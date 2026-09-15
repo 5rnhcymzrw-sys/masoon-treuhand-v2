@@ -173,6 +173,14 @@
   max-width: 32ch;
 }
 
+.home-services {
+  padding-bottom:80px;
+}
+
+.home-knowledge {
+  padding-top:80px;
+}
+
 .home-knowledge__head,
 .home-services__head {
   display: flex;
