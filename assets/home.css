@@ -14,7 +14,7 @@
   align-items: stretch;
   background-image: url("images/backgrounds/background-2.png");
   background-size: cover;
-  background-position: center;
+  background-position: center 60%;
   background-repeat: no-repeat;
 }
 
