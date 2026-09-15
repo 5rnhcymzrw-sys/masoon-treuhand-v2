@@ -86,7 +86,7 @@
 
 .service-card {
   min-height: 250px;
-  padding: 32px;
+  padding: 34px 42px 36px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
