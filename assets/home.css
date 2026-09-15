@@ -151,7 +151,7 @@
   grid-row: 1;
   align-self: center;
   margin: 0;
-  transform:translateX(-5px);
+  transform:translateX(-10px);
   color: var(--ink);
   font-family: var(--font-heading);
   font-size: 24px;
