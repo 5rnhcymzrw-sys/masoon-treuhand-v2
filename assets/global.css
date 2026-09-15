@@ -179,7 +179,7 @@ p,.body-copy {
 
 /* BUTTON: Pfeil als Textzeichen, kein Icon */
 .action::after {
-  content:"➝";
+  content:"➜";
   font-family:Arial,sans-serif;
   font-size:1.15em;
   font-weight:400;
