@@ -165,39 +165,9 @@
   margin-top: 22px;
 }
 
+/* KONTAKT ABSCHLUSSKASTEN: Abstand oberhalb auf der Startseite */
 .home-contact {
   padding-top: 84px;
-}
-
-.home-contact__inner {
-  min-height: 430px;
-  padding: 43px;
-  display: grid;
-  grid-template-columns: minmax(0, .4fr) minmax(0, .6fr);
-  align-items: center;
-  gap: 48px;
-  background: rgba(255,255,255,.76);
-  border: 1px solid transparent;
-  border-image: var(--brand-gradient) 1;
-}
-
-.home-contact__inner > .section-label {
-  margin-bottom: 0;
-}
-
-.home-contact__content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.home-contact .section-title {
-  max-width: 780px;
-}
-
-.home-contact .action {
-  margin-top: 38px;
 }
 
 @media (max-width: 1050px) {
@@ -238,8 +208,7 @@
   }
   .home-intro__grid,
   .service-grid,
-  .knowledge-grid,
-  .home-contact__inner {
+  .knowledge-grid {
     grid-template-columns: 1fr;
     gap: 18px;
   }
@@ -247,8 +216,7 @@
     gap: 42px;
   }
   .home-knowledge__head,
-  .home-services__head,
-  .home-contact__inner {
+  .home-services__head {
     align-items: flex-start;
   }
   .service-grid,
