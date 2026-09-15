@@ -109,7 +109,7 @@
 .service-card {
   position: relative;
   min-height: 250px;
-  padding: 43px;
+  padding: 50px;
   display: grid;
   grid-template-columns: 38px minmax(0,1fr);
   grid-template-rows: auto auto;
