@@ -16,12 +16,16 @@
   --label-size: 11px;
   --label-weight: 500;
   --label-spacing: 1.1px;
-  --title-size: 46px;
+
+  /* Referenz: testseite-referenz */
+  --title-size: 42px;
   --title-weight: 700;
-  --title-line: 1.04;
+  --title-line: 1.08;
+  --title-spacing: -0.018em;
   --subtitle-size: 22px;
   --subtitle-weight: 700;
   --subtitle-line: 1.12;
+  --subtitle-spacing: 0;
 
   --content-width: 1227px;
   --page-gutter: 32px;
@@ -80,7 +84,7 @@ p,.body-copy {
   font-size:var(--title-size);
   font-weight:var(--title-weight);
   line-height:var(--title-line);
-  letter-spacing:0;
+  letter-spacing:var(--title-spacing);
 }
 
 .subtitle {
@@ -90,7 +94,7 @@ p,.body-copy {
   font-size:var(--subtitle-size);
   font-weight:var(--subtitle-weight);
   line-height:var(--subtitle-line);
-  letter-spacing:0;
+  letter-spacing:var(--subtitle-spacing);
 }
 
 .section-label {
