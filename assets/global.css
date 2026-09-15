@@ -140,6 +140,15 @@ p,.body-copy {
   color:var(--white);
   background:var(--black);
 }
+.site-header::after {
+  content:"";
+  position:absolute;
+  right:0;
+  bottom:calc(-1 * var(--accent-height));
+  left:0;
+  height:var(--accent-height);
+  background:var(--brand-gradient);
+}
 .header-inner {
   height:100%;
   display:flex;
