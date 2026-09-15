@@ -174,10 +174,26 @@ p,.body-copy {
   gap:36px;
 }
 .site-brand {
+  position:relative;
   width:225px;
+  height:var(--header-height);
   flex:0 0 225px;
+  display:flex;
+  align-items:center;
 }
-.site-brand img {
+.site-brand__icon {
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:69%;
+  height:auto;
+  opacity:.18;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+}
+.site-brand__text {
+  position:relative;
+  z-index:1;
   width:100%;
   height:auto;
 }
@@ -279,6 +295,7 @@ p,.body-copy {
   }
   .site-brand {
     width:190px;
+    height:var(--header-height);
     flex-basis:190px;
   }
   .site-nav { display:none; }
