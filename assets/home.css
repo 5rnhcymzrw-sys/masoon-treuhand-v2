@@ -105,15 +105,26 @@
   gap: 18px;
 }
 
+/* DIENSTLEISTUNGSKÄSTEN: Zahl links neben Titel, Textabstand unverändert */
 .service-card {
   min-height: 250px;
   padding: 43px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 52px minmax(0,1fr);
+  grid-template-rows: 1fr auto;
+  column-gap: 14px;
   background: rgba(255,255,255,.76);
   border: 1px solid transparent;
 }
+
+.service-card__number,
+.service-card > div {
+  grid-row: 2;
+  align-self: start;
+}
+
+.service-card__number { grid-column: 1; }
+.service-card > div { grid-column: 2; }
 
 /* DIENSTLEISTUNGSKÄSTEN: Verlauf durchgehend wie alte Webseite */
 .service-card:nth-child(3n + 1) { border-image: var(--brand-gradient-left) 1; }
@@ -135,7 +146,7 @@
 }
 
 .service-card h3 {
-  margin: 34px 0 14px;
+  margin: 0 0 14px;
   color: var(--ink);
   font-family: var(--font-heading);
   font-size: 24px;
