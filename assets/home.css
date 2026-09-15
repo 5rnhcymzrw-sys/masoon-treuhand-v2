@@ -197,9 +197,6 @@
 
 .home-contact .action {
   margin-top: 38px;
-  padding: 14px 18px;
-  border: 1px solid transparent;
-  border-image: var(--brand-gradient) 1;
 }
 
 @media (max-width: 1050px) {
