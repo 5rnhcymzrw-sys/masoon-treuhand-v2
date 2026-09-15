@@ -208,9 +208,9 @@ p,.body-copy {
 /* KOPFZEILE: Logo Grösse */
 .site-brand {
   position:relative;
-  width:225px;
+  width:215px;
   height:var(--header-height);
-  flex:0 0 225px;
+  flex:0 0 215px;
   display:flex;
   align-items:center;
 }
@@ -334,7 +334,7 @@ p,.body-copy {
 @media (max-width:1050px) {
   .site-nav,
   .footer-links { gap:20px; }
-  .site-brand { width:200px; flex-basis:200px; }
+  .site-brand { width:210px; flex-basis:210px; }
 }
 
 /* MOBIL: Titel, Seitenrand, Kopfzeile, Fusszeile */
