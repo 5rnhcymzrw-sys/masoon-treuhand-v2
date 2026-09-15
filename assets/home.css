@@ -135,16 +135,12 @@
 
 /* DIENSTLEISTUNGSKÄSTEN: Zahlen 01 bis 06 wie alte Webseite */
 .service-card__number {
-  color: var(--ink);
+  color: #c9c7c5;
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 44px;
   font-weight: 500;
   line-height: 39.6px;
   letter-spacing: -1.76px;
-}
-
-.service-card:nth-child(n + 2) .service-card__number {
-  color: #c9c7c5;
 }
 
 .service-card h3 {
