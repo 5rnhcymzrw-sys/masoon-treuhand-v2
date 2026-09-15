@@ -245,7 +245,7 @@ p,.body-copy {
   gap:34px;
 }
 
-/* KOPFZEILE: Navigation Schrift */
+/* KOPFZEILE: Schriftgrösse, Gewicht und Buchstabenabstand */
 .site-nav a {
   position:relative;
   padding:35px 0 32px;
@@ -309,7 +309,7 @@ p,.body-copy {
   gap:36px;
 }
 
-/* FUSSZEILE: Schrift */
+/* FUSSZEILE: Schriftgrösse, Gewicht und Buchstabenabstand */
 .footer-home,
 .footer-links a {
   color:var(--white);
