@@ -153,13 +153,13 @@ p,.body-copy {
   text-transform:uppercase;
 }
 
-/* BEREICHSTITEL: kurze Linie erste Verlaufsfarbe */
+/* BEREICHSTITEL: kurze Linie */
 .section-label::before {
   content:"";
   width:30px;
   height:1px;
   flex:0 0 30px;
-  background:#f3e8d4;
+  background:currentColor;
 }
 
 /* BUTTON: Textlink mit Pfeil */
