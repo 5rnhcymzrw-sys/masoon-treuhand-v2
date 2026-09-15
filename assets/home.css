@@ -126,7 +126,7 @@
   grid-column: 1;
   grid-row: 1;
   align-self: start;
-  transform:translateY(-4px);
+  transform:translateY(-5px);
 }
 
 /* DIENSTLEISTUNGSKÄSTEN: Verlauf durchgehend wie alte Webseite */
