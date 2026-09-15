@@ -201,7 +201,7 @@ p,.body-copy {
 /* ABSCHLUSSKASTEN: Textblock rechts */
 .closing-card__content {
   position:relative;
-  left:-39px;
+  left:-35px;
   display:flex;
   flex-direction:column;
   align-items:flex-start;
