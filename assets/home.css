@@ -86,7 +86,7 @@
 
 .service-card {
   min-height: 250px;
-  padding: 34px 42px 36px;
+  padding: 43px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -131,7 +131,7 @@
 
 .knowledge-card {
   min-height: 360px;
-  padding: 34px 42px 36px;
+  padding: 43px;
   display: flex;
   flex-direction: column;
   background: rgba(255,255,255,.8);
