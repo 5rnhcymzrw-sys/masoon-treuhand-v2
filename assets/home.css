@@ -55,22 +55,19 @@
   margin-left: -6vw;
 }
 
-/* HERO-BILD: ganzes Foto leicht abdunkeln, Bücherregal links deutlich dunkler */
+/* HERO-BILD: nur Bücherregal links abdunkeln, Gesicht unverändert */
 .home-hero__image::after {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0,0,0,.62) 0%,
-      rgba(0,0,0,.50) 24%,
-      rgba(0,0,0,.30) 46%,
-      rgba(0,0,0,.14) 64%,
-      rgba(0,0,0,0) 78%
-    ),
-    rgba(0,0,0,.10);
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,.68) 0%,
+    rgba(0,0,0,.52) 18%,
+    rgba(0,0,0,.28) 34%,
+    rgba(0,0,0,0) 48%
+  );
 }
 
 .home-hero__image img {
