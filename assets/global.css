@@ -104,10 +104,10 @@ p,.body-copy {
   margin:0 0 30px;
   color:var(--muted);
   font-family:var(--font-body);
-  font-size:10px;
-  font-weight:500;
+  font-size:var(--label-size);
+  font-weight:var(--label-weight);
   line-height:1.4;
-  letter-spacing:1.5px;
+  letter-spacing:var(--label-spacing);
   text-transform:uppercase;
 }
 .section-label::before {
@@ -124,10 +124,10 @@ p,.body-copy {
   gap:10px;
   color:var(--muted);
   font-family:var(--font-body);
-  font-size:10px;
-  font-weight:500;
+  font-size:var(--label-size);
+  font-weight:var(--label-weight);
   line-height:1.4;
-  letter-spacing:1px;
+  letter-spacing:var(--label-spacing);
   text-transform:uppercase;
   transition:color 180ms ease;
 }
@@ -174,10 +174,10 @@ p,.body-copy {
   position:relative;
   padding:35px 0 32px;
   color:var(--white);
-  font-size:12px;
-  font-weight:500;
+  font-size:var(--label-size);
+  font-weight:var(--label-weight);
   line-height:1.4;
-  letter-spacing:1px;
+  letter-spacing:var(--label-spacing);
   text-transform:uppercase;
 }
 .site-nav a::after {
@@ -221,9 +221,8 @@ p,.body-copy {
   align-items:center;
   justify-content:space-between;
   gap:28px;
-  font-size:10px;
-  font-weight:300;
-  letter-spacing:.6px;
+  font-size:11px;
+  letter-spacing:.4px;
   color:#c8c8c8;
 }
 .footer-links {
