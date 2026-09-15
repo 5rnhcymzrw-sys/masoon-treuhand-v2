@@ -189,7 +189,7 @@
 }
 
 .knowledge-card {
-  min-height: 340px;
+  min-height: 360px;
   padding: 43px;
   display: flex;
   flex-direction: column;
