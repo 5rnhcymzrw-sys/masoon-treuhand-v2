@@ -170,7 +170,8 @@ p,.body-copy {
   text-transform:uppercase;
 }
 .site-nav a[aria-current="page"] {
-  padding-bottom:7px;
+  padding-bottom:14px;
+  margin-bottom:-14px;
   background-image:var(--brand-gradient);
   background-repeat:no-repeat;
   background-position:left bottom;
