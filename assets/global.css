@@ -179,9 +179,9 @@ p,.body-copy {
 
 /* BUTTON: Pfeil als Textzeichen, kein Icon */
 .action::after {
-  content:"\2197\FE0E";
+  content:"➝";
   font-family:Arial,sans-serif;
-  font-size:1em;
+  font-size:1.15em;
   font-weight:400;
   line-height:1;
   letter-spacing:0;
