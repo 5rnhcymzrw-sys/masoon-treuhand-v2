@@ -165,6 +165,7 @@ p,.body-copy {
   background:var(--brand-gradient);
 }
 .header-inner {
+  position:relative;
   height:100%;
   display:flex;
   align-items:center;
@@ -180,9 +181,11 @@ p,.body-copy {
   height:auto;
 }
 .site-nav {
+  position:absolute;
+  left:50%;
   display:flex;
   align-items:center;
-  justify-content:flex-end;
+  justify-content:flex-start;
   gap:34px;
 }
 .site-nav a {
