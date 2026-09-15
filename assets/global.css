@@ -181,7 +181,7 @@ p,.body-copy {
 .action::after {
   content:"➜";
   font-family:Arial,sans-serif;
-  font-size:1.1em;
+  font-size:1em;
   font-weight:100;
   line-height:1;
   letter-spacing:0;
