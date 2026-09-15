@@ -142,7 +142,7 @@ p,.body-copy {
 .section-label {
   display:flex;
   align-items:center;
-  gap:16px;
+  gap:14px;
   margin:0 0 30px;
   color:var(--muted);
   font-family:var(--font-body);
