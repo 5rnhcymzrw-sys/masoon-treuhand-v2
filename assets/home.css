@@ -4,7 +4,7 @@
   height: calc(100dvh - var(--header-height) - var(--accent-height));
   min-height: calc(100dvh - var(--header-height) - var(--accent-height));
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(420px, 50%);
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 50%);
   background: rgba(255,255,255,.72);
 }
 
