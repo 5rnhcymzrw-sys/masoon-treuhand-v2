@@ -56,7 +56,7 @@
   height: 100%;
   object-fit: cover;
   object-position: 100% 18%;
-  transform: scale(1.08);
+  transform: translateY(8px) scale(1.08);
   transform-origin: right center;
 }
 
