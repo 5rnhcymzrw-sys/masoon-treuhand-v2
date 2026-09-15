@@ -127,7 +127,7 @@
 .service-card__number {
   position: absolute;
   top: 43px;
-  left: 44px;
+  left: 48px;
   transform: translateY(-6px);
 }
 
