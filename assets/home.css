@@ -105,8 +105,9 @@
   gap: 18px;
 }
 
-/* DIENSTLEISTUNGSKÄSTEN: Zahl links neben Titel, Fliesstext darunter */
+/* DIENSTLEISTUNGSKÄSTEN: Zahl links neben Titel, ohne Einfluss auf Abstände */
 .service-card {
+  position: relative;
   min-height: 250px;
   padding: 43px;
   display: grid;
@@ -123,10 +124,10 @@
 }
 
 .service-card__number {
-  grid-column: 1;
-  grid-row: 1;
-  align-self: start;
-  transform:translateY(-5px);
+  position: absolute;
+  top: 43px;
+  left: 43px;
+  transform: translateY(-5px);
 }
 
 /* DIENSTLEISTUNGSKÄSTEN: Verlauf durchgehend wie alte Webseite */
