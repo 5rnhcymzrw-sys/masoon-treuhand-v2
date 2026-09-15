@@ -179,10 +179,10 @@ p,.body-copy {
 
 /* BUTTON: Pfeil als Textzeichen, kein Icon */
 .action::after {
-  content:"➜";
+  content:"\2197\FE0E";
   font-family:Arial,sans-serif;
-  font-size:1em;
-  font-weight:100;
+  font-size:1.2em;
+  font-weight:500;
   line-height:1;
   letter-spacing:0;
   text-transform:none;
