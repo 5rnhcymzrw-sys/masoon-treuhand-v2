@@ -50,7 +50,7 @@
   min-height: 0;
   overflow: hidden;
   width: calc(100% + 80px);
-  margin-left: -100px;
+  margin-left: -90px;
 }
 
 .home-hero__image img {
