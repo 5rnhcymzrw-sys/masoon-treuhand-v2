@@ -334,7 +334,7 @@ p,.body-copy {
 @media (max-width:1050px) {
   .site-nav,
   .footer-links { gap:20px; }
-  .site-brand { width:210px; flex-basis:210px; }
+  .site-brand { width:200px; flex-basis:200px; }
 }
 
 /* MOBIL: Titel, Seitenrand, Kopfzeile, Fusszeile */
