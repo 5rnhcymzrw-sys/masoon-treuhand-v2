@@ -150,7 +150,6 @@
   grid-row: 1;
   align-self: center;
   margin: 0;
-  transform: translateY(2px);
   color: var(--ink);
   font-family: var(--font-heading);
   font-size: 24px;
@@ -161,7 +160,6 @@
   grid-column: 1 / -1;
   grid-row: 2;
   margin-top: 14px;
-  transform: translateY(2px);
   max-width: 32ch;
 }
 
