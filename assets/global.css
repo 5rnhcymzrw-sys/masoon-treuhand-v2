@@ -1,0 +1,188 @@
+/* MASOON TREUHAND V2 | einzige zentrale Designquelle */
+
+:root {
+  --black: #000000;
+  --ink: #171715;
+  --text: #484a4f;
+  --muted: #777777;
+  --white: #ffffff;
+  --brand-gradient: linear-gradient(110deg,#f3e8d4 0%,#e8e5df 38%,#c7cbd3 66%,#8d96a8 100%);
+
+  --font-body: "Inter", Arial, sans-serif;
+  --font-heading: "PT Serif", Georgia, serif;
+  --body-size: 14px;
+  --body-weight: 300;
+  --body-line: 1.65;
+  --label-size: 11px;
+  --label-weight: 500;
+  --label-spacing: 1.1px;
+  --title-size: 46px;
+  --title-weight: 700;
+  --title-line: 1.04;
+  --subtitle-size: 22px;
+  --subtitle-weight: 700;
+  --subtitle-line: 1.12;
+
+  --content-width: 1227px;
+  --page-gutter: 32px;
+  --page-gutter-mobile: 24px;
+  --section-space: 126px;
+  --section-space-mobile: 82px;
+  --header-height: 108px;
+  --footer-height: 80px;
+  --accent-height: 8px;
+}
+
+*,*::before,*::after { box-sizing: border-box; }
+html { margin: 0; padding: 0; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--text);
+  background: var(--white);
+  font-family: var(--font-body);
+  font-size: var(--body-size);
+  font-weight: var(--body-weight);
+  line-height: var(--body-line);
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+}
+img,picture,svg { display:block; max-width:100%; }
+a { color:inherit; text-decoration:none; }
+button,input,textarea,select { font:inherit; }
+
+.container {
+  width:min(calc(100% - (2 * var(--page-gutter))),var(--content-width));
+  margin-inline:auto;
+}
+.section { padding-block:var(--section-space); }
+
+/* Einzige globale Fliesstextregel */
+p,.body-copy {
+  margin:0;
+  color:var(--text);
+  font-family:var(--font-body);
+  font-size:var(--body-size);
+  font-weight:var(--body-weight);
+  line-height:var(--body-line);
+  letter-spacing:0;
+}
+
+/* Einzige globale Grosstitelregel */
+.page-title,.section-title {
+  margin:0;
+  color:var(--ink);
+  font-family:var(--font-heading);
+  font-size:var(--title-size);
+  font-weight:var(--title-weight);
+  line-height:var(--title-line);
+  letter-spacing:0;
+}
+
+/* Einzige globale Zwischentitelregel */
+.subtitle {
+  margin:0;
+  color:var(--ink);
+  font-family:var(--font-heading);
+  font-size:var(--subtitle-size);
+  font-weight:var(--subtitle-weight);
+  line-height:var(--subtitle-line);
+  letter-spacing:0;
+}
+
+.section-label {
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin:0 0 30px;
+  color:var(--muted);
+  font-family:var(--font-body);
+  font-size:var(--label-size);
+  font-weight:var(--label-weight);
+  line-height:1.4;
+  letter-spacing:var(--label-spacing);
+  text-transform:uppercase;
+}
+.section-label::before {
+  content:"";
+  width:30px;
+  height:1px;
+  flex:0 0 30px;
+  background:currentColor;
+}
+
+.action {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:var(--muted);
+  font-family:var(--font-body);
+  font-size:var(--label-size);
+  font-weight:var(--label-weight);
+  line-height:1.4;
+  letter-spacing:var(--label-spacing);
+  text-transform:uppercase;
+  transition:color 180ms ease;
+}
+.action:hover,.action:focus-visible { color:var(--ink); }
+
+.site-header {
+  position:relative;
+  height:var(--header-height);
+  color:var(--white);
+  background:var(--black);
+}
+.site-header::after {
+  content:"";
+  position:absolute;
+  right:0;
+  bottom:calc(-1 * var(--accent-height));
+  left:0;
+  height:var(--accent-height);
+  background:var(--brand-gradient);
+}
+.header-inner {
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.site-nav { display:flex; align-items:center; gap:34px; }
+.site-nav a {
+  color:var(--white);
+  font-size:var(--label-size);
+  font-weight:var(--label-weight);
+  line-height:1.4;
+  letter-spacing:var(--label-spacing);
+  text-transform:uppercase;
+}
+
+.site-footer {
+  position:relative;
+  min-height:var(--footer-height);
+  color:var(--white);
+  background:var(--black);
+}
+.site-footer::before {
+  content:"";
+  position:absolute;
+  top:calc(-1 * var(--accent-height));
+  right:0;
+  left:0;
+  height:var(--accent-height);
+  background:var(--brand-gradient);
+}
+.footer-inner {
+  min-height:var(--footer-height);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:34px;
+}
+
+@media (max-width:800px) {
+  :root { --title-size:40px; }
+  .container { width:calc(100% - (2 * var(--page-gutter-mobile))); }
+  .section { padding-block:var(--section-space-mobile); }
+  .site-nav { gap:18px; }
+}
