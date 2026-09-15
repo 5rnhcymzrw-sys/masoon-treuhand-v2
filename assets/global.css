@@ -238,7 +238,7 @@ p,.body-copy {
 /* KOPFZEILE: Navigation */
 .site-nav {
   position:absolute;
-  left:50%;
+  left:41%;
   display:flex;
   align-items:center;
   justify-content:flex-start;
