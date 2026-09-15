@@ -186,6 +186,9 @@ p,.body-copy {
   line-height:1;
   letter-spacing:0;
   text-transform:none;
+position:relative;
+top:-3px;
+
 }
 
 /* BUTTON: Hover */
