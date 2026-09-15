@@ -151,7 +151,7 @@
   grid-row: 1;
   align-self: center;
   margin: 0;
-  transform:translateX(-8px);
+  transform:translateX(-7px);
   color: var(--ink);
   font-family: var(--font-heading);
   font-size: var(--subtitle-size);
