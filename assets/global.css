@@ -221,7 +221,9 @@ p,.body-copy {
   .container { width:calc(100% - (2 * var(--page-gutter-mobile))); }
   .section { padding-block:var(--section-space-mobile); }
   .header-inner {
-    justify-content:center;
+    width:100%;
+    margin-inline:0;
+    justify-content:flex-start;
   }
   .site-brand {
     width:190px;
