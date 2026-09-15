@@ -157,7 +157,7 @@ p,.body-copy {
 .section-label::before {
   content:"";
   width:30px;
-  height:2.5px;
+  height:2px;
   flex:0 0 30px;
   background:#f3e8d4;
 }
