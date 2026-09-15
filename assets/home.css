@@ -167,14 +167,18 @@
 
 .home-contact {
   padding-block: 84px;
-  background: rgba(255,255,255,.66);
 }
 
 .home-contact__inner {
+  min-height: 280px;
+  padding: 43px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 48px;
+  background: rgba(255,255,255,.76);
+  border: 1px solid transparent;
+  border-image: var(--brand-gradient) 1;
 }
 
 .home-contact .section-title {
