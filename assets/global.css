@@ -266,9 +266,9 @@ p,.body-copy {
 /* KOPFZEILE: Logo Grösse */
 .site-brand {
   position:relative;
-  width:200px;
+  width:290px;
   height:var(--header-height);
-  flex:0 0 200px;
+  flex:0 0 290px;
   display:flex;
   align-items:center;
 }
