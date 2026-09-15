@@ -1,6 +1,6 @@
 /* MASOON TREUHAND V2 | einzige zentrale Designquelle */
 
-/* GLOBALE DESIGNWERTE: Farben, Schriften, Typografie, Breiten, Abstände und Höhen */
+/* GLOBALE DESIGNWERTE | Suchwörter: global, Werte, Farben, Schriften, Abstände, Grössen */
 :root {
   --black: #000000;
   --ink: #171715;
@@ -18,7 +18,7 @@
   --label-weight: 500;
   --label-spacing: 1.1px;
 
-  /* HAUPTTITEL UND ZWISCHENTITEL */
+  /* HAUPTTITEL UND ZWISCHENTITEL | Suchwörter: Titel, grosser Titel, Haupttitel, Zwischentitel, Überschrift */
   --title-size: 50px;
   --title-weight: 700;
   --title-line: 1.08;
@@ -28,7 +28,7 @@
   --subtitle-line: 1.12;
   --subtitle-spacing: 0;
 
-  /* SEITENBREITE, SEITENRÄNDER, ABSCHNITTSABSTÄNDE, KOPFZEILE UND FUSSZEILE */
+  /* SEITENBREITE UND ABSTÄNDE | Suchwörter: Seitenbreite, Rand, Abstand, Leerraum, Kopfzeile, Fusszeile, Header, Footer */
   --content-width: 1227px;
   --page-gutter: 32px;
   --page-gutter-mobile: 24px;
@@ -39,13 +39,13 @@
   --accent-height: 8px;
 }
 
-/* GLOBALE BOX-BERECHNUNG */
+/* GLOBALE BOX-BERECHNUNG | Suchwörter: Box, Rahmen, Boxgrösse */
 *,*::before,*::after { box-sizing: border-box; }
 
-/* HTML-GRUNDEINSTELLUNGEN */
+/* HTML-GRUNDEINSTELLUNGEN | Suchwörter: HTML, Scrollen */
 html { margin: 0; padding: 0; scroll-behavior: smooth; }
 
-/* GESAMTE WEBSITE: Hintergrund, Grundschrift und Textdarstellung */
+/* GESAMTE WEBSITE | Suchwörter: Hintergrund, Background, Grundschrift, Schrift, Website */
 body {
   position:relative;
   margin: 0;
@@ -66,7 +66,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* TEMPORAERE MESSLINIE | nach dem Abmessen wieder entfernen */
+/* TEMPORAERE MESSLINIE | Suchwörter: rote Linie, Messlinie, Mitte, Hilfslinie */
 body::after {
   content:"";
   position:absolute;
@@ -79,28 +79,28 @@ body::after {
   z-index:9999;
 }
 
-/* BILDER UND GRAFIKEN */
+/* BILDER UND GRAFIKEN | Suchwörter: Bild, Bilder, Grafik, Icon */
 img,picture,svg { display:block; max-width:100%; }
 
-/* LINKS */
+/* LINKS | Suchwörter: Link, Verlinkung */
 a { color:inherit; text-decoration:none; }
 
-/* FORMULARELEMENTE ERBEN DIE GLOBALE SCHRIFT */
+/* FORMULARELEMENTE | Suchwörter: Formular, Eingabefeld, Button, Schrift */
 button,input,textarea,select { font:inherit; }
 
-/* GLOBALER ABSTAND ZWISCHEN LETZTEM INHALT UND FUSSZEILE */
+/* GLOBALER ABSTAND VOR DER FUSSZEILE | Suchwörter: Fusszeile, Footer, Leerraum unten, Abstand unten, letzter Inhalt */
 main { padding-bottom:var(--section-space); }
 
-/* ZENTRALER INHALTSBEREICH DER WEBSITE */
+/* ZENTRALER INHALTSBEREICH | Suchwörter: Container, Inhalt, Seitenbreite, Seitenrand */
 .container {
   width:min(calc(100% - (2 * var(--page-gutter))),var(--content-width));
   margin-inline:auto;
 }
 
-/* GLOBALER VERTIKALER ABSCHNITTSABSTAND */
+/* GLOBALER VERTIKALER ABSCHNITTSABSTAND | Suchwörter: Abschnitt, Abstand, Leerraum, oben unten */
 .section { padding-block:var(--section-space); }
 
-/* FLIESSTEXT */
+/* FLIESSTEXT | Suchwörter: Fliesstext, Text, Absatz, Schrift */
 p,.body-copy {
   margin:0;
   color:var(--text);
@@ -111,7 +111,7 @@ p,.body-copy {
   letter-spacing:0;
 }
 
-/* GROSSE SEITENTITEL UND BEREICHSTITEL */
+/* GROSSE SEITENTITEL UND BEREICHSTITEL | Suchwörter: Titel, grosser Titel, Seitentitel, Bereichstitel, Überschrift */
 .page-title,.section-title {
   margin:0;
   color:var(--ink);
@@ -122,7 +122,7 @@ p,.body-copy {
   letter-spacing:var(--title-spacing);
 }
 
-/* ZWISCHENTITEL */
+/* ZWISCHENTITEL | Suchwörter: Zwischentitel, Untertitel, Subtitle */
 .subtitle {
   margin:0;
   color:var(--ink);
@@ -133,7 +133,7 @@ p,.body-copy {
   letter-spacing:var(--subtitle-spacing);
 }
 
-/* KLEINE BEREICHSTITEL WIE KONTAKT, FACHWISSEN UND DIENSTLEISTUNGEN */
+/* KLEINE BEREICHSTITEL | Suchwörter: kleiner Titel, Bereichstitel, Kontakt, Fachwissen, Dienstleistungen */
 .section-label {
   display:flex;
   align-items:center;
@@ -148,7 +148,7 @@ p,.body-copy {
   text-transform:uppercase;
 }
 
-/* KURZE LINIE VOR KLEINEN BEREICHSTITELN */
+/* KURZE LINIE VOR KLEINEN BEREICHSTITELN | Suchwörter: Linie, kurze Linie, Bereichstitel Linie */
 .section-label::before {
   content:"";
   width:30px;
@@ -157,7 +157,7 @@ p,.body-copy {
   background:currentColor;
 }
 
-/* TEXTLINKS UND HANDLUNGSLINKS WIE KONTAKT AUFNEHMEN */
+/* TEXTLINKS UND HANDLUNGSLINKS | Suchwörter: Button, Link, Kontakt aufnehmen, Aktion, Pfeil */
 .action {
   display:inline-flex;
   align-items:center;
@@ -172,10 +172,10 @@ p,.body-copy {
   transition:color 180ms ease;
 }
 
-/* HOVER UND TASTATURFOKUS DER HANDLUNGSLINKS */
+/* HOVER UND FOKUS DER HANDLUNGSLINKS | Suchwörter: Hover, Maus, Linkfarbe, Button Hover */
 .action:hover,.action:focus-visible { color:var(--ink); }
 
-/* KOPFZEILE */
+/* KOPFZEILE | Suchwörter: Kopfzeile, Header, oben, schwarzer Balken */
 .site-header {
   position:relative;
   z-index:10;
@@ -184,7 +184,7 @@ p,.body-copy {
   background:var(--black);
 }
 
-/* FARBIGER BALKEN UNTER DER KOPFZEILE */
+/* FARBIGER BALKEN UNTER DER KOPFZEILE | Suchwörter: Kopfzeile Linie, Header Linie, farbiger Balken, Verlauf */
 .site-header::after {
   content:"";
   position:absolute;
@@ -195,7 +195,7 @@ p,.body-copy {
   background:var(--brand-gradient);
 }
 
-/* INHALT UND AUSRICHTUNG DER KOPFZEILE */
+/* INHALT UND AUSRICHTUNG DER KOPFZEILE | Suchwörter: Kopfzeile Inhalt, Header Inhalt, Ausrichtung */
 .header-inner {
   position:relative;
   height:100%;
@@ -205,7 +205,7 @@ p,.body-copy {
   gap:36px;
 }
 
-/* LOGO-BEREICH IN DER KOPFZEILE */
+/* LOGO IN DER KOPFZEILE | Suchwörter: Logo, Logo Grösse, Firmenlogo, Kopfzeile Logo */
 .site-brand {
   position:relative;
   width:225px;
@@ -215,7 +215,7 @@ p,.body-copy {
   align-items:center;
 }
 
-/* SCHLÜSSEL-SYMBOL HINTER DEM TEXTLOGO */
+/* SCHLÜSSEL-SYMBOL HINTER DEM LOGO | Suchwörter: Schlüssel, Schlüsselsymbol, Symbol, Icon, Hintergrundlogo */
 .site-brand__icon {
   position:absolute;
   top:50%;
@@ -227,7 +227,7 @@ p,.body-copy {
   pointer-events:none;
 }
 
-/* TEXTLOGO VOR DEM SCHLÜSSEL-SYMBOL */
+/* TEXTLOGO VOR DEM SCHLÜSSEL | Suchwörter: Textlogo, MASOON TREUHAND, Logo Schrift */
 .site-brand__text {
   position:relative;
   z-index:1;
@@ -235,7 +235,7 @@ p,.body-copy {
   height:auto;
 }
 
-/* HAUPTNAVIGATION IN DER KOPFZEILE */
+/* HAUPTNAVIGATION IN DER KOPFZEILE | Suchwörter: Navigation, Menü, Menüpunkte, Kopfzeile Titel */
 .site-nav {
   position:absolute;
   left:50%;
@@ -245,7 +245,7 @@ p,.body-copy {
   gap:34px;
 }
 
-/* NAVIGATIONSTITEL */
+/* NAVIGATIONSTITEL | Suchwörter: Navigation Titel, Menü Titel, Startseite, Unternehmen, Dienstleistungen, Fachwissen, Kontakt */
 .site-nav a {
   position:relative;
   padding:35px 0 32px;
@@ -257,7 +257,7 @@ p,.body-copy {
   text-transform:uppercase;
 }
 
-/* KURZE FARBIGE LINIE UNTER AKTIVEM ODER ANGEHOVERTEM NAVIGATIONSTITEL */
+/* LINIE UNTER NAVIGATIONSTITEL | Suchwörter: Navigation Linie, Menü Linie, Unterlinie, aktive Seite, Hover Linie */
 .site-nav a::after {
   content:"";
   display:block;
@@ -273,14 +273,14 @@ p,.body-copy {
   pointer-events:none;
 }
 
-/* SICHTBARE NAVIGATIONSLINIE BEI HOVER, FOKUS UND AKTIVER SEITE */
+/* SICHTBARE NAVIGATIONSLINIE | Suchwörter: aktive Linie, Hover Linie, Menüübergang */
 .site-nav a:hover::after,
 .site-nav a:focus-visible::after,
 .site-nav a[aria-current="page"]::after {
   width:40px;
 }
 
-/* FUSSZEILE */
+/* FUSSZEILE | Suchwörter: Fusszeile, Footer, unten, schwarzer Balken unten */
 .site-footer {
   position:relative;
   min-height:var(--footer-height);
@@ -288,7 +288,7 @@ p,.body-copy {
   background:var(--black);
 }
 
-/* FARBIGER BALKEN ÜBER DER FUSSZEILE */
+/* FARBIGER BALKEN ÜBER DER FUSSZEILE | Suchwörter: Fusszeile Linie, Footer Linie, farbiger Balken unten, Verlauf */
 .site-footer::before {
   content:"";
   position:absolute;
@@ -299,7 +299,7 @@ p,.body-copy {
   background:var(--brand-gradient);
 }
 
-/* INHALT UND AUSRICHTUNG DER FUSSZEILE */
+/* INHALT UND AUSRICHTUNG DER FUSSZEILE | Suchwörter: Fusszeile Inhalt, Footer Inhalt, Ausrichtung unten */
 .footer-inner {
   position:relative;
   min-height:var(--footer-height);
@@ -309,7 +309,7 @@ p,.body-copy {
   gap:36px;
 }
 
-/* TYPOGRAFIE DER FUSSZEILEN-LINKS */
+/* SCHRIFT DER FUSSZEILE | Suchwörter: Fusszeile Schrift, Footer Schrift, Disclaimer, Impressum, Datenschutz, Kontakt */
 .footer-home,
 .footer-links a {
   color:var(--white);
@@ -320,7 +320,7 @@ p,.body-copy {
   text-transform:uppercase;
 }
 
-/* POSITION UND ABSTÄNDE DER FUSSZEILEN-LINKS */
+/* POSITION UND ABSTÄNDE DER FUSSZEILEN-LINKS | Suchwörter: Fusszeile Links, Footer Links, Abstand Fusszeile, Disclaimer Impressum Datenschutz Kontakt */
 .footer-links {
   position:absolute;
   left:50%;
@@ -330,14 +330,14 @@ p,.body-copy {
   gap:34px;
 }
 
-/* TABLET: kleinere Abstände und kleineres Logo */
+/* TABLET | Suchwörter: Tablet, kleinere Abstände, kleineres Logo */
 @media (max-width:1050px) {
   .site-nav,
   .footer-links { gap:20px; }
   .site-brand { width:210px; flex-basis:210px; }
 }
 
-/* MOBIL: mobile Titelgrösse, Seitenränder, Kopfzeile und Fusszeile */
+/* MOBIL | Suchwörter: Mobil, Handy, Smartphone, mobile Ansicht, mobile Kopfzeile, mobile Fusszeile */
 @media (max-width:800px) {
   :root { --title-size:40px; --header-height:92px; }
   body { background-attachment:scroll; }
