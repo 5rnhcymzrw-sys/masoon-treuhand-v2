@@ -105,26 +105,28 @@
   gap: 18px;
 }
 
-/* DIENSTLEISTUNGSKÄSTEN: Zahl links neben Titel, Textabstand unverändert */
+/* DIENSTLEISTUNGSKÄSTEN: Zahl links neben Titel, Fliesstext darunter */
 .service-card {
   min-height: 250px;
   padding: 43px;
   display: grid;
-  grid-template-columns: 52px minmax(0,1fr);
-  grid-template-rows: 1fr auto;
+  grid-template-columns: 38px minmax(0,1fr);
+  grid-template-rows: auto auto;
   column-gap: 14px;
+  align-content: start;
   background: rgba(255,255,255,.76);
   border: 1px solid transparent;
 }
 
-.service-card__number,
 .service-card > div {
-  grid-row: 2;
-  align-self: start;
+  display: contents;
 }
 
-.service-card__number { grid-column: 1; }
-.service-card > div { grid-column: 2; }
+.service-card__number {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: start;
+}
 
 /* DIENSTLEISTUNGSKÄSTEN: Verlauf durchgehend wie alte Webseite */
 .service-card:nth-child(3n + 1) { border-image: var(--brand-gradient-left) 1; }
@@ -146,7 +148,10 @@
 }
 
 .service-card h3 {
-  margin: 0 0 14px;
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+  margin: 0;
   color: var(--ink);
   font-family: var(--font-heading);
   font-size: 24px;
@@ -154,6 +159,9 @@
 }
 
 .service-card p {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin-top: 14px;
   max-width: 32ch;
 }
 
