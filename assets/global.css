@@ -8,6 +8,9 @@
   --muted: #777777;
   --white: #ffffff;
   --brand-gradient: linear-gradient(110deg,#f3e8d4 0%,#e8e5df 38%,#c7cbd3 66%,#8d96a8 100%);
+  --brand-gradient-left: linear-gradient(110deg,#f3e8d4 0%,#e8e5df 100%);
+  --brand-gradient-middle: linear-gradient(110deg,#e8e5df 0%,#c7cbd3 100%);
+  --brand-gradient-right: linear-gradient(110deg,#c7cbd3 0%,#8d96a8 100%);
 
   --font-body: "Inter", Arial, sans-serif;
   --font-heading: "PT Serif", Georgia, serif;
@@ -150,13 +153,13 @@ p,.body-copy {
   text-transform:uppercase;
 }
 
-/* BEREICHSTITEL: kurze Linie */
+/* BEREICHSTITEL: kurze Linie mit Farbverlauf */
 .section-label::before {
   content:"";
   width:30px;
   height:1px;
   flex:0 0 30px;
-  background:currentColor;
+  background:var(--brand-gradient);
 }
 
 /* BUTTON: Textlink mit Pfeil */
@@ -172,6 +175,17 @@ p,.body-copy {
   letter-spacing:var(--label-spacing);
   text-transform:uppercase;
   transition:color 180ms ease;
+}
+
+/* BUTTON: Pfeil als Textzeichen, kein Icon */
+.action::after {
+  content:"\2197\FE0E";
+  font-family:Arial,sans-serif;
+  font-size:1em;
+  font-weight:400;
+  line-height:1;
+  letter-spacing:0;
+  text-transform:none;
 }
 
 /* BUTTON: Hover */

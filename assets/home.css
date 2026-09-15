@@ -113,14 +113,25 @@
   justify-content: space-between;
   background: rgba(255,255,255,.76);
   border: 1px solid transparent;
-  border-image: var(--brand-gradient) 1;
 }
 
+/* DIENSTLEISTUNGSKÄSTEN: Verlauf durchgehend wie alte Webseite */
+.service-card:nth-child(3n + 1) { border-image: var(--brand-gradient-left) 1; }
+.service-card:nth-child(3n + 2) { border-image: var(--brand-gradient-middle) 1; }
+.service-card:nth-child(3n + 3) { border-image: var(--brand-gradient-right) 1; }
+
+/* DIENSTLEISTUNGSKÄSTEN: Zahlen 01 bis 06 wie alte Webseite */
 .service-card__number {
-  color: var(--muted);
-  font-size: 11px;
+  color: var(--ink);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 44px;
   font-weight: 500;
-  letter-spacing: 1.1px;
+  line-height: 39.6px;
+  letter-spacing: -1.76px;
+}
+
+.service-card:nth-child(n + 2) .service-card__number {
+  color: #c9c7c5;
 }
 
 .service-card h3 {
