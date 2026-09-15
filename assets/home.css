@@ -144,6 +144,12 @@
   font-weight: 500;
   line-height: 39.6px;
   letter-spacing: -1.76px;
+  transition: color 180ms ease;
+}
+
+/* DIENSTLEISTUNGSKÄSTEN: Zahl beim Darüberfahren schwarz */
+.service-card:hover .service-card__number {
+  color: var(--ink);
 }
 
 .service-card h3 {
