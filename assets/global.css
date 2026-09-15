@@ -175,6 +175,11 @@ p,.body-copy {
 /* BUTTON: Hover */
 .action:hover,.action:focus-visible { color:var(--ink); }
 
+/* ABSCHLUSSKASTEN: globaler Abstand oberhalb */
+.closing-card-section {
+  padding-top:84px;
+}
+
 /* ABSCHLUSSKASTEN: globaler grosser Kasten */
 .closing-card {
   min-height:430px;
@@ -196,6 +201,7 @@ p,.body-copy {
 /* ABSCHLUSSKASTEN: Textblock rechts */
 .closing-card__content {
   position:relative;
+  left:-41px;
   display:flex;
   flex-direction:column;
   align-items:flex-start;
@@ -385,6 +391,7 @@ p,.body-copy {
     gap:18px;
     align-items:flex-start;
   }
+  .closing-card__content { left:0; }
   .header-inner {
     width:100%;
     margin-inline:0;
