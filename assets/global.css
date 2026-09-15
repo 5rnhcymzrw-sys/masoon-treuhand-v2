@@ -323,7 +323,7 @@ p,.body-copy {
 /* FUSSZEILE: Links und Abstände */
 .footer-links {
   position:absolute;
-  left:30%;
+  left:40%;
   display:flex;
   align-items:center;
   justify-content:flex-start;
