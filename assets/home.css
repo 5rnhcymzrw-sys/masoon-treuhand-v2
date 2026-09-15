@@ -165,10 +165,12 @@
   margin-top: 22px;
 }
 
+/* KONTAKT ABSCHLUSSKASTEN: Abstand oberhalb auf der Startseite */
 .home-contact {
   padding-top: 84px;
 }
 
+<<<<<<< HEAD
 .home-contact__inner {
   min-height: 430px;
   padding: 43px;
@@ -201,6 +203,8 @@
   margin-top: 38px;
 }
 
+=======
+>>>>>>> fa72c7e801da40ecf379306f809d6bb3652fc09d
 @media (max-width: 1050px) {
   .home-hero {
     grid-template-columns: 1fr 42%;
@@ -239,8 +243,7 @@
   }
   .home-intro__grid,
   .service-grid,
-  .knowledge-grid,
-  .home-contact__inner {
+  .knowledge-grid {
     grid-template-columns: 1fr;
     gap: 18px;
   }
@@ -248,8 +251,7 @@
     gap: 42px;
   }
   .home-knowledge__head,
-  .home-services__head,
-  .home-contact__inner {
+  .home-services__head {
     align-items: flex-start;
   }
   .service-grid,
