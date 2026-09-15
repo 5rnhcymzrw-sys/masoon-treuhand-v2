@@ -186,9 +186,23 @@
 }
 
 .home-contact__content {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+/* TEMPORAERE MESSLINIE | linke Kante des Kontakt-Titels */
+.home-contact__content::before {
+  content:"";
+  position:absolute;
+  top:-10000px;
+  bottom:-10000px;
+  left:0;
+  width:1px;
+  background:#d00000;
+  pointer-events:none;
+  z-index:9998;
 }
 
 .home-contact .section-title {
