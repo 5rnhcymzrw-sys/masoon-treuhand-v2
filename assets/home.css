@@ -1,13 +1,15 @@
 /* MASOON TREUHAND V2 | nur Startseite */
 
 .home-hero {
-  min-height: calc(100vh - var(--header-height) - var(--accent-height));
+  height: calc(100dvh - var(--header-height) - var(--accent-height));
+  min-height: calc(100dvh - var(--header-height) - var(--accent-height));
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(420px, 46%);
   background: rgba(255,255,255,.72);
 }
 
 .home-hero__content {
+  height: 100%;
   display: flex;
   align-items: stretch;
 }
@@ -15,7 +17,8 @@
 .home-hero__inner {
   width: min(calc(100% - (2 * var(--page-gutter))), 720px);
   margin-left: max(var(--page-gutter), calc((100vw - var(--content-width)) / 2));
-  min-height: calc(100vh - var(--header-height) - var(--accent-height));
+  height: 100%;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,7 +46,8 @@
 }
 
 .home-hero__image {
-  min-height: calc(100vh - var(--header-height) - var(--accent-height));
+  height: 100%;
+  min-height: 0;
   overflow: hidden;
 }
 
@@ -192,12 +196,17 @@
 
 @media (max-width: 800px) {
   .home-hero {
+    height: auto;
     min-height: auto;
     grid-template-columns: 1fr;
+  }
+  .home-hero__content {
+    height: auto;
   }
   .home-hero__inner {
     width: calc(100% - (2 * var(--page-gutter-mobile)));
     margin: 0 auto;
+    height: auto;
     min-height: auto;
     padding: 84px 0 64px;
   }
@@ -205,6 +214,7 @@
     font-size: clamp(42px, 12vw, 58px);
   }
   .home-hero__image {
+    height: auto;
     min-height: 460px;
   }
   .home-intro__grid,
