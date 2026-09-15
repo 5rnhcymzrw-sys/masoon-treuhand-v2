@@ -148,14 +148,9 @@ p,.body-copy {
   left:0;
   height:var(--accent-height);
   background:
-    linear-gradient(to bottom,
-      rgba(255,255,255,.42) 0 1px,
-      transparent 1px 3px,
-      rgba(255,255,255,.18) 3px 4px,
-      transparent 4px 6px,
-      rgba(0,0,0,.08) 6px 7px,
-      transparent 7px 8px),
-    var(--brand-gradient);
+    var(--brand-gradient) top / 100% 1px no-repeat,
+    var(--brand-gradient) center / 100% 1px no-repeat,
+    var(--brand-gradient) bottom / 100% 1px no-repeat;
 }
 .header-inner {
   height:100%;
