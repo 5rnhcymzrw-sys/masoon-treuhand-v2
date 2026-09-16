@@ -297,7 +297,6 @@ p + p,
   line-height:var(--title-line);
   letter-spacing:var(--title-spacing);
 }
-
 /* GROSSE TITEL: globaler Abstand zum Fliesstext
    Beispiel: Abstand von "Wir stehen Ihnen gerne zur Verfügung." zu "Bitte füllen Sie das Kontaktformular aus." */
 .page-title + p,
@@ -430,9 +429,7 @@ p + .subtitle,
   grid-template-rows:auto auto;
   column-gap:14px;
   align-content:start;
-  border-width:3px 1px 1px;
-  border-style:solid;
-  border-color:transparent;
+  border:1px solid transparent;
 }
 
 .service-card > div { display:contents; }
@@ -487,7 +484,9 @@ p + .subtitle,
   display:flex;
   flex-direction:column;
   background:rgba(255,255,255,.8);
-  border:1px solid transparent;
+  border-width:3px 1px 1px;
+  border-style:solid;
+  border-color:transparent;
   border-image:var(--brand-gradient) 1;
 }
 
