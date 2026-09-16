@@ -253,7 +253,7 @@
 
 .knowledge-card {
   min-height: 360px;
-  padding: 40px 42px 30px;
+  padding: 40px 42px 40px;
   display: flex;
   flex-direction: column;
   background: rgba(255,255,255,.8);
