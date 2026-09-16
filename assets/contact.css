@@ -1,0 +1,142 @@
+/* KONTAKTSEITE: nur Layout und Formular, Typografie bleibt global */
+
+.contact-page {
+  padding-top:var(--section-space);
+}
+
+.contact-page__intro {
+  max-width:920px;
+}
+
+.contact-page__lead {
+  margin-top:18px;
+  max-width:430px;
+}
+
+.contact-page__grid {
+  margin-top:72px;
+  display:grid;
+  grid-template-columns:minmax(0,.38fr) minmax(0,.62fr);
+  gap:96px;
+  align-items:start;
+}
+
+.contact-details {
+  display:grid;
+  gap:36px;
+}
+
+.contact-detail {
+  display:grid;
+  grid-template-columns:24px minmax(0,1fr);
+  column-gap:16px;
+  align-items:start;
+}
+
+.contact-detail svg {
+  width:20px;
+  height:20px;
+  margin-top:2px;
+  color:var(--label-color);
+}
+
+.contact-detail__content {
+  min-width:0;
+}
+
+.contact-detail a {
+  transition:color 180ms ease;
+}
+
+.contact-detail a:hover,
+.contact-detail a:focus-visible {
+  color:var(--ink);
+}
+
+.contact-form {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  column-gap:32px;
+  row-gap:30px;
+}
+
+.contact-form__field {
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.contact-form__field--message {
+  grid-column:1 / -1;
+}
+
+.contact-form label {
+  color:var(--label-color);
+  font-family:var(--font-body);
+  font-size:var(--label-size);
+  font-weight:var(--label-weight);
+  line-height:var(--label-line);
+  letter-spacing:var(--label-spacing);
+  text-transform:uppercase;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width:100%;
+  margin:0;
+  padding:0 0 12px;
+  color:var(--text);
+  background:transparent;
+  border:0;
+  border-bottom:1px solid rgba(23,23,21,.26);
+  border-radius:0;
+  outline:none;
+}
+
+.contact-form textarea {
+  min-height:132px;
+  resize:vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-bottom-color:#8d96a8;
+}
+
+.contact-form__submit {
+  grid-column:1 / -1;
+  justify-self:start;
+  margin-top:4px;
+  padding:14px 22px;
+  color:var(--white);
+  background:var(--black);
+  border:1px solid var(--black);
+  border-radius:0;
+  cursor:pointer;
+  font-family:var(--font-body);
+  font-size:var(--label-size);
+  font-weight:var(--label-weight);
+  line-height:var(--label-line);
+  letter-spacing:var(--label-spacing);
+}
+
+@media (max-width:800px) {
+  .contact-page {
+    padding-top:var(--section-space-mobile);
+  }
+
+  .contact-page__grid {
+    margin-top:56px;
+    grid-template-columns:1fr;
+    gap:56px;
+  }
+
+  .contact-form {
+    grid-template-columns:1fr;
+  }
+
+  .contact-form__field--message,
+  .contact-form__submit {
+    grid-column:1;
+  }
+}
