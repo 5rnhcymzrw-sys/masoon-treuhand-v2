@@ -17,7 +17,6 @@
 
 .contact-page__lead {
   max-width:430px;
-  margin-top:calc(2 * var(--body-spacing));
 }
 
 .contact-details {
