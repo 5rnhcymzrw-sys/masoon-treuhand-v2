@@ -1,7 +1,7 @@
 /* KONTAKTSEITE: nur Layout und Formular, Typografie bleibt global */
 
 .contact-page {
-  padding-top:var(--section-space-compact);
+  padding-top:var(--section-space);
 }
 
 .contact-page__grid {
@@ -12,7 +12,7 @@
 }
 
 .contact-page__info {
-  padding-top:calc(2 * var(--body-spacing));
+  padding-top:0;
 }
 
 .contact-page__lead {
@@ -65,6 +65,7 @@
 
 .contact-form {
   min-height:630px;
+  margin-top:calc(2 * var(--body-spacing));
   padding:calc(2 * var(--page-gutter)) var(--page-gutter);
   display:flex;
   flex-direction:column;
@@ -133,6 +134,7 @@
 
   .contact-form {
     min-height:0;
+    margin-top:0;
     padding:var(--page-gutter-mobile);
   }
 }
