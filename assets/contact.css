@@ -1,9 +1,14 @@
-/* KONTAKTSEITE: nur Layout und Formular, Typografie bleibt global */
+/* =========================================================
+   KONTAKTSEITE
+   Nur Layout und Formular. Typografie bleibt global geregelt.
+   ========================================================= */
 
+/* GESAMTE KONTAKTSEITE: Abstand von oben */
 .contact-page {
   padding-top:var(--section-space);
 }
 
+/* HAUPTAUFTEILUNG: linke Kontaktangaben und rechtes Formular */
 .contact-page__grid {
   display:grid;
   grid-template-columns:53% 47%;
@@ -11,20 +16,24 @@
   align-items:start;
 }
 
+/* LINKE SPALTE: gesamter Informationsbereich */
 .contact-page__info {
   padding-top:0;
 }
 
+/* EINLEITUNGSTEXT unter dem grossen Titel */
 .contact-page__lead {
   max-width:430px;
 }
 
+/* KONTAKTDATEN: Abstand nach oben und Abstand zwischen Adresse, Telefon und E Mail */
 .contact-details {
   margin-top:72px;
   display:grid;
   gap:42px;
 }
 
+/* EINZELNER KONTAKTBLOCK: Icon links und Text rechts */
 .contact-detail {
   display:grid;
   grid-template-columns:34px minmax(0,1fr);
@@ -33,6 +42,7 @@
   max-width:430px;
 }
 
+/* ICONS bei Adresse, Telefon und E Mail */
 .contact-detail svg {
   width:28px;
   height:30px;
@@ -45,19 +55,23 @@
   stroke-linejoin:round;
 }
 
+/* TEXTBEREICH neben den Icons */
 .contact-detail__content {
   min-width:0;
 }
 
+/* LINKS bei Telefonnummer und E Mail */
 .contact-detail a {
   transition:color 180ms ease;
 }
 
+/* LINKS bei Maus darüber oder Tastaturfokus */
 .contact-detail a:hover,
 .contact-detail a:focus-visible {
   color:var(--ink);
 }
 
+/* KONTAKTFORMULAR KASTEN: Höhe, Position und Innenabstände */
 .contact-form {
   box-sizing:border-box;
   height:616px;
@@ -71,6 +85,7 @@
   border-image:var(--brand-gradient) 1;
 }
 
+/* FORMULARFELDER: Abstand innerhalb und zwischen den einzelnen Feldern */
 .contact-form__field {
   display:flex;
   flex-direction:column;
@@ -78,6 +93,7 @@
   margin-bottom:var(--body-spacing);
 }
 
+/* EINGABEFELDER UND NACHRICHTENFELD: Breite, Linien und Innenabstand */
 .contact-form input,
 .contact-form textarea {
   width:100%;
@@ -91,10 +107,12 @@
   outline:none;
 }
 
+/* NORMALE EINGABEFELDER: Mindesthöhe */
 .contact-form input {
   min-height:36px;
 }
 
+/* NACHRICHTENFELD: Höhe */
 .contact-form textarea {
   height:100px;
   min-height:100px;
@@ -102,11 +120,13 @@
   resize:none;
 }
 
+/* AKTIVES EINGABEFELD: Farbe der unteren Linie */
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-bottom-color:#8d96a8;
 }
 
+/* BUTTON NACHRICHT SENDEN: Position und Abstand */
 .contact-form__submit {
   align-self:flex-start;
   margin-top:var(--body-spacing);
@@ -116,20 +136,27 @@
   cursor:pointer;
 }
 
+/* =========================================================
+   MOBILE ANSICHT bis 800 px
+   ========================================================= */
 @media (max-width:800px) {
+  /* MOBILE: Abstand der gesamten Kontaktseite von oben */
   .contact-page {
     padding-top:var(--section-space-mobile);
   }
 
+  /* MOBILE: Kontaktangaben und Formular untereinander */
   .contact-page__grid {
     grid-template-columns:1fr;
     gap:var(--section-space-mobile);
   }
 
+  /* MOBILE: linke Kontaktspalte */
   .contact-page__info {
     padding-top:0;
   }
 
+  /* MOBILE: Formularhöhe, Position und Innenabstand */
   .contact-form {
     height:auto;
     min-height:0;
