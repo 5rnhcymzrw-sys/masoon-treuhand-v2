@@ -33,14 +33,14 @@
   padding: 72px 72px 72px 0;
 }
 
-/* GANZ GROSSER TITEL-HERO: Schrift global geregelt */
+/* GANZ GROSSER TITEL-HERO: Schrift und Abstand global geregelt */
 .home-hero__title {
   max-width: 620px;
 }
 
+/* HERO-FLIESSTEXT: Schrift und Abstand global geregelt */
 .home-hero__copy {
   max-width: 380px;
-  margin-top: 24px;
 }
 
 .home-hero__actions {
@@ -128,10 +128,6 @@
 
 .home-intro__copy {
   max-width: 590px;
-}
-
-.home-intro__copy p + p {
-  margin-top: 18px;
 }
 
 .home-intro__copy .action {
@@ -248,11 +244,10 @@
   transform:translateX(-6px);
 }
 
-/* DIENSTLEISTUNGSKÄSTEN: Fliesstext, Schrift global geregelt */
+/* DIENSTLEISTUNGSKÄSTEN: Fliesstext, Schrift und Abstand global geregelt */
 .service-card p {
   grid-column: 1 / -1;
   grid-row: 2;
-  margin-top: 14px;
   max-width: 32ch;
 }
 
@@ -289,7 +284,7 @@
   background-size: 100% 1px;
 }
 
-/* FACHWISSEN: Fliesstext, Schrift global geregelt */
+/* FACHWISSEN: Fliesstext, Schrift und Abstand global geregelt */
 .knowledge-card p {
-  margin-top: 22px;
+  margin-top: var(--subtitle-bottom-space);
 }
