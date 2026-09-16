@@ -14,7 +14,7 @@
   --brand-gradient-middle: linear-gradient(110deg,#e8e5df 0%,#c7cbd3 100%);
   --brand-gradient-right: linear-gradient(110deg,#c7cbd3 0%,#8d96a8 100%);
 
-  /* FLIESSTEXT: Schrift, Farbe und Abstände */
+  /* FLIESSTEXTE: Schrift, Farbe und Abstände */
   --font-body: "Inter", Arial, sans-serif;
   --body-size: 14px;
   --body-weight: 300;
@@ -139,8 +139,8 @@ main { padding-bottom:var(--page-bottom-space); }
   position:relative;
   z-index:10;
   height:var(--header-height);
-  color:var(--white);
-  background:var(--black);
+  color:var(--black);
+  background:var(--white);
 }
 
 .site-header::after {
