@@ -442,16 +442,15 @@ p + p,
   min-height:var(--footer-height);
   display:flex;
   align-items:center;
-  justify-content:space-between;
-  gap:36px;
+  justify-content:flex-start;
+  gap:34px;
 }
 
 .footer-home,
 .footer-links a { color:var(--footer-label-color); }
 
 .footer-links {
-  position:absolute;
-  left:41%;
+  position:static;
   display:flex;
   align-items:center;
   justify-content:flex-start;
