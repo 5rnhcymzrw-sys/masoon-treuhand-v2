@@ -57,7 +57,7 @@
 
 /* STANDORT ICON: minimal nach links bis zur Ausrichtungslinie */
 .contact-detail:first-child svg {
-  transform:translateX(-4px);
+  transform:translateX(-2px);
 }
 
 /* TEXTBEREICH neben den Icons */
@@ -83,7 +83,7 @@
   min-height:616px;
   margin-top:calc(-5.1% + 7px);
   transform:translateX(-38px);
-  padding:62px 56px;
+  padding:62px 62px;
   display:flex;
   flex-direction:column;
   border:1px solid transparent;
