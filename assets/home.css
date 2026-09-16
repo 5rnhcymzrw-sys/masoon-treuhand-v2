@@ -1,50 +1,33 @@
 /* MASOON TREUHAND V2 | nur Startseite */
 
 /* =========================================================
-   HERO UND KOPFZEILE: gemeinsamer Hintergrund
-   ========================================================= */
-body.home-page::before {
-  content:"";
-  position:absolute;
-  top:0;
-  right:0;
-  left:0;
-  height:100dvh;
-  background-image:url("images/backgrounds/background-3.png");
-  background-size:200% auto;
-  background-position:100% 40%;
-  background-repeat:no-repeat;
-  pointer-events:none;
-  z-index:0;
-}
-
-.home-page .site-header,
-.home-page main {
-  position:relative;
-  z-index:1;
-}
-
-.home-page .site-header {
-  background:transparent;
-}
-
-/* =========================================================
    HERO
    ========================================================= */
+
+/* STARTSEITE KOPFZEILE: Hero-Hintergrund nach oben weiterziehen */
+.home-page .site-header {
+  background-image:url("images/backgrounds/background-3.png");
+  background-size:200% auto;
+  background-position:100% calc(40% + var(--header-height));
+  background-repeat:no-repeat;
+}
 
 .home-hero {
   height: calc(100dvh - var(--header-height));
   min-height: calc(100dvh - var(--header-height));
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(420px, 50%);
-  background: transparent;
+  background: rgba(255,255,255,.72);
 }
 
 .home-hero__content {
   height: 100%;
   display: flex;
   align-items: stretch;
-  background: transparent;
+  background-image:url("images/backgrounds/background-3.png");
+  background-size:200% auto;
+  background-position:100% 40%;
+  background-repeat:no-repeat;
 }
 
 .home-hero__inner {
@@ -117,6 +100,9 @@ body.home-page::before {
 
 /* HERO: Mobil */
 @media (max-width: 800px) {
+  .home-page .site-header {
+    background-size:200% auto;
+  }
   .home-hero {
     height: auto;
     min-height: auto;
