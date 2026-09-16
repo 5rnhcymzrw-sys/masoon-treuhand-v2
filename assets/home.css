@@ -127,21 +127,12 @@
   display: contents;
 }
 
-/*Abstände Zahlen 01-06 */
+/* DIENSTLEISTUNGSKÄSTEN: Zahlen 01 bis 06 */
 .service-card__number {
   position: absolute;
   top: 43px;
   left: 40px;
   transform: translateY(-5px);
-}
-
-/* DIENSTLEISTUNGSKÄSTEN: Verlauf durchgehend wie alte Webseite */
-.service-card:nth-child(3n + 1) { border-image: var(--brand-gradient-left) 1; }
-.service-card:nth-child(3n + 2) { border-image: var(--brand-gradient-middle) 1; }
-.service-card:nth-child(3n + 3) { border-image: var(--brand-gradient-right) 1; }
-
-/* DIENSTLEISTUNGSKÄSTEN: Zahlen 01 bis 06 wie alte Webseite */
-.service-card__number {
   color: #c9c7c5;
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 42px;
@@ -150,6 +141,11 @@
   letter-spacing: -1.76px;
   transition: color 180ms ease;
 }
+
+/* DIENSTLEISTUNGSKÄSTEN: Verlauf durchgehend wie alte Webseite */
+.service-card:nth-child(3n + 1) { border-image: var(--brand-gradient-left) 1; }
+.service-card:nth-child(3n + 2) { border-image: var(--brand-gradient-middle) 1; }
+.service-card:nth-child(3n + 3) { border-image: var(--brand-gradient-right) 1; }
 
 /* DIENSTLEISTUNGSKÄSTEN: Zahl beim Darüberfahren schwarz */
 .service-card:hover .service-card__number {
