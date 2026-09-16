@@ -201,7 +201,7 @@ main {
   display:block;
   color:var(--header-label-color);
   font-family:var(--font-heading);
-  font-size:28px;
+  font-size:19px;
   font-weight:var(--title-weight);
   line-height:1;
   letter-spacing:var(--title-spacing);
