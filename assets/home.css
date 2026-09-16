@@ -4,11 +4,11 @@
    HERO
    ========================================================= */
 
-/* STARTSEITE KOPFZEILE: Hero-Hintergrund nach oben weiterziehen */
+/* STARTSEITE KOPFZEILE: Hintergrundbild 3 nur in der Kopfzeile weiterzeigen */
 .home-page .site-header {
   background-image:url("images/backgrounds/background-3.png");
   background-size:200% auto;
-  background-position:100% calc(40% + var(--header-height));
+  background-position:100% 0;
   background-repeat:no-repeat;
 }
 
@@ -100,9 +100,6 @@
 
 /* HERO: Mobil */
 @media (max-width: 800px) {
-  .home-page .site-header {
-    background-size:200% auto;
-  }
   .home-hero {
     height: auto;
     min-height: auto;
