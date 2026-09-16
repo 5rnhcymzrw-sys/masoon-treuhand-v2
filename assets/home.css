@@ -17,8 +17,8 @@
   display: flex;
   align-items: stretch;
   background-image: url("images/backgrounds/background-3.png");
-  background-size: 100% auto;
-  background-position: center center;
+  background-size: 50% auto;
+  background-position: left top;
   background-repeat: no-repeat;
 }
 
