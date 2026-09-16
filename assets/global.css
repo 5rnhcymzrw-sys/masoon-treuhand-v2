@@ -94,7 +94,7 @@ body {
   background-color:var(--white);
   background-image:url("images/backgrounds/background-2.png");
   background-size:100%;
-  background-position:90%;
+  background-position:80% 3%;
   background-repeat:repeat-y;
   background-attachment:fixed;
   font-family:var(--font-body);
@@ -483,7 +483,6 @@ p + p,
   grid-template-columns:minmax(0,.4fr) minmax(0,.6fr);
   align-items:center;
   gap:48px;
-  background:rgba(255,255,255,.76);
   border:1px solid transparent;
   border-image:var(--brand-gradient) 1;
 }
