@@ -33,16 +33,9 @@
   padding: 72px 72px 72px 0;
 }
 
-/* GANZ GROSSER TITEL-HERO */
+/* GANZ GROSSER TITEL-HERO: Schrift global geregelt */
 .home-hero__title {
   max-width: 620px;
-  margin: 0;
-  color: var(--ink);
-  font-family: var(--font-heading);
-  font-size: clamp(52px, 5vw, 66px);
-  font-weight: 700;
-  line-height: .96;
-  letter-spacing: 0;
 }
 
 .home-hero__copy {
@@ -113,9 +106,6 @@
     height: auto;
     min-height: auto;
     padding: 84px 0 64px;
-  }
-  .home-hero__title {
-    font-size: clamp(42px, 12vw, 58px);
   }
   .home-hero__image {
     height: auto;
@@ -250,20 +240,15 @@
   color: var(--ink);
 }
 
+/* DIENSTLEISTUNGSKÄSTEN: Zwischentitel, Schrift global geregelt */
 .service-card h3 {
   grid-column: 2;
   grid-row: 1;
   align-self: center;
-  margin: 0;
   transform:translateX(-6px);
-  color: var(--ink);
-  font-family: var(--font-heading);
-  font-size: var(--subtitle-size);
-  font-weight: var(--subtitle-weight);
-  line-height: var(--subtitle-line);
-  letter-spacing: var(--subtitle-spacing);
 }
 
+/* DIENSTLEISTUNGSKÄSTEN: Fliesstext, Schrift global geregelt */
 .service-card p {
   grid-column: 1 / -1;
   grid-row: 2;
@@ -295,21 +280,16 @@
   margin-bottom: 38px;
 }
 
+/* FACHWISSEN: Zwischentitel, Schrift global geregelt */
 .knowledge-card h3 {
-  margin: 0;
   padding-bottom: 22px;
-  color: var(--ink);
-  font-family: var(--font-heading);
-  font-size: var(--subtitle-size);
-  font-weight: var(--subtitle-weight);
-  line-height: var(--subtitle-line);
-  letter-spacing: var(--subtitle-spacing);
   background-image: var(--brand-gradient);
   background-repeat: no-repeat;
   background-position: left bottom;
   background-size: 100% 1px;
 }
 
+/* FACHWISSEN: Fliesstext, Schrift global geregelt */
 .knowledge-card p {
   margin-top: 22px;
 }
