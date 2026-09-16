@@ -98,6 +98,11 @@
   margin-bottom:var(--body-spacing);
 }
 
+/* FORMULARFELDER NACHNAME BIS TELEFON: mehr Abstand nach der unteren Linie */
+.contact-form__field:not(.contact-form__field--message) {
+  margin-bottom:26px;
+}
+
 /* EINGABEFELDER UND NACHRICHTENFELD: Breite, Linien und Innenabstand */
 .contact-form input,
 .contact-form textarea {
