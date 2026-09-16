@@ -430,7 +430,6 @@ p + .subtitle,
   grid-template-rows:auto auto;
   column-gap:14px;
   align-content:start;
-  background:rgba(255,255,255,.76);
   border:1px solid transparent;
 }
 
@@ -450,10 +449,39 @@ p + .subtitle,
   transition:color 180ms ease;
 }
 
-.service-card:nth-child(3n + 1) { border-image:var(--brand-gradient-left) 1; }
-.service-card:nth-child(3n + 2) { border-image:var(--brand-gradient-middle) 1; }
-.service-card:nth-child(3n + 3) { border-image:var(--brand-gradient-right) 1; }
+/* DIENSTLEISTUNGSKACHELN: Creme, Weiss und Schwarz aus der Kopfzeilen-Palette
+   Beispiel: Administration / Buchhaltung / Personaladministration */
+.service-card:nth-child(3n + 1) {
+  background:#f5f1e8;
+  border-color:#e7dfc1;
+}
+
+.service-card:nth-child(3n + 2) {
+  background:rgba(255,255,255,.88);
+  border-color:#dedbd5;
+}
+
+.service-card:nth-child(3n + 3) {
+  background:#0b0b0b;
+  border-color:#0b0b0b;
+}
+
+/* SCHWARZE DIENSTLEISTUNGSKACHELN: helle Texte für guten Kontrast
+   Beispiel: Personaladministration / Unternehmensberatung */
+.service-card:nth-child(3n + 3) h3 {
+  color:var(--white);
+}
+
+.service-card:nth-child(3n + 3) p {
+  color:#c9c9c6;
+}
+
+.service-card:nth-child(3n + 3) .service-card__number {
+  color:#e7dfc1;
+}
+
 .service-card:hover .service-card__number { color:var(--ink); }
+.service-card:nth-child(3n + 3):hover .service-card__number { color:var(--white); }
 
 .service-card h3 {
   grid-column:2;
