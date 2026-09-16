@@ -506,8 +506,8 @@ p + p,
 .legal-section { padding-top:var(--section-space); }
 
 .legal-card {
-  min-height:463px;
-  padding:43px;
+  min-height:405px;
+  padding: 67px 156px 43px 75px;
   display:grid;
   grid-template-columns:minmax(0,.4fr) minmax(0,.6fr);
   align-items:start;
@@ -518,7 +518,11 @@ p + p,
 }
 
 .legal-card .page-title { margin:0; }
-.legal-card .legal-copy { align-self:start; }
+.legal-card .legal-copy {
+  align-self:start;
+  margin-top:14px;
+  margin-right: -90px;
+ }
 
 @media (max-width:800px) {
   .legal-section { padding-top:var(--section-space-mobile); }
