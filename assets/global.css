@@ -31,13 +31,14 @@
   --header-label-color: #000000;
   --footer-label-color: #797c82;
 
-  /* GROSSE TITEL: Schrift und Abstand unten */
+  /* GROSSE TITEL: Schrift, maximale Breite und Abstand unten */
   --font-heading: "PT Serif", Georgia, serif;
   --title-size: 46px;
   --title-weight: 700;
   --title-line: 1.08;
   --title-spacing: -0.018em;
-  --title-bottom-space: 0px;
+  --title-max-width: 520px;
+  --title-bottom-space: 34px;
 
   /* ZWISCHENTITEL: Schrift und globale Abstände */
   --subtitle-size: 22px;
@@ -276,6 +277,7 @@ p + p,
 
 /* GROSSE TITEL: global */
 .page-title,.section-title {
+  max-width:var(--title-max-width);
   margin:0 0 var(--title-bottom-space);
   color:var(--ink);
   font-family:var(--font-heading);
@@ -502,7 +504,6 @@ p + .subtitle,
   align-items:flex-start;
 }
 
-.closing-card .section-title { max-width:780px; }
 .closing-card .action { margin-top:38px; }
 
 @media (max-width:800px) {
