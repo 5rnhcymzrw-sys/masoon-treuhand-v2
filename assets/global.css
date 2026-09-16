@@ -148,7 +148,7 @@ main { padding-bottom:var(--page-bottom-space); }
   right:0;
   bottom:-8px;
   left:0;
-  height:15px;
+  height:13px;
   background:
     var(--brand-gradient) top / 100% 2px no-repeat,
     var(--brand-gradient) center / 100% 2px no-repeat,
