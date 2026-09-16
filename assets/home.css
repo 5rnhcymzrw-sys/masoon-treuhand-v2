@@ -290,13 +290,9 @@
   border-image: var(--brand-gradient) 1;
 }
 
+/* FACHWISSEN: Datum, Schrift global geregelt */
 .knowledge-card__date {
   margin-bottom: 38px;
-  color: var(--muted);
-  font-size: var(--label-size);
-  font-weight: var(--label-weight);
-  letter-spacing: var(--label-spacing);
-  text-transform: uppercase;
 }
 
 .knowledge-card h3 {
