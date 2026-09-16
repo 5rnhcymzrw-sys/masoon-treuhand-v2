@@ -116,6 +116,19 @@ body::after {
   z-index:9999;
 }
 
+/* PROVISORISCH: zweite rote Messlinie – left-Wert zum Verschieben ändern */
+body::before {
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:56%;
+  width:1px;
+  background:#d00000;
+  pointer-events:none;
+  z-index:9999;
+}
+
 img,picture,svg { display:block; max-width:100%; }
 a { color:inherit; text-decoration:none; }
 button,input,textarea,select { font:inherit; }
