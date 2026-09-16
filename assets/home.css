@@ -193,7 +193,7 @@
 .service-card {
   position: relative;
   min-height: 232px;
-  padding:50px 43px 43px 43px;
+  padding:48px 43px 43px 43px;
   display: grid;
   grid-template-columns: 38px minmax(0,1fr);
   grid-template-rows: auto auto;
