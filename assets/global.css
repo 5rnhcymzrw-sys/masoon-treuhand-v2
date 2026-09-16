@@ -120,13 +120,13 @@ body::after {
   z-index:9999;
 }
 
-/* PROVISORISCH: zweite Messlinie – left-Wert zum Verschieben ändern */
+/* PROVISORISCH: zweite grüne Messlinie – left-Wert zum Verschieben ändern */
 body::before {
   content:"";
   position:absolute;
   top:0;
   bottom:0;
-  left:22%;
+  left:18%;
   width:1px;
   background:#00d092;
   pointer-events:none;
