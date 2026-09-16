@@ -150,9 +150,9 @@ main { padding-bottom:var(--page-bottom-space); }
   left:0;
   height:13px;
   background:
-    var(--brand-gradient) top / 100% 2px no-repeat,
-    var(--brand-gradient) center / 100% 2px no-repeat,
-    var(--brand-gradient) bottom / 100% 2px no-repeat;
+    var(--brand-gradient) top / 100% 1px no-repeat,
+    var(--brand-gradient) center / 100% 1px no-repeat,
+    var(--brand-gradient) bottom / 100% 1px no-repeat;
 }
 
 .header-inner {
