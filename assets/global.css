@@ -37,8 +37,8 @@
   --title-weight: 700;
   --title-line: 1.08;
   --title-spacing: -0.018em;
-  --title-max-width: 760px;
-  --title-bottom-space: 0px;
+  --title-max-width: 520px;
+  --title-bottom-space: 34px;
 
   /* ZWISCHENTITEL: Schrift und globale Abstände */
   --subtitle-size: 22px;
