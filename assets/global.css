@@ -22,11 +22,12 @@
   --body-spacing: 18px;
 
   /* KLEINE GROSSBUCHSTABEN: Schrift und Farben */
+  --font-label: "Inter", Arial, sans-serif;
   --label-size: 11px;
-  --label-weight: 500;
+  --label-weight: 600;
   --label-line: 1.4;
-  --label-spacing: 1.1px;
-  --label-color: #777777;
+  --label-spacing: 1px;
+  --label-color: #000000;
   --header-label-color: #ffffff;
   --footer-label-color: #797c82;
 
@@ -138,8 +139,8 @@ main { padding-bottom:var(--page-bottom-space); }
   position:relative;
   z-index:10;
   height:var(--header-height);
-  color:var(--black);
-  background:var(--white);
+  color:var(--white);
+  background:var(--black);
 }
 
 .site-header::after {
@@ -303,7 +304,7 @@ p + p,
 .knowledge-card__date,
 .footer-home,
 .footer-links a {
-  font-family:var(--font-body);
+  font-family:var(--font-label);
   font-size:var(--label-size);
   font-weight:var(--label-weight);
   line-height:var(--label-line);
