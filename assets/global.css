@@ -1,6 +1,8 @@
 /* MASOON TREUHAND V2 | einzige zentrale Designquelle */
 
-/* GLOBALE DESIGNWERTE */
+/* =========================================================
+   GLOBALE DESIGNWERTE
+   ========================================================= */
 :root {
   --black: #000000;
   --ink: #171715;
@@ -43,6 +45,10 @@
   --footer-height: 80px;
   --accent-height: 8px;
 }
+
+/* =========================================================
+   WEBSITE: GRUNDLAGEN
+   ========================================================= */
 
 /* BOXEN */
 *,*::before,*::after { box-sizing: border-box; }
@@ -93,7 +99,7 @@ a { color:inherit; text-decoration:none; }
 /* FORMULAR: Schrift */
 button,input,textarea,select { font:inherit; }
 
-/* FUSSZEILE: Leerraum davor */
+/* WEBSITE: Leerraum vor der Fusszeile */
 main { padding-bottom:var(--section-space); }
 
 /* INHALT: zentrale Breite */
@@ -105,136 +111,9 @@ main { padding-bottom:var(--section-space); }
 /* ABSCHNITT: Abstand oben und unten */
 .section { padding-block:var(--section-space); }
 
-/* FLIESSTEXT: Schrift */
-p,.body-copy {
-  margin:0;
-  color:var(--text);
-  font-family:var(--font-body);
-  font-size:var(--body-size);
-  font-weight:var(--body-weight);
-  line-height:var(--body-line);
-  letter-spacing:0;
-}
-
-/* TITEL: grosse Seitentitel */
-.page-title,.section-title {
-  margin:0;
-  color:var(--ink);
-  font-family:var(--font-heading);
-  font-size:var(--title-size);
-  font-weight:var(--title-weight);
-  line-height:var(--title-line);
-  letter-spacing:var(--title-spacing);
-}
-
-/* ZWISCHENTITEL: Schrift */
-.subtitle {
-  margin:0;
-  color:var(--ink);
-  font-family:var(--font-heading);
-  font-size:var(--subtitle-size);
-  font-weight:var(--subtitle-weight);
-  line-height:var(--subtitle-line);
-  letter-spacing:var(--subtitle-spacing);
-}
-
-/* BEREICHSTITEL: kleine Titel */
-.section-label {
-  display:flex;
-  align-items:center;
-  gap:14px;
-  margin:0 0 30px;
-  color:var(--muted);
-  font-family:var(--font-body);
-  font-size:var(--label-size);
-  font-weight:var(--label-weight);
-  line-height:1.4;
-  letter-spacing:var(--label-spacing);
-  text-transform:uppercase;
-}
-
-/* BEREICHSTITEL: kurze Linie */
-.section-label::before {
-  content:"";
-  width:30px;
-  height:1px;
-  flex:0 0 30px;
-  background:currentColor;
-}
-
-/* BUTTON: Textlink mit Pfeil */
-.action {
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  color:var(--muted);
-  font-family:var(--font-body);
-  font-size:var(--label-size);
-  font-weight:var(--label-weight);
-  line-height:1.4;
-  letter-spacing:var(--label-spacing);
-  text-transform:uppercase;
-  transition:color 180ms ease;
-}
-
-/* BUTTON: Pfeil als Textzeichen, kein Icon */
-.action::after {
-  content:"\2197\FE0E";
-  font-family:Arial,sans-serif;
-  font-size:1.2em;
-  font-weight:500;
-  line-height:1;
-  letter-spacing:0;
-  text-transform:none;
-position:relative;
-top:-2px;
-
-}
-
-/* BUTTON: Hover */
-.action:hover,.action:focus-visible { color:var(--ink); }
-
-/* ABSCHLUSSKASTEN: globaler Abstand oberhalb */
-.closing-card-section {
-  padding-top:84px;
-}
-
-/* ABSCHLUSSKASTEN: globaler grosser Kasten */
-.closing-card {
-  min-height:463px;
-  padding:43px;
-  display:grid;
-  grid-template-columns:minmax(0,.4fr) minmax(0,.6fr);
-  align-items:center;
-  gap:48px;
-  background:rgba(255,255,255,.76);
-  border:1px solid transparent;
-  border-image:var(--brand-gradient) 1;
-}
-
-/* ABSCHLUSSKASTEN: Bereichstitel links */
-.closing-card > .section-label {
-  margin-bottom:0;
-}
-
-/* ABSCHLUSSKASTEN: Textblock rechts */
-.closing-card__content {
-  position:relative;
-  left:-26px;
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-}
-
-/* ABSCHLUSSKASTEN: grosser Titel */
-.closing-card .section-title {
-  max-width:780px;
-}
-
-/* ABSCHLUSSKASTEN: Link unter dem Titel */
-.closing-card .action {
-  margin-top:38px;
-}
+/* =========================================================
+   KOPFZEILE
+   ========================================================= */
 
 /* KOPFZEILE: schwarzer Balken */
 .site-header {
@@ -341,6 +220,189 @@ top:-2px;
   width:40px;
 }
 
+/* KOPFZEILE: Tablet */
+@media (max-width:1050px) {
+  .site-nav { gap:20px; }
+  .site-brand { width:210px; flex-basis:210px; }
+}
+
+/* KOPFZEILE: Mobil */
+@media (max-width:800px) {
+  :root { --header-height:92px; }
+  .header-inner {
+    width:100%;
+    margin-inline:0;
+    justify-content:flex-start;
+  }
+  .site-brand {
+    width:190px;
+    height:var(--header-height);
+    flex-basis:190px;
+  }
+  .site-nav { display:none; }
+}
+
+/* =========================================================
+   SCHRIFTEN UND WIEDERVERWENDBARE ELEMENTE
+   ========================================================= */
+
+/* FLIESSTEXT: Schrift */
+p,.body-copy {
+  margin:0;
+  color:var(--text);
+  font-family:var(--font-body);
+  font-size:var(--body-size);
+  font-weight:var(--body-weight);
+  line-height:var(--body-line);
+  letter-spacing:0;
+}
+
+/* TITEL: grosse Seitentitel */
+.page-title,.section-title {
+  margin:0;
+  color:var(--ink);
+  font-family:var(--font-heading);
+  font-size:var(--title-size);
+  font-weight:var(--title-weight);
+  line-height:var(--title-line);
+  letter-spacing:var(--title-spacing);
+}
+
+/* ZWISCHENTITEL: Schrift */
+.subtitle {
+  margin:0;
+  color:var(--ink);
+  font-family:var(--font-heading);
+  font-size:var(--subtitle-size);
+  font-weight:var(--subtitle-weight);
+  line-height:var(--subtitle-line);
+  letter-spacing:var(--subtitle-spacing);
+}
+
+/* BEREICHSTITEL: kleine Titel */
+.section-label {
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin:0 0 30px;
+  color:var(--muted);
+  font-family:var(--font-body);
+  font-size:var(--label-size);
+  font-weight:var(--label-weight);
+  line-height:1.4;
+  letter-spacing:var(--label-spacing);
+  text-transform:uppercase;
+}
+
+/* BEREICHSTITEL: kurze Linie */
+.section-label::before {
+  content:"";
+  width:30px;
+  height:1px;
+  flex:0 0 30px;
+  background:currentColor;
+}
+
+/* BUTTON: Textlink mit Pfeil */
+.action {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:var(--muted);
+  font-family:var(--font-body);
+  font-size:var(--label-size);
+  font-weight:var(--label-weight);
+  line-height:1.4;
+  letter-spacing:var(--label-spacing);
+  text-transform:uppercase;
+  transition:color 180ms ease;
+}
+
+/* BUTTON: Pfeil als Textzeichen, kein Icon */
+.action::after {
+  content:"\2197\FE0E";
+  font-family:Arial,sans-serif;
+  font-size:1.2em;
+  font-weight:500;
+  line-height:1;
+  letter-spacing:0;
+  text-transform:none;
+  position:relative;
+  top:-2px;
+}
+
+/* BUTTON: Hover */
+.action:hover,.action:focus-visible { color:var(--ink); }
+
+/* SCHRIFTEN UND ABSTÄNDE: Mobil */
+@media (max-width:800px) {
+  :root { --title-size:40px; }
+  body { background-attachment:scroll; }
+  main { padding-bottom:var(--section-space-mobile); }
+  .container { width:calc(100% - (2 * var(--page-gutter-mobile))); }
+  .section { padding-block:var(--section-space-mobile); }
+}
+
+/* =========================================================
+   ABSCHLUSSKASTEN / KONTAKT
+   ========================================================= */
+
+/* ABSCHLUSSKASTEN: globaler Abstand oberhalb */
+.closing-card-section {
+  padding-top:84px;
+}
+
+/* ABSCHLUSSKASTEN: globaler grosser Kasten */
+.closing-card {
+  min-height:463px;
+  padding:43px;
+  display:grid;
+  grid-template-columns:minmax(0,.4fr) minmax(0,.6fr);
+  align-items:center;
+  gap:48px;
+  background:rgba(255,255,255,.76);
+  border:1px solid transparent;
+  border-image:var(--brand-gradient) 1;
+}
+
+/* ABSCHLUSSKASTEN: Bereichstitel links */
+.closing-card > .section-label {
+  margin-bottom:0;
+}
+
+/* ABSCHLUSSKASTEN: Textblock rechts */
+.closing-card__content {
+  position:relative;
+  left:-26px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+/* ABSCHLUSSKASTEN: grosser Titel */
+.closing-card .section-title {
+  max-width:780px;
+}
+
+/* ABSCHLUSSKASTEN: Link unter dem Titel */
+.closing-card .action {
+  margin-top:38px;
+}
+
+/* ABSCHLUSSKASTEN: Mobil */
+@media (max-width:800px) {
+  .closing-card {
+    grid-template-columns:1fr;
+    gap:18px;
+    align-items:flex-start;
+  }
+  .closing-card__content { left:0; }
+}
+
+/* =========================================================
+   FUSSZEILE
+   ========================================================= */
+
 /* FUSSZEILE: schwarzer Balken */
 .site-footer {
   position:relative;
@@ -391,37 +453,13 @@ top:-2px;
   gap:34px;
 }
 
-/* TABLET: Navigation, Fusszeile, Logo */
+/* FUSSZEILE: Tablet */
 @media (max-width:1050px) {
-  .site-nav,
   .footer-links { gap:20px; }
-  .site-brand { width:210px; flex-basis:210px; }
 }
 
-/* MOBIL: Titel, Seitenrand, Kopfzeile, Fusszeile */
+/* FUSSZEILE: Mobil */
 @media (max-width:800px) {
-  :root { --title-size:40px; --header-height:92px; }
-  body { background-attachment:scroll; }
-  main { padding-bottom:var(--section-space-mobile); }
-  .container { width:calc(100% - (2 * var(--page-gutter-mobile))); }
-  .section { padding-block:var(--section-space-mobile); }
-  .closing-card {
-    grid-template-columns:1fr;
-    gap:18px;
-    align-items:flex-start;
-  }
-  .closing-card__content { left:0; }
-  .header-inner {
-    width:100%;
-    margin-inline:0;
-    justify-content:flex-start;
-  }
-  .site-brand {
-    width:190px;
-    height:var(--header-height);
-    flex-basis:190px;
-  }
-  .site-nav { display:none; }
   .footer-inner {
     min-height:120px;
     padding-block:24px;
