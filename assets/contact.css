@@ -87,36 +87,62 @@
   color:var(--ink);
 }
 
-/* KONTAKTFORMULAR KASTEN: Höhe, Position und Innenabstände
+/* KONTAKTFORMULAR KASTEN: zweispaltige, ruhige Formulararchitektur
    Beispiel: "Nachname", "Vorname", "E Mail", "Telefon", "Nachricht", "Nachricht senden" */
 .contact-form {
   position:relative;
   box-sizing:border-box;
-  height:648px;
-  min-height:648px;
+  height:600px;
+  min-height:600px;
   margin-top:calc(-5.1% + 7px);
   transform:translateX(-38px);
-  padding:62px 62px;
-  display:flex;
-  flex-direction:column;
+  padding:56px 62px 50px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  column-gap:36px;
+  align-content:start;
   overflow:hidden;
+  background:linear-gradient(180deg,rgba(255,255,255,.82),rgba(255,255,255,.62));
   border:1px solid transparent;
   border-image:var(--brand-gradient) 1;
+  box-shadow:0 18px 44px rgba(23,23,21,.035);
 }
 
-/* FORMULARFELDER: Abstand innerhalb und zwischen den einzelnen Feldern
+/* FORMULARFELDER: klare Abstände und ruhige Hierarchie
    Beispiel: "Nachname", "Vorname", "E Mail", "Telefon", "Nachricht" */
 .contact-form__field {
+  position:relative;
   display:flex;
   flex-direction:column;
-  gap:calc(var(--body-spacing) / 2);
-  margin-bottom:var(--body-spacing);
+  gap:10px;
+  margin:0 0 32px;
 }
 
-/* FORMULARFELDER NACHNAME BIS TELEFON: mehr Abstand nach der unteren Linie
-   Beispiel: Linie unter "Nachname", "Vorname", "E Mail" und "Telefon" */
-.contact-form__field:not(.contact-form__field--message) {
-  margin-bottom:26px;
+/* FORMULARFELDER ERSTE ZEILE: Nachname links und Vorname rechts
+   Beispiel: "Nachname", "Vorname" */
+.contact-form > .contact-form__field:nth-child(1) {
+  grid-column:1;
+}
+
+.contact-form > .contact-form__field:nth-child(2) {
+  grid-column:2;
+}
+
+/* FORMULARFELDER ZWEITE ZEILE: E Mail links und Telefon rechts
+   Beispiel: "E Mail", "Telefon" */
+.contact-form > .contact-form__field:nth-child(3) {
+  grid-column:1;
+}
+
+.contact-form > .contact-form__field:nth-child(4) {
+  grid-column:2;
+}
+
+/* NACHRICHTENFELD: über die gesamte Formularbreite
+   Beispiel: "Nachricht" */
+.contact-form__field--message {
+  grid-column:1 / -1;
+  margin-bottom:24px;
 }
 
 /* FELDBESCHRIFTUNG: ruhiger Farbwechsel beim Anklicken
@@ -131,50 +157,64 @@
   color:var(--ink);
 }
 
-/* EINGABEFELDER UND NACHRICHTENFELD: Breite, Linien und Innenabstand
-   Beispiel: Eingabebereich unter "Nachname" bis "Nachricht" */
+/* EINGABEFELDER UND NACHRICHTENFELD: feine Verlaufslinie und grosszügige Eingabefläche
+   Beispiel: Linie unter "Nachname", "Vorname", "E Mail", "Telefon" und "Nachricht" */
 .contact-form input,
 .contact-form textarea {
   width:100%;
   margin:0;
-  padding:3px 0 7px;
+  padding:5px 0 9px;
   color:var(--text);
-  background:transparent;
+  caret-color:#8d96a8;
+  background-color:transparent;
+  background-image:linear-gradient(90deg,rgba(243,232,212,.95) 0%,rgba(232,229,223,.82) 52%,rgba(141,150,168,.48) 100%);
+  background-repeat:no-repeat;
+  background-position:left bottom;
+  background-size:100% 1px;
   border:0;
-  border-bottom:1px solid rgba(23,23,21,.14);
   border-radius:0;
   outline:none;
-  transition:border-color 180ms ease;
+  transition:background-image 180ms ease,color 180ms ease;
 }
 
-/* NORMALE EINGABEFELDER: Mindesthöhe
+/* EINGABEFELDER BEI MAUS DARÜBER: Verlauf etwas deutlicher
+   Beispiel: Linie unter "Nachname" */
+.contact-form input:hover,
+.contact-form textarea:hover {
+  background-image:var(--brand-gradient);
+}
+
+/* NORMALE EINGABEFELDER: etwas mehr Höhe für ruhigere Proportionen
    Beispiel: "Nachname", "Vorname", "E Mail", "Telefon" */
 .contact-form input {
-  min-height:36px;
+  min-height:42px;
 }
 
-/* NACHRICHTENFELD: Höhe
+/* NACHRICHTENFELD: grosszügigere Höhe
    Beispiel: Feld unter "Nachricht" */
 .contact-form textarea {
-  height:100px;
-  min-height:100px;
-  max-height:100px;
+  height:140px;
+  min-height:140px;
+  max-height:140px;
   resize:none;
 }
 
-/* AKTIVES EINGABEFELD: Farbe der unteren Linie
+/* AKTIVES EINGABEFELD: Linie bleibt 1 px und wird vollständig blau
    Beispiel: angeklicktes Feld unter "Nachname" oder "E Mail" */
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-bottom-color:#8d96a8;
+  background-image:linear-gradient(#8d96a8,#8d96a8);
+  background-size:100% 1px;
 }
 
-/* BUTTON NACHRICHT SENDEN: Position und Abstand
+/* BUTTON NACHRICHT SENDEN: bewusst rahmenlos und mit mehr Klickfläche
    Beispiel: "Nachricht senden ↗" */
 .contact-form__submit {
-  align-self:flex-start;
-  margin-top:var(--body-spacing);
-  padding:0;
+  grid-column:1 / -1;
+  justify-self:start;
+  align-self:start;
+  margin-top:2px;
+  padding:8px 0;
   border:0;
   background:transparent;
   cursor:pointer;
@@ -351,13 +391,34 @@
     padding-top:0;
   }
 
-  /* MOBILE: Formularhöhe, Position und Innenabstand
+  /* MOBILE: Formular einspaltig mit ruhigen Innenabständen
      Beispiel: "Nachname" bis "Nachricht senden" */
   .contact-form {
     height:auto;
     min-height:0;
     margin-top:0;
-    padding:var(--page-gutter-mobile);
+    padding:36px var(--page-gutter-mobile) 34px;
+    grid-template-columns:1fr;
+    column-gap:0;
+  }
+
+  /* MOBILE: alle Formularfelder untereinander
+     Beispiel: "Nachname", "Vorname", "E Mail", "Telefon", "Nachricht" */
+  .contact-form > .contact-form__field:nth-child(1),
+  .contact-form > .contact-form__field:nth-child(2),
+  .contact-form > .contact-form__field:nth-child(3),
+  .contact-form > .contact-form__field:nth-child(4),
+  .contact-form__field--message,
+  .contact-form__submit {
+    grid-column:1;
+  }
+
+  /* MOBILE: Nachricht etwas kompakter
+     Beispiel: Feld unter "Nachricht" */
+  .contact-form textarea {
+    height:120px;
+    min-height:120px;
+    max-height:120px;
   }
 
   /* MOBILE TESTANSICHT: Mindesthöhe für die sichtbare Statusmeldung
