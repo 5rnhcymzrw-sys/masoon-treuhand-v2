@@ -56,7 +56,7 @@
   --card-hover-shadow: 0 14px 32px rgba(35,35,33,.055);
   --card-hover-duration: .45s;
 
-  /* SEITE: Breite, Rand und globale Abstände */
+  /* SEITE-Kopfzeile-Linie: Breite, Rand und globale Abstände */
   --content-width: 1227px;
   --page-gutter: 32px;
   --page-gutter-mobile: 24px;
@@ -68,7 +68,7 @@
   --page-bottom-space-mobile: 82px;
   --header-height: 108px;
   --footer-height: 80px;
-  --accent-height: 8px;
+  --accent-height: 2px;
 }
 
 /* =========================================================
