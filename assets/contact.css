@@ -165,6 +165,38 @@
   cursor:pointer;
 }
 
+/* VERSANDSTATUS: Nachricht bleibt im bestehenden Formularrahmen
+   Beispiel: "Vielen Dank für Ihre Anfrage." */
+.contact-form__response[hidden] {
+  display:none;
+}
+
+/* TESTANSICHT: Formularfelder und Button werden nur im Testzustand ausgeblendet
+   Beispiel: "Vielen Dank für Ihre Anfrage." */
+.contact-form.is-preview-status .contact-form__field,
+.contact-form.is-preview-status .contact-form__submit {
+  display:none;
+}
+
+/* TESTANSICHT: Statusmeldung wird mittig im Formularrahmen angezeigt
+   Beispiel: "Wir haben Ihre Nachricht erhalten und melden uns in Kürze bei Ihnen." */
+.contact-form.is-preview-status .contact-form__response {
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* STATUSMELDUNG: innerer Rahmen und Ausrichtung
+   Beispiel: "Vielen Dank für Ihre Anfrage." */
+.contact-form__response-message {
+  width:min(100%,400px);
+  padding:28px 24px;
+  text-align:center;
+  border:1px solid transparent;
+  border-image:var(--brand-gradient) 1;
+}
+
 /* =========================================================
    MOBILE ANSICHT bis 800 px
    ========================================================= */
@@ -195,5 +227,11 @@
     min-height:0;
     margin-top:0;
     padding:var(--page-gutter-mobile);
+  }
+
+  /* MOBILE TESTANSICHT: Mindesthöhe für die sichtbare Statusmeldung
+     Beispiel: "Vielen Dank für Ihre Anfrage." */
+  .contact-form.is-preview-status {
+    min-height:360px;
   }
 }
