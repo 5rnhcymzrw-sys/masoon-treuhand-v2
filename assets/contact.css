@@ -62,6 +62,7 @@
   height:630px;
   min-height:630px;
   margin-top:-5.1%;
+  transform:translateX(-38px);
   padding:62px 42px;
   display:flex;
   flex-direction:column;
