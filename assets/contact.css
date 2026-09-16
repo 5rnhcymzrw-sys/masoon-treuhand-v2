@@ -20,15 +20,15 @@
 }
 
 .contact-details {
-  margin-top:var(--section-space-compact);
+  margin-top:72px;
   display:grid;
-  gap:calc(2 * var(--body-spacing));
+  gap:30px;
 }
 
 .contact-detail {
   display:grid;
   grid-template-columns:34px minmax(0,1fr);
-  column-gap:var(--body-spacing);
+  column-gap:24px;
   align-items:start;
   max-width:430px;
 }
