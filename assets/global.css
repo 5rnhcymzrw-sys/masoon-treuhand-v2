@@ -455,7 +455,6 @@ p + .subtitle,
    Beispiel: Administration / Buchhaltung / Personaladministration */
 .service-card:nth-child(3n + 1) {
   background:#F2F2F2;
-
 }
 
 .service-card:nth-child(3n + 2) {
