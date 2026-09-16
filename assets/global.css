@@ -215,7 +215,7 @@ main {
   font-size:22px;
   font-weight:var(--title-weight);
   line-height:var(--title-line);
-  letter-spacing: 4px;
+  letter-spacing: 1px;
   white-space:nowrap;
   transition:color 260ms ease;
 }
