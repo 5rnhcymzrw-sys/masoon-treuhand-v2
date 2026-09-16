@@ -322,13 +322,7 @@ p + p,
   margin:0 0 30px;
 }
 
-.section-label::before {
-  content:"";
-  width:30px;
-  height:1px;
-  flex:0 0 30px;
-  background:currentColor;
-}
+
 
 .action {
   display:inline-flex;
