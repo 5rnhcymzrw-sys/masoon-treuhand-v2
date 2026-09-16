@@ -114,18 +114,6 @@ body {
   text-rendering:optimizeLegibility;
 }
 
-/* MESSLINIE: rote Linie in der Mitte */
-body::after {
-  content:"";
-  position:absolute;
-  top:0;
-  bottom:0;
-  left:44%;
-  width:1px;
-  background:#d00000;
-  pointer-events:none;
-  z-index:9999;
-}
 
 /* PROVISORISCH: zweite grüne Messlinie – left-Wert zum Verschieben ändern */
 body::before {
