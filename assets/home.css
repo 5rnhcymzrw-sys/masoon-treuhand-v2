@@ -189,10 +189,6 @@
    DIENSTLEISTUNGEN
    ========================================================= */
 
-.home-services {
-  padding-bottom:80px;
-}
-
 /* DIENSTLEISTUNGSKÄSTEN: Zahl links neben Titel, ohne Einfluss auf Abstände */
 .service-card {
   position: relative;
@@ -254,11 +250,6 @@
 /* =========================================================
    FACHWISSEN
    ========================================================= */
-
-.home-knowledge {
-  padding-top:80px;
-  padding-bottom:80px;
-}
 
 .knowledge-card {
   min-height: 352px;
