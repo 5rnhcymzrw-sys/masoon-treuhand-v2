@@ -30,7 +30,7 @@
   --label-line: 1.4;
   --label-spacing: 1.1px;
   --label-color: #797c82;
-  --header-label-color: #FFFFFF;
+  --header-label-color: #080808;
   --footer-label-color: #797c82;
   --small-title-bottom-space: 7px;
 
@@ -160,14 +160,14 @@ main {
 .section-compact-bottom { padding-bottom:var(--section-space-compact); }
 
 /* =========================================================
-   KOPFZEILE
+   KOPFZEILE (Farbe)
    ========================================================= */
 .site-header {
   position:relative;
   z-index:10;
   height:var(--header-height);
   color:var(--white);
-  background:var(--black);
+  background:var(--white);
 }
 
 .site-header::after {
