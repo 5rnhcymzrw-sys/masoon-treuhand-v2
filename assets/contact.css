@@ -55,6 +55,11 @@
   stroke-linejoin:round;
 }
 
+/* STANDORT ICON: minimal nach links bis zur Ausrichtungslinie */
+.contact-detail:first-child svg {
+  transform:translateX(-4px);
+}
+
 /* TEXTBEREICH neben den Icons */
 .contact-detail__content {
   min-width:0;
