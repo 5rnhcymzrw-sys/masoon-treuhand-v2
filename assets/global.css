@@ -430,7 +430,9 @@ p + .subtitle,
   grid-template-rows:auto auto;
   column-gap:14px;
   align-content:start;
-  border:1px solid transparent;
+  border-width:3px 1px 1px;
+  border-style:solid;
+  border-color:transparent;
 }
 
 .service-card > div { display:contents; }
