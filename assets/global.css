@@ -51,10 +51,10 @@
   --hero-title-spacing: 0;
   --hero-title-bottom-space: 24px;
 
-  /* KARTEN: globaler Hover wie alte Webseite */
+  /* KARTEN: globaler Hover, bewusst weich und langsam */
   --card-hover-lift: -3px;
   --card-hover-shadow: 0 14px 32px rgba(35,35,33,.055);
-  --card-hover-duration: .28s;
+  --card-hover-duration: .45s;
 
   /* SEITE: Breite, Rand und globale Abstände */
   --content-width: 1227px;
