@@ -19,9 +19,15 @@
   --body-size: 14px;
   --body-weight: 300;
   --body-line: 1.65;
+
+  /* KLEINE GROSSBUCHSTABEN: Schrift und Farben */
   --label-size: 11px;
   --label-weight: 500;
+  --label-line: 1.4;
   --label-spacing: 1.1px;
+  --label-color: #777777;
+  --header-label-color: #ffffff;
+  --footer-label-color: #797c82;
 
   /* GROSSE TITEL: Schriftgrösse, Gewicht, Zeilenhöhe, Buchstabenabstand */
   --title-size: 46px;
@@ -185,16 +191,11 @@ main { padding-bottom:var(--section-space); }
   gap:34px;
 }
 
-/* KOPFZEILE: Schriftgrösse, Gewicht und Buchstabenabstand */
+/* KOPFZEILE: Schriftfarbe */
 .site-nav a {
   position:relative;
   padding:35px 0 32px;
-  color:var(--white);
-  font-size:var(--label-size);
-  font-weight:var(--label-weight);
-  line-height:1.4;
-  letter-spacing:var(--label-spacing);
-  text-transform:uppercase;
+  color:var(--header-label-color);
 }
 
 /* KOPFZEILE: Navigation Linie */
@@ -279,19 +280,34 @@ p,.body-copy {
   letter-spacing:var(--subtitle-spacing);
 }
 
+/* KLEINE GROSSBUCHSTABEN: global für Navigation, Bereichstitel, Links, Daten und Fusszeile */
+.site-nav a,
+.section-label,
+.action,
+.knowledge-card__date,
+.footer-home,
+.footer-links a {
+  font-family:var(--font-body);
+  font-size:var(--label-size);
+  font-weight:var(--label-weight);
+  line-height:var(--label-line);
+  letter-spacing:var(--label-spacing);
+  text-transform:uppercase;
+}
+
+/* KLEINE GROSSBUCHSTABEN: normale Farbe */
+.section-label,
+.action,
+.knowledge-card__date {
+  color:var(--label-color);
+}
+
 /* BEREICHSTITEL: kleine Titel */
 .section-label {
   display:flex;
   align-items:center;
   gap:14px;
   margin:0 0 30px;
-  color:var(--muted);
-  font-family:var(--font-body);
-  font-size:var(--label-size);
-  font-weight:var(--label-weight);
-  line-height:1.4;
-  letter-spacing:var(--label-spacing);
-  text-transform:uppercase;
 }
 
 /* BEREICHSTITEL: kurze Linie */
@@ -308,13 +324,6 @@ p,.body-copy {
   display:inline-flex;
   align-items:center;
   gap:10px;
-  color:var(--muted);
-  font-family:var(--font-body);
-  font-size:var(--label-size);
-  font-weight:var(--label-weight);
-  line-height:1.4;
-  letter-spacing:var(--label-spacing);
-  text-transform:uppercase;
   transition:color 180ms ease;
 }
 
@@ -432,15 +441,10 @@ p,.body-copy {
   gap:36px;
 }
 
-/* FUSSZEILE: Schriftgrösse, Gewicht und Buchstabenabstand */
+/* FUSSZEILE: Schriftfarbe */
 .footer-home,
 .footer-links a {
-  color:#797c82;
-  font-size:var(--label-size);
-  font-weight:var(--label-weight);
-  line-height:1.4;
-  letter-spacing:var(--label-spacing);
-  text-transform:uppercase;
+  color:var(--footer-label-color);
 }
 
 /* FUSSZEILE: Links und Abstände */
