@@ -46,7 +46,8 @@ if (contactForm) {
     response.hidden = false;
 
     if (previewState === 'fehler') {
-      responseTitle.textContent = 'Ihre Nachricht konnte nicht gesendet werden.';
+      contactForm.classList.add('is-preview-error');
+      responseTitle.innerHTML = 'Ihre Nachricht konnte<br>nicht gesendet werden.';
       responseCopy.replaceChildren(
         'Bitte versuchen Sie es erneut oder',
         document.createElement('br'),
