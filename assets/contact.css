@@ -3,12 +3,14 @@
    Nur Layout und Formular. Typografie bleibt global geregelt.
    ========================================================= */
 
-/* GESAMTE KONTAKTSEITE: Abstand von oben */
+/* GESAMTE KONTAKTSEITE: Abstand von oben
+   Beispiel auf der Webseite: Bereich mit "Kontakt" */
 .contact-page {
   padding-top:var(--section-space);
 }
 
-/* HAUPTAUFTEILUNG: linke Kontaktangaben und rechtes Formular */
+/* HAUPTAUFTEILUNG: linke Kontaktangaben und rechtes Formular
+   Beispiel auf der Webseite: links "Wir stehen Ihnen gerne zur Verfügung.", rechts Formular */
 .contact-page__grid {
   display:grid;
   grid-template-columns:53% 47%;
@@ -16,24 +18,28 @@
   align-items:start;
 }
 
-/* LINKE SPALTE: gesamter Informationsbereich */
+/* LINKE SPALTE: gesamter Informationsbereich
+   Beispiel auf der Webseite: "Kontakt", grosser Titel, Einleitung, Adresse, Telefon, E Mail */
 .contact-page__info {
   padding-top:0;
 }
 
-/* EINLEITUNGSTEXT unter dem grossen Titel */
+/* EINLEITUNGSTEXT unter dem grossen Titel
+   Beispiel auf der Webseite: "Bitte füllen Sie das Kontaktformular aus." */
 .contact-page__lead {
   max-width:430px;
 }
 
-/* KONTAKTDATEN: Abstand nach oben und Abstand zwischen Adresse, Telefon und E Mail */
+/* KONTAKTDATEN: Abstand nach oben und Abstand zwischen Adresse, Telefon und E Mail
+   Beispiele auf der Webseite: "Adresse", "Telefon", "E Mail" */
 .contact-details {
   margin-top:72px;
   display:grid;
   gap:42px;
 }
 
-/* EINZELNER KONTAKTBLOCK: Icon links und Text rechts */
+/* EINZELNER KONTAKTBLOCK: Icon links und Text rechts
+   Beispiel auf der Webseite: Icon + "Adresse" + "MASOON TREUHAND" */
 .contact-detail {
   display:grid;
   grid-template-columns:34px minmax(0,1fr);
@@ -42,7 +48,8 @@
   max-width:430px;
 }
 
-/* ICONS bei Adresse, Telefon und E Mail */
+/* ICONS bei Adresse, Telefon und E Mail
+   Beispiele auf der Webseite: Standort Pin, Telefonhörer, Briefumschlag */
 .contact-detail svg {
   width:28px;
   height:30px;
@@ -55,28 +62,33 @@
   stroke-linejoin:round;
 }
 
-/* STANDORT ICON: minimal nach links bis zur Ausrichtungslinie */
+/* STANDORT ICON: minimal nach links bis zur Ausrichtungslinie
+   Beispiel auf der Webseite: erstes Icon neben "Adresse" */
 .contact-detail:first-child svg {
   transform:translateX(-2px);
 }
 
-/* TEXTBEREICH neben den Icons */
+/* TEXTBEREICH neben den Icons
+   Beispiele auf der Webseite: "MASOON TREUHAND", "+41 79 966 36 36", "info@masoontreuhand.ch" */
 .contact-detail__content {
   min-width:0;
 }
 
-/* LINKS bei Telefonnummer und E Mail */
+/* LINKS bei Telefonnummer und E Mail
+   Beispiele auf der Webseite: "+41 79 966 36 36", "info@masoontreuhand.ch" */
 .contact-detail a {
   transition:color 180ms ease;
 }
 
-/* LINKS bei Maus darüber oder Tastaturfokus */
+/* LINKS bei Maus darüber oder Tastaturfokus
+   Beispiele auf der Webseite: Telefonnummer und E Mail Adresse */
 .contact-detail a:hover,
 .contact-detail a:focus-visible {
   color:var(--ink);
 }
 
-/* KONTAKTFORMULAR KASTEN: Höhe, Position und Innenabstände */
+/* KONTAKTFORMULAR KASTEN: Höhe, Position und Innenabstände
+   Beispiele auf der Webseite: "Nachname", "Vorname", "E Mail", "Telefon", "Nachricht", "Nachricht senden" */
 .contact-form {
   box-sizing:border-box;
   height:616px;
@@ -90,7 +102,8 @@
   border-image:var(--brand-gradient) 1;
 }
 
-/* FORMULARFELDER: Abstand innerhalb und zwischen den einzelnen Feldern */
+/* FORMULARFELDER: Abstand innerhalb und zwischen den einzelnen Feldern
+   Beispiele auf der Webseite: "Nachname", "Vorname", "E Mail", "Telefon", "Nachricht" */
 .contact-form__field {
   display:flex;
   flex-direction:column;
@@ -98,12 +111,14 @@
   margin-bottom:var(--body-spacing);
 }
 
-/* FORMULARFELDER NACHNAME BIS TELEFON: mehr Abstand nach der unteren Linie */
+/* FORMULARFELDER NACHNAME BIS TELEFON: mehr Abstand nach der unteren Linie
+   Beispiele auf der Webseite: Linie unter "Nachname", "Vorname", "E Mail" und "Telefon" */
 .contact-form__field:not(.contact-form__field--message) {
   margin-bottom:26px;
 }
 
-/* EINGABEFELDER UND NACHRICHTENFELD: Breite, Linien und Innenabstand */
+/* EINGABEFELDER UND NACHRICHTENFELD: Breite, Linien und Innenabstand
+   Beispiele auf der Webseite: Eingabebereich unter "Nachname" bis "Nachricht" */
 .contact-form input,
 .contact-form textarea {
   width:100%;
@@ -117,12 +132,14 @@
   outline:none;
 }
 
-/* NORMALE EINGABEFELDER: Mindesthöhe */
+/* NORMALE EINGABEFELDER: Mindesthöhe
+   Beispiele auf der Webseite: "Nachname", "Vorname", "E Mail", "Telefon" */
 .contact-form input {
   min-height:36px;
 }
 
-/* NACHRICHTENFELD: Höhe */
+/* NACHRICHTENFELD: Höhe
+   Beispiel auf der Webseite: Feld unter "Nachricht" */
 .contact-form textarea {
   height:100px;
   min-height:100px;
@@ -130,13 +147,15 @@
   resize:none;
 }
 
-/* AKTIVES EINGABEFELD: Farbe der unteren Linie */
+/* AKTIVES EINGABEFELD: Farbe der unteren Linie
+   Beispiel auf der Webseite: angeklicktes Feld unter "Nachname" oder "E Mail" */
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-bottom-color:#8d96a8;
 }
 
-/* BUTTON NACHRICHT SENDEN: Position und Abstand */
+/* BUTTON NACHRICHT SENDEN: Position und Abstand
+   Beispiel auf der Webseite: "Nachricht senden ↗" */
 .contact-form__submit {
   align-self:flex-start;
   margin-top:var(--body-spacing);
@@ -150,23 +169,27 @@
    MOBILE ANSICHT bis 800 px
    ========================================================= */
 @media (max-width:800px) {
-  /* MOBILE: Abstand der gesamten Kontaktseite von oben */
+  /* MOBILE: Abstand der gesamten Kontaktseite von oben
+     Beispiel auf der Webseite: Bereich mit "Kontakt" auf Handy */
   .contact-page {
     padding-top:var(--section-space-mobile);
   }
 
-  /* MOBILE: Kontaktangaben und Formular untereinander */
+  /* MOBILE: Kontaktangaben und Formular untereinander
+     Beispiel auf der Webseite: zuerst "Wir stehen Ihnen gerne zur Verfügung.", danach Formular */
   .contact-page__grid {
     grid-template-columns:1fr;
     gap:var(--section-space-mobile);
   }
 
-  /* MOBILE: linke Kontaktspalte */
+  /* MOBILE: linke Kontaktspalte
+     Beispiel auf der Webseite: "Adresse", "Telefon", "E Mail" */
   .contact-page__info {
     padding-top:0;
   }
 
-  /* MOBILE: Formularhöhe, Position und Innenabstand */
+  /* MOBILE: Formularhöhe, Position und Innenabstand
+     Beispiele auf der Webseite: "Nachname" bis "Nachricht senden" */
   .contact-form {
     height:auto;
     min-height:0;
