@@ -146,10 +146,13 @@ main { padding-bottom:var(--page-bottom-space); }
   content:"";
   position:absolute;
   right:0;
-  bottom:calc(-1 * var(--accent-height));
+  bottom:-8px;
   left:0;
-  height:var(--accent-height);
-  background:var(--brand-gradient);
+  height:8px;
+  background:
+    var(--brand-gradient) top / 100% 2px no-repeat,
+    var(--brand-gradient) center / 100% 2px no-repeat,
+    var(--brand-gradient) bottom / 100% 2px no-repeat;
 }
 
 .header-inner {
