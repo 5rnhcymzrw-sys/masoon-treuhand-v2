@@ -15,16 +15,11 @@
   --brand-gradient-middle: linear-gradient(110deg,#e8e5df 0%,#c7cbd3 100%);
   --brand-gradient-right: linear-gradient(110deg,#c7cbd3 0%,#8d96a8 100%);
 
-  /* FARBVERLAUF DIENSTLEISTUNGS-KACHELN
-     Hier kannst du nur die Füllfarbe der Dienstleistungs-Kacheln ändern.
-     Letzte Zahl bei rgba = Stärke/Transparenz:
-     1 = 100 %, .8 = 80 %, .6 = 60 %, .4 = 40 % sichtbar.
-     Erster rgba-Wert = Startfarbe, zweiter rgba-Wert = Endfarbe.
-     Der Verlauf läuft über Kachel 1 bis 3 und beginnt bei Kachel 4 bis 6 wieder von vorne. */
+  /* FARBVERLAUF DIENSTLEISTUNGS-KACHELN */
   --service-card-gradient: linear-gradient(
     110deg,
-    rgba(232,229,223,1) 0%,
-    rgba(199,203,211,1) 100%
+    rgba(232,229,223,1) 50%,
+    rgba(199,203,211,1) 90%
   );
 
   /* FLIESSTEXTE: Schrift, Farbe und Abstände
