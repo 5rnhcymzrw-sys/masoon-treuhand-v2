@@ -51,12 +51,16 @@
   --hero-title-spacing: 0;
   --hero-title-bottom-space: 24px;
 
-  /* SEITE: Breite, Rand, Abschnitt, Kopfzeile, Fusszeile */
+  /* SEITE: Breite, Rand und globale Abstände */
   --content-width: 1227px;
   --page-gutter: 32px;
   --page-gutter-mobile: 24px;
   --section-space: 126px;
+  --section-space-compact: 80px;
   --section-space-mobile: 82px;
+  --closing-card-space: 84px;
+  --page-bottom-space: 126px;
+  --page-bottom-space-mobile: 82px;
   --header-height: 108px;
   --footer-height: 80px;
   --accent-height: 8px;
@@ -109,14 +113,18 @@ body::after {
 img,picture,svg { display:block; max-width:100%; }
 a { color:inherit; text-decoration:none; }
 button,input,textarea,select { font:inherit; }
-main { padding-bottom:var(--section-space); }
+main { padding-bottom:var(--page-bottom-space); }
 
 .container {
   width:min(calc(100% - (2 * var(--page-gutter))),var(--content-width));
   margin-inline:auto;
 }
 
+/* ABSCHNITTE: globale Abstände */
 .section { padding-block:var(--section-space); }
+.section-compact { padding-block:var(--section-space-compact); }
+.section-compact-top { padding-top:var(--section-space-compact); }
+.section-compact-bottom { padding-bottom:var(--section-space-compact); }
 
 /* =========================================================
    KOPFZEILE
@@ -344,7 +352,7 @@ p + p,
     --hero-title-size:clamp(42px, 12vw, 58px);
   }
   body { background-attachment:scroll; }
-  main { padding-bottom:var(--section-space-mobile); }
+  main { padding-bottom:var(--page-bottom-space-mobile); }
   .container { width:calc(100% - (2 * var(--page-gutter-mobile))); }
   .section { padding-block:var(--section-space-mobile); }
 }
@@ -352,7 +360,7 @@ p + p,
 /* =========================================================
    ABSCHLUSSKASTEN / KONTAKT
    ========================================================= */
-.closing-card-section { padding-top:84px; }
+.closing-card-section { padding-top:var(--closing-card-space); }
 
 .closing-card {
   min-height:463px;
