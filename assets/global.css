@@ -23,7 +23,7 @@
 
   /* KLEINE GROSSBUCHSTABEN: Schrift und Farben */
   --font-label: Arial, Helvetica, sans-serif;
-  --label-size: 10.5x;
+  --label-size: 10.5px;
   --label-weight: 700;
   --label-line: 1.4;
   --label-spacing: 1.2px;
