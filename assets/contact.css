@@ -90,6 +90,7 @@
 /* KONTAKTFORMULAR KASTEN: Höhe, Position und Innenabstände
    Beispiel: "Nachname", "Vorname", "E Mail", "Telefon", "Nachricht", "Nachricht senden" */
 .contact-form {
+  position:relative;
   box-sizing:border-box;
   height:648px;
   min-height:648px;
@@ -98,6 +99,7 @@
   padding:62px 62px;
   display:flex;
   flex-direction:column;
+  overflow:hidden;
   border:1px solid transparent;
   border-image:var(--brand-gradient) 1;
 }
@@ -117,6 +119,18 @@
   margin-bottom:26px;
 }
 
+/* FELDBESCHRIFTUNG: ruhiger Farbwechsel beim Anklicken
+   Beispiel: "Nachname", "Vorname", "E Mail", "Telefon", "Nachricht" */
+.contact-form .contact-label {
+  transition:color 180ms ease;
+}
+
+/* AKTIVE FELDBESCHRIFTUNG: dunkler beim Schreiben
+   Beispiel: "E Mail" bei aktivem Eingabefeld */
+.contact-form__field:focus-within .contact-label {
+  color:var(--ink);
+}
+
 /* EINGABEFELDER UND NACHRICHTENFELD: Breite, Linien und Innenabstand
    Beispiel: Eingabebereich unter "Nachname" bis "Nachricht" */
 .contact-form input,
@@ -130,6 +144,7 @@
   border-bottom:1px solid rgba(23,23,21,.14);
   border-radius:0;
   outline:none;
+  transition:border-color 180ms ease;
 }
 
 /* NORMALE EINGABEFELDER: Mindesthöhe
@@ -165,36 +180,152 @@
   cursor:pointer;
 }
 
+/* BUTTON PFEIL: dezente Bewegung bei Maus darüber
+   Beispiel: Pfeil hinter "Nachricht senden" */
+.contact-form__submit::after {
+  transition:transform 180ms ease;
+}
+
+.contact-form__submit:hover::after,
+.contact-form__submit:focus-visible::after {
+  transform:translate(2px,-2px);
+}
+
 /* VERSANDSTATUS: Nachricht bleibt im bestehenden Formularrahmen
    Beispiel: "Vielen Dank für Ihre Anfrage." */
+.contact-form__response {
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:62px;
+  overflow:hidden;
+  text-align:center;
+  background:rgba(255,255,255,.98);
+}
+
 .contact-form__response[hidden] {
   display:none;
+}
+
+/* VERSANDSTATUS: kurze Verlaufslinie läuft beim Anzeigen durch
+   Beispiel: "Vielen Dank für Ihre Anfrage." */
+.contact-form__response::before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:-45%;
+  width:45%;
+  height:3px;
+  background:linear-gradient(90deg,transparent,#8d96a8,#f3e8d4,transparent);
+  animation:contact-response-sweep 950ms ease-out both;
 }
 
 /* TESTANSICHT: Formularfelder und Button werden nur im Testzustand ausgeblendet
    Beispiel: "Vielen Dank für Ihre Anfrage." */
 .contact-form.is-preview-status .contact-form__field,
 .contact-form.is-preview-status .contact-form__submit {
-  display:none;
+  visibility:hidden;
 }
 
-/* TESTANSICHT: Statusmeldung wird mittig im Formularrahmen angezeigt
+/* STATUSMELDUNG: Textblock wird ruhig eingeblendet
    Beispiel: "Wir haben Ihre Nachricht erhalten und melden uns in Kürze bei Ihnen." */
-.contact-form.is-preview-status .contact-form__response {
-  flex:1;
+.contact-form__response-message {
+  width:min(100%,420px);
+  text-align:center;
+  opacity:0;
+  transform:translateY(10px);
+  animation:contact-response-in 520ms 180ms ease-out forwards;
+}
+
+/* STATUSSYMBOL: Kreis für Erfolg oder Fehler
+   Beispiel: Häkchen bei erfolgreichem Versand */
+.contact-form__response-icon {
+  width:66px;
+  height:66px;
+  margin:0 auto 26px;
   display:flex;
   align-items:center;
   justify-content:center;
+  color:#8d96a8;
+  border:1.5px solid #8d96a8;
+  border-radius:50%;
+  opacity:0;
+  transform:scale(.88);
+  animation:contact-response-icon 520ms 80ms ease-out forwards;
 }
 
-/* STATUSMELDUNG: innerer Rahmen und Ausrichtung
+/* ERFOLGSSYMBOL: Häkchen im Kreis
    Beispiel: "Vielen Dank für Ihre Anfrage." */
-.contact-form__response-message {
-  width:min(100%,400px);
-  padding:28px 24px;
-  text-align:center;
-  border:1px solid transparent;
-  border-image:var(--brand-gradient) 1;
+.contact-form__response-icon::before {
+  content:"";
+  width:22px;
+  height:11px;
+  border-left:2px solid currentColor;
+  border-bottom:2px solid currentColor;
+  transform:rotate(-45deg) translate(2px,-1px);
+}
+
+/* FEHLERSYMBOL: Ausrufezeichen statt Häkchen
+   Beispiel: "Ihre Nachricht konnte nicht gesendet werden." */
+.contact-form.is-preview-error .contact-form__response-icon::before {
+  content:"!";
+  width:auto;
+  height:auto;
+  border:0;
+  transform:none;
+  font-family:var(--font-body);
+  font-size:28px;
+  font-weight:300;
+  line-height:1;
+}
+
+/* STATUSTITEL: Abstand zum Text
+   Beispiel: "Vielen Dank für Ihre Anfrage." */
+.contact-form__response-title {
+  margin-bottom:14px;
+}
+
+/* STATUSAKZENT: kurze Verlaufslinie unter der Meldung
+   Beispiel: Linie unter "Wir haben Ihre Nachricht erhalten" */
+.contact-form__response-accent {
+  display:block;
+  width:74px;
+  height:1px;
+  margin:24px auto 0;
+  background:var(--brand-gradient);
+  transform:scaleX(0);
+  transform-origin:center;
+  animation:contact-response-line 620ms 350ms ease-out forwards;
+}
+
+@keyframes contact-response-sweep {
+  from { left:-45%; }
+  to { left:100%; }
+}
+
+@keyframes contact-response-in {
+  to { opacity:1; transform:translateY(0); }
+}
+
+@keyframes contact-response-icon {
+  to { opacity:1; transform:scale(1); }
+}
+
+@keyframes contact-response-line {
+  to { transform:scaleX(1); }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .contact-form__response::before,
+  .contact-form__response-message,
+  .contact-form__response-icon,
+  .contact-form__response-accent {
+    animation:none;
+    opacity:1;
+    transform:none;
+  }
 }
 
 /* =========================================================
@@ -233,5 +364,11 @@
      Beispiel: "Vielen Dank für Ihre Anfrage." */
   .contact-form.is-preview-status {
     min-height:360px;
+  }
+
+  /* MOBILE STATUSMELDUNG: Innenabstand
+     Beispiel: "Vielen Dank für Ihre Anfrage." */
+  .contact-form__response {
+    padding:var(--page-gutter-mobile);
   }
 }
