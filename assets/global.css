@@ -39,11 +39,12 @@
   --title-spacing: -0.018em;
   --title-bottom-space: 0px;
 
-  /* ZWISCHENTITEL: Schrift und Abstand zum Fliesstext */
+  /* ZWISCHENTITEL: Schrift und globale Abstände */
   --subtitle-size: 22px;
   --subtitle-weight: 700;
   --subtitle-line: 1.12;
   --subtitle-spacing: 0;
+  --subtitle-top-space: 30px;
   --subtitle-bottom-space: 14px;
 
   /* GANZ GROSSER HERO-TITEL */
@@ -303,6 +304,10 @@ p + p,
 .subtitle + p,
 .subtitle + .body-copy { margin-top:var(--subtitle-bottom-space); }
 
+/* ZWISCHENTITEL: globaler Abstand vom Fliesstext */
+p + .subtitle,
+.body-copy + .subtitle { margin-top:var(--subtitle-top-space); }
+
 /* GANZ GROSSER HERO-TITEL: global */
 .home-hero__title {
   margin:0;
@@ -526,10 +531,6 @@ p + p,
   align-self:start;
   margin-top:14px;
   margin-right:-90px;
-}
-
-.legal-card .legal-copy .subtitle:not(:first-child) {
-  margin-top:30px;
 }
 
 @media (max-width:800px) {
