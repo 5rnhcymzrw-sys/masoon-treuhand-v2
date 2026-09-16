@@ -196,8 +196,7 @@ main {
   align-items:center;
 }
 
-/* WORTMARKE: einheitlicher Schriftzug in der globalen Titelschrift
-   Beispiel: "MASOON TREUHAND" oben links */
+/* LOGO: MASOON TREUHAND (Schrift) */
 .site-brand__text {
   display:block;
   color:var(--header-label-color);
