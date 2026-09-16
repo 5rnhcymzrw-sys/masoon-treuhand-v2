@@ -252,8 +252,8 @@
    ========================================================= */
 
 .knowledge-card {
-  min-height: 352px;
-  padding: 43px;
+  min-height: 360px;
+  padding: 34px 42px 36px;
   display: flex;
   flex-direction: column;
   background: rgba(255,255,255,.8);
@@ -261,21 +261,33 @@
   border-image: var(--brand-gradient) 1;
 }
 
-/* FACHWISSEN: Datum, Schrift global geregelt */
+/* FACHWISSEN: Datum */
 .knowledge-card__date {
   margin-bottom: 38px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
 }
 
-/* FACHWISSEN: Zwischentitel, Schrift global geregelt */
+/* FACHWISSEN: Zwischentitel */
 .knowledge-card h3 {
+  margin: 0;
   padding-bottom: 22px;
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0;
   background-image: var(--brand-gradient);
   background-repeat: no-repeat;
   background-position: left bottom;
   background-size: 100% 1px;
 }
 
-/* FACHWISSEN: Fliesstext, Schrift und Abstand global geregelt */
+/* FACHWISSEN: Fliesstext */
 .knowledge-card p {
-  margin-top: var(--subtitle-bottom-space);
+  margin-top: 22px;
 }
