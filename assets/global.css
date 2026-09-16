@@ -30,6 +30,7 @@
   --label-color: #797c82;
   --header-label-color: #FFFFFF;
   --footer-label-color: #797c82;
+  --small-title-bottom-space: 7px;
 
   /* GROSSE TITEL: Schrift und Abstand unten */
   --font-heading: "PT Serif", Georgia, serif;
@@ -327,6 +328,7 @@ p + .subtitle,
 .action,
 .knowledge-card__date,
 .contact-label,
+.small-title,
 .footer-home,
 .footer-links a {
   font-family:var(--font-body);
@@ -340,7 +342,12 @@ p + .subtitle,
 .section-label,
 .action,
 .knowledge-card__date,
-.contact-label { color:var(--label-color); }
+.contact-label,
+.small-title { color:var(--label-color); }
+
+/* KLEINER TITEL: Spezialfall mit kleinem Abstand zum Fliesstext */
+.small-title + p,
+.small-title + .body-copy { margin-top:var(--small-title-bottom-space); }
 
 .section-label {
   display:flex;

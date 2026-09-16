@@ -6,13 +6,13 @@
 
 .contact-page__grid {
   display:grid;
-  grid-template-columns:minmax(0,.47fr) minmax(0,.53fr);
+  grid-template-columns:minmax(0,.53fr) minmax(0,.47fr);
   gap:var(--page-gutter);
   align-items:start;
 }
 
 .contact-page__info {
-  padding-top:calc(2 * var(--body-spacing));
+  padding-top:0;
 }
 
 .contact-page__lead {
@@ -50,10 +50,6 @@
   min-width:0;
 }
 
-.contact-detail__label {
-  margin:0 0 calc(var(--body-spacing) / 2);
-}
-
 .contact-detail a {
   transition:color 180ms ease;
 }
@@ -65,6 +61,7 @@
 
 .contact-form {
   min-height:630px;
+  margin-top:calc(2 * var(--body-spacing));
   padding:calc(2 * var(--page-gutter)) var(--page-gutter);
   display:flex;
   flex-direction:column;
@@ -133,6 +130,7 @@
 
   .contact-form {
     min-height:0;
+    margin-top:0;
     padding:var(--page-gutter-mobile);
   }
 }
