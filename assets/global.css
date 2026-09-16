@@ -22,7 +22,7 @@
   --body-spacing: 18px;
 
   /* KLEINE GROSSBUCHSTABEN: Schrift und Farben */
-  --font-label: Arial, Helvetica, sans-serif;
+  --font-label: "Inter", Arial, sans-serif;
   --label-size: 10px;
   --label-weight: 600;
   --label-line: 1.4;
