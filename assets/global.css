@@ -174,9 +174,6 @@ main {
 .site-header.is-scrolling-up {
   color:var(--white);
   background:rgba(0,0,0,.78);
-  -webkit-backdrop-filter:blur(12px);
-  backdrop-filter:blur(12px);
-  transform:translateY(0);
 }
 
 /* KOPFZEILE SCHWARZ: Logo und Navigation weiss
