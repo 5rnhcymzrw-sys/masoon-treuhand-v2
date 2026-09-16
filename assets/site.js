@@ -33,4 +33,25 @@ if (contactForm) {
       field.setCustomValidity('');
     });
   });
+
+  /* KONTAKTFORMULAR TESTANSICHT: Erfolg oder Fehler ohne echten Versand anzeigen
+     Beispiel: "Vielen Dank für Ihre Anfrage." */
+  const previewState = new URLSearchParams(window.location.search).get('formular-test');
+  const response = contactForm.querySelector('.contact-form__response');
+  const responseTitle = contactForm.querySelector('.contact-form__response-title');
+  const responseCopy = contactForm.querySelector('.contact-form__response-copy');
+
+  if (response && responseTitle && responseCopy && (previewState === 'erfolg' || previewState === 'fehler')) {
+    contactForm.classList.add('is-preview-status');
+    response.hidden = false;
+
+    if (previewState === 'fehler') {
+      responseTitle.textContent = 'Ihre Nachricht konnte nicht gesendet werden.';
+      responseCopy.replaceChildren(
+        'Bitte versuchen Sie es erneut oder',
+        document.createElement('br'),
+        'kontaktieren Sie uns direkt per E-Mail.'
+      );
+    }
+  }
 }
