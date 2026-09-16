@@ -201,10 +201,10 @@ main {
   display:block;
   color:var(--header-label-color);
   font-family:var(--font-heading);
-  font-size:19px;
+  font-size:22px;
   font-weight:var(--title-weight);
   line-height:var(--title-line);
-  letter-spacing:var(--title-spacing);
+  letter-spacing: 10px;
   white-space:nowrap;
 }
 
