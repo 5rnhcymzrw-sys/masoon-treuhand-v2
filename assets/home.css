@@ -56,32 +56,26 @@
   margin-left: -6vw;
 }
 
-/* HERO-BILD: schräge halbtransparente Fläche für weicheren Übergang */
-.home-hero__image::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background: rgba(255,255,255,.28);
-  clip-path: polygon(0 0, 36% 0, 58% 100%, 0 100%);
-}
-
-/* HERO-BILD: links weich in den hellen Hero überblenden, Foto leicht abdunkeln */
+/* HERO-BILD: weicher heller Übergang mit dezenter schräger Lichtfläche */
 .home-hero__image::after {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 2;
   pointer-events: none;
   background:
     linear-gradient(
+      108deg,
+      rgba(255,255,255,.42) 0%,
+      rgba(255,255,255,.28) 14%,
+      rgba(255,255,255,.12) 24%,
+      rgba(255,255,255,0) 36%
+    ),
+    linear-gradient(
       90deg,
-      rgba(255,255,255,.88) 0%,
-      rgba(255,255,255,.72) 16%,
-      rgba(255,255,255,.42) 30%,
-      rgba(255,255,255,.12) 42%,
-      rgba(255,255,255,0) 52%
+      rgba(255,255,255,.86) 0%,
+      rgba(255,255,255,.58) 9%,
+      rgba(255,255,255,.26) 18%,
+      rgba(255,255,255,0) 30%
     ),
     linear-gradient(
       90deg,
