@@ -31,6 +31,7 @@
   --label-spacing: 1.1px;
   --label-color: #797c82;
   --header-label-color: #080808;
+  --header-scroll-accent: #e8d59e;
   --footer-label-color: #797c82;
   --small-title-bottom-space: 7px;
 
@@ -137,12 +138,19 @@ main {
 /* =========================================================
    KOPFZEILE (Farbe)
    ========================================================= */
+
+/* KOPFZEILE: am Seitenanfang weiss und beim Scrollen beweglich
+   Beispiel: weisse Kopfzeile direkt nach dem Laden der Seite */
 .site-header {
-  position:relative;
-  z-index:10;
+  position:sticky;
+  top:0;
+  z-index:1000;
   height:var(--header-height);
-  color:var(--white);
+  color:var(--header-label-color);
   background:var(--white);
+  transform:translateY(0);
+  transition:transform 260ms ease, background-color 260ms ease, color 260ms ease;
+  will-change:transform;
 }
 
 .site-header::after {
@@ -153,6 +161,33 @@ main {
   left:0;
   height:var(--accent-height);
   background:var(--brand-gradient);
+}
+
+/* KOPFZEILE BEIM HERUNTERSCROLLEN: aus dem Sichtbereich schieben
+   Beispiel: nach unten scrollen */
+.site-header.is-scrolling-down {
+  transform:translateY(calc(-100% - var(--accent-height)));
+}
+
+/* KOPFZEILE BEIM HOCHSCROLLEN: schwarz und wieder sichtbar
+   Beispiel: nach unten scrollen und danach wieder nach oben */
+.site-header.is-scrolling-up {
+  color:var(--white);
+  background:var(--black);
+  transform:translateY(0);
+}
+
+/* KOPFZEILE SCHWARZ: Logo und Navigation weiss
+   Beispiel: "MASOON TREUHAND" und "STARTSEITE" beim Hochscrollen */
+.site-header.is-scrolling-up .site-brand__text,
+.site-header.is-scrolling-up .site-nav a {
+  color:var(--white);
+}
+
+/* KOPFZEILE SCHWARZ: Unterlinien gelb statt blau
+   Beispiel: Unterlinie unter "KONTAKT" beim Hochscrollen */
+.site-header.is-scrolling-up .site-nav a::after {
+  background:var(--header-scroll-accent);
 }
 
 .header-inner {
@@ -182,6 +217,7 @@ main {
   line-height:var(--title-line);
   letter-spacing: 4px;
   white-space:nowrap;
+  transition:color 260ms ease;
 }
 
 .site-nav {
@@ -197,6 +233,7 @@ main {
   position:relative;
   padding:35px 0 32px;
   color:var(--header-label-color);
+  transition:color 260ms ease;
 }
 
 .site-nav a::after {
@@ -210,7 +247,7 @@ main {
   height:2px;
   background:#8D96A8;
   opacity:1;
-  transition:width .4s ease;
+  transition:width .4s ease, background-color 260ms ease;
   pointer-events:none;
 }
 
