@@ -193,22 +193,26 @@ main {
   align-items:center;
 }
 
-.site-brand__icon {
-  position:absolute;
-  top:50%;
-  left:50%;
-  width:40%;
-  height:auto;
-  opacity:.18;
-  transform:translate(-50%,-50%);
-  pointer-events:none;
+/* WORTMARKE: echter Text in der globalen Titelschrift */
+.site-brand__text {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+  width:100%;
+  color:var(--header-label-color);
+  font-family:var(--font-heading);
+  font-size:28px;
+  font-weight:var(--title-weight);
+  line-height:1;
+  letter-spacing:var(--title-spacing);
+  white-space:nowrap;
 }
 
-.site-brand__text {
-  position:relative;
-  z-index:1;
-  width:100%;
-  height:auto;
+.site-brand__text > span {
+  font-size:var(--label-size);
+  line-height:var(--label-line);
+  letter-spacing:var(--label-spacing);
 }
 
 .site-nav {
