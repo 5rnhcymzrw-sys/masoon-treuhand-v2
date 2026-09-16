@@ -444,6 +444,7 @@ p + p,
   align-items:center;
   justify-content:flex-end;
   gap:34px;
+  padding-left:41%;
 }
 
 .footer-home,
