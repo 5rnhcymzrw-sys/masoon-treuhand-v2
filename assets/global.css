@@ -503,6 +503,8 @@ p + p,
 /* =========================================================
    KASTEN: Disclaimer, Impressum, Datenschutz
    ========================================================= */
+.legal-section { padding-top:var(--section-space); }
+
 .legal-card {
   min-height:463px;
   padding:43px;
@@ -519,6 +521,7 @@ p + p,
 .legal-card .legal-copy { align-self:start; }
 
 @media (max-width:800px) {
+  .legal-section { padding-top:var(--section-space-mobile); }
   .legal-card {
     grid-template-columns:1fr;
     gap:18px;
