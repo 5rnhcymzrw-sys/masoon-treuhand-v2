@@ -198,7 +198,7 @@ main {
 
 /* LOGO: MASOON TREUHAND (Schrift) */
 .site-brand__text {
-  transform:translateX(10px);
+  transform:translateX(0px);
   display:block;
   color:var(--header-label-color);
   font-family:var(--font-heading);
