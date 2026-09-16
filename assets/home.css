@@ -193,7 +193,7 @@
 .service-card {
   position: relative;
   min-height: 232px;
-  padding:46px 43px 43px 43px;
+  padding:45px 43px 43px 43px;
   display: grid;
   grid-template-columns: 38px minmax(0,1fr);
   grid-template-rows: auto auto;
@@ -207,7 +207,7 @@
   display: contents;
 }
 
-/* DIENSTLEISTUNGSKÄSTEN: Zahlen 01 bis 06 */
+/* DIENSTLEISTUNGSKÄSTEN: Zahlen 01-06 */
 .service-card__number {
   position: absolute;
   top: 43px;
