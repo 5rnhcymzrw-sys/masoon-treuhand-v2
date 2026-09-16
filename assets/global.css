@@ -116,15 +116,15 @@ body::after {
   z-index:9999;
 }
 
-/* PROVISORISCH: zweite rote Messlinie – left-Wert zum Verschieben ändern */
+/* PROVISORISCH: zweite Messlinie – left-Wert zum Verschieben ändern */
 body::before {
   content:"";
   position:absolute;
   top:0;
   bottom:0;
-  left:56%;
+  left:22%;
   width:1px;
-  background:#d00000;
+  background:#00d092;
   pointer-events:none;
   z-index:9999;
 }
