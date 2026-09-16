@@ -1,12 +1,12 @@
 /* KONTAKTSEITE: nur Layout und Formular, Typografie bleibt global */
 
 .contact-page {
-  padding-top:var(--section-space);
+  padding-top:var(--section-space-compact);
 }
 
 .contact-page__grid {
   display:grid;
-  grid-template-columns:minmax(0,.47fr) minmax(0,.53fr);
+  grid-template-columns:minmax(0,.53fr) minmax(0,.47fr);
   gap:var(--page-gutter);
   align-items:start;
 }
