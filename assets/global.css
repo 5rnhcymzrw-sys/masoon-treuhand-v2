@@ -429,7 +429,7 @@ p + .subtitle,
   grid-template-rows:auto auto;
   column-gap:14px;
   align-content:start;
-  background:rgba(255,255,255,.76);
+  background:var(--brand-gradient-middle);
   border:1px solid transparent;
 }
 
