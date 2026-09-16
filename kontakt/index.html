@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Inter:wght@300;500&family=PT+Serif:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/global.css?v=20260915-2141">
-  <link rel="stylesheet" href="../assets/contact.css?v=20260916-2024">
+  <link rel="stylesheet" href="../assets/global.css?v=20260916-2045">
+  <link rel="stylesheet" href="../assets/contact.css?v=20260916-2045">
 </head>
 <body>
   <header class="site-header">
@@ -30,14 +30,12 @@
 
   <main>
     <section class="contact-page">
-      <div class="container">
-        <div class="contact-page__intro">
+      <div class="container contact-page__grid">
+        <div class="contact-page__info">
           <p class="section-label">Kontakt</p>
           <h1 class="page-title">Wir stehen Ihnen gerne zur Verfügung.</h1>
           <p class="contact-page__lead">Bitte füllen Sie das Kontaktformular aus.<br>Wir werden uns zeitnah bei Ihnen melden.</p>
-        </div>
 
-        <div class="contact-page__grid">
           <div class="contact-details">
             <div class="contact-detail">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -45,7 +43,7 @@
                 <circle cx="12" cy="9" r="2.2" stroke="currentColor" stroke-width="1.4"/>
               </svg>
               <div class="contact-detail__content">
-                <h2 class="subtitle">Adresse</h2>
+                <p class="contact-detail__label">Adresse</p>
                 <p>MASOON TREUHAND<br>Täschmattstrasse 19<br>6015 Luzern</p>
               </div>
             </div>
@@ -55,7 +53,7 @@
                 <path d="M7.3 3.5 4.8 5.2c-.8.6-.9 1.7-.5 2.6 2.3 5.1 6.4 9.2 11.5 11.5.9.4 2 .3 2.6-.5l1.7-2.5-4.2-2-1.5 1.7a15 15 0 0 1-6.4-6.4l1.7-1.5-2-4.2-.4-.4Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
               </svg>
               <div class="contact-detail__content">
-                <h2 class="subtitle">Telefon</h2>
+                <p class="contact-detail__label">Telefon</p>
                 <p><a href="tel:+41799663636">+41 79 966 36 36</a></p>
               </div>
             </div>
@@ -66,41 +64,41 @@
                 <path d="m4.5 7 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
               </svg>
               <div class="contact-detail__content">
-                <h2 class="subtitle">E-Mail</h2>
+                <p class="contact-detail__label">E-Mail</p>
                 <p><a href="mailto:info@masoontreuhand.ch">info@masoontreuhand.ch</a></p>
               </div>
             </div>
           </div>
-
-          <form class="contact-form">
-            <div class="contact-form__field">
-              <label for="nachname">Nachname</label>
-              <input id="nachname" name="nachname" type="text" autocomplete="family-name" required>
-            </div>
-
-            <div class="contact-form__field">
-              <label for="vorname">Vorname</label>
-              <input id="vorname" name="vorname" type="text" autocomplete="given-name" required>
-            </div>
-
-            <div class="contact-form__field">
-              <label for="email">E-Mail</label>
-              <input id="email" name="email" type="email" autocomplete="email" required>
-            </div>
-
-            <div class="contact-form__field">
-              <label for="telefon">Telefon</label>
-              <input id="telefon" name="telefon" type="tel" autocomplete="tel">
-            </div>
-
-            <div class="contact-form__field contact-form__field--message">
-              <label for="nachricht">Nachricht</label>
-              <textarea id="nachricht" name="nachricht" rows="6" required></textarea>
-            </div>
-
-            <button class="contact-form__submit" type="submit">Nachricht senden ›</button>
-          </form>
         </div>
+
+        <form class="contact-form">
+          <div class="contact-form__field">
+            <label for="nachname">Nachname</label>
+            <input id="nachname" name="nachname" type="text" autocomplete="family-name" required>
+          </div>
+
+          <div class="contact-form__field">
+            <label for="vorname">Vorname</label>
+            <input id="vorname" name="vorname" type="text" autocomplete="given-name" required>
+          </div>
+
+          <div class="contact-form__field">
+            <label for="email">E-Mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="contact-form__field">
+            <label for="telefon">Telefon</label>
+            <input id="telefon" name="telefon" type="tel" autocomplete="tel">
+          </div>
+
+          <div class="contact-form__field contact-form__field--message">
+            <label for="nachricht">Nachricht</label>
+            <textarea id="nachricht" name="nachricht" rows="6" required></textarea>
+          </div>
+
+          <button class="contact-form__submit" type="submit">Nachricht senden ›</button>
+        </form>
       </div>
     </section>
   </main>
