@@ -4,14 +4,6 @@
    HERO
    ========================================================= */
 
-/* STARTSEITE KOPFZEILE: Hintergrundbild 3 nur in der Kopfzeile weiterzeigen */
-.home-page .site-header {
-  background-image:url("images/backgrounds/background-3.png");
-  background-size:200% auto;
-  background-position:100% 0;
-  background-repeat:no-repeat;
-}
-
 .home-hero {
   height: calc(100dvh - var(--header-height));
   min-height: calc(100dvh - var(--header-height));
