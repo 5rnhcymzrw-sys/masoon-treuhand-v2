@@ -53,7 +53,6 @@
 
   /* KARTEN: globaler Hover wie alte Webseite */
   --card-hover-lift: -3px;
-  --card-hover-background: #ffffff;
   --card-hover-shadow: 0 14px 32px rgba(35,35,33,.055);
   --card-hover-duration: .28s;
 
@@ -353,13 +352,11 @@ p + p,
 .action:hover,.action:focus-visible { color:var(--ink); }
 
 /* =========================================================
-   BEITRAGSKARTEN: GLOBALER HOVER 1:1 WIE ALTE WEBSEITE
+   BEITRAGSKARTEN: GLOBALER HOVER
    ========================================================= */
 .knowledge-card,
 .article-card {
   box-shadow:none;
-  -webkit-backdrop-filter:none;
-  backdrop-filter:none;
   transition:
     transform var(--card-hover-duration) ease,
     box-shadow var(--card-hover-duration) ease;
@@ -370,12 +367,6 @@ p + p,
   .article-card:hover {
     transform:translateY(var(--card-hover-lift));
     box-shadow:var(--card-hover-shadow);
-    background:var(--card-hover-background);
-    background-image:none;
-    border:1px solid transparent;
-    border-image:var(--brand-gradient) 1;
-    -webkit-backdrop-filter:none;
-    backdrop-filter:none;
   }
 }
 
