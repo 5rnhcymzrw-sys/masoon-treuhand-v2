@@ -212,7 +212,7 @@ main {
   display:block;
   color:var(--header-label-color);
   font-family:var(--font-heading);
-  font-size:20px;
+  font-size:18px;
   font-weight:var(--title-weight);
   line-height:var(--title-line);
   letter-spacing: 2px;
