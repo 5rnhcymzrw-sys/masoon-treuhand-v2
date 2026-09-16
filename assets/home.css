@@ -252,7 +252,7 @@
    ========================================================= */
 
 .knowledge-card {
-  min-height: 330px;
+  min-height: 360px;
   padding: 40px 42px 40px;
   display: flex;
   flex-direction: column;
