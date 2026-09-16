@@ -23,10 +23,10 @@
 
   /* KLEINE GROSSBUCHSTABEN: Schrift und Farben */
   --label-size: 11px;
-  --label-weight: 500;
+  --label-weight: 600;
   --label-line: 1.4;
-  --label-spacing: 1.1px;
-  --label-color: #777777;
+  --label-spacing: 1px;
+  --label-color: #000000;
   --header-label-color: #ffffff;
   --footer-label-color: #797c82;
 
