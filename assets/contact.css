@@ -59,6 +59,7 @@
 }
 
 .contact-form {
+  box-sizing:border-box;
   height:630px;
   min-height:630px;
   margin-top:-5.1%;
@@ -108,7 +109,7 @@
 
 .contact-form__submit {
   align-self:flex-start;
-  margin-top:auto;
+  margin-top:var(--body-spacing);
   padding:0;
   border:0;
   background:transparent;
