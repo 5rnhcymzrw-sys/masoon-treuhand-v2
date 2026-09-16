@@ -326,6 +326,7 @@ p + .subtitle,
 .section-label,
 .action,
 .knowledge-card__date,
+.contact-label,
 .footer-home,
 .footer-links a {
   font-family:var(--font-body);
@@ -338,7 +339,8 @@ p + .subtitle,
 
 .section-label,
 .action,
-.knowledge-card__date { color:var(--label-color); }
+.knowledge-card__date,
+.contact-label { color:var(--label-color); }
 
 .section-label {
   display:flex;
