@@ -415,7 +415,7 @@ p + p,
 .knowledge-card__date { margin-bottom:38px; }
 
 .knowledge-card h3 {
-  padding-bottom:26px;
+  padding-bottom:25px;
   background-image:var(--brand-gradient);
   background-repeat:no-repeat;
   background-position:left bottom;
