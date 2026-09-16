@@ -512,7 +512,7 @@ p + p,
 
 .legal-card {
   min-height:405px;
-  padding: 67px 156px 43px 75px;
+  padding:67px 156px 43px 75px;
   display:grid;
   grid-template-columns:minmax(0,.4fr) minmax(0,.6fr);
   align-items:start;
@@ -525,8 +525,12 @@ p + p,
 .legal-card .legal-copy {
   align-self:start;
   margin-top:14px;
-  margin-right: -90px;
- }
+  margin-right:-90px;
+}
+
+.legal-card .legal-copy .subtitle:not(:first-child) {
+  margin-top:30px;
+}
 
 @media (max-width:800px) {
   .legal-section { padding-top:var(--section-space-mobile); }
