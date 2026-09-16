@@ -51,10 +51,11 @@
   --hero-title-spacing: 0;
   --hero-title-bottom-space: 24px;
 
-  /* KARTEN: globaler Hover */
-  --card-hover-lift: -4px;
-  --card-hover-background: rgba(255,255,255,.94);
-  --card-hover-duration: 180ms;
+  /* KARTEN: globaler Hover wie alte Webseite */
+  --card-hover-lift: -3px;
+  --card-hover-background: #ffffff;
+  --card-hover-shadow: 0 14px 32px rgba(35,35,33,.055);
+  --card-hover-duration: .28s;
 
   /* SEITE: Breite, Rand und globale Abstände */
   --content-width: 1227px;
@@ -352,31 +353,30 @@ p + p,
 .action:hover,.action:focus-visible { color:var(--ink); }
 
 /* =========================================================
-   BEITRAGSKARTEN: GLOBALER HOVER
+   BEITRAGSKARTEN: GLOBALER HOVER 1:1 WIE ALTE WEBSEITE
    ========================================================= */
 .knowledge-card,
 .article-card {
+  box-shadow:none;
+  -webkit-backdrop-filter:none;
+  backdrop-filter:none;
   transition:
     transform var(--card-hover-duration) ease,
-    background-color var(--card-hover-duration) ease;
+    box-shadow var(--card-hover-duration) ease;
 }
 
-.knowledge-card:hover,
-.knowledge-card:focus-within,
-.article-card:hover,
-.article-card:focus-within {
-  transform:translateY(var(--card-hover-lift));
-  background-color:var(--card-hover-background);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .knowledge-card,
-  .article-card { transition:none; }
-
+@media (hover:hover) {
   .knowledge-card:hover,
-  .knowledge-card:focus-within,
-  .article-card:hover,
-  .article-card:focus-within { transform:none; }
+  .article-card:hover {
+    transform:translateY(var(--card-hover-lift));
+    box-shadow:var(--card-hover-shadow);
+    background:var(--card-hover-background);
+    background-image:none;
+    border:1px solid transparent;
+    border-image:var(--brand-gradient) 1;
+    -webkit-backdrop-filter:none;
+    backdrop-filter:none;
+  }
 }
 
 @media (max-width:800px) {
