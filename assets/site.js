@@ -3,43 +3,6 @@
    Keine CSS-Regeln oder Style-Injections in dieser Datei.
 */
 
-/* KOPFZEILE: beim Herunterscrollen ausblenden, beim Hochscrollen schwarz einblenden
-   Beispiel: Seite nach unten scrollen und danach wieder nach oben */
-const siteHeader = document.querySelector('.site-header');
-
-if (siteHeader) {
-  let lastScrollY = window.scrollY;
-
-  if (lastScrollY > 2) {
-    siteHeader.classList.add('is-scrolling-up');
-  }
-
-  window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
-    const scrollDifference = currentScrollY - lastScrollY;
-
-    if (currentScrollY <= 2) {
-      siteHeader.classList.remove('is-scrolling-down', 'is-scrolling-up');
-      lastScrollY = 0;
-      return;
-    }
-
-    if (Math.abs(scrollDifference) < 4) {
-      return;
-    }
-
-    if (scrollDifference > 0) {
-      siteHeader.classList.add('is-scrolling-down');
-      siteHeader.classList.remove('is-scrolling-up');
-    } else {
-      siteHeader.classList.add('is-scrolling-up');
-      siteHeader.classList.remove('is-scrolling-down');
-    }
-
-    lastScrollY = currentScrollY;
-  }, { passive:true });
-}
-
 /* KONTAKTFORMULAR: individuelle Fehlermeldungen für Pflichtfelder
    Beispiel: "Bitte geben Sie Ihren Nachnamen ein." */
 const contactForm = document.querySelector('.contact-form');
