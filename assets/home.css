@@ -56,7 +56,7 @@
   margin-left: -6vw;
 }
 
-/* HERO-BILD: weicher heller Übergang mit dezenter schräger Lichtfläche */
+/* HERO-BILD: weicher heller Übergang mit gerader Lichtfläche */
 .home-hero__image::after {
   content: "";
   position: absolute;
@@ -64,7 +64,7 @@
   pointer-events: none;
   background:
     linear-gradient(
-      108deg,
+      90deg,
       rgba(255,255,255,.42) 0%,
       rgba(255,255,255,.28) 14%,
       rgba(255,255,255,.12) 24%,
