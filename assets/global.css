@@ -169,11 +169,13 @@ main {
   transform:translateY(calc(-100% - var(--accent-height)));
 }
 
-/* KOPFZEILE BEIM HOCHSCROLLEN: schwarz und wieder sichtbar
+/* KOPFZEILE BEIM HOCHSCROLLEN: transparentes Schwarz und wieder sichtbar
    Beispiel: nach unten scrollen und danach wieder nach oben */
 .site-header.is-scrolling-up {
   color:var(--white);
-  background:var(--black);
+  background:rgba(0,0,0,.78);
+  -webkit-backdrop-filter:blur(12px);
+  backdrop-filter:blur(12px);
   transform:translateY(0);
 }
 
