@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
-
 /* MASOON TREUHAND V2 | einzige zentrale Designquelle */
 
 /* =========================================================
@@ -24,11 +22,11 @@
   --body-spacing: 18px;
 
   /* KLEINE GROSSBUCHSTABEN: Schrift und Farben */
-  --font-label: "Montserrat", Arial, sans-serif;
-  --label-size: 11px;
-  --label-weight: 600;
+  --font-label: Arial, Helvetica, sans-serif;
+  --label-size: 10px;
+  --label-weight: 700;
   --label-line: 1.4;
-  --label-spacing: 1.6px;
+  --label-spacing: 1.8px;
   --label-color: #000000;
   --header-label-color: #ffffff;
   --footer-label-color: #797c82;
