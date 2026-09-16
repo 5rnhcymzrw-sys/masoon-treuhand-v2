@@ -39,7 +39,7 @@
   --title-line: 1.08;
   --title-spacing: -0.018em;
   --title-bottom-space: 0px;
-  --title-body-space: calc(2 * var(--body-spacing));
+  --title-body-space: 30px;
 
   /* ZWISCHENTITEL: Schrift und globale Abstände */
   --subtitle-size: 22px;
