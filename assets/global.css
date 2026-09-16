@@ -16,6 +16,8 @@
 
   --font-body: "Inter", Arial, sans-serif;
   --font-heading: "PT Serif", Georgia, serif;
+
+  /* FLIESSTEXT: Schriftgrösse, Gewicht, Zeilenhöhe */
   --body-size: 14px;
   --body-weight: 300;
   --body-line: 1.65;
@@ -34,6 +36,11 @@
   --title-weight: 700;
   --title-line: 1.08;
   --title-spacing: -0.018em;
+
+  /* GANZ GROSSER HERO TITEL */
+  --hero-title-size: clamp(52px, 5vw, 66px);
+  --hero-title-line: .96;
+  --hero-title-spacing: 0;
 
   /* ZWISCHENTITEL: Schriftgrösse, Gewicht, Zeilenhöhe, Buchstabenabstand */
   --subtitle-size: 22px;
@@ -247,8 +254,9 @@ main { padding-bottom:var(--section-space); }
    SCHRIFTEN UND WIEDERVERWENDBARE ELEMENTE
    ========================================================= */
 
-/* FLIESSTEXT: Schrift */
-p,.body-copy {
+/* FLIESSTEXT: global */
+p,
+.body-copy {
   margin:0;
   color:var(--text);
   font-family:var(--font-body);
@@ -258,8 +266,9 @@ p,.body-copy {
   letter-spacing:0;
 }
 
-/* TITEL: grosse Seitentitel */
-.page-title,.section-title {
+/* GROSSE TITEL: global */
+.page-title,
+.section-title {
   margin:0;
   color:var(--ink);
   font-family:var(--font-heading);
@@ -269,8 +278,21 @@ p,.body-copy {
   letter-spacing:var(--title-spacing);
 }
 
-/* ZWISCHENTITEL: Schrift */
-.subtitle {
+/* GANZ GROSSER HERO TITEL: global */
+.home-hero__title {
+  margin:0;
+  color:var(--ink);
+  font-family:var(--font-heading);
+  font-size:var(--hero-title-size);
+  font-weight:var(--title-weight);
+  line-height:var(--hero-title-line);
+  letter-spacing:var(--hero-title-spacing);
+}
+
+/* ZWISCHENTITEL: global */
+.subtitle,
+.service-card h3,
+.knowledge-card h3 {
   margin:0;
   color:var(--ink);
   font-family:var(--font-heading);
@@ -345,7 +367,10 @@ p,.body-copy {
 
 /* SCHRIFTEN UND ABSTÄNDE: Mobil */
 @media (max-width:800px) {
-  :root { --title-size:40px; }
+  :root {
+    --title-size:40px;
+    --hero-title-size:clamp(42px, 12vw, 58px);
+  }
   body { background-attachment:scroll; }
   main { padding-bottom:var(--section-space-mobile); }
   .container { width:calc(100% - (2 * var(--page-gutter-mobile))); }
