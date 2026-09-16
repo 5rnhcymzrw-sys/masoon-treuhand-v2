@@ -29,7 +29,7 @@
   --label-spacing: 1px;
   --label-color: #000000;
   --header-label-color: #ffffff;
-  --footer-label-color: #797c82;
+  --footer-label-color: #e67e33a8;
 
   /* GROSSE TITEL: Schrift und Abstand unten */
   --font-heading: "PT Serif", Georgia, serif;
