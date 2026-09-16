@@ -16,7 +16,7 @@
   --brand-gradient-right: linear-gradient(110deg,#c7cbd3 0%,#8d96a8 100%);
 
   /* FLIESSTEXTE: Schrift, Farbe und Abstände
-     Beispiel auf der Webseite: "Bitte füllen Sie das Kontaktformular aus." */
+     Beispiel: "Bitte füllen Sie das Kontaktformular aus." */
   --font-body: "Inter", Arial, sans-serif;
   --body-size: 14px;
   --body-weight: 300;
@@ -24,7 +24,7 @@
   --body-spacing: 18px;
 
   /* KLEINE GROSSBUCHSTABEN + Bereichstitel: Schrift und Farben
-     Beispiele auf der Webseite: "KONTAKT", "ADRESSE", "NACHNAME", "FACHWISSEN" */
+     Beispiel: "KONTAKT", "ADRESSE", "NACHNAME", "FACHWISSEN" */
   --label-size: 11px;
   --label-weight: 500;
   --label-line: 1.4;
@@ -35,7 +35,7 @@
   --small-title-bottom-space: 7px;
 
   /* GROSSE TITEL: Schrift und Abstand unten
-     Beispiele auf der Webseite: "Wir stehen Ihnen gerne zur Verfügung." / "Treuhandlösungen für Ihren Geschäftsalltag." */
+     Beispiel: "Wir stehen Ihnen gerne zur Verfügung." / "Treuhandlösungen für Ihren Geschäftsalltag." */
   --font-heading: "PT Serif", Georgia, serif;
   --title-size: 46px;
   --title-weight: 700;
@@ -45,7 +45,7 @@
   --title-body-space: 30px;
 
   /* ZWISCHENTITEL: Schrift und globale Abstände
-     Beispiele auf der Webseite: "Buchhaltung" / "Checkliste für die Steuererklärung" */
+     Beispiel: "Buchhaltung" / "Checkliste für die Steuererklärung" */
   --subtitle-size: 22px;
   --subtitle-weight: 700;
   --subtitle-line: 1.12;
@@ -54,7 +54,7 @@
   --subtitle-bottom-space: 14px;
 
   /* GANZ GROSSER HERO-TITEL
-     Beispiel auf der Webseite: "Treuhand mit Struktur und Anspruch." */
+     Beispiel: "Treuhand mit Struktur und Anspruch." */
   --hero-title-size: clamp(52px, 5vw, 66px);
   --hero-title-line: .96;
   --hero-title-spacing: 0;
@@ -199,7 +199,7 @@ main {
 }
 
 /* WORTMARKE: echter Text in der globalen Titelschrift
-   Beispiel auf der Webseite: "MASOON" / "TREUHAND" oben links */
+   Beispiel: "MASOON" / "TREUHAND" oben links */
 .site-brand__text {
   display:flex;
   flex-direction:column;
@@ -272,7 +272,7 @@ main {
    ========================================================= */
 
 /* FLIESSTEXT: global
-   Beispiele auf der Webseite: "Bitte füllen Sie das Kontaktformular aus." / "Ordnungsgemässe Führung der Finanzbuchhaltung..." */
+   Beispiel: "Bitte füllen Sie das Kontaktformular aus." / "Ordnungsgemässe Führung der Finanzbuchhaltung..." */
 p,.body-copy {
   margin:0;
   color:var(--text);
@@ -284,12 +284,12 @@ p,.body-copy {
 }
 
 /* FLIESSTEXT: Abstand zwischen aufeinanderfolgenden Absätzen
-   Beispiel auf der Webseite: mehrere Fliesstext Absätze direkt untereinander */
+   Beispiel: mehrere Fliesstext Absätze direkt untereinander */
 p + p,
 .body-copy + .body-copy { margin-top:var(--body-spacing); }
 
 /* GROSSE TITEL: global
-   Beispiele auf der Webseite: "Wir stehen Ihnen gerne zur Verfügung." / "Treuhandlösungen für Ihren Geschäftsalltag." */
+   Beispiel: "Wir stehen Ihnen gerne zur Verfügung." / "Treuhandlösungen für Ihren Geschäftsalltag." */
 .page-title,.section-title {
   margin:0 0 var(--title-bottom-space);
   color:var(--ink);
@@ -301,14 +301,14 @@ p + p,
 }
 
 /* GROSSE TITEL: globaler Abstand zum Fliesstext
-   Beispiel auf der Webseite: Abstand von "Wir stehen Ihnen gerne zur Verfügung." zu "Bitte füllen Sie das Kontaktformular aus." */
+   Beispiel: Abstand von "Wir stehen Ihnen gerne zur Verfügung." zu "Bitte füllen Sie das Kontaktformular aus." */
 .page-title + p,
 .page-title + .body-copy,
 .section-title + p,
 .section-title + .body-copy { margin-top:var(--title-body-space); }
 
 /* ZWISCHENTITEL: global
-   Beispiele auf der Webseite: "Buchhaltung" / "Checkliste für die Steuererklärung" */
+   Beispiel: "Buchhaltung" / "Checkliste für die Steuererklärung" */
 .subtitle,
 .service-card h3,
 .knowledge-card h3 {
@@ -322,19 +322,19 @@ p + p,
 }
 
 /* ZWISCHENTITEL: globaler Abstand zum Fliesstext
-   Beispiel auf der Webseite: Abstand von "Buchhaltung" zum Text "Ordnungsgemässe Führung der Finanzbuchhaltung..." */
+   Beispiel: Abstand von "Buchhaltung" zum Text "Ordnungsgemässe Führung der Finanzbuchhaltung..." */
 .service-card h3 + p,
 .knowledge-card h3 + p,
 .subtitle + p,
 .subtitle + .body-copy { margin-top:var(--subtitle-bottom-space); }
 
 /* ZWISCHENTITEL: globaler Abstand vom Fliesstext
-   Beispiel auf der Webseite: Abstand eines Fliesstexts zum folgenden Zwischentitel */
+   Beispiel: Abstand eines Fliesstexts zum folgenden Zwischentitel */
 p + .subtitle,
 .body-copy + .subtitle { margin-top:var(--subtitle-top-space); }
 
 /* GANZ GROSSER HERO-TITEL: global
-   Beispiel auf der Webseite: "Treuhand mit Struktur und Anspruch." */
+   Beispiel: "Treuhand mit Struktur und Anspruch." */
 .home-hero__title {
   margin:0;
   color:var(--ink);
@@ -346,11 +346,11 @@ p + .subtitle,
 }
 
 /* HERO-TITEL: Abstand zum Fliesstext darunter
-   Beispiel auf der Webseite: Abstand von "Treuhand mit Struktur und Anspruch." zu "Auf der Basis von Diskretion..." */
+   Beispiel: Abstand von "Treuhand mit Struktur und Anspruch." zu "Auf der Basis von Diskretion..." */
 .home-hero__title + .home-hero__copy { margin-top:var(--hero-title-bottom-space); }
 
 /* KLEINE GROSSBUCHSTABEN: global
-   Beispiele auf der Webseite: "KONTAKT", "ADRESSE", "NACHNAME", "07.2026 STEUERN" */
+   Beispiel: "KONTAKT", "ADRESSE", "NACHNAME", "07.2026 STEUERN" */
 .site-nav a,
 .section-label,
 .action,
@@ -374,12 +374,12 @@ p + .subtitle,
 .small-title { color:var(--label-color); }
 
 /* KLEINER TITEL: Spezialfall mit kleinem Abstand zum Fliesstext
-   Beispiele auf der Webseite: "ADRESSE" zu "MASOON TREUHAND" / "TELEFON" zu "+41 79 966 36 36" */
+   Beispiel: "ADRESSE" zu "MASOON TREUHAND" / "TELEFON" zu "+41 79 966 36 36" */
 .small-title + p,
 .small-title + .body-copy { margin-top:var(--small-title-bottom-space); }
 
 /* BEREICHSTITEL MIT KURZER LINIE LINKS
-   Beispiele auf der Webseite: "KONTAKT", "DIENSTLEISTUNGEN", "FACHWISSEN" */
+   Beispiel: "KONTAKT", "DIENSTLEISTUNGEN", "FACHWISSEN" */
 .section-label {
   display:flex;
   align-items:center;
@@ -396,7 +396,7 @@ p + .subtitle,
 }
 
 /* TEXTLINK / BUTTON OHNE RAHMEN
-   Beispiele auf der Webseite: "Nachricht senden", "Kontakt aufnehmen", "Alle Beiträge ansehen" */
+   Beispiel: "Nachricht senden", "Kontakt aufnehmen", "Alle Beiträge ansehen" */
 .action {
   display:inline-flex;
   align-items:center;
@@ -405,7 +405,7 @@ p + .subtitle,
 }
 
 /* PFEIL BEI TEXTLINKS UND BUTTONS
-   Beispiel auf der Webseite: Pfeil hinter "Nachricht senden" */
+   Beispiel: Pfeil hinter "Nachricht senden" */
 .action::after {
   content:"\2197\FE0E";
   font-family:Arial,sans-serif;
