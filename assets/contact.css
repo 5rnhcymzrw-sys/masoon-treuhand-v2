@@ -50,10 +50,6 @@
   min-width:0;
 }
 
-.contact-detail__label {
-  margin:0 0 calc(var(--body-spacing) / 2);
-}
-
 .contact-detail a {
   transition:color 180ms ease;
 }
