@@ -6,8 +6,8 @@
 
 .contact-page__grid {
   display:grid;
-  grid-template-columns:minmax(0,.49fr) minmax(0,.48fr);
-  gap:var(--page-gutter);
+  grid-template-columns:53% 47%;
+  gap:0;
   align-items:start;
 }
 
@@ -59,9 +59,10 @@
 }
 
 .contact-form {
+  height:630px;
   min-height:630px;
-  margin-top: -5.1%;
-  padding:calc(2 * var(--page-gutter)) var(--page-gutter);
+  margin-top:-5.1%;
+  padding:62px 42px;
   display:flex;
   flex-direction:column;
   border:1px solid transparent;
@@ -128,6 +129,7 @@
   }
 
   .contact-form {
+    height:auto;
     min-height:0;
     margin-top:0;
     padding:var(--page-gutter-mobile);
