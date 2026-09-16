@@ -451,8 +451,7 @@ p + p,
 .footer-links a { color:var(--footer-label-color); }
 
 .footer-links {
-  position:absolute;
-  left: 41%
+  position:static;
   display:flex;
   align-items:center;
   justify-content:flex-start;
