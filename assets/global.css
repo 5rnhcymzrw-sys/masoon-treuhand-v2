@@ -138,6 +138,7 @@ main { padding-bottom:var(--page-bottom-space); }
   position:relative;
   z-index:10;
   height:var(--header-height);
+  color:var(--white);
   background:var(--white);
 }
 
