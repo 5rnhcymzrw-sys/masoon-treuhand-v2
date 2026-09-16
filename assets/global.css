@@ -190,10 +190,10 @@ main { padding-bottom:var(--section-space); }
   position:relative;
   padding:35px 0 32px;
   color:var(--white);
-  font-size:11px;
-  font-weight:500;
+  font-size:var(--label-size);
+  font-weight:var(--label-weight);
   line-height:1.4;
-  letter-spacing:1.1px;
+  letter-spacing:var(--label-spacing);
   text-transform:uppercase;
 }
 
@@ -436,10 +436,10 @@ p,.body-copy {
 .footer-home,
 .footer-links a {
   color:#797c82;
-  font-size:11px;
-  font-weight:500;
+  font-size:var(--label-size);
+  font-weight:var(--label-weight);
   line-height:1.4;
-  letter-spacing:1.1px;
+  letter-spacing:var(--label-spacing);
   text-transform:uppercase;
 }
 
