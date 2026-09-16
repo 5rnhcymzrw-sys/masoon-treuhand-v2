@@ -1,0 +1,104 @@
+/* =========================================================
+   KONTAKT TESTSEITE
+   Nur für die Vorschau von Formular, Erfolg und Fehler.
+   ========================================================= */
+
+/* TESTFORMULAR: Position für die eingeblendeten Rückmeldungen
+   Beispiel: "Vielen Dank für Ihre Anfrage." */
+.contact-test-form {
+  position:relative;
+}
+
+/* TESTINHALT: normale Formularfelder
+   Beispiel: "Nachname", "Vorname", "E-Mail" */
+.contact-test__fields {
+  display:flex;
+  flex-direction:column;
+}
+
+/* TESTRÜCKMELDUNG: füllt den bestehenden Formularrahmen aus
+   Beispiel: "Vielen Dank für Ihre Anfrage." */
+.contact-test__response {
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:62px;
+}
+
+.contact-test__response[hidden] {
+  display:none;
+}
+
+/* TESTMELDUNG: mittiger Kasten mit bestehendem Farbverlauf
+   Beispiel: "Ihre Nachricht konnte nicht gesendet werden." */
+.contact-test__message {
+  width:min(100%,400px);
+  padding:28px 24px;
+  text-align:center;
+  background:rgba(255,255,255,.82);
+  border:1px solid transparent;
+  border-image:var(--brand-gradient) 1;
+}
+
+.contact-test__message .subtitle {
+  margin:0;
+}
+
+.contact-test__message .body-copy {
+  margin-top:14px;
+}
+
+/* TESTSTEUERUNG: Umschalten zwischen Formular, Erfolg und Fehler
+   Beispiel: "Erfolg" */
+.contact-test__controls {
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:99999;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:10px;
+  background:#ffffff;
+  border:1px solid #d8d8d8;
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+  font-family:var(--font-body);
+  font-size:11px;
+  line-height:1;
+}
+
+.contact-test__controls span {
+  margin-right:4px;
+  color:var(--label-color);
+  letter-spacing:var(--label-spacing);
+}
+
+.contact-test__controls button {
+  padding:8px 10px;
+  border:1px solid #d8d8d8;
+  background:#ffffff;
+  color:var(--ink);
+  cursor:pointer;
+}
+
+.contact-test__controls button[aria-pressed="true"] {
+  color:#ffffff;
+  background:#171715;
+  border-color:#171715;
+}
+
+@media (max-width:800px) {
+  .contact-test__response {
+    padding:var(--page-gutter-mobile);
+  }
+
+  .contact-test__controls {
+    right:12px;
+    bottom:12px;
+    left:12px;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+}
