@@ -62,7 +62,7 @@
   box-sizing:border-box;
   height:616px;
   min-height:616px;
-  margin-top:-5.1%;
+  margin-top:calc(-5.1% + 7px);
   transform:translateX(-38px);
   padding:62px 42px;
   display:flex;
