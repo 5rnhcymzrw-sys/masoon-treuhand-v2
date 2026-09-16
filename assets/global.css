@@ -27,7 +27,7 @@
   --label-line: 1.4;
   --label-spacing: 1.1px;
   --label-color: #797c82;
-  --header-label-color: #ffffff;
+  --header-label-color: #000000;
   --footer-label-color: #797c82;
 
   /* GROSSE TITEL: Schrift und Abstand unten */
@@ -139,7 +139,7 @@ main { padding-bottom:var(--page-bottom-space); }
   z-index:10;
   height:var(--header-height);
   color:var(--white);
-  background:var(--black);
+  background:var(--white);
 }
 
 .site-header::after {
