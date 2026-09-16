@@ -14,13 +14,12 @@
   --brand-gradient-middle: linear-gradient(110deg,#e8e5df 0%,#c7cbd3 100%);
   --brand-gradient-right: linear-gradient(110deg,#c7cbd3 0%,#8d96a8 100%);
 
+  /* FLIESSTEXT: Schrift, Farbe und Abstände */
   --font-body: "Inter", Arial, sans-serif;
-  --font-heading: "PT Serif", Georgia, serif;
-
-  /* FLIESSTEXT: Schriftgrösse, Gewicht, Zeilenhöhe */
   --body-size: 14px;
   --body-weight: 300;
   --body-line: 1.65;
+  --body-spacing: 18px;
 
   /* KLEINE GROSSBUCHSTABEN: Schrift und Farben */
   --label-size: 11px;
@@ -31,22 +30,26 @@
   --header-label-color: #ffffff;
   --footer-label-color: #797c82;
 
-  /* GROSSE TITEL: Schriftgrösse, Gewicht, Zeilenhöhe, Buchstabenabstand */
+  /* GROSSE TITEL: Schrift und Abstand unten */
+  --font-heading: "PT Serif", Georgia, serif;
   --title-size: 46px;
   --title-weight: 700;
   --title-line: 1.08;
   --title-spacing: -0.018em;
+  --title-bottom-space: 0px;
 
-  /* GANZ GROSSER HERO TITEL */
-  --hero-title-size: clamp(52px, 5vw, 66px);
-  --hero-title-line: .96;
-  --hero-title-spacing: 0;
-
-  /* ZWISCHENTITEL: Schriftgrösse, Gewicht, Zeilenhöhe, Buchstabenabstand */
+  /* ZWISCHENTITEL: Schrift und Abstand zum Fliesstext */
   --subtitle-size: 22px;
   --subtitle-weight: 700;
   --subtitle-line: 1.12;
   --subtitle-spacing: 0;
+  --subtitle-bottom-space: 14px;
+
+  /* GANZ GROSSER HERO-TITEL */
+  --hero-title-size: clamp(52px, 5vw, 66px);
+  --hero-title-line: .96;
+  --hero-title-spacing: 0;
+  --hero-title-bottom-space: 24px;
 
   /* SEITE: Breite, Rand, Abschnitt, Kopfzeile, Fusszeile */
   --content-width: 1227px;
@@ -72,22 +75,22 @@ html { margin: 0; padding: 0; scroll-behavior: smooth; }
 /* WEBSITE: Hintergrund und Grundschrift */
 body {
   position:relative;
-  margin: 0;
-  min-width: 320px;
-  color: var(--text);
-  background-color: var(--white);
-  background-image: url("images/backgrounds/background-2.png");
-  background-size: cover;
-  background-position: center top;
-  background-repeat: repeat-y;
-  background-attachment: fixed;
-  font-family: var(--font-body);
-  font-size: var(--body-size);
-  font-weight: var(--body-weight);
-  line-height: var(--body-line);
-  letter-spacing: 0;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  margin:0;
+  min-width:320px;
+  color:var(--text);
+  background-color:var(--white);
+  background-image:url("images/backgrounds/background-2.png");
+  background-size:cover;
+  background-position:center top;
+  background-repeat:repeat-y;
+  background-attachment:fixed;
+  font-family:var(--font-body);
+  font-size:var(--body-size);
+  font-weight:var(--body-weight);
+  line-height:var(--body-line);
+  letter-spacing:0;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
 }
 
 /* MESSLINIE: rote Linie in der Mitte */
@@ -103,32 +106,21 @@ body::after {
   z-index:9999;
 }
 
-/* BILDER */
 img,picture,svg { display:block; max-width:100%; }
-
-/* LINKS */
 a { color:inherit; text-decoration:none; }
-
-/* FORMULAR: Schrift */
 button,input,textarea,select { font:inherit; }
-
-/* WEBSITE: Leerraum vor der Fusszeile */
 main { padding-bottom:var(--section-space); }
 
-/* INHALT: zentrale Breite */
 .container {
   width:min(calc(100% - (2 * var(--page-gutter))),var(--content-width));
   margin-inline:auto;
 }
 
-/* ABSCHNITT: Abstand oben und unten */
 .section { padding-block:var(--section-space); }
 
 /* =========================================================
    KOPFZEILE
    ========================================================= */
-
-/* KOPFZEILE: schwarzer Balken */
 .site-header {
   position:relative;
   z-index:10;
@@ -137,7 +129,6 @@ main { padding-bottom:var(--section-space); }
   background:var(--black);
 }
 
-/* KOPFZEILE: farbiger Balken unten */
 .site-header::after {
   content:"";
   position:absolute;
@@ -148,7 +139,6 @@ main { padding-bottom:var(--section-space); }
   background:var(--brand-gradient);
 }
 
-/* KOPFZEILE: Inhalt und Ausrichtung */
 .header-inner {
   position:relative;
   height:100%;
@@ -158,7 +148,6 @@ main { padding-bottom:var(--section-space); }
   gap:36px;
 }
 
-/* KOPFZEILE: Logo Grösse */
 .site-brand {
   position:relative;
   width:200px;
@@ -168,7 +157,6 @@ main { padding-bottom:var(--section-space); }
   align-items:center;
 }
 
-/* KOPFZEILE: Schlüssel im Hintergrund */
 .site-brand__icon {
   position:absolute;
   top:50%;
@@ -180,7 +168,6 @@ main { padding-bottom:var(--section-space); }
   pointer-events:none;
 }
 
-/* KOPFZEILE: Textlogo */
 .site-brand__text {
   position:relative;
   z-index:1;
@@ -188,7 +175,6 @@ main { padding-bottom:var(--section-space); }
   height:auto;
 }
 
-/* KOPFZEILE: Navigation */
 .site-nav {
   position:absolute;
   left:41%;
@@ -198,14 +184,12 @@ main { padding-bottom:var(--section-space); }
   gap:34px;
 }
 
-/* KOPFZEILE: Schriftfarbe */
 .site-nav a {
   position:relative;
   padding:35px 0 32px;
   color:var(--header-label-color);
 }
 
-/* KOPFZEILE: Navigation Linie */
 .site-nav a::after {
   content:"";
   display:block;
@@ -221,32 +205,19 @@ main { padding-bottom:var(--section-space); }
   pointer-events:none;
 }
 
-/* KOPFZEILE: aktive Navigation Linie */
 .site-nav a:hover::after,
 .site-nav a:focus-visible::after,
-.site-nav a[aria-current="page"]::after {
-  width:40px;
-}
+.site-nav a[aria-current="page"]::after { width:40px; }
 
-/* KOPFZEILE: Tablet */
 @media (max-width:1050px) {
   .site-nav { gap:20px; }
   .site-brand { width:210px; flex-basis:210px; }
 }
 
-/* KOPFZEILE: Mobil */
 @media (max-width:800px) {
   :root { --header-height:92px; }
-  .header-inner {
-    width:100%;
-    margin-inline:0;
-    justify-content:flex-start;
-  }
-  .site-brand {
-    width:190px;
-    height:var(--header-height);
-    flex-basis:190px;
-  }
+  .header-inner { width:100%; margin-inline:0; justify-content:flex-start; }
+  .site-brand { width:190px; height:var(--header-height); flex-basis:190px; }
   .site-nav { display:none; }
 }
 
@@ -255,8 +226,7 @@ main { padding-bottom:var(--section-space); }
    ========================================================= */
 
 /* FLIESSTEXT: global */
-p,
-.body-copy {
+p,.body-copy {
   margin:0;
   color:var(--text);
   font-family:var(--font-body);
@@ -266,27 +236,19 @@ p,
   letter-spacing:0;
 }
 
+/* FLIESSTEXT: Abstand zwischen aufeinanderfolgenden Absätzen */
+p + p,
+.body-copy + .body-copy { margin-top:var(--body-spacing); }
+
 /* GROSSE TITEL: global */
-.page-title,
-.section-title {
-  margin:0;
+.page-title,.section-title {
+  margin:0 0 var(--title-bottom-space);
   color:var(--ink);
   font-family:var(--font-heading);
   font-size:var(--title-size);
   font-weight:var(--title-weight);
   line-height:var(--title-line);
   letter-spacing:var(--title-spacing);
-}
-
-/* GANZ GROSSER HERO TITEL: global */
-.home-hero__title {
-  margin:0;
-  color:var(--ink);
-  font-family:var(--font-heading);
-  font-size:var(--hero-title-size);
-  font-weight:var(--title-weight);
-  line-height:var(--hero-title-line);
-  letter-spacing:var(--hero-title-spacing);
 }
 
 /* ZWISCHENTITEL: global */
@@ -302,7 +264,26 @@ p,
   letter-spacing:var(--subtitle-spacing);
 }
 
-/* KLEINE GROSSBUCHSTABEN: global für Navigation, Bereichstitel, Links, Daten und Fusszeile */
+/* ZWISCHENTITEL: globaler Abstand zum Fliesstext */
+.service-card h3 + p,
+.knowledge-card h3 + p,
+.subtitle + p,
+.subtitle + .body-copy { margin-top:var(--subtitle-bottom-space); }
+
+/* GANZ GROSSER HERO-TITEL: global */
+.home-hero__title {
+  margin:0;
+  color:var(--ink);
+  font-family:var(--font-heading);
+  font-size:var(--hero-title-size);
+  font-weight:var(--title-weight);
+  line-height:var(--hero-title-line);
+  letter-spacing:var(--hero-title-spacing);
+}
+
+.home-hero__title + .home-hero__copy { margin-top:var(--hero-title-bottom-space); }
+
+/* KLEINE GROSSBUCHSTABEN: global */
 .site-nav a,
 .section-label,
 .action,
@@ -317,14 +298,10 @@ p,
   text-transform:uppercase;
 }
 
-/* KLEINE GROSSBUCHSTABEN: normale Farbe */
 .section-label,
 .action,
-.knowledge-card__date {
-  color:var(--label-color);
-}
+.knowledge-card__date { color:var(--label-color); }
 
-/* BEREICHSTITEL: kleine Titel */
 .section-label {
   display:flex;
   align-items:center;
@@ -332,7 +309,6 @@ p,
   margin:0 0 30px;
 }
 
-/* BEREICHSTITEL: kurze Linie */
 .section-label::before {
   content:"";
   width:30px;
@@ -341,7 +317,6 @@ p,
   background:currentColor;
 }
 
-/* BUTTON: Textlink mit Pfeil */
 .action {
   display:inline-flex;
   align-items:center;
@@ -349,7 +324,6 @@ p,
   transition:color 180ms ease;
 }
 
-/* BUTTON: Pfeil als Textzeichen, kein Icon */
 .action::after {
   content:"\2197\FE0E";
   font-family:Arial,sans-serif;
@@ -362,10 +336,8 @@ p,
   top:-2px;
 }
 
-/* BUTTON: Hover */
 .action:hover,.action:focus-visible { color:var(--ink); }
 
-/* SCHRIFTEN UND ABSTÄNDE: Mobil */
 @media (max-width:800px) {
   :root {
     --title-size:40px;
@@ -380,13 +352,8 @@ p,
 /* =========================================================
    ABSCHLUSSKASTEN / KONTAKT
    ========================================================= */
+.closing-card-section { padding-top:84px; }
 
-/* ABSCHLUSSKASTEN: globaler Abstand oberhalb */
-.closing-card-section {
-  padding-top:84px;
-}
-
-/* ABSCHLUSSKASTEN: globaler grosser Kasten */
 .closing-card {
   min-height:463px;
   padding:43px;
@@ -399,12 +366,8 @@ p,
   border-image:var(--brand-gradient) 1;
 }
 
-/* ABSCHLUSSKASTEN: Bereichstitel links */
-.closing-card > .section-label {
-  margin-bottom:0;
-}
+.closing-card > .section-label { margin-bottom:0; }
 
-/* ABSCHLUSSKASTEN: Textblock rechts */
 .closing-card__content {
   position:relative;
   left:-26px;
@@ -413,31 +376,17 @@ p,
   align-items:flex-start;
 }
 
-/* ABSCHLUSSKASTEN: grosser Titel */
-.closing-card .section-title {
-  max-width:780px;
-}
+.closing-card .section-title { max-width:780px; }
+.closing-card .action { margin-top:38px; }
 
-/* ABSCHLUSSKASTEN: Link unter dem Titel */
-.closing-card .action {
-  margin-top:38px;
-}
-
-/* ABSCHLUSSKASTEN: Mobil */
 @media (max-width:800px) {
-  .closing-card {
-    grid-template-columns:1fr;
-    gap:18px;
-    align-items:flex-start;
-  }
+  .closing-card { grid-template-columns:1fr; gap:18px; align-items:flex-start; }
   .closing-card__content { left:0; }
 }
 
 /* =========================================================
    FUSSZEILE
    ========================================================= */
-
-/* FUSSZEILE: schwarzer Balken */
 .site-footer {
   position:relative;
   min-height:var(--footer-height);
@@ -445,7 +394,6 @@ p,
   background:var(--black);
 }
 
-/* FUSSZEILE: farbiger Balken oben */
 .site-footer::before {
   content:"";
   position:absolute;
@@ -456,7 +404,6 @@ p,
   background:var(--brand-gradient);
 }
 
-/* FUSSZEILE: Inhalt und Ausrichtung */
 .footer-inner {
   position:relative;
   min-height:var(--footer-height);
@@ -466,13 +413,9 @@ p,
   gap:36px;
 }
 
-/* FUSSZEILE: Schriftfarbe */
 .footer-home,
-.footer-links a {
-  color:var(--footer-label-color);
-}
+.footer-links a { color:var(--footer-label-color); }
 
-/* FUSSZEILE: Links und Abstände */
 .footer-links {
   position:absolute;
   left:41%;
@@ -482,12 +425,8 @@ p,
   gap:34px;
 }
 
-/* FUSSZEILE: Tablet */
-@media (max-width:1050px) {
-  .footer-links { gap:20px; }
-}
+@media (max-width:1050px) { .footer-links { gap:20px; } }
 
-/* FUSSZEILE: Mobil */
 @media (max-width:800px) {
   .footer-inner {
     min-height:120px;
@@ -496,9 +435,5 @@ p,
     justify-content:center;
     text-align:center;
   }
-  .footer-links {
-    position:static;
-    flex-wrap:wrap;
-    justify-content:center;
-  }
+  .footer-links { position:static; flex-wrap:wrap; justify-content:center; }
 }
