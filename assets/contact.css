@@ -108,7 +108,7 @@
 
 .contact-form__submit {
   align-self:flex-start;
-  margin-top:var(--body-spacing);
+  margin-top:auto;
   padding:0;
   border:0;
   background:transparent;
