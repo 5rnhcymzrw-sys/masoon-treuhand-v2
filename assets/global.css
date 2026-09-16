@@ -203,7 +203,7 @@ main {
   font-family:var(--font-heading);
   font-size:28px;
   font-weight:var(--title-weight);
-  line-height:1;
+  line-height:var(--title-line);
   letter-spacing:var(--title-spacing);
   white-space:nowrap;
 }
