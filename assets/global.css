@@ -51,6 +51,11 @@
   --hero-title-spacing: 0;
   --hero-title-bottom-space: 24px;
 
+  /* KARTEN: globaler Hover */
+  --card-hover-lift: -4px;
+  --card-hover-background: rgba(255,255,255,.94);
+  --card-hover-duration: 180ms;
+
   /* SEITE: Breite, Rand und globale Abstände */
   --content-width: 1227px;
   --page-gutter: 32px;
@@ -345,6 +350,34 @@ p + p,
 }
 
 .action:hover,.action:focus-visible { color:var(--ink); }
+
+/* =========================================================
+   BEITRAGSKARTEN: GLOBALER HOVER
+   ========================================================= */
+.knowledge-card,
+.article-card {
+  transition:
+    transform var(--card-hover-duration) ease,
+    background-color var(--card-hover-duration) ease;
+}
+
+.knowledge-card:hover,
+.knowledge-card:focus-within,
+.article-card:hover,
+.article-card:focus-within {
+  transform:translateY(var(--card-hover-lift));
+  background-color:var(--card-hover-background);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .knowledge-card,
+  .article-card { transition:none; }
+
+  .knowledge-card:hover,
+  .knowledge-card:focus-within,
+  .article-card:hover,
+  .article-card:focus-within { transform:none; }
+}
 
 @media (max-width:800px) {
   :root {
