@@ -30,6 +30,7 @@
 
 .company-intro__caption {
   position:absolute;
+  z-index:3;
   bottom:0;
   left:0;
   margin:0;
