@@ -503,7 +503,8 @@ p + .subtitle,
   border:1px solid transparent;
 }
 
-.service-card > div { display:contents; }
+.service-card > div,
+.service-card > summary { display:contents; }
 
 .service-card__number {
   position:absolute;
