@@ -89,6 +89,7 @@
   --accent-height: 6px;
   --secondary-column-start: calc(40% + 11.4px);
   --legal-left-inset: 75px;
+  --content-card-inline-space: 130px;
 }
 
 /* =========================================================
@@ -449,6 +450,15 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   background:currentColor;
 }
 
+/* BLOGBEITRÄGE: Metadaten ohne Strich am Titelanfang ausrichten */
+.section-label.article-meta {
+  margin-left:var(--content-card-inline-space);
+}
+
+.section-label.article-meta::before {
+  content:none;
+}
+
 /* TEXTLINK / BUTTON OHNE RAHMEN
    Beispiel: "Nachricht senden", "Kontakt aufnehmen", "Alle Beiträge ansehen" */
 .action {
@@ -640,6 +650,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
     --header-height:92px;
     --title-size:40px;
     --hero-title-size:clamp(42px, 12vw, 58px);
+    --content-card-inline-space:var(--page-gutter-mobile);
   }
   body { background-attachment:scroll; }
   main { padding-bottom:var(--page-bottom-space-mobile); }
@@ -689,7 +700,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 }
 
 .content-card {
-  padding:var(--legal-left-inset) 130px;
+  padding:var(--legal-left-inset) var(--content-card-inline-space);
 }
 
 .content-card > header {
