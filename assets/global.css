@@ -358,6 +358,14 @@ p + p,
   line-height:var(--title-line);
   letter-spacing:var(--title-spacing);
 }
+
+/* GROSSER TITEL OHNE UMBRUCH: globale, wiederverwendbare Ausnahme für Desktop */
+@media (min-width:801px) {
+  .title-single-line {
+    max-width:none;
+    white-space:nowrap;
+  }
+}
 /* GROSSE TITEL: globaler Abstand zum Fliesstext
    Beispiel: Abstand von "Wir stehen Ihnen gerne zur Verfügung." zu "Bitte füllen Sie das Kontaktformular aus." */
 .page-title + p,
