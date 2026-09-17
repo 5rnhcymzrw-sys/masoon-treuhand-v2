@@ -665,6 +665,13 @@ p + .subtitle,
   padding:var(--legal-left-inset) 160px;
 }
 
+.content-card > header {
+  margin-bottom:var(--subtitle-top-space);
+  padding-bottom:var(--subtitle-top-space);
+  border-bottom:1px solid transparent;
+  border-image:inherit;
+}
+
 .content-card .page-title {
   max-width:none;
 }
