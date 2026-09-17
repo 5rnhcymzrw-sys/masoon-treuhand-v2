@@ -705,7 +705,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 
   .service-detail:hover {
     transform:translateY(-2px);
-    background:linear-gradient(120deg,rgba(243,232,212,.20),rgba(199,203,211,.18));
+    background:linear-gradient(120deg,#faf8f4 0%,#f3f5f8 100%);
   }
 
   .service-detail:hover .service-detail__toggle[aria-expanded="false"] {
