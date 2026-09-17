@@ -125,33 +125,6 @@ body {
   text-rendering:optimizeLegibility;
 }
 
-/* =========================================================
-   PROVISORISCHE ROTE MESSLINIEN – KOMPLETTEN BLOCK LÖSCHEN
-   Enthält Farbe, Breite, Höhe und Position aller drei Linien.
-   Linie 1: linke Kante der Titel auf den Rechtseiten
-   Linie 2: linke Kante der Fliesstexte und Navigation
-   Linie 3: Mitte der Webseite
-   ========================================================= */
-body::before {
-  --guide-color:#ff0000;
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:9999;
-  background-image:
-    linear-gradient(var(--guide-color),var(--guide-color)),
-    linear-gradient(var(--guide-color),var(--guide-color)),
-    linear-gradient(var(--guide-color),var(--guide-color));
-  background-size:1px 100%,1px 100%,1px 100%;
-  background-position:
-    calc(max(var(--page-gutter),calc(50% - 640px)) + var(--legal-left-inset)) top,
-    max(calc(40% + clamp(6.8px,1.44vw,23px) + 11.4px),calc(50% - 116.6px)) top,
-    calc(50% - .5px) top;
-  background-repeat:no-repeat;
-  pointer-events:none;
-}
-
-
 img,picture,svg { display:block; max-width:100%; }
 a { color:inherit; text-decoration:none; }
 button,input,textarea,select { font:inherit; }
