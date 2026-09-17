@@ -397,13 +397,18 @@ p + .subtitle,
 
 /* BEREICHSTITEL – Werte wie auf der Testseite */
 .section-label {
-  display:block;
+  display:flex;
+  align-items:center;
+  gap:14px;
   margin:0 0 30px;
 }
 
 .section-label::before {
-  content:none;
-  display:none;
+  content:"";
+  width:30px;
+  height:1px;
+  flex:0 0 30px;
+  background:currentColor;
 }
 
 /* TEXTLINK / BUTTON OHNE RAHMEN
