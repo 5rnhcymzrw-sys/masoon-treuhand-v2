@@ -346,6 +346,8 @@ p,.body-copy {
   font-weight:var(--body-weight);
   line-height:var(--body-line);
   letter-spacing:0;
+  -webkit-hyphens:auto;
+  hyphens:auto;
 }
 
 /* FLIESSTEXT: Abstand zwischen aufeinanderfolgenden Absätzen
