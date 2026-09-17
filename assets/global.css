@@ -116,10 +116,13 @@ body {
   text-rendering:optimizeLegibility;
 }
 
-/* PROVISORISCHE ROTE MESSLINIEN
+/* =========================================================
+   PROVISORISCHE ROTE MESSLINIEN – KOMPLETTEN BLOCK LÖSCHEN
+   Enthält Farbe, Breite, Höhe und Position aller drei Linien.
    Linie 1: linke Kante der Titel auf den Rechtseiten
    Linie 2: linke Kante der Fliesstexte und Navigation
-   Linie 3: Mitte der Webseite */
+   Linie 3: Mitte der Webseite
+   ========================================================= */
 body::before {
   --guide-color:#ff0000;
   content:"";
@@ -224,7 +227,7 @@ main {
   align-items:center;
 }
 
-/* RECHTSEITEN: Logo beginnt an der roten Linie 1 */
+/* RECHTSEITEN: Logo mit der linken Titelkante ausrichten */
 .legal-page .site-brand {
   margin-left:var(--legal-left-inset);
 }
