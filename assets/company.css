@@ -21,7 +21,7 @@
   position:relative;
   width:100%;
   margin:0;
-  padding-bottom:19px;
+  padding-bottom:26px;
   background-image:linear-gradient(90deg,rgba(244,228,201,.24) 0%,rgba(232,227,218,.24) 36%,rgba(193,199,214,.24) 68%,rgba(158,165,184,.24) 100%);
   --company-box-position-x:0%;
   background-position:var(--company-box-position-x) bottom;
@@ -39,7 +39,7 @@
 .company-intro__caption {
   position:absolute;
   z-index:3;
-  bottom:19px;
+  bottom:26px;
   left:0;
   margin:0;
   padding:18px 22px;
