@@ -314,22 +314,11 @@ main {
 }
 
 /* =========================================================
-   BILDER: GEMEINSAME ABDUNKELUNG
-   Exakt gleiche Abdunkelung für Hero Foto und Unternehmensfoto.
+   BILDER: GEMEINSAME SCHWARZWEISSDARSTELLUNG
+   Gilt für Hero Foto und Unternehmensfoto. Die Bücherabdunkelung bleibt im Hero.
    ========================================================= */
-.photo-dark-overlay::after {
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:2;
-  pointer-events:none;
-  background:linear-gradient(
-    90deg,
-    rgba(0,0,0,.24) 0%,
-    rgba(0,0,0,.22) 48%,
-    rgba(0,0,0,.12) 62%,
-    rgba(0,0,0,0) 78%
-  );
+.photo-grayscale img {
+  filter:grayscale(1);
 }
 
 /* =========================================================
@@ -346,8 +335,6 @@ p,.body-copy {
   font-weight:var(--body-weight);
   line-height:var(--body-line);
   letter-spacing:0;
-  -webkit-hyphens:auto;
-  hyphens:auto;
 }
 
 /* FLIESSTEXT: Abstand zwischen aufeinanderfolgenden Absätzen
