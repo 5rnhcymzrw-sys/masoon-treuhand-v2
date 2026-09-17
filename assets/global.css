@@ -469,7 +469,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   font-weight:300;
   line-height:.7;
   letter-spacing:0;
-  transform:translateY(-1px);
+  transform:translateY(-2px);
 }
 
 
