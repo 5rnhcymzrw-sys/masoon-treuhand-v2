@@ -42,10 +42,10 @@
   /* KLEINE GROSSBUCHSTABEN + Bereichstitel: Schrift und Farben
      Beispiel: "KONTAKT", "ADRESSE", "NACHNAME", "FACHWISSEN" */
   --label-size: 11px;
-  --label-weight: 500;
-  --label-line: 1.4;
-  --label-spacing: 1.1px;
-  --label-color: #797c82;
+  --label-weight: 700;
+  --label-line: normal;
+  --label-spacing: .5px;
+  --label-color: #555b63;
   --header-label-color: #080808;
   --header-scroll-accent: #e7dfc1;
   --footer-label-color: #797c82;
@@ -245,13 +245,6 @@ main {
   align-items:center;
   justify-content:flex-start;
   gap:34px;
-  color:#555b63;
-  font-family:Arial,Helvetica,sans-serif;
-  font-size:11px;
-  font-weight:700;
-  line-height:normal;
-  letter-spacing:.5px;
-  text-transform:uppercase;
 }
 
 .site-nav a {
@@ -373,6 +366,8 @@ p + .subtitle,
 
 /* KLEINE GROSSBUCHSTABEN: global
    Beispiel: "KONTAKT", "ADRESSE", "NACHNAME", "07.2026 STEUERN" */
+.site-nav,
+.home-hero__actions,
 .section-label,
 .action,
 .knowledge-card__date,
@@ -380,7 +375,7 @@ p + .subtitle,
 .small-title,
 .footer-home,
 .footer-links a {
-  font-family:var(--font-body);
+  font-family:Arial,Helvetica,sans-serif;
   font-size:var(--label-size);
   font-weight:var(--label-weight);
   line-height:var(--label-line);
@@ -388,6 +383,8 @@ p + .subtitle,
   text-transform:uppercase;
 }
 
+.site-nav,
+.home-hero__actions,
 .section-label,
 .action,
 .knowledge-card__date,
