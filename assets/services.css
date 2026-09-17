@@ -9,7 +9,6 @@
    ========================================================= */
 .service-detail {
   grid-template-rows:auto auto auto auto;
-  padding-bottom:45px;
   cursor:pointer;
 }
 
@@ -19,6 +18,7 @@
 
 .service-detail.is-open {
   height:auto;
+  padding-bottom:45px;
 }
 
 .service-detail__toggle {
