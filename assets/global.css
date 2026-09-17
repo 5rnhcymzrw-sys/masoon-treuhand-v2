@@ -278,7 +278,9 @@ main > section:last-child { padding-bottom:0; }
 
 .site-nav a:hover,
 .site-nav a:focus-visible,
-.site-nav a[aria-current="page"] { color:var(--black); }
+.site-nav a[aria-current="page"],
+.service-detail:hover .service-detail__toggle,
+.service-detail__toggle:focus-visible { color:var(--black); }
 
 .site-nav a:hover::after,
 .site-nav a:focus-visible::after,
