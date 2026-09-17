@@ -469,7 +469,28 @@ p + .subtitle,
 
 /* =========================================================
    KACHELN: GLOBAL
+   Dienstleistungsraster und Karten werden auf allen Seiten gemeinsam verwendet.
    ========================================================= */
+.service-grid {
+  margin-top:64px;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+
+@media (max-width:1050px) {
+  .service-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width:800px) {
+  .service-grid {
+    margin-top:46px;
+    grid-template-columns:1fr;
+  }
+}
+
 .service-card {
   position:relative;
   min-height:232px;
