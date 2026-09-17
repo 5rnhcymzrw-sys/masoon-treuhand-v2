@@ -80,6 +80,7 @@
   --accent-height: 6px;
   --guide-color: #ff0000;
   --secondary-column-start: calc(40% + 11.4px);
+  --legal-left-inset: 75px;
 }
 
 /* =========================================================
@@ -127,7 +128,7 @@ body::before {
     linear-gradient(var(--guide-color),var(--guide-color));
   background-size:1px 100%,1px 100%,1px 100%;
   background-position:
-    calc(max(var(--page-gutter),calc(50% - 640px)) + 75px) top,
+    calc(max(var(--page-gutter),calc(50% - 640px)) + var(--legal-left-inset)) top,
     max(calc(40% + clamp(6.8px,1.44vw,23px) + 11.4px),calc(50% - 116.6px)) top,
     calc(50% - .5px) top;
   background-repeat:no-repeat;
@@ -217,6 +218,10 @@ main {
   flex:0 0 auto;
   display:flex;
   align-items:center;
+}
+
+.legal-page .site-brand {
+  margin-left:var(--legal-left-inset);
 }
 
 /* LOGO: MASOON TREUHAND (Schrift) */
@@ -596,7 +601,7 @@ p + .subtitle,
   --subtitle-size:18px;
   --subtitle-bottom-space:10px;
   min-height:405px;
-  padding:67px 156px 67px 75px;
+  padding:67px 156px 67px var(--legal-left-inset);
   display:grid;
   grid-template-columns:minmax(0,.4fr) minmax(0,.6fr);
   align-items:start;
