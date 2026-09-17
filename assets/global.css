@@ -243,12 +243,19 @@ main {
   align-items:center;
   justify-content:flex-start;
   gap:34px;
+  color:#555b63;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:11px;
+  font-weight:700;
+  line-height:normal;
+  letter-spacing:.5px;
+  text-transform:uppercase;
 }
 
 .site-nav a {
   position:relative;
   padding:35px 0 32px;
-  color:var(--header-label-color);
+  color:inherit;
   transition:color 260ms ease;
 }
 
@@ -364,7 +371,6 @@ p + .subtitle,
 
 /* KLEINE GROSSBUCHSTABEN: global
    Beispiel: "KONTAKT", "ADRESSE", "NACHNAME", "07.2026 STEUERN" */
-.site-nav a,
 .section-label,
 .action,
 .knowledge-card__date,
