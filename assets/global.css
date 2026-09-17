@@ -365,6 +365,7 @@ p + .subtitle,
    Beispiel: "KONTAKT", "ADRESSE", "NACHNAME", "07.2026 STEUERN" */
 .site-nav,
 .home-hero__actions,
+.section-label,
 .action,
 .knowledge-card__date,
 .contact-label,
@@ -381,6 +382,7 @@ p + .subtitle,
 
 .site-nav,
 .home-hero__actions,
+.section-label,
 .action,
 .knowledge-card__date,
 .contact-label,
@@ -397,13 +399,6 @@ p + .subtitle,
 .section-label {
   display:block;
   margin:0 0 30px;
-  color:#555b63;
-  font-family:Arial,Helvetica,sans-serif;
-  font-size:11px;
-  font-weight:700;
-  line-height:1.75;
-  letter-spacing:2.4px;
-  text-transform:uppercase;
 }
 
 .section-label::before {
