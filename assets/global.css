@@ -811,7 +811,7 @@ body.page-article-employment-termination .content-card .article-text-table td:la
 
 .content-card .article-table-wrap th,
 .content-card .article-text-table th,
-.content-card .item-label strong {
+.content-card strong {
   color:#303236;
   font-weight:500;
 }
