@@ -37,21 +37,24 @@
   padding:76px 74px 74px 4px;
 }
 
-/* GANZ GROSSER TITEL-HERO: Schrift und Abstand global geregelt */
-.home-hero__title {
-  max-width:720px;
-}
-
 /* HERO-FLIESSTEXT: Schrift und Abstand global geregelt */
 .home-hero__copy {
   max-width:560px;
 }
 
+/* HERO-LEISTUNGEN: Anordnung und vollständige Schriftwerte */
 .home-hero__actions {
   margin-top:28px;
   display:flex;
   flex-wrap:wrap;
   gap:28px;
+  color:var(--label-color);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:var(--label-size);
+  font-weight:var(--label-weight);
+  line-height:var(--label-line);
+  letter-spacing:var(--label-spacing);
+  text-transform:uppercase;
 }
 
 /* HERO-FOTO: wie auf der Testseite als klarer rechter Bildblock */
