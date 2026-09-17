@@ -458,6 +458,20 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   margin-left:var(--content-card-inline-space);
 }
 
+/* BLOGBEITRÄGE: kräftiges Winkelzeichen wie auf der alten Webseite */
+.section-label.article-back {
+  gap:10px;
+}
+
+.article-back__mark {
+  display:inline-block;
+  font-size:20px;
+  font-weight:300;
+  line-height:.7;
+  letter-spacing:0;
+  transform:translateY(-1px);
+}
+
 /* BLOGBEITRÄGE: kleiner Abstand vom oberen Zurücklink zu den Metadaten */
 .container > .article-back {
   margin-bottom:16px;
