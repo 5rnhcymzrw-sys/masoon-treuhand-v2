@@ -4,30 +4,18 @@
 */
 
 /* =========================================================
-   DIENSTLEISTUNGEN: AUSKLAPPBARE KARTEN
+   DIENSTLEISTUNGEN: PLUS UND AUSKLAPPBARE TÄTIGKEITEN
+   Titel und Fliesstext bleiben fest. Nur die Liste erweitert den Kasten nach unten.
    ========================================================= */
-.service-detail summary {
-  cursor:pointer;
-  list-style:none;
-}
-
-.service-detail summary::-webkit-details-marker {
-  display:none;
-}
-
 .service-detail__toggle {
   grid-column:1 / -1;
   grid-row:3;
   justify-self:start;
   margin-top:28px;
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-}
-
-.service-detail__toggle-symbol {
-  font-size:1.2em;
-  line-height:1;
+  padding:0;
+  border:0;
+  background:transparent;
+  cursor:pointer;
 }
 
 .service-detail__list {
