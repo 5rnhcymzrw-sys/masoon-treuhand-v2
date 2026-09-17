@@ -441,6 +441,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   line-height:var(--label-line);
   letter-spacing:var(--label-spacing);
   text-transform:uppercase;
+  transition:color 260ms ease;
 }
 
 .section-label::before {
@@ -460,6 +461,11 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 .section-label.article-back::before,
 .section-label.article-meta::before {
   content:none;
+}
+
+/* BLOGBEITRÄGE: unterer Zurücklink nach dem Fazit */
+.content-card .article-back {
+  margin:var(--subtitle-top-space) 0 0;
 }
 
 /* TEXTLINK / BUTTON OHNE RAHMEN
@@ -498,8 +504,12 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   top:-2px;
 }
 
-.action:hover,.action:focus-visible {
+.action:hover,.action:focus-visible,
+.article-back:hover,.article-back:focus-visible {
   color:var(--black);
+}
+
+.action:hover,.action:focus-visible {
   background-size:40px 2px;
 }
 

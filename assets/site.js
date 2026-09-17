@@ -80,9 +80,9 @@ serviceDetailToggles.forEach((toggle) => {
 
 /* FACHBEITRÄGE: Zurücklink zur vorherigen Position
    Bei direktem Aufruf bleibt die Fachwissen-Übersicht das normale Linkziel. */
-const articleBackLink = document.querySelector('.article-back');
+const articleBackLinks = document.querySelectorAll('.article-back');
 
-if (articleBackLink) {
+articleBackLinks.forEach((articleBackLink) => {
   articleBackLink.addEventListener('click', (event) => {
     if (!document.referrer || window.history.length <= 1) return;
 
@@ -93,4 +93,4 @@ if (articleBackLink) {
     event.preventDefault();
     window.history.back();
   });
-}
+});
