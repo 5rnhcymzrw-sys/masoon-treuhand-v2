@@ -673,7 +673,7 @@ p + .subtitle,
 }
 
 .content-card > div {
-  width:min(calc(50% + 322px),100%);
+  width:min(calc(50% + 305px),100%);
   margin-left:auto;
 }
 
