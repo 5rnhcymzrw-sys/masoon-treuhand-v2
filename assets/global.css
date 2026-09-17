@@ -493,7 +493,8 @@ p + .subtitle,
    KACHELN: GLOBAL
    Dienstleistungsraster und Karten werden auf allen Seiten gemeinsam verwendet.
    ========================================================= */
-.service-grid {
+.service-grid,
+.knowledge-grid {
   margin-top:64px;
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
@@ -501,13 +502,15 @@ p + .subtitle,
 }
 
 @media (max-width:1050px) {
-  .service-grid {
+  .service-grid,
+  .knowledge-grid {
     grid-template-columns:repeat(2,minmax(0,1fr));
   }
 }
 
 @media (max-width:800px) {
-  .service-grid {
+  .service-grid,
+  .knowledge-grid {
     margin-top:46px;
     grid-template-columns:1fr;
   }
@@ -565,27 +568,6 @@ p + .subtitle,
   grid-column:1 / -1;
   grid-row:2;
   max-width:34ch;
-}
-
-/* FACHWISSEN-RASTER: global für Startseite und Fachwissen-Hauptseite */
-.knowledge-grid {
-  margin-top:64px;
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:18px;
-}
-
-@media (max-width:1050px) {
-  .knowledge-grid {
-    grid-template-columns:repeat(2,minmax(0,1fr));
-  }
-}
-
-@media (max-width:800px) {
-  .knowledge-grid {
-    margin-top:46px;
-    grid-template-columns:1fr;
-  }
 }
 
 .knowledge-card {
