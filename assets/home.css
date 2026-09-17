@@ -10,7 +10,7 @@
   min-height:700px;
   margin:48px auto 90px;
   display:grid;
-  grid-template-columns:var(--secondary-column-start) 1fr;
+  grid-template-columns:1fr 1fr;
   background:rgba(255,255,255,.72);
 }
 
@@ -95,6 +95,9 @@
 
 /* HERO: Tablet */
 @media (max-width:1050px) {
+  .home-hero {
+    grid-template-columns:1fr 42%;
+  }
   .home-hero__inner {
     padding-right:40px;
   }
