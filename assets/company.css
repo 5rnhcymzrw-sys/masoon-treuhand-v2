@@ -42,6 +42,14 @@
 }
 
 /* =========================================================
+   UNTERNEHMEN: WERTEKARTEN
+   Nur die Höhe der drei Wertekarten. Alle übrigen Werte bleiben global.
+   ========================================================= */
+.company-value-card {
+  min-height:0;
+}
+
+/* =========================================================
    UNTERNEHMEN: MOBIL
    ========================================================= */
 @media (max-width:800px) {
