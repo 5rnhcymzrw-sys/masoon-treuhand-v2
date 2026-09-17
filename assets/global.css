@@ -240,17 +240,11 @@ main {
   bottom:18px;
   width:0;
   height:2px;
-  background:var(--nav-underline-color);
+  background:#8d96a8;
   opacity:1;
   transition:width .4s ease;
   pointer-events:none;
 }
-
-.site-nav a:nth-child(1) { --nav-underline-color:#f3e8d4; }
-.site-nav a:nth-child(2) { --nav-underline-color:#e8e5df; }
-.site-nav a:nth-child(3) { --nav-underline-color:#d7d8d9; }
-.site-nav a:nth-child(4) { --nav-underline-color:#c7cbd3; }
-.site-nav a:nth-child(5) { --nav-underline-color:#8d96a8; }
 
 .site-nav a:hover::after,
 .site-nav a:focus-visible::after,
