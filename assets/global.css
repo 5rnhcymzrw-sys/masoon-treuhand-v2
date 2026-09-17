@@ -289,7 +289,6 @@ main {
 }
 
 @media (max-width:800px) {
-  :root { --header-height:92px; }
   .header-inner { width:100%; margin-inline:0; justify-content:flex-start; }
   .site-nav { display:none; }
 }
@@ -386,6 +385,7 @@ p + .subtitle,
 .small-title,
 .footer-home,
 .footer-links a {
+  color:var(--label-color);
   font-family:Arial,Helvetica,sans-serif;
   font-size:var(--label-size);
   font-weight:var(--label-weight);
@@ -393,16 +393,6 @@ p + .subtitle,
   letter-spacing:var(--label-spacing);
   text-transform:uppercase;
 }
-
-.site-nav,
-.home-hero__actions,
-.section-label,
-.action,
-.knowledge-card__date,
-.contact-label,
-.small-title,
-.footer-home,
-.footer-links a { color:var(--label-color); }
 
 /* KLEINER TITEL: Spezialfall mit kleinem Abstand zum Fliesstext
    Beispiel: "ADRESSE" zu "MASOON TREUHAND" / "TELEFON" zu "+41 79 966 36 36" */
@@ -552,6 +542,7 @@ p + .subtitle,
 
 @media (max-width:800px) {
   :root {
+    --header-height:92px;
     --title-size:40px;
     --hero-title-size:clamp(42px, 12vw, 58px);
   }
