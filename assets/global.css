@@ -395,6 +395,29 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   margin-top:5px;
 }
 
+/* FACHBEITRÄGE: gestapelte Listen mit Titel und Detailtext darunter */
+.page-article-stacked-list .content-card li {
+  padding-left:16px;
+}
+
+.page-article-stacked-list .content-card li::before {
+  left:0;
+}
+
+.page-article-stacked-list .content-card li + li {
+  margin-top:10px;
+}
+
+.page-article-stacked-list .content-card .item-label {
+  display:block;
+  margin-left:0;
+  margin-bottom:1px;
+}
+
+.page-article-stacked-list .content-card .item-separator {
+  display:none;
+}
+
 /* GANZ GROSSER HERO-TITEL: global
    Beispiel: "Treuhand mit Struktur und Anspruch." */
 .home-hero__title {
