@@ -1,0 +1,43 @@
+/* MASOON TREUHAND V2 | nur Dienstleistungsseite
+   Enthält ausschliesslich das Verhalten der ausklappbaren Leistungsdetails.
+   Raster, Karten, Schriften, Farben und Abstände bleiben global geregelt.
+*/
+
+/* =========================================================
+   DIENSTLEISTUNGEN: AUSKLAPPBARE KARTEN
+   ========================================================= */
+.service-detail summary {
+  cursor:pointer;
+  list-style:none;
+}
+
+.service-detail summary::-webkit-details-marker {
+  display:none;
+}
+
+.service-detail__toggle {
+  grid-column:1 / -1;
+  grid-row:3;
+  justify-self:start;
+  margin-top:28px;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+}
+
+.service-detail__toggle-symbol {
+  font-size:1.2em;
+  line-height:1;
+}
+
+.service-detail__list {
+  grid-column:1 / -1;
+  grid-row:4;
+  margin:28px 0 0;
+  padding:24px 0 0 18px;
+  border-top:1px solid var(--label-color);
+}
+
+.service-detail__list li + li {
+  margin-top:8px;
+}
