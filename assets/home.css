@@ -10,7 +10,7 @@
   min-height:700px;
   margin:48px auto 90px;
   display:grid;
-  grid-template-columns:1fr 1.04fr;
+  grid-template-columns:1fr 1fr;
   background:rgba(255,255,255,.72);
 }
 
