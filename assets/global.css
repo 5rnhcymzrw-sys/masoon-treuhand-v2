@@ -174,7 +174,7 @@ main {
   right:0;
   bottom:calc(1px - var(--accent-height));
   left:0;
-  width:min(calc(100% - (2 * var(--page-gutter))),var(--content-width));
+  width:min(calc(100% - (2 * var(--page-gutter))),1400px);
   height:calc(var(--accent-height) - 1px);
   margin-inline:auto;
   background:var(--brand-gradient);
