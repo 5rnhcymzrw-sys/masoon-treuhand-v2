@@ -22,17 +22,10 @@
 .article-title {
   max-width:none;
   margin:0;
-  color:var(--ink);
-  font-family:var(--font-heading);
-  font-size:clamp(30px,2.45vw,34px);
-  font-weight:var(--title-weight);
-  line-height:1.04;
-  letter-spacing:var(--title-spacing);
-  white-space:nowrap;
 }
 
 .article-lead {
-  max-width:760px;
+  max-width:none;
   margin-top:24px;
 }
 
@@ -46,8 +39,8 @@
 }
 
 .article-body {
-  max-width:600px;
-  margin:50px auto 0 40px;
+  max-width:none;
+  margin:50px 0 0 40px;
 }
 
 .article-body h2 {
@@ -99,10 +92,6 @@
     padding:52px 26px;
   }
 
-  .article-title {
-    font-size:38px;
-    white-space:normal;
-  }
 
   .article-body {
     max-width:none;
