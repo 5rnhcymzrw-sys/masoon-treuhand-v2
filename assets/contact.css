@@ -224,9 +224,8 @@
   justify-self:start;
   align-self:start;
   margin-top:2px;
-  padding:8px 0;
   border:0;
-  background:transparent;
+  background-color:transparent;
   cursor:pointer;
 }
 
