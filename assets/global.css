@@ -307,7 +307,10 @@ main > section:last-child { padding-bottom:0; }
 
 /* FLIESSTEXT: global
    Beispiel: "Bitte füllen Sie das Kontaktformular aus." / "Ordnungsgemässe Führung der Finanzbuchhaltung..." */
-p,.body-copy {
+p,
+.body-copy,
+.content-card .article-table-wrap td,
+.content-card .article-text-table td {
   margin:0;
   color:var(--text);
   font-family:var(--font-body);
