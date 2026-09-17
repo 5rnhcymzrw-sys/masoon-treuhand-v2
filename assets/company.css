@@ -21,6 +21,7 @@
   position:relative;
   width:100%;
   margin:0;
+  clip-path:inset(0 5% 0 5%);
 }
 
 .company-intro__portrait img {
