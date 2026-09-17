@@ -9,6 +9,7 @@
    ========================================================= */
 .service-detail {
   grid-template-rows:auto auto auto auto;
+  padding-bottom:45px;
   cursor:pointer;
 }
 
