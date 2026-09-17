@@ -458,6 +458,11 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   margin-left:var(--content-card-inline-space);
 }
 
+/* BLOGBEITRÄGE: kleiner Abstand vom oberen Zurücklink zu den Metadaten */
+.container > .article-back {
+  margin-bottom:16px;
+}
+
 .section-label.article-back::before,
 .section-label.article-meta::before {
   content:none;
