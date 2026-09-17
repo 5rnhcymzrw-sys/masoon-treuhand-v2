@@ -763,6 +763,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 /* INHALTSKARTEN: rahmenlose Texttabellen mit linksbündigen Spalten */
 .content-card .article-text-table {
   width:100%;
+  margin:var(--body-spacing) 0;
   table-layout:fixed;
   border-collapse:collapse;
 }
