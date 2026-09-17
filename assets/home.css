@@ -165,7 +165,7 @@
    ========================================================= */
 
 .home-knowledge {
-  background:#F2F2F2;
+  background:linear-gradient(90deg,#eaeaea 0%,#f0f0f0 50%,#f9f9f9 100%);
 }
 
 .home-services__head,
