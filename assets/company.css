@@ -23,7 +23,8 @@
   margin:0;
   padding-bottom:19px;
   background-image:linear-gradient(90deg,rgba(244,228,201,.24) 0%,rgba(232,227,218,.24) 36%,rgba(193,199,214,.24) 68%,rgba(158,165,184,.24) 100%);
-  background-position:right bottom;
+  --company-box-position-x:100%;
+  background-position:var(--company-box-position-x) bottom;
   background-size:72% 58%;
   background-repeat:no-repeat;
 }
