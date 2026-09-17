@@ -10,6 +10,7 @@
 .service-detail {
   grid-template-rows:auto auto auto auto;
   cursor:pointer;
+  transition:transform .24s ease,background .24s ease;
 }
 
 .service-grid:has(.service-detail.is-open) .service-detail {
@@ -37,7 +38,7 @@
   border:0;
   background:transparent;
   cursor:pointer;
-  transition:color 260ms ease;
+  transition:transform .22s ease,color .22s ease;
 }
 
 .service-detail__list {
