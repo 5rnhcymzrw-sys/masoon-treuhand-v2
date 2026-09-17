@@ -21,7 +21,7 @@
   --body-size: 14px;
   --body-weight: 300;
   --body-line: 1.75;
-  --body-spacing: 18px;
+  --body-spacing: 12px;
 
   /* KLEINE GROSSBUCHSTABEN + Bereichstitel: Schrift und Farben
      Beispiel: "KONTAKT", "ADRESSE", "NACHNAME", "FACHWISSEN" */
@@ -670,6 +670,11 @@ p + .subtitle,
   padding-bottom:var(--subtitle-top-space);
   border-bottom:1px solid transparent;
   border-image:inherit;
+}
+
+.content-card > div {
+  width:min(calc(50% + 322px),100%);
+  margin-left:auto;
 }
 
 .content-card .page-title {
