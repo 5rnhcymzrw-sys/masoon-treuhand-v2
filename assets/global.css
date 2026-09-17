@@ -78,7 +78,6 @@
   --header-height: 122px;
   --footer-height: 80px;
   --accent-height: 6px;
-  --guide-color: #ff0000;
   --secondary-column-start: calc(40% + 11.4px);
   --legal-left-inset: 75px;
 }
@@ -122,6 +121,7 @@ body {
    Linie 2: linke Kante der Fliesstexte und Navigation
    Linie 3: Mitte der Webseite */
 body::before {
+  --guide-color:#ff0000;
   content:"";
   position:absolute;
   inset:0;
