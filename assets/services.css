@@ -40,22 +40,8 @@
   grid-column:1 / -1;
   grid-row:4;
   margin:var(--subtitle-bottom-space) 0 0;
-  padding:0;
-  list-style:none;
 }
 
 .service-detail__list li {
-  position:relative;
-  padding-left:16px;
   line-height:1.45;
-}
-
-.service-detail__list li::before {
-  content:"-";
-  position:absolute;
-  left:0;
-}
-
-.service-detail__list li + li {
-  margin-top:5px;
 }
