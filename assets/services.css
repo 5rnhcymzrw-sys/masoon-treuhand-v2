@@ -42,9 +42,16 @@
 .service-detail__list {
   grid-column:1 / -1;
   grid-row:4;
-  margin:20px 0 0 ;
+  margin:20px 0 0;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-rows:repeat(3,auto);
+  grid-auto-flow:column;
+  column-gap:24px;
+  row-gap:2px;
 }
 
 .service-detail__list li {
+  margin-top:0;
   line-height:1;
 }
