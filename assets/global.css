@@ -786,7 +786,7 @@ body.page-article-employment-termination .content-card .article-text-table th {
 }
 
 body.page-article-employment-termination .content-card .article-text-table tr + tr td {
-  padding-top:8px;
+  padding-top:0;
 }
 
 body.page-article-employment-termination .content-card .article-text-table th:last-child,
