@@ -101,19 +101,11 @@ body {
   flex-direction:column;
   color:var(--text);
   background-color:var(--white);
-  background-image:
-    linear-gradient(var(--guide-color),var(--guide-color)),
-    linear-gradient(var(--guide-color),var(--guide-color)),
-    linear-gradient(var(--guide-color),var(--guide-color)),
-    url("images/backgrounds/background-2.png");
-  background-size:1px 100%,1px 100%,1px 100%,100% auto;
-  background-position:
-    calc(max(var(--page-gutter),calc(50% - 640px)) + 75px) top,
-    max(calc(40% + clamp(6.8px,1.44vw,23px) + 11.4px),calc(50% - 116.6px)) top,
-    calc(50% - .5px) top,
-    80% 3%;
-  background-repeat:no-repeat,no-repeat,no-repeat,repeat-y;
-  background-attachment:scroll,scroll,scroll,fixed;
+  background-image:url("images/backgrounds/background-2.png");
+  background-size:100% auto;
+  background-position:80% 3%;
+  background-repeat:repeat-y;
+  background-attachment:fixed;
   font-family:var(--font-body);
   font-size:var(--body-size);
   font-weight:var(--body-weight);
@@ -121,6 +113,24 @@ body {
   letter-spacing:0;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
+}
+
+body::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:9999;
+  background-image:
+    linear-gradient(var(--guide-color),var(--guide-color)),
+    linear-gradient(var(--guide-color),var(--guide-color)),
+    linear-gradient(var(--guide-color),var(--guide-color));
+  background-size:1px 100%,1px 100%,1px 100%;
+  background-position:
+    calc(max(var(--page-gutter),calc(50% - 640px)) + 75px) top,
+    max(calc(40% + clamp(6.8px,1.44vw,23px) + 11.4px),calc(50% - 116.6px)) top,
+    calc(50% - .5px) top;
+  background-repeat:no-repeat;
+  pointer-events:none;
 }
 
 
