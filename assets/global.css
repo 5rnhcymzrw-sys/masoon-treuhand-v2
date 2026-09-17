@@ -56,7 +56,7 @@
 
   /* GANZ GROSSER HERO-TITEL
      Beispiel: "Treuhand mit Struktur und Anspruch." */
-  --hero-title-size: clamp(52px, 4.8vw, 78px);
+  --hero-title-size: clamp(52px, 4.8vw, 75px);
   --hero-title-line: .96;
   --hero-title-spacing: 0;
   --hero-title-bottom-space: 24px;
