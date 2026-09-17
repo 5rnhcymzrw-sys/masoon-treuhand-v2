@@ -47,7 +47,8 @@
   margin-top: 38px;
 }
 
-/* Foto-Hero-Rechts I*/
+/* HERO-FOTO: Position und Überlappung mit der linken Hero-Hälfte
+   Beispiel: das bestehende Schwarzweissfoto rechts */
 .home-hero__image {
   position: relative;
   height: 100%;
@@ -55,10 +56,11 @@
   overflow: hidden;
   width: calc(100% + 6vw);
   margin-left: -6vw;
-  transform: translateY(-0px);
+  transform: translateY(0);
 }
 
-/* HERO-BILD: Foto leicht abdunkeln, Bücherregal links deutlich dunkler */
+/* HERO-FOTO: insgesamt heller und links weich in Weiss auslaufen lassen
+   Beispiel: Bücherregal links im Foto verschmilzt mit dem hellen Hero */
 .home-hero__image::after {
   content: "";
   position: absolute;
@@ -67,15 +69,17 @@
   background:
     linear-gradient(
       90deg,
-      rgba(0,0,0,.80) 10%,
-      rgba(0,0,0,.52) 22%,
-      rgba(0,0,0,.28) 36%,
-      rgba(0,0,0,0) 50%
+      rgba(255,255,255,1) 0%,
+      rgba(255,255,255,.96) 10%,
+      rgba(255,255,255,.78) 22%,
+      rgba(255,255,255,.42) 36%,
+      rgba(255,255,255,.18) 50%,
+      rgba(255,255,255,.10) 100%
     ),
-    rgba(0,0,0,.13);
+    rgba(255,255,255,.12);
 }
 
-/* Foto-Hero-Rechts II */
+/* HERO-BILD: Originalausschnitt beibehalten */
 .home-hero__image img {
   width: 100%;
   height: 100%;
