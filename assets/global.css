@@ -760,33 +760,33 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   vertical-align:middle;
 }
 
-/* INHALTSKARTEN: rahmenlose Texttabellen mit linksbündigen Spalten */
-.content-card .article-text-table {
+/* ARBEITSRECHT: rahmenlose Texttabellen mit linksbündigen Spalten */
+body.page-article-employment-termination .content-card .article-text-table {
   width:auto;
   margin:var(--body-spacing) 0;
   table-layout:auto;
   border-collapse:collapse;
 }
 
-.content-card .article-text-table th,
-.content-card .article-text-table td {
+body.page-article-employment-termination .content-card .article-text-table th,
+body.page-article-employment-termination .content-card .article-text-table td {
   padding:0 30px 0 0;
   text-align:left;
   vertical-align:top;
 }
 
-.content-card .article-text-table th {
+body.page-article-employment-termination .content-card .article-text-table th {
   padding-bottom:var(--subtitle-bottom-space);
   color:var(--ink);
   font-weight:500;
 }
 
-.content-card .article-text-table tr + tr td {
+body.page-article-employment-termination .content-card .article-text-table tr + tr td {
   padding-top:5px;
 }
 
-.content-card .article-text-table th:last-child,
-.content-card .article-text-table td:last-child {
+body.page-article-employment-termination .content-card .article-text-table th:last-child,
+body.page-article-employment-termination .content-card .article-text-table td:last-child {
   padding-right:0;
 }
 
