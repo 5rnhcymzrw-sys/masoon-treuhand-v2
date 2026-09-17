@@ -12,7 +12,7 @@
 }
 
 .service-detail.is-open {
-  min-height:600px;
+  height:650px;
 }
 
 .service-detail__toggle {
