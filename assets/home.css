@@ -168,6 +168,33 @@
   background:linear-gradient(90deg,#eaeaea 0%,#f0f0f0 50%,#f9f9f9 100%);
 }
 
+/* DIENSTLEISTUNGEN: ein durchgehender Farbverlauf über das gesamte Raster */
+.home-services .service-card {
+  background-image:linear-gradient(90deg,#eaeaea 0%,#f0f0f0 50%,#f9f9f9 100%);
+  background-size:calc(300% + 36px) 100%;
+  background-repeat:no-repeat;
+}
+
+.home-services .service-card:nth-child(3n + 1) { background-position:left; }
+.home-services .service-card:nth-child(3n + 2) { background-position:center; }
+.home-services .service-card:nth-child(3n) { background-position:right; }
+
+@media (max-width:1050px) {
+  .home-services .service-card {
+    background-size:calc(200% + 18px) 100%;
+  }
+
+  .home-services .service-card:nth-child(odd) { background-position:left; }
+  .home-services .service-card:nth-child(even) { background-position:right; }
+}
+
+@media (max-width:800px) {
+  .home-services .service-card:nth-child(n) {
+    background-size:100% 100%;
+    background-position:center;
+  }
+}
+
 .home-services__head,
 .home-knowledge__head {
   display:flex;
