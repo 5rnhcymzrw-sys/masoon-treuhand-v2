@@ -13,6 +13,8 @@
 }
 
 .home-hero__content {
+  position: relative;
+  z-index: 2;
   height: 100%;
   display: flex;
   align-items: stretch;
@@ -47,20 +49,21 @@
   margin-top: 38px;
 }
 
-/* HERO-FOTO: Position und Überlappung mit der linken Hero-Hälfte
+/* HERO-FOTO: weit in die linke Hero-Hälfte ziehen, damit keine harte Trennkante entsteht
    Beispiel: das bestehende Schwarzweissfoto rechts */
 .home-hero__image {
   position: relative;
+  z-index: 1;
   height: 100%;
   min-height: 0;
   overflow: hidden;
-  width: calc(100% + 6vw);
-  margin-left: -6vw;
+  width: calc(100% + 18vw);
+  margin-left: -18vw;
   transform: translateY(0);
 }
 
-/* HERO-FOTO: insgesamt heller und links weich in Weiss auslaufen lassen
-   Beispiel: Bücherregal links im Foto verschmilzt mit dem hellen Hero */
+/* HERO-FOTO: langer weisser Verlauf über die frühere Trennkante hinweg
+   Beispiel: Bücherregal wird von links ganz weich sichtbar, ohne senkrechten Schnitt */
 .home-hero__image::after {
   content: "";
   position: absolute;
@@ -70,13 +73,16 @@
     linear-gradient(
       90deg,
       rgba(255,255,255,1) 0%,
-      rgba(255,255,255,.96) 10%,
-      rgba(255,255,255,.78) 22%,
-      rgba(255,255,255,.42) 36%,
-      rgba(255,255,255,.18) 50%,
+      rgba(255,255,255,.995) 12%,
+      rgba(255,255,255,.97) 24%,
+      rgba(255,255,255,.88) 36%,
+      rgba(255,255,255,.70) 48%,
+      rgba(255,255,255,.46) 60%,
+      rgba(255,255,255,.26) 72%,
+      rgba(255,255,255,.14) 84%,
       rgba(255,255,255,.10) 100%
     ),
-    rgba(255,255,255,.12);
+    rgba(255,255,255,.08);
 }
 
 /* HERO-BILD: Originalausschnitt beibehalten */
