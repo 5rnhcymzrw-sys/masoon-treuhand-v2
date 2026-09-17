@@ -762,9 +762,9 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 
 /* INHALTSKARTEN: rahmenlose Texttabellen mit linksbündigen Spalten */
 .content-card .article-text-table {
-  width:100%;
+  width:auto;
   margin:var(--body-spacing) 0;
-  table-layout:fixed;
+  table-layout:auto;
   border-collapse:collapse;
 }
 
