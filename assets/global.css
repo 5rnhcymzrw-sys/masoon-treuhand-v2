@@ -246,6 +246,10 @@ main {
   pointer-events:none;
 }
 
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.site-nav a[aria-current="page"] { color:var(--black); }
+
 .site-nav a:hover::after,
 .site-nav a:focus-visible::after,
 .site-nav a[aria-current="page"]::after { width:40px; }
