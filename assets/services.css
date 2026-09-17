@@ -19,7 +19,7 @@
 
 .service-detail.is-open {
   height:auto;
-  padding-bottom:45px;
+  padding-bottom:33px;
   --service-toggle-gap:0px;
 }
 
