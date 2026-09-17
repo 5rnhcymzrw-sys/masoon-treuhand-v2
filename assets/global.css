@@ -117,6 +117,10 @@ body {
   text-rendering:optimizeLegibility;
 }
 
+/* PROVISORISCHE ROTE MESSLINIEN
+   Linie 1: linke Kante der Titel auf den Rechtseiten
+   Linie 2: linke Kante der Fliesstexte und Navigation
+   Linie 3: Mitte der Webseite */
 body::before {
   content:"";
   position:absolute;
@@ -220,6 +224,7 @@ main {
   align-items:center;
 }
 
+/* RECHTSEITEN: Logo beginnt an der roten Linie 1 */
 .legal-page .site-brand {
   margin-left:var(--legal-left-inset);
 }
