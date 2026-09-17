@@ -795,7 +795,7 @@ body.page-article-employment-termination .content-card .article-text-table td:la
 }
 
 .content-card .article-table-wrap {
-  margin:24px -30px 36px;
+  margin:24px -50px 36px;
   overflow-x:auto;
   border:1px solid var(--content-table-line);
 }
