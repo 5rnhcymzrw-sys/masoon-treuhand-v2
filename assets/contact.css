@@ -229,17 +229,6 @@
   cursor:pointer;
 }
 
-/* BUTTON PFEIL: dezente Bewegung bei Maus darüber
-   Beispiel: Pfeil hinter "Nachricht senden" */
-.contact-form__submit::after {
-  transition:transform 180ms ease;
-}
-
-.contact-form__submit:hover::after,
-.contact-form__submit:focus-visible::after {
-  transform:translate(2px,-2px);
-}
-
 /* VERSANDSTATUS: Nachricht bleibt im bestehenden Formularrahmen
    Beispiel: "Vielen Dank für Ihre Anfrage." */
 .contact-form__response {
