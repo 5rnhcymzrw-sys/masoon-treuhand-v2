@@ -43,6 +43,7 @@
   --title-spacing: -0.018em;
   --title-bottom-space: 0px;
   --title-body-space: 30px;
+  --title-wrap-width: 500px;
 
   /* ZWISCHENTITEL: Schrift und globale Abstände
      Beispiel: "Buchhaltung" / "Checkliste für die Steuererklärung" */
@@ -347,6 +348,7 @@ p + p,
 /* GROSSE TITEL: global
    Beispiel: "Wir stehen Ihnen gerne zur Verfügung." / "Treuhandlösungen für Ihren Geschäftsalltag." */
 .page-title,.section-title {
+  max-width:var(--title-wrap-width);
   margin:0 0 var(--title-bottom-space);
   color:var(--ink);
   font-family:var(--font-heading);
@@ -667,7 +669,6 @@ p + .subtitle,
   align-items:flex-start;
 }
 
-.closing-card .section-title { max-width:780px; }
 .closing-card .action { margin-top:38px; }
 
 @media (max-width:800px) {
