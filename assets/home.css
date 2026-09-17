@@ -161,7 +161,8 @@
 }
 
 /* =========================================================
-   DIENSTLEISTUNGEN UND FACHWISSEN: GEMEINSAME ANORDNUNG
+   STARTSEITE: BEREICHSKÖPFE UND FACHWISSEN-ANORDNUNG
+   Das Dienstleistungsraster ist gemeinsam in global.css geregelt.
    ========================================================= */
 
 .home-services__head,
@@ -172,7 +173,6 @@
   gap:32px;
 }
 
-.service-grid,
 .knowledge-grid {
   margin-top:64px;
   display:grid;
@@ -180,22 +180,20 @@
   gap:18px;
 }
 
-/* GEMEINSAME ANORDNUNG: Tablet */
+/* STARTSEITE: Tablet */
 @media (max-width:1050px) {
-  .service-grid,
   .knowledge-grid {
     grid-template-columns:repeat(2,minmax(0,1fr));
   }
 }
 
-/* GEMEINSAME ANORDNUNG: Mobil */
+/* STARTSEITE: Mobil */
 @media (max-width:800px) {
   .home-services__head,
   .home-knowledge__head {
     align-items:flex-start;
   }
 
-  .service-grid,
   .knowledge-grid {
     grid-template-columns:1fr;
     gap:18px;
