@@ -444,13 +444,12 @@ p + .subtitle,
   top:38px;
   left:40px;
   transform:translateY(-5px);
-  color:#c9c7c5;
+  color:var(--ink);
   font-family:"Cormorant Garamond",Georgia,serif;
   font-size:42px;
   font-weight:500;
   line-height:39.6px;
   letter-spacing:-1.76px;
-  transition:color 180ms ease;
 }
 
 .service-card:nth-child(1) { border-image:var(--brand-gradient-left) 1; }
@@ -459,7 +458,6 @@ p + .subtitle,
 .service-card:nth-child(4) { border-image:var(--brand-gradient-left) 1; }
 .service-card:nth-child(5) { border-image:var(--brand-gradient-middle) 1; }
 .service-card:nth-child(6) { border-image:var(--brand-gradient-right) 1; }
-.service-card:hover .service-card__number { color:var(--ink); }
 
 .service-card h3 {
   grid-column:2;
