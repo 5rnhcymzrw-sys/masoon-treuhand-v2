@@ -946,10 +946,3 @@ body.page-article-employment-termination .content-card .article-text-table td:la
   }
   .footer-links { position:static; flex-wrap:wrap; justify-content:center; }
 }
-
-/* GLOBALE DRUCKSPERRE: Fotos beim Drucken als schwarze Flächen ausgeben */
-@media print {
-  img[src*="images/photos/"] {
-    filter:brightness(0) !important;
-  }
-}
