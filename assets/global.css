@@ -401,7 +401,12 @@ p + .subtitle,
   display:inline-flex;
   align-items:center;
   gap:10px;
-  transition:color 180ms ease;
+  padding-bottom:8px;
+  background-image:linear-gradient(#8d96a8,#8d96a8);
+  background-repeat:no-repeat;
+  background-position:left bottom;
+  background-size:0 2px;
+  transition:color 260ms ease,background-size .4s ease;
 }
 
 /* PFEIL BEI TEXTLINKS UND BUTTONS
@@ -418,7 +423,10 @@ p + .subtitle,
   top:-2px;
 }
 
-.action:hover,.action:focus-visible { color:var(--ink); }
+.action:hover,.action:focus-visible {
+  color:var(--black);
+  background-size:40px 2px;
+}
 
 /* =========================================================
    KACHELN: GLOBAL
