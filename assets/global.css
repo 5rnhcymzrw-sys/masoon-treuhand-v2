@@ -451,7 +451,7 @@ p + .subtitle,
   top:38px;
   left:40px;
   transform:translateY(-5px);
-  color:var(--ink);
+  color:#8b8e92;
   font-family:"Cormorant Garamond",Georgia,serif;
   font-size:42px;
   font-weight:500;
