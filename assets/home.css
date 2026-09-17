@@ -197,7 +197,7 @@
 
 /* FACHWISSEN: erste Karte breit, zweite und dritte Karte schmal */
 .home-knowledge .knowledge-grid {
-  grid-template-columns:2fr 1fr 1fr;
+  grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);
 }
 
 @media (max-width:1050px) {
