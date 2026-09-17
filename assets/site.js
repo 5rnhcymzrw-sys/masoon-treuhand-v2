@@ -78,3 +78,19 @@ serviceDetailToggles.forEach((toggle) => {
   });
 });
 
+/* FACHBEITRÄGE: Zurücklink zur vorherigen Position
+   Bei direktem Aufruf bleibt die Fachwissen-Übersicht das normale Linkziel. */
+const articleBackLink = document.querySelector('.article-back');
+
+if (articleBackLink) {
+  articleBackLink.addEventListener('click', (event) => {
+    if (!document.referrer || window.history.length <= 1) return;
+
+    const previousUrl = new URL(document.referrer);
+
+    if (previousUrl.origin !== window.location.origin) return;
+
+    event.preventDefault();
+    window.history.back();
+  });
+}

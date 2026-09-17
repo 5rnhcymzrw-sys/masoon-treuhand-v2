@@ -452,10 +452,12 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 }
 
 /* BLOGBEITRÄGE: Metadaten ohne Strich am Titelanfang ausrichten */
+.section-label.article-back,
 .section-label.article-meta {
   margin-left:var(--content-card-inline-space);
 }
 
+.section-label.article-back::before,
 .section-label.article-meta::before {
   content:none;
 }
