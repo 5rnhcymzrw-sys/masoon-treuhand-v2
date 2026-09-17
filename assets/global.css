@@ -816,7 +816,7 @@ body.page-article-employment-termination .content-card .article-text-table td:la
 
 .content-card .article-table-wrap th {
   color:var(--text);
-  font-weight:var(--body-weight);
+  font-weight:500;
 }
 
 .content-card .article-table-wrap tr:last-child td {
