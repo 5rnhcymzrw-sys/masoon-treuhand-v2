@@ -113,6 +113,7 @@ serviceDetailToggles.forEach((toggle) => {
 
     toggle.setAttribute('aria-expanded', String(!isOpen));
     toggle.setAttribute('aria-label', isOpen ? 'Tätigkeiten anzeigen' : 'Tätigkeiten ausblenden');
+    toggle.textContent = `Mehr anzeigen\u2003${isOpen ? '+' : '−'}`;
     card?.classList.toggle('is-open', !isOpen);
     list.hidden = isOpen;
 
