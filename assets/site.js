@@ -104,12 +104,12 @@ const alignOpenServiceCards = () => {
 serviceDetailToggles.forEach((toggle) => {
   const listId = toggle.getAttribute('aria-controls');
   const list = listId ? document.getElementById(listId) : null;
+  const card = toggle.closest('.service-detail');
 
-  if (!list) return;
+  if (!list || !card) return;
 
-  toggle.addEventListener('click', () => {
+  card.addEventListener('click', () => {
     const isOpen = toggle.getAttribute('aria-expanded') === 'true';
-    const card = toggle.closest('.service-detail');
 
     toggle.setAttribute('aria-expanded', String(!isOpen));
     toggle.setAttribute('aria-label', isOpen ? 'Tätigkeiten anzeigen' : 'Tätigkeiten ausblenden');
