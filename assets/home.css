@@ -172,11 +172,6 @@
   gap:32px;
 }
 
-/* STARTSEITE: drei einmalige Farbverläufe der Fachwissen-Karten */
-.home-knowledge .knowledge-card:nth-child(1) { border-image:var(--brand-gradient-left) 1; }
-.home-knowledge .knowledge-card:nth-child(2) { border-image:var(--brand-gradient-middle) 1; }
-.home-knowledge .knowledge-card:nth-child(3) { border-image:var(--brand-gradient-right) 1; }
-
 /* STARTSEITE: Mobil */
 @media (max-width:800px) {
   .home-services__head,

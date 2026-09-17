@@ -94,3 +94,27 @@ articleBackLinks.forEach((articleBackLink) => {
     window.history.back();
   });
 });
+
+/* GLOBALE KOPIERSPERRE: Inhalte und Bilder vor einfachem Kopieren schützen
+   Formulareingaben bleiben von der Sperre ausgenommen. */
+const isEditableElement = (target) =>
+  target instanceof Element &&
+  Boolean(target.closest('input, textarea, select, [contenteditable="true"]'));
+
+document.addEventListener('selectstart', (event) => {
+  if (!isEditableElement(event.target)) event.preventDefault();
+});
+
+document.addEventListener('copy', (event) => {
+  if (!isEditableElement(event.target)) event.preventDefault();
+});
+
+document.addEventListener('contextmenu', (event) => {
+  if (!isEditableElement(event.target)) event.preventDefault();
+});
+
+document.addEventListener('dragstart', (event) => {
+  if (event.target instanceof Element && event.target.closest('img')) {
+    event.preventDefault();
+  }
+});
