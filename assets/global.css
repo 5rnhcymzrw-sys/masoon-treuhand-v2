@@ -567,7 +567,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 .knowledge-grid {
   margin-top:64px;
   display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-columns:var(--card-grid-columns,repeat(3,minmax(0,1fr)));
   gap:18px;
 }
 
