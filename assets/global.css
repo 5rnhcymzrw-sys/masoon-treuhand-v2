@@ -593,6 +593,8 @@ p + .subtitle,
 .legal-section { padding-top:var(--section-space); }
 
 .legal-card {
+  --subtitle-size:20px;
+  --subtitle-bottom-space:10px;
   min-height:405px;
   padding:67px 156px 43px 75px;
   display:grid;
