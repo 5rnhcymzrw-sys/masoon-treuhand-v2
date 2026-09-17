@@ -21,12 +21,13 @@
   position:relative;
   width:100%;
   margin:0;
-  clip-path:inset(0 5% 0 5%);
 }
 
 .company-intro__portrait img {
   width:100%;
   height:auto;
+  clip-path:inset(0 5% 0 5%);
+  transform:translateX(-5%);
 }
 
 .company-intro__caption {
