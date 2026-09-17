@@ -158,8 +158,7 @@ main {
 /* KOPFZEILE: am Seitenanfang weiss und beim Scrollen beweglich
    Beispiel: weisse Kopfzeile direkt nach dem Laden der Seite */
 .site-header {
-  position:sticky;
-  top:0;
+  position:relative;
   z-index:1000;
   height:var(--header-height);
   color:var(--header-label-color);
