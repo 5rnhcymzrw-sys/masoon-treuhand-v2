@@ -69,9 +69,11 @@ serviceDetailToggles.forEach((toggle) => {
 
   toggle.addEventListener('click', () => {
     const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+    const card = toggle.closest('.service-detail');
 
     toggle.setAttribute('aria-expanded', String(!isOpen));
     toggle.setAttribute('aria-label', isOpen ? 'Tätigkeiten anzeigen' : 'Tätigkeiten ausblenden');
+    card?.classList.toggle('is-open', !isOpen);
     list.hidden = isOpen;
   });
 });
