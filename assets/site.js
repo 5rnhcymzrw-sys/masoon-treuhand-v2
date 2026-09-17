@@ -118,3 +118,49 @@ document.addEventListener('dragstart', (event) => {
     event.preventDefault();
   }
 });
+
+/* STARTSEITE FACHWISSEN: automatisch die drei neuesten Fachbeiträge anzeigen
+   Die Fachwissen-Hauptseite bleibt die einzige Inhaltsquelle. */
+const latestKnowledgeGrid = document.querySelector('.home-knowledge .knowledge-grid');
+
+if (latestKnowledgeGrid) {
+  const knowledgeOverviewUrl = new URL('fachwissen/', document.baseURI);
+
+  fetch(knowledgeOverviewUrl, { cache: 'no-cache' })
+    .then((response) => {
+      if (!response.ok) throw new Error('Fachwissen-Hauptseite konnte nicht geladen werden.');
+      return response.text();
+    })
+    .then((html) => {
+      const documentCopy = new DOMParser().parseFromString(html, 'text/html');
+      const knowledgeCards = Array.from(
+        documentCopy.querySelectorAll('.knowledge-grid .knowledge-card')
+      );
+
+      const dateValue = (card) => {
+        const dateText = card.querySelector('.knowledge-card__date')?.textContent ?? '';
+        const dateParts = dateText.match(/(\d{2})\.(\d{4})/);
+
+        return dateParts ? Number(dateParts[2]) * 100 + Number(dateParts[1]) : 0;
+      };
+
+      const latestCards = knowledgeCards
+        .sort((firstCard, secondCard) => dateValue(secondCard) - dateValue(firstCard))
+        .slice(0, 3)
+        .map((card) => {
+          const cardCopy = card.cloneNode(true);
+          const relativeUrl = cardCopy.getAttribute('href');
+
+          if (relativeUrl) {
+            cardCopy.setAttribute('href', new URL(relativeUrl, knowledgeOverviewUrl).href);
+          }
+
+          return cardCopy;
+        });
+
+      latestKnowledgeGrid.replaceChildren(...latestCards);
+    })
+    .catch(() => {
+      latestKnowledgeGrid.replaceChildren();
+    });
+}
