@@ -25,12 +25,13 @@
   justify-self:start;
   margin-top:28px;
   padding:0;
-  color:var(--service-number-color);
-  font-family:var(--service-number-font);
-  font-size:var(--service-number-size);
-  font-weight:var(--service-number-weight);
-  line-height:var(--service-number-line);
-  letter-spacing:var(--service-number-spacing);
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:var(--label-size);
+  font-weight:var(--label-weight);
+  line-height:var(--label-line);
+  letter-spacing:var(--label-spacing);
+  text-transform:uppercase;
   border:0;
   background:transparent;
   cursor:pointer;
@@ -43,5 +44,5 @@
 }
 
 .service-detail__list li {
-  line-height:1.45;
+  line-height:1.3;
 }
