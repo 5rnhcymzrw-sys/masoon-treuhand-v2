@@ -770,7 +770,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 
 .content-card .article-text-table th,
 .content-card .article-text-table td {
-  padding:0 30px 0 0;
+  padding:0 46px 0 0;
   text-align:left;
   vertical-align:top;
 }
