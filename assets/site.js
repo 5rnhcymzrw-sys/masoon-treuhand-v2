@@ -161,6 +161,6 @@ if (latestKnowledgeGrid) {
       latestKnowledgeGrid.replaceChildren(...latestCards);
     })
     .catch(() => {
-      latestKnowledgeGrid.replaceChildren();
+      /* Die bereits im HTML vorhandenen Kacheln bleiben als sichere Anzeige bestehen. */
     });
 }
