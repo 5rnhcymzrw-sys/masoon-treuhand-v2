@@ -639,7 +639,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 .service-card p {
   grid-column:1 / -1;
   grid-row:2;
-  max-width:34ch;
+  max-width:var(--service-copy-width,34ch);
 }
 
 .knowledge-card {
