@@ -1,5 +1,5 @@
 /* MASOON TREUHAND V2 | nur Unternehmensseite
-   Enthält ausschliesslich die Anordnung von Einleitung, Portrait und Wertekarten.
+   Enthält ausschliesslich die Anordnung von Einleitung und Portrait.
    Schriften, Farben, Rahmen und Kartenwerte bleiben global geregelt.
 */
 
@@ -32,10 +32,6 @@
   display:flex;
   flex-wrap:wrap;
   gap:8px 18px;
-}
-
-.company-intro__caption .small-title {
-  display:block;
 }
 
 /* =========================================================
