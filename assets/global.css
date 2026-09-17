@@ -813,6 +813,7 @@ body.page-article-employment-termination .content-card .article-text-table td:la
 }
 
 .content-card .article-table-wrap th,
+.content-card .article-table-wrap td:first-child,
 .content-card .article-text-table th,
 .content-card strong {
   color:#303236;
