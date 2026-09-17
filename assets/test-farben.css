@@ -1,0 +1,161 @@
+/* MASOON TREUHAND V2 | Testseite Farben
+   Nur für test-farben.html. Die Live-Seite bleibt unverändert. */
+
+.test-colors {
+  background-image:none;
+  background-color:#ffffff;
+}
+
+/* Werteband direkt unter dem Hero: Farbe ohne zusätzlichen Kasten */
+.test-colors .test-values {
+  margin:0 0 18px;
+  padding:28px 0;
+  background:linear-gradient(110deg,rgba(243,232,212,.58) 0%,rgba(232,229,223,.58) 45%,rgba(199,203,211,.56) 100%);
+  border-top:1px solid rgba(141,150,168,.18);
+  border-bottom:1px solid rgba(141,150,168,.18);
+}
+
+.test-colors .test-values__inner {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:36px;
+}
+
+.test-colors .test-values__item {
+  display:flex;
+  align-items:center;
+  gap:13px;
+  color:#62656b;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:var(--label-size);
+  font-weight:var(--label-weight);
+  line-height:var(--label-line);
+  letter-spacing:var(--label-spacing);
+  text-transform:uppercase;
+}
+
+.test-colors .test-values__item::before {
+  content:"";
+  width:24px;
+  height:1px;
+  flex:0 0 24px;
+  background:#8d96a8;
+}
+
+/* Dienstleistungen: keine sechs geschlossenen Kästen mehr,
+   sondern offene Module mit feiner oberer Linie. */
+.test-colors .home-services {
+  padding-top:104px;
+  padding-bottom:112px;
+}
+
+.test-colors .service-grid {
+  gap:0 30px;
+}
+
+.test-colors .service-card,
+.test-colors .service-card:nth-child(1),
+.test-colors .service-card:nth-child(2),
+.test-colors .service-card:nth-child(3),
+.test-colors .service-card:nth-child(4),
+.test-colors .service-card:nth-child(5),
+.test-colors .service-card:nth-child(6) {
+  min-height:240px;
+  border:0;
+  border-top:1px solid rgba(141,150,168,.42);
+  border-image:none;
+  background:transparent;
+  box-shadow:none;
+}
+
+.test-colors .service-card:nth-child(1),
+.test-colors .service-card:nth-child(2),
+.test-colors .service-card:nth-child(3) {
+  border-top-color:rgba(204,186,153,.62);
+}
+
+.test-colors .service-card:nth-child(4),
+.test-colors .service-card:nth-child(5),
+.test-colors .service-card:nth-child(6) {
+  border-top-color:rgba(141,150,168,.50);
+}
+
+/* Fachwissen: ganze Fläche statt weiterer Kastenwirkung. */
+.test-colors .home-knowledge {
+  margin:0;
+  padding:108px 0 114px;
+  background:linear-gradient(110deg,rgba(243,232,212,.50) 0%,rgba(232,229,223,.55) 44%,rgba(199,203,211,.58) 100%);
+}
+
+.test-colors .knowledge-grid {
+  margin-top:58px;
+}
+
+.test-colors .knowledge-card {
+  background:rgba(255,255,255,.90);
+  border:0;
+  border-top:3px solid transparent;
+  border-image:var(--brand-gradient) 1;
+  box-shadow:none;
+}
+
+/* Kontakt: farbiger Abschluss über die ganze Breite statt Rahmenkasten. */
+.test-colors .closing-card-section {
+  margin:0;
+  padding:96px 0 104px;
+  background:linear-gradient(110deg,rgba(243,232,212,.72) 0%,rgba(232,229,223,.70) 48%,rgba(199,203,211,.74) 100%);
+}
+
+.test-colors .closing-card {
+  min-height:320px;
+  padding:58px 0;
+  border:0;
+  border-image:none;
+}
+
+.test-colors .closing-card__content {
+  left:0;
+}
+
+.test-colors .closing-card .section-title {
+  max-width:620px;
+}
+
+@media (hover:hover) {
+  .test-colors .service-card:hover {
+    transform:none;
+    box-shadow:none;
+    background:rgba(243,232,212,.16);
+  }
+
+  .test-colors .knowledge-card:hover {
+    transform:translateY(-3px);
+  }
+}
+
+@media (max-width:800px) {
+  .test-colors .test-values {
+    padding:24px 0;
+  }
+
+  .test-colors .test-values__inner {
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  .test-colors .home-services,
+  .test-colors .home-knowledge,
+  .test-colors .closing-card-section {
+    padding-top:76px;
+    padding-bottom:78px;
+  }
+
+  .test-colors .service-grid {
+    gap:0;
+  }
+
+  .test-colors .closing-card {
+    padding:0;
+    min-height:auto;
+  }
+}
