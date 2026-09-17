@@ -689,7 +689,7 @@ p + .subtitle,
 }
 
 .content-card {
-  padding:var(--legal-left-inset);
+  padding:var(--legal-left-inset) 160px;
 }
 
 .content-card .page-title {
