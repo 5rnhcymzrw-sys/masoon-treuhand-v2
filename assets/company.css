@@ -40,6 +40,22 @@
   gap:4px;
   color:var(--white);
   background:var(--black);
+  font-family:var(--font-body);
+  font-size:11px;
+  font-weight:500;
+  line-height:1.55;
+  letter-spacing:.09em;
+}
+
+.company-intro__caption strong {
+  font-weight:400;
+}
+
+.company-intro__caption span {
+  color:#9b9b9b;
+  font-size:10px;
+  font-weight:500;
+  white-space:nowrap;
 }
 
 /* =========================================================
