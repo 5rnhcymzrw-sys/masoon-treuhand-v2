@@ -15,20 +15,6 @@
   --brand-gradient-middle: linear-gradient(110deg,#e8e5df 0%,#c7cbd3 100%);
   --brand-gradient-right: linear-gradient(110deg,#c7cbd3 0%,#8d96a8 100%);
 
-  /* FARBVERLAUF DIENSTLEISTUNGS-KACHELN
-     Verlauf exakt von links nach rechts: Beige -> Grau -> Blau.
-     Kachel 1 bis 3 bilden einen Verlauf; Kachel 4 bis 6 beginnen wieder von vorne.
-     Transparenz nur bei --service-card-transparenz ändern:
-     100% = voll sichtbar, 80% = leicht transparent, 60% = deutlich transparenter,
-     40% = sehr dezent, 20% = fast transparent. */
-  --service-card-transparenz:100%;
-  --service-card-gradient:linear-gradient(
-    90deg,
-    rgb(243 232 212 / var(--service-card-transparenz)) 0%,
-    rgb(232 229 223 / var(--service-card-transparenz)) 50%,
-    rgb(141 150 168 / var(--service-card-transparenz)) 100%
-  );
-
   /* FLIESSTEXTE: Schrift, Farbe und Abstände
      Beispiel: "Bitte füllen Sie das Kontaktformular aus." */
   --font-body: "Inter", Arial, sans-serif;
@@ -448,9 +434,6 @@ p + .subtitle,
   grid-template-rows:auto auto;
   column-gap:14px;
   align-content:start;
-  background-image:var(--service-card-gradient);
-  background-size:300% 100%;
-  background-repeat:no-repeat;
   border:1px solid transparent;
 }
 
@@ -470,12 +453,12 @@ p + .subtitle,
   transition:color 180ms ease;
 }
 
-.service-card:nth-child(1) { border-image:var(--brand-gradient-left) 1; background-position:0% 0; }
-.service-card:nth-child(2) { border-image:var(--brand-gradient-middle) 1; background-position:50% 0; }
-.service-card:nth-child(3) { border-image:var(--brand-gradient-right) 1; background-position:100% 0; }
-.service-card:nth-child(4) { border-image:var(--brand-gradient-left) 1; background-position:0% 0; }
-.service-card:nth-child(5) { border-image:var(--brand-gradient-middle) 1; background-position:50% 0; }
-.service-card:nth-child(6) { border-image:var(--brand-gradient-right) 1; background-position:100% 0; }
+.service-card:nth-child(1) { border-image:var(--brand-gradient-left) 1; }
+.service-card:nth-child(2) { border-image:var(--brand-gradient-middle) 1; }
+.service-card:nth-child(3) { border-image:var(--brand-gradient-right) 1; }
+.service-card:nth-child(4) { border-image:var(--brand-gradient-left) 1; }
+.service-card:nth-child(5) { border-image:var(--brand-gradient-middle) 1; }
+.service-card:nth-child(6) { border-image:var(--brand-gradient-right) 1; }
 .service-card:hover .service-card__number { color:var(--ink); }
 
 .service-card h3 {
