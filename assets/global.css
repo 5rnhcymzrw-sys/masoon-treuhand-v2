@@ -90,6 +90,7 @@
   --secondary-column-start: calc(40% + 11.4px);
   --legal-left-inset: 75px;
   --content-card-inline-space: 130px;
+  --content-table-line: #d7d5d1;
 }
 
 /* =========================================================
@@ -717,6 +718,60 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 
 .content-card .page-title {
   max-width:none;
+}
+
+/* INHALTSKARTEN: gemeinsame Trennzeichen und Tabellen für alle Fachbeiträge */
+.content-card .item-separator,
+.content-card .heading-separator {
+  display:inline-block;
+  width:0;
+  height:14px;
+  margin:0 7px;
+  border-left:1px solid var(--content-table-line);
+  font-size:0;
+  line-height:0;
+  vertical-align:middle;
+}
+
+.content-card .article-table-wrap {
+  margin:24px 0 36px;
+  overflow-x:auto;
+  border:1px solid var(--content-table-line);
+}
+
+.content-card .article-table-wrap table {
+  width:100%;
+  border-collapse:collapse;
+}
+
+.content-card .article-table-wrap th,
+.content-card .article-table-wrap td {
+  padding:12px 14px;
+  text-align:left;
+  vertical-align:top;
+  border-right:1px solid var(--content-table-line);
+  border-bottom:1px solid var(--content-table-line);
+}
+
+.content-card .article-table-wrap th {
+  color:var(--ink);
+  font-weight:500;
+}
+
+.content-card .article-table-wrap tr:last-child td {
+  border-bottom:0;
+}
+
+.content-card .article-table-wrap th:last-child,
+.content-card .article-table-wrap td:last-child {
+  border-right:0;
+}
+
+.content-card .table-list-line {
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr);
+  align-items:start;
+  column-gap:4px;
 }
 
 .legal-card {
