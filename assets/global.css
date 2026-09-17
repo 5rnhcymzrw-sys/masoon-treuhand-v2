@@ -243,7 +243,7 @@ main {
   background:linear-gradient(90deg,#f3e8d4 45%,#e8e5df 58%,#c7cbd3 70%,#8d96a8 82%);
   background-attachment:fixed;
   opacity:1;
-  transition:width .4s ease, background-color 260ms ease;
+  transition:width .4s ease;
   pointer-events:none;
 }
 
