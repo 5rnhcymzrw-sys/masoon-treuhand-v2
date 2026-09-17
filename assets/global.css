@@ -692,6 +692,10 @@ p + .subtitle,
   padding:var(--legal-left-inset);
 }
 
+.content-card .page-title {
+  max-width:none;
+}
+
 .legal-card {
   --subtitle-size:18px;
   --subtitle-bottom-space:10px;
