@@ -144,7 +144,6 @@
    Beispiel: "Nachricht" */
 .contact-form__field--message {
   grid-column:1 / -1;
-  margin-bottom:24px;
 }
 
 /* FELDBESCHRIFTUNG: ruhiger Farbwechsel beim Anklicken
@@ -223,7 +222,6 @@
   grid-column:1 / -1;
   justify-self:start;
   align-self:start;
-  margin-top:2px;
   border:0;
   background-color:transparent;
   cursor:pointer;
