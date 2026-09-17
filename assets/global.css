@@ -677,9 +677,19 @@ p + .subtitle,
 .closing-card .action { margin-top:38px; }
 
 /* =========================================================
-   KASTEN: Disclaimer, Impressum, Datenschutz
+   KÄSTEN: Inhaltsseiten, Disclaimer, Impressum, Datenschutz
    ========================================================= */
 .legal-section { padding-top:var(--section-space); }
+
+.legal-card,
+.content-card {
+  border:1px solid transparent;
+  border-image:var(--brand-gradient) 1;
+}
+
+.content-card {
+  padding:var(--legal-left-inset);
+}
 
 .legal-card {
   --subtitle-size:18px;
@@ -690,8 +700,6 @@ p + .subtitle,
   grid-template-columns:minmax(0,.4fr) minmax(0,.6fr);
   align-items:start;
   gap:48px;
-  border:1px solid transparent;
-  border-image:var(--brand-gradient) 1;
 }
 
 .legal-card .page-title { margin:0; }
@@ -711,6 +719,7 @@ p + .subtitle,
   }
 
   .closing-card__content { left:0; }
+  .content-card { padding:var(--page-gutter-mobile); }
   .legal-section { padding-top:var(--section-space-mobile); }
 }
 
