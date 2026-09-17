@@ -1,3 +1,33 @@
 /* MASOON TREUHAND | nur Testseite
    Temporäre Gestaltungsversuche werden ausschliesslich hier eingetragen.
    Nach der endgültigen Entscheidung wird diese Datei wieder gelöscht. */
+
+/* TEST: Dienstleistungen – Mehr anzeigen und kompaktere Tätigkeitsliste */
+.service-detail__toggle {
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.service-detail__toggle::before {
+  content:"Mehr anzeigen";
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:var(--label-size);
+  font-weight:var(--label-weight);
+  line-height:var(--label-line);
+  letter-spacing:var(--label-spacing);
+  text-transform:uppercase;
+}
+
+.service-detail__list {
+  margin-top:8px;
+}
+
+.service-detail__list li {
+  line-height:1.35;
+}
+
+.service-detail__list li + li {
+  margin-top:2px;
+}
