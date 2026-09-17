@@ -159,11 +159,11 @@
   color:var(--ink);
 }
 
-/* EINGABEFELDER UND NACHRICHTENFELD: feine Verlaufslinie und grosszügige Eingabefläche
-   Beispiel: Linie unter "Nachname", "Vorname", "E Mail", "Telefon" und "Nachricht" */
-.contact-form input,
-.contact-form textarea {
+/* NORMALE EINGABEFELDER: Darstellung und vollständige Grössenwerte
+   Beispiel: "Nachname", "Vorname", "E Mail" und "Telefon" */
+.contact-form input {
   width:100%;
+  min-height:42px;
   margin:0;
   padding:5px 0 9px;
   color:var(--text);
@@ -179,26 +179,34 @@
   transition:background-image 180ms ease,color 180ms ease;
 }
 
-/* EINGABEFELDER BEI MAUS DARÜBER: Verlauf etwas deutlicher
-   Beispiel: Linie unter "Nachname" */
-.contact-form input:hover,
-.contact-form textarea:hover {
-  background-image:var(--brand-gradient);
-}
-
-/* NORMALE EINGABEFELDER: etwas mehr Höhe für ruhigere Proportionen
-   Beispiel: "Nachname", "Vorname", "E Mail", "Telefon" */
-.contact-form input {
-  min-height:42px;
-}
-
-/* NACHRICHTENFELD: grosszügigere Höhe
+/* NACHRICHTENFELD: Darstellung und vollständige Grössenwerte
    Beispiel: Feld unter "Nachricht" */
 .contact-form textarea {
+  width:100%;
   height:140px;
   min-height:140px;
   max-height:140px;
+  margin:0;
+  padding:5px 0 9px;
+  color:var(--text);
+  caret-color:#8d96a8;
+  background-color:transparent;
+  background-image:linear-gradient(90deg,rgba(243,232,212,.95) 0%,rgba(232,229,223,.82) 52%,rgba(141,150,168,.48) 100%);
+  background-repeat:no-repeat;
+  background-position:left bottom;
+  background-size:100% 1px;
+  border:0;
+  border-radius:0;
+  outline:none;
   resize:none;
+  transition:background-image 180ms ease,color 180ms ease;
+}
+
+/* EINGABEFELDER BEI MAUS DARÜBER: Verlauf etwas deutlicher
+   Beispiel: Linie unter "Nachname" oder "Nachricht" */
+.contact-form input:hover,
+.contact-form textarea:hover {
+  background-image:var(--brand-gradient);
 }
 
 /* AKTIVES EINGABEFELD: Linie bleibt 1 px und wird vollständig blau
