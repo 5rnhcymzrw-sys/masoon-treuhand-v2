@@ -257,6 +257,10 @@ main {
   transition:color 260ms ease;
 }
 
+.site-brand__text span:last-child {
+  color:#74777b;
+}
+
 /* KOPFZEILE: Navigation, Position und Schriftwerte */
 .site-nav {
   position:absolute;
