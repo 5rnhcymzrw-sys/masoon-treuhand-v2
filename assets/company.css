@@ -12,7 +12,7 @@
 
 .company-intro__grid {
   display:grid;
-  grid-template-columns:minmax(0,.4fr) minmax(0,.6fr);
+  grid-template-columns:calc(var(--secondary-column-start) - 48px) minmax(0,1fr);
   gap:48px;
   align-items:start;
 }
@@ -32,15 +32,6 @@
   display:flex;
   flex-wrap:wrap;
   gap:8px 18px;
-}
-
-/* =========================================================
-   UNTERNEHMEN: TABLET
-   ========================================================= */
-@media (max-width:1050px) {
-  .company-intro__grid {
-    grid-template-columns:minmax(0,.46fr) minmax(0,.54fr);
-  }
 }
 
 /* =========================================================
