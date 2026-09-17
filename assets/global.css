@@ -401,6 +401,7 @@ p + .subtitle,
   display:inline-flex;
   align-items:center;
   gap:10px;
+  margin-bottom:-14px;
   padding-bottom:14px;
   background-image:linear-gradient(#8d96a8,#8d96a8);
   background-repeat:no-repeat;
