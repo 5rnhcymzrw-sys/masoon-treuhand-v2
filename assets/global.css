@@ -15,7 +15,6 @@
   --brand-gradient-middle: linear-gradient(110deg,#e8e5df 0%,#c7cbd3 100%);
   --brand-gradient-right: linear-gradient(110deg,#c7cbd3 0%,#8d96a8 100%);
 
-=======
   /* FARBVERLAUF DIENSTLEISTUNGS-KACHELN
      Verlauf exakt von links nach rechts: Beige -> Grau -> Blau.
      Kachel 1 bis 3 bilden einen Verlauf; Kachel 4 bis 6 beginnen wieder von vorne.
@@ -28,7 +27,6 @@
     rgb(243 232 212 / var(--service-card-transparenz)) 0%,
     rgb(232 229 223 / var(--service-card-transparenz)) 50%,
     rgb(141 150 168 / var(--service-card-transparenz)) 100%
->>>>>>> 0d745eca7b72dee4d9ab27638ec799b9fa57b879
   );
 
   /* FLIESSTEXTE: Schrift, Farbe und Abstände
@@ -367,7 +365,6 @@ p + .subtitle,
    Beispiel: "KONTAKT", "ADRESSE", "NACHNAME", "07.2026 STEUERN" */
 .site-nav,
 .home-hero__actions,
-.section-label,
 .action,
 .knowledge-card__date,
 .contact-label,
@@ -384,7 +381,6 @@ p + .subtitle,
 
 .site-nav,
 .home-hero__actions,
-.section-label,
 .action,
 .knowledge-card__date,
 .contact-label,
