@@ -79,6 +79,7 @@
   --footer-height: 80px;
   --accent-height: 6px;
   --guide-color: #ff0000;
+  --secondary-column-start: calc(40% + 11.4px);
 }
 
 /* =========================================================
@@ -236,7 +237,7 @@ main {
 
 .site-nav {
   position:absolute;
-  left:50%;
+  left:var(--secondary-column-start);
   display:flex;
   align-items:center;
   justify-content:flex-start;
@@ -649,7 +650,7 @@ p + .subtitle,
 
 .footer-links {
   position:absolute;
-  left:50%;
+  left:var(--secondary-column-start);
   display:flex;
   align-items:center;
   justify-content:flex-start;
