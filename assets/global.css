@@ -543,11 +543,13 @@ p + .subtitle,
   letter-spacing:var(--service-number-spacing);
 }
 
-.service-card:nth-child(1) { border-image:var(--brand-gradient-left) 1; }
-.service-card:nth-child(2) { border-image:var(--brand-gradient-middle) 1; }
-.service-card:nth-child(3) { border-image:var(--brand-gradient-right) 1; }
+.service-card:nth-child(1),
 .service-card:nth-child(4) { border-image:var(--brand-gradient-left) 1; }
+
+.service-card:nth-child(2),
 .service-card:nth-child(5) { border-image:var(--brand-gradient-middle) 1; }
+
+.service-card:nth-child(3),
 .service-card:nth-child(6) { border-image:var(--brand-gradient-right) 1; }
 
 .service-card h3 {
@@ -674,11 +676,6 @@ p + .subtitle,
 
 .closing-card .action { margin-top:38px; }
 
-@media (max-width:800px) {
-  .closing-card { grid-template-columns:1fr; gap:18px; align-items:flex-start; }
-  .closing-card__content { left:0; }
-}
-
 /* =========================================================
    KASTEN: Disclaimer, Impressum, Datenschutz
    ========================================================= */
@@ -704,13 +701,17 @@ p + .subtitle,
   margin-right:-90px;
 }
 
+/* ABSCHLUSSKASTEN UND RECHTSEITENKASTEN: gemeinsame mobile Anordnung */
 @media (max-width:800px) {
-  .legal-section { padding-top:var(--section-space-mobile); }
+  .closing-card,
   .legal-card {
     grid-template-columns:1fr;
     gap:18px;
     align-items:flex-start;
   }
+
+  .closing-card__content { left:0; }
+  .legal-section { padding-top:var(--section-space-mobile); }
 }
 
 /* =========================================================
