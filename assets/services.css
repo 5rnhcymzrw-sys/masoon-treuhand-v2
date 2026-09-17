@@ -13,6 +13,12 @@
   justify-self:start;
   margin-top:28px;
   padding:0;
+  color:var(--service-number-color);
+  font-family:var(--service-number-font);
+  font-size:var(--service-number-size);
+  font-weight:var(--service-number-weight);
+  line-height:var(--service-number-line);
+  letter-spacing:var(--service-number-spacing);
   border:0;
   background:transparent;
   cursor:pointer;
