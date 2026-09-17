@@ -5,110 +5,115 @@
    ========================================================= */
 
 .home-hero {
-  height: calc(100dvh - var(--header-height));
-  min-height: calc(100dvh - var(--header-height));
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(420px, 50%);
-  background: rgba(255,255,255,.72);
+  width:min(calc(100% - (2 * var(--page-gutter))),1400px);
+  height:700px;
+  min-height:700px;
+  margin:48px auto 90px;
+  display:grid;
+  grid-template-columns:1fr 1.04fr;
+  background:rgba(255,255,255,.72);
 }
 
 .home-hero__content {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  display: flex;
-  align-items: stretch;
+  position:relative;
+  z-index:2;
+  height:100%;
+  display:flex;
+  align-items:stretch;
   background-image:url("images/backgrounds/background-2.png");
-  background-size:160% auto;
-  background-position:120% 30%;
+  background-size:228% auto;
+  background-position:72% 20%;
   background-repeat:no-repeat;
 }
 
 .home-hero__inner {
-  width: min(calc(100% - (2 * var(--page-gutter))), 720px);
-  margin-left: max(var(--page-gutter), calc((100vw - var(--content-width)) / 2));
-  height: 100%;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 72px 72px 72px 0;
+  width:100%;
+  margin-left:0;
+  height:100%;
+  min-height:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:76px 74px 74px 4px;
 }
 
 /* GANZ GROSSER TITEL-HERO: Schrift und Abstand global geregelt */
 .home-hero__title {
-  max-width: 620px;
+  max-width:720px;
 }
 
 /* HERO-FLIESSTEXT: Schrift und Abstand global geregelt */
 .home-hero__copy {
-  max-width: 380px;
+  max-width:560px;
 }
 
 .home-hero__actions {
-  margin-top: 38px;
+  margin-top:28px;
 }
 
-/* HERO-FOTO: wie auf der Testseite sauber in der rechten Hero-Hälfte */
+/* HERO-FOTO: wie auf der Testseite als klarer rechter Bildblock */
 .home-hero__image {
-  position: relative;
-  z-index: 1;
-  height: 100%;
-  min-height: 0;
-  overflow: hidden;
-  width: 100%;
-  margin-left: 0;
-  transform: translateY(0);
+  position:relative;
+  z-index:1;
+  height:700px;
+  min-height:700px;
+  overflow:hidden;
+  width:100%;
+  margin-left:0;
+  transform:none;
+  background:#ddd;
 }
 
 /* HERO-FOTO: kein zusätzlicher Verlauf über dem Portrait */
 .home-hero__image::after {
-  content: none;
-  display: none;
+  content:none;
+  display:none;
 }
 
 /* HERO-BILD: Ausschnitt wie auf der Testseite */
 .home-hero__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 68% center;
-  filter: grayscale(1);
-  display: block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:68% center;
+  filter:grayscale(1);
+  display:block;
 }
 
 /* HERO: Tablet */
-@media (max-width: 1050px) {
+@media (max-width:1050px) {
   .home-hero {
-    grid-template-columns: 1fr 42%;
+    grid-template-columns:1fr 42%;
   }
   .home-hero__inner {
-    padding-right: 40px;
+    padding-right:40px;
   }
 }
 
 /* HERO: Mobil */
-@media (max-width: 800px) {
+@media (max-width:800px) {
   .home-hero {
-    height: auto;
-    min-height: auto;
-    grid-template-columns: 1fr;
+    width:calc(100% - (2 * var(--page-gutter-mobile)));
+    height:auto;
+    min-height:auto;
+    margin:32px auto 64px;
+    grid-template-columns:1fr;
   }
   .home-hero__content {
-    height: auto;
+    height:auto;
   }
   .home-hero__inner {
-    width: calc(100% - (2 * var(--page-gutter-mobile)));
-    margin: 0 auto;
-    height: auto;
-    min-height: auto;
-    padding: 84px 0 64px;
+    width:100%;
+    margin:0;
+    height:auto;
+    min-height:auto;
+    padding:84px 0 64px;
   }
   .home-hero__image {
-    height: auto;
-    min-height: 460px;
-    width: 100%;
-    margin-left: 0;
+    height:auto;
+    min-height:460px;
+    width:100%;
+    margin-left:0;
   }
 }
 
@@ -117,25 +122,25 @@
    ========================================================= */
 
 .home-intro__grid {
-  display: grid;
-  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
-  gap: 90px;
-  align-items: start;
+  display:grid;
+  grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+  gap:90px;
+  align-items:start;
 }
 
 .home-intro__copy {
-  max-width: 590px;
+  max-width:590px;
 }
 
 .home-intro__copy .action {
-  margin-top: 28px;
+  margin-top:28px;
 }
 
 /* STARTSEITEN INTRO: Mobil */
-@media (max-width: 800px) {
+@media (max-width:800px) {
   .home-intro__grid {
-    grid-template-columns: 1fr;
-    gap: 42px;
+    grid-template-columns:1fr;
+    gap:42px;
   }
 }
 
@@ -145,39 +150,39 @@
 
 .home-services__head,
 .home-knowledge__head {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 32px;
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:32px;
 }
 
 .service-grid,
 .knowledge-grid {
-  margin-top: 64px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
-  gap: 18px;
+  margin-top:64px;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
 }
 
 /* GEMEINSAME ANORDNUNG: Tablet */
-@media (max-width: 1050px) {
+@media (max-width:1050px) {
   .service-grid,
   .knowledge-grid {
-    grid-template-columns: repeat(2, minmax(0,1fr));
+    grid-template-columns:repeat(2,minmax(0,1fr));
   }
 }
 
 /* GEMEINSAME ANORDNUNG: Mobil */
-@media (max-width: 800px) {
+@media (max-width:800px) {
   .home-services__head,
   .home-knowledge__head {
-    align-items: flex-start;
+    align-items:flex-start;
   }
 
   .service-grid,
   .knowledge-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    margin-top: 46px;
+    grid-template-columns:1fr;
+    gap:18px;
+    margin-top:46px;
   }
 }
