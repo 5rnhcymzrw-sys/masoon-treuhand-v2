@@ -389,7 +389,9 @@ p + .subtitle,
 .action,
 .knowledge-card__date,
 .contact-label,
-.small-title { color:var(--label-color); }
+.small-title,
+.footer-home,
+.footer-links a { color:var(--label-color); }
 
 /* KLEINER TITEL: Spezialfall mit kleinem Abstand zum Fliesstext
    Beispiel: "ADRESSE" zu "MASOON TREUHAND" / "TELEFON" zu "+41 79 966 36 36" */
@@ -642,9 +644,6 @@ p + .subtitle,
   justify-content:space-between;
   gap:36px;
 }
-
-.footer-home,
-.footer-links a { color:var(--footer-label-color); }
 
 .footer-links {
   position:absolute;
