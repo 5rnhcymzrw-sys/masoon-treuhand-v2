@@ -100,11 +100,13 @@ body {
   flex-direction:column;
   color:var(--text);
   background-color:var(--white);
-  background-image:url("images/backgrounds/background-2.png");
-  background-size:100%;
-  background-position:80% 3%;
-  background-repeat:repeat-y;
-  background-attachment:fixed;
+  background-image:
+    linear-gradient(to right,transparent calc(50% - .5px),#ff0000 calc(50% - .5px),#ff0000 calc(50% + .5px),transparent calc(50% + .5px)),
+    url("images/backgrounds/background-2.png");
+  background-size:100% 100%,100% auto;
+  background-position:center top,80% 3%;
+  background-repeat:no-repeat,repeat-y;
+  background-attachment:scroll,fixed;
   font-family:var(--font-body);
   font-size:var(--body-size);
   font-weight:var(--body-weight);
