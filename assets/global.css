@@ -768,10 +768,6 @@ body.page-article-employment-termination .content-card .article-text-table {
   border-collapse:collapse;
 }
 
-.content-card .article-text-table th,
-.content-card .article-text-table td {
-  padding:0 46px 0 0;
-  }
 body.page-article-employment-termination .content-card .article-text-table th,
 body.page-article-employment-termination .content-card .article-text-table td {
   padding:0 46px 0 0;
@@ -781,8 +777,6 @@ body.page-article-employment-termination .content-card .article-text-table td {
 
 body.page-article-employment-termination .content-card .article-text-table th {
   padding-bottom:10px;
-  color:var(--ink);
-  font-weight:500;
 }
 
 body.page-article-employment-termination .content-card .article-text-table tr + tr td {
@@ -815,6 +809,7 @@ body.page-article-employment-termination .content-card .article-text-table td:la
 }
 
 .content-card .article-table-wrap th,
+.content-card .article-text-table th,
 .content-card .item-label strong {
   color:var(--ink);
   font-weight:500;
