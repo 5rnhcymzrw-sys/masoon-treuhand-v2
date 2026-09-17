@@ -43,14 +43,8 @@
   grid-column:1 / -1;
   grid-row:4;
   margin:20px 0 0;
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  grid-auto-flow:row;
-  column-gap:24px;
-  row-gap:2px;
 }
 
 .service-detail__list li {
-  margin-top:0;
   line-height:1;
 }
