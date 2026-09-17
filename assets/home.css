@@ -220,6 +220,39 @@
   }
 }
 
+/* FACHWISSEN: hervorgehobene erste Karte und zurückhaltende Folgekarten */
+.home-knowledge .knowledge-card:first-child {
+  background:#222426;
+  border-color:#222426;
+  border-image:none;
+}
+
+.home-knowledge .knowledge-card:first-child h3 {
+  color:#fff;
+  font-size:clamp(36px,2.35vw,46px);
+  line-height:1.08;
+  background-image:linear-gradient(90deg,rgba(255,255,255,.62),rgba(255,255,255,.14));
+}
+
+.home-knowledge .knowledge-card:first-child .knowledge-card__date {
+  color:#d5d7d6;
+}
+
+.home-knowledge .knowledge-card:first-child p {
+  color:rgba(255,255,255,.78);
+}
+
+.home-knowledge .knowledge-card:nth-child(2),
+.home-knowledge .knowledge-card:nth-child(3) {
+  background:#f5f6f5;
+}
+
+.home-knowledge .knowledge-card:nth-child(2) h3,
+.home-knowledge .knowledge-card:nth-child(3) h3 {
+  font-size:clamp(23px,1.5vw,28px);
+  line-height:1.12;
+}
+
 .home-services__head,
 .home-knowledge__head {
   display:flex;
