@@ -79,9 +79,9 @@
   pointer-events:none;
   background:linear-gradient(
     90deg,
-    rgba(0,0,0,.24) 0%,
-    rgba(0,0,0,.22) 48%,
-    rgba(0,0,0,.12) 62%,
+    rgba(0,0,0,.34) 0%,
+    rgba(0,0,0,.30) 48%,
+    rgba(0,0,0,.16) 62%,
     rgba(0,0,0,0) 78%
   );
 }
