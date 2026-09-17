@@ -3,7 +3,7 @@
 */
 
 /* =========================================================
-   FACHBEITRÄGE: TITELBEREICH UND LESespalte
+   FACHBEITRÄGE: TITELBEREICH UND LESESPALTE
    ========================================================= */
 .article-section {
   padding-top:var(--section-space);
@@ -17,10 +17,11 @@
 }
 
 .article-header {
-  max-width:760px;
+  max-width:none;
 }
 
 .article-title {
+  max-width:760px;
   margin:0;
   color:var(--ink);
   font-family:var(--font-heading);
@@ -31,13 +32,14 @@
 }
 
 .article-lead {
+  max-width:760px;
   margin-top:24px;
 }
 
 .article-header::after {
   content:"";
   display:block;
-  width:160px;
+  width:100%;
   height:1px;
   margin-top:40px;
   background:var(--brand-gradient);
@@ -45,7 +47,7 @@
 
 .article-body {
   max-width:600px;
-  margin:50px 0 0 auto;
+  margin:50px auto 0 0;
 }
 
 .article-body h2 {
