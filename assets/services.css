@@ -5,8 +5,12 @@
 
 /* =========================================================
    DIENSTLEISTUNGEN: PLUS UND AUSKLAPPBARE TÄTIGKEITEN
-   Titel und Fliesstext bleiben fest. Nur die Liste erweitert den Kasten nach unten.
+   Titel und Fliesstext bleiben fest. Nur die angeklickte Karte wächst nach unten.
    ========================================================= */
+.service-detail {
+  align-self:start;
+}
+
 .service-detail__toggle {
   grid-column:1 / -1;
   grid-row:3;
@@ -28,8 +32,19 @@
   grid-column:1 / -1;
   grid-row:4;
   margin:28px 0 0;
-  padding:24px 0 0 18px;
-  border-top:1px solid var(--label-color);
+  padding:0;
+  list-style:none;
+}
+
+.service-detail__list li {
+  position:relative;
+  padding-left:16px;
+}
+
+.service-detail__list li::before {
+  content:"-";
+  position:absolute;
+  left:0;
 }
 
 .service-detail__list li + li {
