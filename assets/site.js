@@ -56,3 +56,23 @@ if (contactForm) {
     }
   }
 }
+
+/* DIENSTLEISTUNGEN: Tätigkeitsliste über das Plus einblenden
+   Titel und Fliesstext bleiben unverändert, nur der Kasten wächst nach unten. */
+const serviceDetailToggles = document.querySelectorAll('.service-detail__toggle');
+
+serviceDetailToggles.forEach((toggle) => {
+  const listId = toggle.getAttribute('aria-controls');
+  const list = listId ? document.getElementById(listId) : null;
+
+  if (!list) return;
+
+  toggle.addEventListener('click', () => {
+    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+
+    toggle.setAttribute('aria-expanded', String(!isOpen));
+    toggle.setAttribute('aria-label', isOpen ? 'Tätigkeiten anzeigen' : 'Tätigkeiten ausblenden');
+    list.hidden = isOpen;
+  });
+});
+
