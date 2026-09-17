@@ -361,7 +361,8 @@ p + p,
 /* ZWISCHENTITEL: globaler Abstand vom Fliesstext
    Beispiel: Abstand eines Fliesstexts zum folgenden Zwischentitel */
 p + .subtitle,
-.body-copy + .subtitle { margin-top:var(--subtitle-top-space); }
+.body-copy + .subtitle,
+ul + .subtitle { margin-top:var(--subtitle-top-space); }
 
 /* GANZ GROSSER HERO-TITEL: global
    Beispiel: "Treuhand mit Struktur und Anspruch." */
