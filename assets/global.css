@@ -364,6 +364,31 @@ p + .subtitle,
 .body-copy + .subtitle,
 ul + .subtitle { margin-top:var(--subtitle-top-space); }
 
+/* AUFZÄHLUNGEN: globale Bindestriche in Dienstleistungen und Inhaltskarten */
+.service-detail__list,
+.content-card ul {
+  padding:0;
+  list-style:none;
+}
+
+.service-detail__list li,
+.content-card li {
+  position:relative;
+  padding-left:16px;
+}
+
+.service-detail__list li::before,
+.content-card li::before {
+  content:"-";
+  position:absolute;
+  left:0;
+}
+
+.service-detail__list li + li,
+.content-card li + li {
+  margin-top:5px;
+}
+
 /* GANZ GROSSER HERO-TITEL: global
    Beispiel: "Treuhand mit Struktur und Anspruch." */
 .home-hero__title {
