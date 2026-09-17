@@ -92,7 +92,7 @@
   --closing-card-space: 84px;
   --page-bottom-space: 126px;
   --page-bottom-space-mobile: 82px;
-  --header-height: 108px;
+  --header-height: 122px;
   --footer-height: 80px;
   --accent-height: 6px;
 }
@@ -172,10 +172,10 @@ main {
   content:"";
   position:absolute;
   right:0;
-  bottom:calc(1px - var(--accent-height));
+  bottom:-2px;
   left:0;
   width:min(calc(100% - (2 * var(--page-gutter))),1400px);
-  height:calc(var(--accent-height) - 1px);
+  height:2px;
   margin-inline:auto;
   background:var(--brand-gradient);
 }
