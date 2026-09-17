@@ -195,6 +195,31 @@
   }
 }
 
+/* FACHWISSEN: erste Karte breit, zweite und dritte Karte schmal */
+.home-knowledge .knowledge-grid {
+  grid-template-columns:2fr 1fr 1fr;
+}
+
+@media (max-width:1050px) {
+  .home-knowledge .knowledge-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .home-knowledge .knowledge-card:first-child {
+    grid-column:1 / -1;
+  }
+}
+
+@media (max-width:800px) {
+  .home-knowledge .knowledge-grid {
+    grid-template-columns:1fr;
+  }
+
+  .home-knowledge .knowledge-card:first-child {
+    grid-column:auto;
+  }
+}
+
 .home-services__head,
 .home-knowledge__head {
   display:flex;
