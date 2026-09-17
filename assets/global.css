@@ -61,6 +61,14 @@
   --hero-title-spacing: 0;
   --hero-title-bottom-space: 24px;
 
+  /* KARTENZAHLEN UND PLUS: gemeinsame globale Schriftwerte */
+  --service-number-color:#8b8e92;
+  --service-number-font:"Cormorant Garamond",Georgia,serif;
+  --service-number-size:42px;
+  --service-number-weight:500;
+  --service-number-line:39.6px;
+  --service-number-spacing:-1.76px;
+
   /* KARTEN: globaler Hover, bewusst weich und langsam */
   --card-hover-lift: -3px;
   --card-hover-shadow: 0 14px 32px rgba(35,35,33,.055);
@@ -531,16 +539,12 @@ p + .subtitle,
   top:38px;
   left:40px;
   transform:translateY(-5px);
-}
-
-.service-card__number,
-.service-detail__toggle {
-  color:#8b8e92;
-  font-family:"Cormorant Garamond",Georgia,serif;
-  font-size:42px;
-  font-weight:500;
-  line-height:39.6px;
-  letter-spacing:-1.76px;
+  color:var(--service-number-color);
+  font-family:var(--service-number-font);
+  font-size:var(--service-number-size);
+  font-weight:var(--service-number-weight);
+  line-height:var(--service-number-line);
+  letter-spacing:var(--service-number-spacing);
 }
 
 .service-card:nth-child(1) { border-image:var(--brand-gradient-left) 1; }
