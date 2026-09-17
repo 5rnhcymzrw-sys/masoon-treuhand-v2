@@ -70,22 +70,6 @@
   background:#ddd;
 }
 
-/* HERO-FOTO: Bücherregal links dunkler, Portrait rechts weitgehend unverändert */
-.home-hero__image::after {
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:2;
-  pointer-events:none;
-  background:linear-gradient(
-    90deg,
-    rgba(0,0,0,.24) 0%,
-    rgba(0,0,0,.22) 48%,
-    rgba(0,0,0,.12) 62%,
-    rgba(0,0,0,0) 78%
-  );
-}
-
 /* HERO-BILD: Ausschnitt wie auf der Testseite */
 .home-hero__image img {
   width:100%;
