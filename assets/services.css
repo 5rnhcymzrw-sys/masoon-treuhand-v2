@@ -50,7 +50,7 @@
   row-gap:2px;
 }
 
-.service-detail__list li.body-copy {
+.service-detail__list li {
   margin-top:0;
   line-height:1;
 }
