@@ -390,7 +390,10 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   left:0;
 }
 
-.service-detail__list li + li,
+.service-detail__list li + li {
+  margin-top:2px;
+}
+
 .content-card li + li {
   margin-top:5px;
 }
