@@ -40,7 +40,7 @@
 .service-detail__list {
   grid-column:1 / -1;
   grid-row:4;
-  margin:28px 0 0;
+  margin:var(--subtitle-bottom-space) 0 0;
 }
 
 .service-detail__list li {
