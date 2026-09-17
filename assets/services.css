@@ -9,6 +9,7 @@
    ========================================================= */
 .service-detail {
   grid-template-rows:auto 220px auto auto;
+  cursor:pointer;
 }
 
 .service-grid:has(.service-detail.is-open) .service-detail {
