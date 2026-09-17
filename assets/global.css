@@ -183,12 +183,6 @@ main {
   color:var(--white);
 }
 
-/* KOPFZEILE SCHWARZ: Unterlinien gelb statt blau
-   Beispiel: Unterlinie unter "KONTAKT" beim Hochscrollen */
-.site-header.is-scrolling-up .site-nav a::after {
-  background:var(--header-scroll-accent);
-}
-
 .header-inner {
   position:relative;
   height:100%;
@@ -246,7 +240,8 @@ main {
   bottom:18px;
   width:0;
   height:2px;
-  background:#8D96A8;
+  background:linear-gradient(90deg,#f3e8d4 45%,#e8e5df 58%,#c7cbd3 70%,#8d96a8 82%);
+  background-attachment:fixed;
   opacity:1;
   transition:width .4s ease, background-color 260ms ease;
   pointer-events:none;
