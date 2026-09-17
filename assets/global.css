@@ -524,14 +524,17 @@ p + .subtitle,
   border:1px solid transparent;
 }
 
-.service-card > div,
-.service-card > summary { display:contents; }
+.service-card > div { display:contents; }
 
 .service-card__number {
   position:absolute;
   top:38px;
   left:40px;
   transform:translateY(-5px);
+}
+
+.service-card__number,
+.service-detail__toggle {
   color:#8b8e92;
   font-family:"Cormorant Garamond",Georgia,serif;
   font-size:42px;
