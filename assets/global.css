@@ -89,8 +89,6 @@
   --card-meta-spacing: .05em;
   --card-meta-color: #696969;
   --card-line-color: #adadad;
-  --home-card-column-gap: 46px;
-  --home-card-row-gap: 30px;
 
   /* SEITE-Kopfzeile-Linie: Breite, Rand und globale Abstände */
   --content-width: 1280px;
@@ -525,11 +523,11 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
    ========================================================= */
 .service-grid,
 .knowledge-grid {
-  margin-top:var(--card-grid-top,64px);
+  margin-top:var(--card-grid-top,58px);
   display:grid;
   grid-template-columns:var(--card-grid-columns,repeat(3,minmax(0,1fr)));
-  column-gap:var(--card-column-gap,18px);
-  row-gap:var(--card-row-gap,18px);
+  column-gap:var(--card-column-gap,46px);
+  row-gap:var(--card-row-gap,30px);
 }
 
 .knowledge-grid > div {
