@@ -79,7 +79,7 @@
 
 /* UNTERNEHMEN: unterer Titel und Fliesstext horizontal fein ausrichten */
 .company-values + .closing-card-section .closing-card__content {
-  transform:translateX(22px);
+  transform:translateX(20px);
 }
 
 .company-values .section-label {
