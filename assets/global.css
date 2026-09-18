@@ -577,7 +577,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   letter-spacing:0;
   text-transform:none;
   position:relative;
-  top:30px;
+  top:0px;
 }
 
 .article-back:hover,.article-back:focus-visible {
