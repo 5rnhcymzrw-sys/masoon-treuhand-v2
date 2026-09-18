@@ -467,7 +467,9 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 /* KLEINE GROSSBUCHSTABEN: global
    Beispiel: "KONTAKT", "ADRESSE", "NACHNAME", "07.2026 STEUERN" */
 .contact-label,
-.small-title {
+.small-title,
+.home-hero__actions,
+.service-detail__toggle {
   color:var(--label-color);
   font-family:var(--font-body);
   font-size:var(--label-size);
