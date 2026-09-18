@@ -92,7 +92,7 @@
   --service-number-spacing:-1.76px;
 
   /* KARTEN: gemeinsamer Abstand von oberer Linie zu Zahl bzw. kleinem Titel */
-  --card-top-space: 23px;
+  --card-top-space: 26px;
 
   /* KARTEN: globaler Hover, bewusst weich und langsam */
   --card-hover-lift: -3px;
