@@ -69,8 +69,24 @@
   );
 }
 
+.company-values > .container {
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  column-gap:36px;
+}
+
+.company-values .section-label {
+  padding-top:10px;
+  margin-bottom:0;
+}
+
 .company-values .section-title {
-  margin-left:calc((100% - (2 * var(--card-column-gap,46px))) / 3 + var(--card-column-gap,46px));
+  max-width:740px;
+  border-top:1px solid red;
+}
+
+.company-values .service-grid {
+  grid-column:1 / -1;
 }
 
 /* UNTERNEHMEN: Abschlussbereich ohne dunklen Hintergrund */
