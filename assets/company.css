@@ -94,6 +94,10 @@
   background:transparent;
 }
 
+.company-values + .closing-card-section .closing-card__content {
+  transform:translateX(22px);
+}
+
 /* =========================================================
    UNTERNEHMEN: MOBIL
    ========================================================= */
