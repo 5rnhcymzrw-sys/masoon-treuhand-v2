@@ -249,3 +249,9 @@
     margin-left: 0;
   }
 }
+
+/* TEST: Abschlussbereich – Kastenlinien wieder sichtbar */
+.closing-card {
+  border: 1px solid transparent;
+  border-image: var(--brand-gradient) 1;
+}
