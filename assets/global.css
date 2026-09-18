@@ -280,7 +280,7 @@ main > section:last-child { padding-bottom:0; }
 .site-nav a:focus-visible,
 .site-nav a[aria-current="page"],
 .service-detail:hover .service-detail__toggle,
-.service-detail__toggle:focus-visible { color:inherit; }
+.service-detail__toggle:focus-visible { color:var(--black); }
 
 .site-nav a:hover::after,
 .site-nav a:focus-visible::after,
@@ -552,7 +552,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 
 .action:hover,.action:focus-visible,
 .article-back:hover,.article-back:focus-visible {
-  color:var(--label-color);
+  color:var(--black);
 }
 
 .action:hover,.action:focus-visible {
@@ -613,14 +613,14 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   letter-spacing:var(--service-number-spacing);
 }
 
-.service-card:nth-child(3n+1),
-.knowledge-card:nth-child(3n+1) { border-image:var(--brand-gradient-left) 1; }
+.service-card:nth-child(1),
+.service-card:nth-child(4) { border-image:var(--brand-gradient-left) 1; }
 
-.service-card:nth-child(3n+2),
-.knowledge-card:nth-child(3n+2) { border-image:var(--brand-gradient-middle) 1; }
+.service-card:nth-child(2),
+.service-card:nth-child(5) { border-image:var(--brand-gradient-middle) 1; }
 
-.service-card:nth-child(3n),
-.knowledge-card:nth-child(3n) { border-image:var(--brand-gradient-right) 1; }
+.service-card:nth-child(3),
+.service-card:nth-child(6) { border-image:var(--brand-gradient-right) 1; }
 
 .service-card h3 {
   grid-column:2;
@@ -648,7 +648,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   display:flex;
   flex-direction:column;
   background:rgba(255,255,255,.8);
-  border-width:1px;
+  border-width:3px 1px 1px;
   border-style:solid;
   border-color:transparent;
   border-image:var(--brand-gradient) 1;
@@ -702,15 +702,6 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
     transform:translateY(var(--card-hover-lift));
     box-shadow:var(--card-hover-shadow);
   }
-
-  .service-detail:hover {
-    transform:translateY(-2px);
-    background:linear-gradient(120deg,#faf8f4 0%,#f3f5f8 100%);
-  }
-
-  .service-detail:hover .service-detail__toggle[aria-expanded="false"] {
-    transform:rotate(90deg);
-  }
 }
 
 @media (max-width:800px) {
@@ -749,7 +740,6 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 .closing-card__content {
   position:relative;
   left:-26px;
-  grid-column:var(--closing-content-column,auto);
   display:flex;
   flex-direction:column;
   align-items:flex-start;
@@ -906,7 +896,7 @@ body.page-article-employment-termination .content-card .article-text-table td:la
     align-items:flex-start;
   }
 
-  .closing-card__content { left:0; grid-column:1; }
+  .closing-card__content { left:0; }
   .content-card { padding:var(--page-gutter-mobile); }
   .legal-section { padding-top:var(--section-space-mobile); }
 }
