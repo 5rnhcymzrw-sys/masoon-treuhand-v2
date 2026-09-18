@@ -57,13 +57,50 @@ if (contactForm) {
   }
 }
 
-/* DIENSTLEISTUNGEN: Nur die gewählte Tätigkeitsliste aufklappen. */
+/* DIENSTLEISTUNGEN: einheitliche Höhe für geschlossene und geöffnete Kästen. */
 const serviceDetailToggles = document.querySelectorAll('.service-detail__toggle');
+const serviceDetails = Array.from(document.querySelectorAll('.service-detail'));
+
+const measureServiceHeights = () => {
+  serviceDetails.forEach((service) => {
+    service.style.minHeight = '';
+  });
+
+  const closedHeight = Math.max(
+    ...serviceDetails.map((service) => service.getBoundingClientRect().height)
+  );
+
+  const openHeights = serviceDetails.map((service) => {
+    const toggle = service.querySelector('.service-detail__toggle');
+    const listId = toggle?.getAttribute('aria-controls');
+    const list = listId ? document.getElementById(listId) : null;
+    if (!toggle || !list) return 0;
+
+    const wasHidden = list.hidden;
+    list.hidden = false;
+    const height = service.getBoundingClientRect().height;
+    list.hidden = wasHidden;
+    return height;
+  });
+
+  const openHeight = Math.max(...openHeights);
+
+  serviceDetails.forEach((service) => {
+    const toggle = service.querySelector('.service-detail__toggle');
+    const isOpen = toggle?.getAttribute('aria-expanded') === 'true';
+    service.style.minHeight = `${isOpen ? openHeight : closedHeight}px`;
+  });
+
+  return { closedHeight, openHeight };
+};
+
+let serviceHeights = measureServiceHeights();
 
 serviceDetailToggles.forEach((toggle) => {
   const listId = toggle.getAttribute('aria-controls');
   const list = listId ? document.getElementById(listId) : null;
-  if (!list) return;
+  const service = toggle.closest('.service-detail');
+  if (!list || !service) return;
 
   toggle.addEventListener('click', () => {
     const isOpen = toggle.getAttribute('aria-expanded') === 'true';
@@ -74,7 +111,12 @@ serviceDetailToggles.forEach((toggle) => {
     toggle.style.setProperty('--action-symbol', nextOpen ? '"–"' : '"+"');
     toggle.style.setProperty('--action-symbol-top', nextOpen ? '-1px' : '2px');
     list.hidden = !nextOpen;
+    service.style.minHeight = `${nextOpen ? serviceHeights.openHeight : serviceHeights.closedHeight}px`;
   });
+});
+
+window.addEventListener('resize', () => {
+  serviceHeights = measureServiceHeights();
 });
 
 /* FACHBEITRÄGE: Zurücklink zur vorherigen Position
