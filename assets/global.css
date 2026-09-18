@@ -241,7 +241,7 @@ main > section:last-child { padding-bottom:0; }
   justify-content:flex-start;
   gap:34px;
   color:var(--white);
-  font-family:Arial,Helvetica,sans-serif;
+  font-family:var(--font-body);
   font-size:var(--label-size);
   font-weight:var(--label-weight);
   line-height:var(--label-line);
