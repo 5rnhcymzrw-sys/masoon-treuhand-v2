@@ -329,57 +329,6 @@
   background: var(--black);
 }
 
-/* TEST: Dienstleistungen – nur Kacheln in Fachwissen-Farbe */
-.home-services .service-card {
-  background: rgba(231,233,237,.48);
-}
-
-/* TEST: Dienstleistungskacheln – Rahmen entfernen */
-.home-services .service-card {
-  border: 0 !important;
-  border-image: none !important;
-}
-
-/* TEST: Blaugrau-Farbkonzept – hell, mittel und dunkel kombiniert */
-/* sehr hell: Kopfzeile */
-.site-header {
-  background: #f5f6f8;
-}
-
-/* mittelhell: Dienstleistungskacheln */
-.home-services .service-card {
-  background: rgba(231,233,237,.62);
-}
-
-/* sehr hell: Fachwissen-Fläche etwas ruhiger als die Dienstleistungskacheln */
-.home-knowledge::before {
-  background: rgba(231,233,237,.30);
-}
-
-/* Fachwissen-Karten bleiben fast weiss, damit die Inhalte klar lesbar bleiben */
-.home-knowledge .knowledge-card {
-  background: rgba(255,255,255,.82);
-}
-
-/* dunkler Ton derselben Farbfamilie für kleine Akzente */
-.home-services .section-label,
-.home-knowledge .section-label,
-.home-services .service-card__number,
-.home-knowledge .knowledge-card__date {
-  color: #7f8796;
-}
-
-/* Abschlussbereich: gleiche Farbfamilie, etwas kräftiger als die übrigen Flächen */
-.closing-card::after {
-  background:
-    linear-gradient(
-      110deg,
-      rgba(238,240,243,.92) 0%,
-      rgba(218,222,228,.86) 48%,
-      rgba(174,182,195,.78) 100%
-    );
-}
-
 /* TEST: Fachwissen – vorherige Farbgebung wiederherstellen */
 .home-knowledge::before {
   background: rgba(231,233,237,.48);
@@ -392,12 +341,6 @@
 .home-knowledge .section-label,
 .home-knowledge .knowledge-card__date {
   color: var(--label-color);
-}
-
-/* TEST: Dienstleistungen und Fachwissen – gleiche Transparenz */
-.home-services .service-card,
-.home-knowledge::before {
-  background: rgba(231,233,237,.62);
 }
 
 /* TEST: Abschlussbereich – Hintergrund RGB 20 22 24 */
@@ -414,11 +357,6 @@
 /* TEST: Fachwissen – Kacheln ohne zusätzliche Farbe */
 .home-knowledge .knowledge-card {
   background: transparent;
-}
-
-/* TEST: Dienstleistungskacheln – Hintergrund #F3F3F3 */
-.home-services .service-card {
-  background: #F3F3F3;
 }
 
 /* TEST: #F3F3F3 gezielt wiederholen */
@@ -568,4 +506,30 @@
 /* TEST: Abschlussbereich – Hintergrund grau */
 .closing-card::after {
   background: #8B8E92;
+}
+
+/* TEST: Dienstleistungskacheln – transparent mit Rahmenlinien */
+.home-services .service-card {
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  border-bottom-width: 1px !important;
+  border-bottom-style: solid !important;
+}
+
+.home-services .service-card:nth-child(odd) {
+  border-image: linear-gradient(
+    90deg,
+    #f3e8d4 0%,
+    #e8e5df 55%,
+    #c7cbd3 100%
+  ) 1 !important;
+}
+
+.home-services .service-card:nth-child(even) {
+  border-image: linear-gradient(
+    90deg,
+    #c7cbd3 0%,
+    #aab1bd 48%,
+    #8d96a8 100%
+  ) 1 !important;
 }
