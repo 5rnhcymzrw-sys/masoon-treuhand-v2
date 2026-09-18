@@ -534,3 +534,16 @@
   background-image: none !important;
   background-size: 0 !important;
 }
+
+/* TEST: provisorische rote Mittellinie über die ganze Seite */
+.test-center-line {
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  transform: translateX(-.5px);
+  background: red;
+  pointer-events: none;
+}
