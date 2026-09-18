@@ -141,13 +141,13 @@ body {
   text-rendering:optimizeLegibility;
 }
 
-/* PROVISORISCHE HILFSLINIE: linke Kante von "Startseite" */
+/* PROVISORISCHE HILFSLINIE: direkt hinter "Startseite" */
 body::before {
   content:"";
   position:fixed;
   top:0;
   bottom:0;
-  left:calc(max(var(--page-gutter),calc((100vw - var(--content-width)) / 2)) + var(--secondary-column-start));
+  left:calc(max(var(--page-gutter),calc((100vw - var(--content-width)) / 2)) + var(--secondary-column-start) + 63px);
   width:1px;
   background:red;
   pointer-events:none;
