@@ -415,3 +415,8 @@
 .home-knowledge .knowledge-card {
   background: transparent;
 }
+
+/* TEST: Dienstleistungskacheln – Hintergrund #F3F3F3 */
+.home-services .service-card {
+  background: #F3F3F3;
+}
