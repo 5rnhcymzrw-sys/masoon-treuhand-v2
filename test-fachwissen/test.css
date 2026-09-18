@@ -576,3 +576,21 @@
     object-position: 70% 38%;
   }
 }
+
+/* TEST: Hero-Bild links bis zur ersten roten Hilfslinie erweitern */
+@media (min-width: 801px) {
+  .home-hero {
+    position: relative;
+  }
+
+  .home-hero__image {
+    position: absolute;
+    top: var(--test-hero-image-top, 0px);
+    right: 0;
+    bottom: var(--test-hero-image-bottom, 0px);
+    left: var(--test-hero-image-left, 50%);
+    width: auto;
+    height: auto;
+    margin: 0;
+  }
+}
