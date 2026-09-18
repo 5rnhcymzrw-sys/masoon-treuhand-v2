@@ -43,9 +43,9 @@
      Aktionslinks und kleine Titel verwenden gemeinsam --label-size.
      Beispiele: Startseite, Fachwissen, BUCHHALTUNG, Beitrag anzeigen, Kontakt aufnehmen. */
   --label-size: 14px;
-  --label-weight: 500;
-  --label-line: 1.5;
-  --label-spacing: .16em;
+  --label-weight: 400;
+  --label-line: 1.75;
+  --label-spacing: 0;
   --label-color: #bb2020;
   --header-label-color: #080808;
   --header-scroll-accent: #e7dfc1;
