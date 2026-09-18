@@ -488,3 +488,30 @@
   );
   pointer-events: none;
 }
+
+/* TEST: Hero – Übergangszone zwischen Achse und Foto */
+.home-hero__content {
+  position: relative;
+}
+
+.home-hero__content::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 80%;
+  background: linear-gradient(
+    90deg,
+    rgba(243,243,243,0) 0%,
+    rgba(231,233,237,.20) 55%,
+    rgba(199,203,211,.32) 100%
+  );
+  pointer-events: none;
+}
+
+.home-hero__inner {
+  position: relative;
+  z-index: 1;
+}
