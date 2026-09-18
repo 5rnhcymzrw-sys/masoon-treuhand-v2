@@ -48,13 +48,6 @@
   display:flex;
   flex-wrap:wrap;
   gap:28px;
-  color:var(--label-color);
-  font-family:Arial,Helvetica,sans-serif;
-  font-size:var(--label-size);
-  font-weight:var(--label-weight);
-  line-height:var(--label-line);
-  letter-spacing:var(--label-spacing);
-  text-transform:uppercase;
 }
 
 /* HERO-FOTO: wie auf der Testseite als klarer rechter Bildblock */
