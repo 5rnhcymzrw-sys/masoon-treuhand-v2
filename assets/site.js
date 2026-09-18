@@ -69,6 +69,8 @@ serviceDetailToggles.forEach((toggle) => {
     const isOpen = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', String(!isOpen));
     toggle.setAttribute('aria-label', isOpen ? 'Tätigkeiten anzeigen' : 'Tätigkeiten ausblenden');
+    toggle.textContent = isOpen ? 'Mehr anzeigen' : 'Weniger anzeigen';
+    toggle.style.setProperty('--action-symbol', isOpen ? '"+"' : '"-"');
     list.hidden = isOpen;
   });
 });
