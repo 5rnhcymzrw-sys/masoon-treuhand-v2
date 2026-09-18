@@ -121,8 +121,6 @@ html { margin: 0; padding: 0; scroll-behavior: smooth; }
 body {
   position:relative;
   margin:0;
-  outline:
-    1px solid transparent;
   min-width:320px;
   min-height:100dvh;
   display:flex;
@@ -141,39 +139,6 @@ body {
   letter-spacing:0;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
-}
-
-/* PROVISORISCHE HILFSLINIEN:
-   1. linke globale Inhaltskante
-   2. linke Kante von "Startseite" in der Kopfzeile
-   3. rechte globale Inhaltskante */
-body::before {
-  content:"";
-  position:fixed;
-  top:0;
-  bottom:0;
-  left:max(var(--page-gutter),calc((100vw - var(--content-width)) / 2));
-  width:min(calc(100vw - (2 * max(var(--page-gutter),calc((100vw - var(--content-width)) / 2)))),var(--content-width));
-  background:
-    linear-gradient(
-      to right,
-      red 0,
-      red 1px,
-      transparent 1px,
-      transparent calc(var(--secondary-column-start) - .5px),
-      red calc(var(--secondary-column-start) - .5px),
-      red calc(var(--secondary-column-start) + .5px),
-      transparent calc(var(--secondary-column-start) + .5px),
-      transparent calc(100% - 1px),
-      red calc(100% - 1px),
-      red 100%
-    );
-  pointer-events:none;
-  z-index:9999;
-}
-
-body::after {
-  content:none;
 }
 
 img,picture,svg { display:block; max-width:100%; }
@@ -200,7 +165,7 @@ main > section:last-child { padding-bottom:0; }
    KOPFZEILE (Farbe)
    ========================================================= */
 
-/* KOPFZEILE: dunkel und beim Scrollen beweglich */
+/* KOPFZEILE: dunkler Hintergrund */
 .site-header {
   position:relative;
   z-index:1000;
@@ -523,7 +488,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 }
 
 /* ZEICHEN BEI TEXTLINKS UND SCHALTFLÄCHEN
-   Pfeil bei Textlinks, drehendes Plus bei "Mehr anzeigen". */
+   Pfeil bei Textlinks, Plus bei "Mehr anzeigen". */
 .action::after,
 .service-detail__toggle::after {
   content:var(--action-symbol,"\2197\FE0E");
@@ -535,8 +500,6 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   text-transform:none;
   position:relative;
   top:var(--action-symbol-top,0px);
-  transform:rotate(var(--action-symbol-rotation,0deg));
-  transition:transform .2s ease;
 }
 
 .article-back:hover,
