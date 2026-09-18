@@ -631,7 +631,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 }
 
 .knowledge-card > .action {
-  margin-top:auto;
+  margin-top:2px;
   align-self:flex-start;
 }
 
