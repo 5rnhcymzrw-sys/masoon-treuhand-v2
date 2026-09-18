@@ -180,6 +180,8 @@
 }
 
 .home-knowledge {
+  width:min(calc(100% - (2 * var(--page-gutter))),var(--content-width));
+  margin-inline:auto;
   background:#f3f3f3;
   --card-column-gap:46px;
   --card-row-gap:30px;
