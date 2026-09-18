@@ -589,45 +589,27 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 .service-card {
   position:relative;
   min-height:232px;
-  padding:45px 43px 43px;
-  display:grid;
-  grid-template-columns:38px minmax(0,1fr);
-  grid-template-rows:auto auto;
-  column-gap:14px;
-  align-content:start;
-  border:1px solid transparent;
+  padding:21px 32px 30px 0;
+  display:block;
+  border-top:1px solid #adadad;
 }
 
-.service-card > div { display:contents; }
+.service-card > div { display:block; }
 
 .service-card__number {
-  position:absolute;
-  top:38px;
-  left:40px;
-  transform:translateY(-5px);
-  color:var(--service-number-color);
-  font-family:var(--service-number-font);
-  font-size:var(--service-number-size);
-  font-weight:var(--service-number-weight);
-  line-height:var(--service-number-line);
-  letter-spacing:var(--service-number-spacing);
+  position:static;
+  display:block;
+  transform:none;
+  color:#696969;
+  font-family:var(--font-body);
+  font-size:12px;
+  font-weight:400;
+  line-height:1.5;
+  letter-spacing:.05em;
 }
 
-.service-card:nth-child(1),
-.service-card:nth-child(4) { border-image:var(--brand-gradient-left) 1; }
-
-.service-card:nth-child(2),
-.service-card:nth-child(5) { border-image:var(--brand-gradient-middle) 1; }
-
-.service-card:nth-child(3),
-.service-card:nth-child(6) { border-image:var(--brand-gradient-right) 1; }
-
 .service-card h3 {
-  grid-column:2;
-  grid-row:1;
-  align-self:center;
-  transform:translateX(-8px);
-  margin:0;
+  margin:31px 0 16px;
   color:var(--ink);
   font-family:var(--font-heading);
   font-size:var(--subtitle-size);
@@ -637,21 +619,16 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 }
 
 .service-card p {
-  grid-column:1 / -1;
-  grid-row:2;
   max-width:var(--service-copy-width,34ch);
 }
 
 .knowledge-card {
   min-height:360px;
-  padding:50px 42px 40px;
+  padding:23px 0 10px;
   display:flex;
   flex-direction:column;
-  background:rgba(255,255,255,.8);
-  border-width:3px 1px 1px;
-  border-style:solid;
-  border-color:transparent;
-  border-image:var(--brand-gradient) 1;
+  background:transparent;
+  border-top:1px solid #bcbcbc;
   box-shadow:none;
   transition:
     transform var(--card-hover-duration) ease,
@@ -660,30 +637,27 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 
 /* FACHWISSEN-KARTEN: Datum mit vollständigen Schriftwerten */
 .knowledge-card__date {
-  margin-bottom:38px;
+  margin-bottom:26px;
   color:var(--label-color);
-  font-family:Arial,Helvetica,sans-serif;
-  font-size:var(--label-size);
-  font-weight:var(--label-weight);
-  line-height:var(--label-line);
-  letter-spacing:var(--label-spacing);
+  font-family:var(--font-body);
+  font-size:11px;
+  font-weight:400;
+  line-height:1.7;
+  letter-spacing:.075em;
   text-transform:uppercase;
 }
 
 /* FACHWISSEN-KARTEN: Titel und untere Trennlinie */
 .knowledge-card h3 {
-  margin:0;
-  padding-bottom:25px;
+  margin:0 0 21px;
+  padding-bottom:0;
   color:var(--ink);
   font-family:var(--font-heading);
   font-size:var(--subtitle-size);
   font-weight:var(--subtitle-weight);
   line-height:var(--subtitle-line);
   letter-spacing:var(--subtitle-spacing);
-  background-image:var(--brand-gradient);
-  background-repeat:no-repeat;
-  background-position:left bottom;
-  background-size:100% 1px;
+  background:none;
 }
 
 /* =========================================================
@@ -723,19 +697,21 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 .closing-card-section { padding-top:var(--closing-card-space); }
 
 .closing-card {
-  min-height:463px;
-  padding:43px;
+  min-height:0;
+  padding:77px 43px 87px;
   display:grid;
   grid-template-columns:minmax(0,.4fr) minmax(0,.6fr);
-  align-items:center;
+  align-items:start;
   gap:48px;
-  border-width:3px 1px 1px;
-  border-style:solid;
-  border-color:transparent;
-  border-image:var(--brand-gradient) 1;
+  color:var(--white);
+  background:#1a1a1a;
+  border:0;
 }
 
-.closing-card > .section-label { margin-bottom:0; }
+.closing-card > .section-label {
+  margin-bottom:0;
+  color:#bbbbbb;
+}
 
 .closing-card__content {
   position:relative;
@@ -743,9 +719,14 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   display:flex;
   flex-direction:column;
   align-items:flex-start;
+  color:var(--white);
 }
 
-.closing-card .action { margin-top:38px; }
+.closing-card .action {
+  margin-top:26px;
+  color:var(--white);
+  background-image:linear-gradient(#9a9a9a,#9a9a9a);
+}
 
 /* =========================================================
    KÄSTEN: Inhaltsseiten, Disclaimer, Impressum, Datenschutz
