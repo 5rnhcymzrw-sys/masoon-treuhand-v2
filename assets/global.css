@@ -80,14 +80,6 @@
   --hero-title-spacing: 0;
   --hero-title-bottom-space: 24px;
 
-  /* KARTENZAHLEN UND PLUS: gemeinsame globale Schriftwerte */
-  --service-number-color:#8b8e92;
-  --service-number-font:"Cormorant Garamond",Georgia,serif;
-  --service-number-size:42px;
-  --service-number-weight:500;
-  --service-number-line:39.6px;
-  --service-number-spacing:-1.76px;
-
   /* KARTEN: gemeinsame Gestaltung für Dienstleistungen und Fachwissen */
   --card-top-space: 26px;
   --card-inline-space: 0px;
@@ -99,8 +91,6 @@
   --card-meta-spacing: .05em;
   --card-meta-color: #696969;
   --card-line-color: #adadad;
-
-  /* KARTEN: globaler Hover, bewusst weich und langsam */
 
   /* SEITE-Kopfzeile-Linie: Breite, Rand und globale Abstände */
   --content-width: 1280px;
@@ -633,7 +623,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   display:flex;
   flex-direction:column;
   padding:var(--card-top-space) var(--card-inline-space) var(--card-bottom-space) 0;
-  border:1px solid var(--card-line-color);
+  border-top:1px solid var(--card-line-color);
   background:transparent;
   box-shadow:none;
 }
