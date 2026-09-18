@@ -416,58 +416,64 @@
   background: var(--brand-gradient);
 }
 
-/* TEST: Hero-Trennlinie exakt auf Startseite-Achse */
+/* TEST: Kacheln – Innenfarben vollständig entfernt */
+.home-services .service-card,
+.home-knowledge .knowledge-card {
+  background: transparent !important;
+}
+
+/* TEST: Hero – weiche geometrische Übergangsflächen statt Linie */
 .home-hero {
   position: relative;
+  overflow: hidden;
+}
+
+.home-hero__content {
+  position: relative;
+  z-index: 2;
+}
+
+.home-hero__image {
+  position: relative;
+  z-index: 1;
+}
+
+.home-hero__inner {
+  position: relative;
+  z-index: 2;
+}
+
+.home-hero::before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  left: 37%;
+  width: 24%;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.88) 0%,
+    rgba(242,242,242,0.72) 45%,
+    rgba(205,210,217,0.34) 100%
+  );
+  clip-path: polygon(18% 0, 100% 0, 72% 100%, 0 100%);
 }
 
 .home-hero::after {
   content: "";
   position: absolute;
-  z-index: 9999;
-  top: 0;
-  bottom: 0;
-  left: var(--secondary-column-start);
-  width: 2px;
+  z-index: 4;
+  top: 8%;
+  bottom: 18%;
+  left: 48%;
+  width: 12%;
+  pointer-events: none;
   background: linear-gradient(
     180deg,
-    #E7D7B9 0%,
-    #D8D5CF 34%,
-    #B5BBC6 67%,
-    #7D879A 100%
+    rgba(255,255,255,0.16) 0%,
+    rgba(180,186,196,0.34) 100%
   );
-  pointer-events: none;
-}
-
-/* TEST: Hero – Übergangszone zwischen Achse und Foto */
-.home-hero__content {
-  position: relative;
-}
-
-.home-hero__content::after {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 80%;
-  background: linear-gradient(
-    90deg,
-    rgba(243,243,243,0) 0%,
-    rgba(231,233,237,.20) 55%,
-    rgba(199,203,211,.32) 100%
-  );
-  pointer-events: none;
-}
-
-.home-hero__inner {
-  position: relative;
-  z-index: 1;
-}
-
-/* TEST: Kacheln – Innenfarben vollständig entfernt */
-.home-services .service-card,
-.home-knowledge .knowledge-card {
-  background: transparent !important;
+  clip-path: polygon(34% 0, 100% 0, 72% 100%, 0 100%);
 }
