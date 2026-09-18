@@ -644,7 +644,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 
 .closing-card {
   --ink:var(--white);
-  min-height:0;
+  height:490px;
   padding:110px 43px 110px 0;
   display:grid;
   grid-template-columns:minmax(0,.4fr) minmax(0,.6fr);
