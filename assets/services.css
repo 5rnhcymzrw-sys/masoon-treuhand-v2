@@ -25,6 +25,7 @@
 /* MEHR ANZEIGEN: globaler Textlink mit Plus statt Pfeil */
 .service-detail__toggle {
   --action-symbol:"+";
+  --action-symbol-top:3px;
   margin-top:var(--subtitle-bottom-space);
   cursor:pointer;
 }
