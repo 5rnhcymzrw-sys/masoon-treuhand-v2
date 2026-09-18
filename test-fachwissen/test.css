@@ -333,3 +333,9 @@
 .home-services .service-card {
   background: rgba(231,233,237,.48);
 }
+
+/* TEST: Dienstleistungskacheln – Rahmen entfernen */
+.home-services .service-card {
+  border: 0 !important;
+  border-image: none !important;
+}
