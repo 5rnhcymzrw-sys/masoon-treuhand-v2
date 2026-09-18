@@ -13,7 +13,6 @@
 .company-intro__grid {
   display:grid;
   grid-template-columns:1.15fr 1fr;
-  gap:80px;
   align-items:start;
 }
 
