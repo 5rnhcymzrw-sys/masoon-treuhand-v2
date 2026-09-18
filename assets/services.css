@@ -27,7 +27,13 @@
   --action-symbol:"+";
   --action-symbol-top:3px;
   margin-top:var(--subtitle-bottom-space);
+  background-image:none;
   cursor:pointer;
+}
+
+.service-detail__toggle:hover,
+.service-detail__toggle:focus-visible {
+  color:#1a1a1a;
 }
 
 /* TÄTIGKEITEN: natürliche Höhe; bei wenig Platz automatisch eine Spalte */
