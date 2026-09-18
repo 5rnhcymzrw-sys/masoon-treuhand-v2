@@ -894,16 +894,17 @@ body.page-article-employment-termination .content-card .article-text-table td:la
 
 .footer-inner {
   position:relative;
-  min-height:auto;
-  padding:33px 0;
+  min-height:96px;
+  padding:38px 0;
   display:flex;
   align-items:center;
-  justify-content:flex-start;
+  justify-content:space-between;
   gap:28px;
 }
 
 .footer-links {
-  position:static;
+  position:absolute;
+  left:var(--secondary-column-start);
   display:flex;
   align-items:center;
   justify-content:flex-start;
