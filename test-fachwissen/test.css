@@ -466,15 +466,20 @@
   background: var(--brand-gradient);
 }
 
-/* TEST: farbige Vertikallinie nur im Hero am Fotoanfang */
-.home-hero__image::before {
+/* TEST: Hero-Trennlinie ganz zuvorderst über allen Bildern */
+.home-hero {
+  position: relative;
+}
+
+.home-hero::after {
   content: "";
   position: absolute;
-  z-index: 10;
+  z-index: 9999;
   top: 0;
   bottom: 0;
-  left: 0;
+  left: 50%;
   width: 2px;
+  transform: translateX(-1px);
   background: linear-gradient(
     180deg,
     #E7D7B9 0%,
