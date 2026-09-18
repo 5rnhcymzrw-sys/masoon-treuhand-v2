@@ -36,3 +36,11 @@
   grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr));
   column-gap:var(--home-card-column-gap);
 }
+
+/* DIENSTLEISTUNGEN: Kontaktbutton im dunklen Abschlusskasten */
+.closing-card .action {
+  padding:15px 21px;
+  color:var(--white);
+  background:#797c82;
+  background-image:none;
+}
