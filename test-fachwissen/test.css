@@ -279,11 +279,6 @@
 }
 
 /* TEST: Farbkonzept – gezielte Flächen statt überall Farbe */
-/* Kopfzeile: leicht abgetönt statt rein weiss */
-.site-header {
-  background: #f3f1ed;
-}
-
 /* Dienstleistungen: bewusst neutral lassen */
 .home-services {
   background: transparent;
@@ -360,11 +355,6 @@
 }
 
 /* TEST: #F3F3F3 gezielt wiederholen */
-/* Kopfzeile: gleiche neutrale Hellgrau-Farbe wie die Dienstleistungskacheln */
-.site-header {
-  background: #F3F3F3;
-}
-
 /* Fachwissen: Farbe nur als dezenter Hover-Akzent wiederholen */
 @media (hover:hover) {
   .home-knowledge .knowledge-card:hover {
