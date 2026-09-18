@@ -175,12 +175,14 @@
 .home-services {
   border-top:1px solid #d6d6d6;
   --card-grid-top:58px;
-  --card-column-gap:44px;
-  --card-row-gap:28px;
+  --card-column-gap:46px;
+  --card-row-gap:30px;
 }
 
 .home-knowledge {
   background:#f3f3f3;
+  --card-column-gap:46px;
+  --card-row-gap:30px;
 }
 
 /* STARTSEITE: Mobil */
