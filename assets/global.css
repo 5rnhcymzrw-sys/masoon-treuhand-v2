@@ -685,6 +685,11 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   max-width:none;
 }
 
+/* FACHWISSEN: gleicher Abstand vom Fliesstext zur unteren Kartenlinie wie bei Dienstleistungen */
+.knowledge-card > p {
+  padding-bottom:var(--card-bottom-space);
+}
+
 .knowledge-card > .action {
   width:100%;
   margin-top:auto;
