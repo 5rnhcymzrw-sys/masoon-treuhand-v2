@@ -479,9 +479,14 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 .home-hero__actions,
 .service-detail__toggle,
 .section-label,
-.action,
-.site-nav {
+.action {
   color:var(--label-color);
+  font-family:var(--font-body);
+  font-weight:var(--label-weight);
+  line-height:var(--label-line);
+}
+
+.site-nav {
   font-family:var(--font-body);
   font-weight:var(--label-weight);
   line-height:var(--label-line);
