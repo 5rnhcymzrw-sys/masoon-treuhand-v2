@@ -120,6 +120,8 @@ html { margin: 0; padding: 0; scroll-behavior: smooth; }
 body {
   position:relative;
   margin:0;
+  outline:
+    1px solid transparent;
   min-width:320px;
   min-height:100dvh;
   display:flex;
@@ -138,6 +140,27 @@ body {
   letter-spacing:0;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
+}
+
+/* PROVISORISCHE HILFSLINIEN: globale linke und rechte Inhaltskante */
+body::before,
+body::after {
+  content:"";
+  position:fixed;
+  top:0;
+  bottom:0;
+  width:1px;
+  background:red;
+  pointer-events:none;
+  z-index:9999;
+}
+
+body::before {
+  left:max(var(--page-gutter),calc((100vw - var(--content-width)) / 2));
+}
+
+body::after {
+  right:max(var(--page-gutter),calc((100vw - var(--content-width)) / 2));
 }
 
 img,picture,svg { display:block; max-width:100%; }
