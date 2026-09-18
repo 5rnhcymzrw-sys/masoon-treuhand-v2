@@ -201,14 +201,12 @@ main > section:last-child { padding-bottom:0; }
   display:inline-flex;
   align-items:baseline;
   gap:.22em;
-  color:var(--white);
   font-family:var(--font-heading);
   font-size:22px;
   font-weight:700;
   line-height:1;
   letter-spacing:.03em;
   white-space:nowrap;
-  transition:color 260ms ease;
 }
 
 /* KOPFZEILE: Navigation, Position und Schriftwerte */
@@ -219,13 +217,6 @@ main > section:last-child { padding-bottom:0; }
   align-items:center;
   justify-content:flex-start;
   gap:34px;
-  color:var(--white);
-  text-transform:none;
-}
-
-.site-nav a {
-  position:relative;
-  color:inherit;
 }
 
 .service-detail:hover .service-detail__toggle,
@@ -632,7 +623,6 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   display:flex;
   flex-direction:column;
   align-items:flex-start;
-  color:var(--white);
 }
 
 .closing-card .action {
