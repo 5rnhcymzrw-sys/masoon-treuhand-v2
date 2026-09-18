@@ -212,7 +212,26 @@ if (latestKnowledgeGrid) {
           return cardCopy;
         });
 
-      latestKnowledgeGrid.replaceChildren(...latestCards);
+      const currentCards = Array.from(
+        latestKnowledgeGrid.querySelectorAll('.knowledge-card')
+      );
+
+      const cardSignature = (card) => [
+        card.getAttribute('href') ?? '',
+        card.querySelector('.knowledge-card__date')?.textContent?.trim() ?? '',
+        card.querySelector('h3')?.textContent?.trim() ?? ''
+      ].join('|');
+
+      const currentSignatures = currentCards.map(cardSignature);
+      const latestSignatures = latestCards.map(cardSignature);
+
+      const cardsChanged =
+        currentSignatures.length !== latestSignatures.length ||
+        currentSignatures.some((signature, index) => signature !== latestSignatures[index]);
+
+      if (cardsChanged) {
+        latestKnowledgeGrid.replaceChildren(...latestCards);
+      }
     })
     .catch(() => {
       /* Die bereits im HTML vorhandenen Kacheln bleiben als sichere Anzeige bestehen. */
