@@ -126,33 +126,6 @@
 }
 
 /* =========================================================
-   STARTSEITEN INTRO
-   ========================================================= */
-
-.home-intro__grid {
-  display:grid;
-  grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
-  gap:90px;
-  align-items:start;
-}
-
-.home-intro__copy {
-  max-width:590px;
-}
-
-.home-intro__copy .action {
-  margin-top:28px;
-}
-
-/* STARTSEITEN INTRO: Mobil */
-@media (max-width:800px) {
-  .home-intro__grid {
-    grid-template-columns:1fr;
-    gap:42px;
-  }
-}
-
-/* =========================================================
    STARTSEITE: BEREICHSKÖPFE UND FACHWISSEN-ANORDNUNG
    Das Dienstleistungsraster ist gemeinsam in global.css geregelt.
    ========================================================= */
