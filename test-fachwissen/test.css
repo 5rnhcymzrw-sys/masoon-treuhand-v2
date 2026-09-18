@@ -32,69 +32,125 @@
   margin-top:2px;
 }
 
-/* TEST: Hero – Referenzaufbau als eine zusammenhängende Fläche */
+/* TEST: Hero – Referenz IMG_3569 sauber nachgebaut */
 @media (min-width: 801px) {
   .home-hero {
     position: relative;
     overflow: hidden;
-    grid-template-columns: var(--secondary-column-start) minmax(0, 1fr);
+    display: block;
     background: #fff;
   }
 
-  /* Foto beginnt exakt an der Startseite-Achse. */
+  /* Foto beginnt exakt auf der Startseite-Achse und bleibt dort fixiert. */
   .home-hero__image {
-    position: relative;
+    position: absolute;
     z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: var(--secondary-column-start);
+    width: auto;
+    height: 100%;
+    min-height: 0;
+    margin: 0;
+  }
+
+  .home-hero__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 70% center;
   }
 
   /*
-    Bestehende abstrakte PNG-Grafik über den gesamten linken Bereich
-    und über den linken Rand des Fotos ziehen. Dadurch entstehen die
-    Formen als ein zusammenhängendes Motiv statt als einzelne Polygone.
+    Linker Bereich wie bisher mit der Originalgrafik.
+    Er endet nicht als harte weisse Fläche über dem Foto.
   */
-  .home-hero::before {
-    content: "";
-    position: absolute;
-    z-index: 3;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 62%;
-    background-image: url("../assets/images/backgrounds/Hintergrund 3.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: left center;
-    pointer-events: none;
-  }
-
-  /* Die ursprüngliche Hintergrundgrafik im Content wird abgeschaltet,
-     damit sie nicht doppelt erscheint. */
   .home-hero__content {
     position: relative;
     z-index: 4;
-    background-image: none !important;
+    width: 49%;
+    height: 100%;
+    background-image: url("../assets/images/backgrounds/Hintergrund 3.png");
+    background-size: 228% auto;
+    background-position: 90% 20%;
+    background-repeat: no-repeat;
+    overflow: visible;
   }
 
   .home-hero__inner {
     position: relative;
-    z-index: 5;
+    z-index: 6;
+    width: 100%;
+    height: 100%;
     justify-content: center;
-    padding-top: 72px;
-    padding-bottom: 72px;
+    padding: 72px 0 72px 4px;
   }
 
   .home-hero__title {
-    max-width: 560px;
+    max-width: none;
+  }
+
+  .home-hero__title > span {
+    white-space: nowrap;
   }
 
   .home-hero__copy {
-    margin-top: 22px;
     max-width: 520px;
+    margin-top: 22px;
   }
 
   .home-hero__cta {
     margin-top: 34px;
     align-self: flex-start;
+  }
+
+  /*
+    Referenz-Übergang: nur eine breite, halbtransparente Lichtzone.
+    Sie liegt über dem Foto und wird an beiden Seiten weich transparent.
+  */
+  .home-hero::before {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    top: -8%;
+    bottom: -8%;
+    left: calc(var(--secondary-column-start) - 7%);
+    width: 19%;
+    transform: skewX(-14deg);
+    transform-origin: center;
+    background: linear-gradient(
+      90deg,
+      rgba(255,255,255,.84) 0%,
+      rgba(255,255,255,.66) 30%,
+      rgba(230,233,237,.38) 62%,
+      rgba(255,255,255,0) 100%
+    );
+    filter: blur(1.5px);
+    pointer-events: none;
+  }
+
+  /*
+    Zweite sehr dezente Fläche unten wie in der Vorlage,
+    ohne harte Polygonkante.
+  */
+  .home-hero::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    left: calc(var(--secondary-column-start) - 13%);
+    bottom: -18%;
+    width: 30%;
+    height: 56%;
+    transform: rotate(-20deg);
+    background: linear-gradient(
+      135deg,
+      rgba(255,255,255,.72) 0%,
+      rgba(237,239,242,.32) 58%,
+      rgba(255,255,255,0) 100%
+    );
+    filter: blur(2px);
+    pointer-events: none;
   }
 }
 
