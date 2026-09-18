@@ -73,9 +73,9 @@
   }
 }
 
-/* TEST: Fachwissen – Titel der ersten Kachel 38 px */
+/* TEST: Fachwissen – Titel der ersten Kachel 32 px */
 .home-knowledge .knowledge-card:nth-child(1) h3 {
-  font-size: 38px;
+  font-size: 32px;
 }
 
 /* TEST: Fachwissen – Beitrag anzeigen unten in allen Kacheln */
