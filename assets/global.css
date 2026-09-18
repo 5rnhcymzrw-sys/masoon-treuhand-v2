@@ -434,6 +434,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 }
 
 .action,
+.service-detail__toggle,
 .site-nav {
   font-size:var(--label-size);
   letter-spacing:var(--label-spacing);
@@ -442,7 +443,6 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 .contact-label,
 .small-title,
 .home-hero__actions,
-.service-detail__toggle,
 .section-label {
   font-size:var(--uppercase-label-size);
   letter-spacing:var(--uppercase-label-spacing);
