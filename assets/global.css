@@ -607,6 +607,19 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   row-gap:var(--card-row-gap,18px);
 }
 
+.knowledge-grid > div {
+  display:flex;
+  flex-direction:column;
+}
+
+.knowledge-grid > div > .knowledge-card {
+  flex:1;
+}
+
+.knowledge-grid > div > .action {
+  margin-top:var(--card-top-space);
+}
+
 @media (max-width:1050px) {
   .service-grid,
   .knowledge-grid {
