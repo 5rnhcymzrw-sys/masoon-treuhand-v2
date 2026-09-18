@@ -17,10 +17,9 @@
   row-gap:0;
 }
 
-/* GEÖFFNETE LEISTUNG: Liste anzeigen und das Plus drehen */
+/* GEÖFFNETE LEISTUNG: Tätigkeitsliste anzeigen */
 .service-detail.is-open {
   --service-list-display:block;
-  --action-symbol-rotation:45deg;
 }
 
 /* MEHR ANZEIGEN: globaler Textlink mit Plus statt Pfeil */
