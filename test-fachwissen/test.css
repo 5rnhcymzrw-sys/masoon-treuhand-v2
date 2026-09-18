@@ -1,3 +1,9 @@
 /* MASOON TREUHAND | nur Testseite
    Temporäre Gestaltungsversuche werden ausschliesslich hier eingetragen.
    Nach der endgültigen Entscheidung wird diese Datei wieder gelöscht. */
+
+/* TEST: Dienstleistungskacheln – oben und unten gleich viel Leerraum */
+.service-card {
+  min-height: 0;
+  padding-bottom: 45px;
+}
