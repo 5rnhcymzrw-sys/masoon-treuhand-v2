@@ -110,3 +110,69 @@
   -webkit-line-clamp: 2;
   line-clamp: 2;
 }
+
+/* TEST: Abschlussbereich – ruhiger editorialer Kontaktblock */
+.closing-card-section {
+  padding-top: 96px;
+}
+
+.closing-card {
+  position: relative;
+  min-height: 330px;
+  padding: 58px 64px;
+  grid-template-columns: var(--secondary-column-start) minmax(0,1fr);
+  align-items: start;
+  gap: 0;
+  border: 0;
+  background:
+    linear-gradient(
+      110deg,
+      rgba(243,232,212,.32) 0%,
+      rgba(232,229,223,.22) 42%,
+      rgba(199,203,211,.18) 72%,
+      rgba(141,150,168,.12) 100%
+    );
+}
+
+.closing-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--brand-gradient);
+}
+
+.closing-card > .section-label {
+  margin: 4px 0 0;
+  align-self: start;
+}
+
+.closing-card__content {
+  left: 0;
+  max-width: 650px;
+  align-self: center;
+}
+
+.closing-card .section-title {
+  max-width: 650px;
+  font-size: 42px;
+}
+
+.closing-card .action {
+  margin-top: 34px;
+}
+
+@media (max-width: 800px) {
+  .closing-card {
+    min-height: 0;
+    padding: 42px 28px;
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .closing-card .section-title {
+    font-size: 36px;
+  }
+}
