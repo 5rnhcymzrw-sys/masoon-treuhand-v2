@@ -649,6 +649,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 
 /* FACHWISSEN-KARTEN: Titel und untere Trennlinie */
 .knowledge-card h3 {
+  min-height:3.36em;
   margin:0 0 21px;
   padding-bottom:0;
   color:var(--ink);
