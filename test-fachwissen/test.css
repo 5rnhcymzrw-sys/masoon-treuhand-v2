@@ -399,3 +399,8 @@
 .home-knowledge::before {
   background: rgba(231,233,237,.62);
 }
+
+/* TEST: Abschlussbereich – Hintergrund RGB 20 22 24 */
+.closing-card::after {
+  background: rgb(20, 22, 24);
+}
