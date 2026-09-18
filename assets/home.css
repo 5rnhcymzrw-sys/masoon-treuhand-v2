@@ -135,9 +135,6 @@
 
 .home-services {
   border-top:1px solid #d6d6d6;
-  --card-grid-top:58px;
-  --card-column-gap:var(--home-card-column-gap);
-  --card-row-gap:var(--home-card-row-gap);
 }
 
 .home-knowledge {
@@ -150,8 +147,6 @@
     transparent calc(100% - var(--page-gutter)),
     transparent 100%
   );
-  --card-column-gap:var(--home-card-column-gap);
-  --card-row-gap:var(--home-card-row-gap);
 }
 
 /* STARTSEITE: Mobil */
