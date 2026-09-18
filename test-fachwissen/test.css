@@ -470,17 +470,17 @@
 .home-hero__image::before {
   content: "";
   position: absolute;
-  z-index: 4;
+  z-index: 10;
   top: 0;
   bottom: 0;
   left: 0;
-  width: 1px;
+  width: 2px;
   background: linear-gradient(
     180deg,
-    #f3e8d4 0%,
-    #e8e5df 34%,
-    #c7cbd3 67%,
-    #8d96a8 100%
+    #E7D7B9 0%,
+    #D8D5CF 34%,
+    #B5BBC6 67%,
+    #7D879A 100%
   );
   pointer-events: none;
 }
