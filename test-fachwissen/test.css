@@ -411,7 +411,7 @@
   color: var(--white);
 }
 
-/* TEST: Fachwissen-Kacheln – helles Blaugrau #DCE0E6 */
+/* TEST: Fachwissen – Kacheln ohne zusätzliche Farbe */
 .home-knowledge .knowledge-card {
-  background: #DCE0E6;
+  background: transparent;
 }
