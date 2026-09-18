@@ -17,11 +17,6 @@
   row-gap:0;
 }
 
-/* GEÖFFNETE LEISTUNG: Tätigkeitsliste anzeigen */
-.service-detail.is-open {
-  --service-list-display:block;
-}
-
 /* MEHR ANZEIGEN: globaler Textlink mit Plus statt Pfeil */
 .service-detail__toggle {
   --action-symbol:"+";
@@ -32,10 +27,9 @@
 }
 
 
-/* TÄTIGKEITEN: natürliche Höhe; bei wenig Platz automatisch eine Spalte */
+/* TÄTIGKEITEN: zwei Spalten, Reihenfolge zuerst links von oben nach unten */
 .service-detail__list {
   margin:var(--card-top-space) 0 0;
-  display:var(--service-list-display,none);
   columns:2;
   column-gap:30px;
 }
