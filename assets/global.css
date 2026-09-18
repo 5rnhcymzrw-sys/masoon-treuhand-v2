@@ -518,7 +518,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 .action {
   display:inline-flex;
   align-items:center;
-  gap:32px;
+  gap:12px;
   margin-bottom:-8px;
   padding:15px 0;
   color:var(--label-color);
