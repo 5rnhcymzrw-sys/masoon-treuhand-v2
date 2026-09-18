@@ -467,3 +467,8 @@
 .site-nav a::after {
   background: #F3F3F3;
 }
+
+/* TEST: Kopfzeile – Navigationslinien dunkler */
+.site-nav a::after {
+  background: #C7CBD3;
+}
