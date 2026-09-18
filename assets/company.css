@@ -62,7 +62,6 @@
 .company-intro__caption span {
   color:var(--label-color);
   font-size:10px;
-  font-weight:500;
   white-space:nowrap;
 }
 
