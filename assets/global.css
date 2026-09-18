@@ -56,7 +56,7 @@
   /* GROSSE TITEL: Schrift und Abstand unten
      Beispiel: "Wir stehen Ihnen gerne zur Verfügung." / "Treuhandlösungen für Ihren Geschäftsalltag." */
   --font-heading: "Cormorant", Georgia, serif;
-  --title-size: 46px;
+  --title-size: 58px;
   --title-weight: 700;
   --title-line: 1.08;
   --title-spacing: -0.018em;
@@ -66,8 +66,8 @@
 
   /* ZWISCHENTITEL: Schrift und globale Abstände
      Beispiel: "Buchhaltung" / "Checkliste für die Steuererklärung" */
-  --subtitle-size: 22px;
-  --subtitle-weight: 700;
+  --subtitle-size: 28px;
+  --subtitle-weight: 800;
   --subtitle-line: 1.12;
   --subtitle-spacing: 0;
   --subtitle-top-space: 48px;
@@ -75,7 +75,7 @@
 
   /* HERO-TITEL GROSS: "Treuhand mit Struktur und Anspruch."
      Schriftgrösse, Zeilenhöhe und Laufweite des grossen Startseiten-Titels */
-  --hero-title-size: clamp(52px, 4.8vw, 75px);
+  --hero-title-size: clamp(52px, 4.8vw, 80px);
   --hero-title-line: .96;
   --hero-title-spacing: 0;
   --hero-title-bottom-space: 24px;
@@ -583,7 +583,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   letter-spacing:0;
   text-transform:none;
   position:relative;
-  top:-2px;
+  top:0px;
 }
 
 .article-back:hover,.article-back:focus-visible {
