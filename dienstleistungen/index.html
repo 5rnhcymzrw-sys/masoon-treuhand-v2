@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dienstleistungen | MASOON TREUHAND</title>
   <meta name="description" content="Administration, Buchhaltung, Personaladministration, Jahresabschluss, Steuererklärung und Unternehmensberatung bei MASOON TREUHAND in Luzern.">
-  <link rel="stylesheet" href="../assets/global.css?v=20260918-v3-nav">
-  <link rel="stylesheet" href="../assets/services.css?v=20260918-clean-rollback-1">
+  <link rel="stylesheet" href="../assets/global.css?v=20260918-shared-services-audit">
+  <link rel="stylesheet" href="../assets/services.css?v=20260918-shared-services-audit">
 </head>
 <body>
   <header class="site-header">
@@ -30,103 +30,115 @@
         <p class="section-label">Dienstleistungen</p>
         <h1 class="page-title">Treuhandlösungen für Ihren Geschäftsalltag.</h1>
 
-        <div class="service-grid" style="--card-grid-columns:repeat(2,minmax(0,1fr))">
-          <article class="service-card service-detail">
-              <span class="service-card__number">01</span>
-              <h3>Administration</h3>
+        <div class="service-grid">
+          <article class="service-card service-detail" id="leistung-1">
+            <span class="service-card__number">01</span>
+            <h2 class="subtitle">Administration</h2>
+            <div>
               <p>Wir entlasten Sie bei administrativen Arbeiten im Geschäftsalltag und unterstützen bei der Geschäftskorrespondenz, dem Mahnwesen und Inkassowesen, dem Offertwesen und Rechnungswesen sowie der Terminverwaltung. So werden organisatorische Aufgaben sauber geführt und rechtzeitig erledigt.</p>
-              <button class="service-detail__toggle" type="button" aria-expanded="false" aria-controls="service-detail-1" aria-label="Tätigkeiten anzeigen">Mehr anzeigen +</button>
-            <ul class="service-detail__list" id="service-detail-1" hidden>
-              <li class="body-copy">Allgemeine Administration</li>
-              <li class="body-copy">Postadministration</li>
-              <li class="body-copy">Geschäftskorrespondenz</li>
-              <li class="body-copy">Mahnwesen und Inkassowesen</li>
-              <li class="body-copy">Offertwesen und Rechnungswesen</li>
-              <li class="body-copy">Zahlungsverkehr</li>
-              <li class="body-copy">Dokumentenmanagement</li>
-              <li class="body-copy">Terminverwaltung</li>
-            </ul>
+              <button class="service-detail__toggle" type="button" aria-expanded="false" aria-controls="service-detail-1" aria-label="Tätigkeiten anzeigen">Mehr anzeigen</button>
+              <ul class="service-detail__list" id="service-detail-1" hidden>
+                  <li class="body-copy">Allgemeine Administration</li>
+                  <li class="body-copy">Postadministration</li>
+                  <li class="body-copy">Geschäftskorrespondenz</li>
+                  <li class="body-copy">Mahnwesen und Inkassowesen</li>
+                  <li class="body-copy">Offertwesen und Rechnungswesen</li>
+                  <li class="body-copy">Zahlungsverkehr</li>
+                  <li class="body-copy">Dokumentenmanagement</li>
+                  <li class="body-copy">Terminverwaltung</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="service-card service-detail">
-              <span class="service-card__number">02</span>
-              <h3>Buchhaltung</h3>
+          <article class="service-card service-detail" id="leistung-2">
+            <span class="service-card__number">02</span>
+            <h2 class="subtitle">Buchhaltung</h2>
+            <div>
               <p>Die laufende Buchhaltung wird zuverlässig betreut und verständlich aufbereitet. Finanzbuchhaltung, Debitorenbuchhaltung und Kreditorenbuchhaltung sowie Mehrwertsteuerabrechnungen schaffen eine klare Grundlage für Zahlen, Auswertungen und Entscheidungen.</p>
-              <button class="service-detail__toggle" type="button" aria-expanded="false" aria-controls="service-detail-2" aria-label="Tätigkeiten anzeigen">Mehr anzeigen +</button>
-            <ul class="service-detail__list" id="service-detail-2" hidden>
-              <li class="body-copy">Finanzbuchhaltung</li>
-              <li class="body-copy">Debitorenbuchhaltung</li>
-              <li class="body-copy">Kreditorenbuchhaltung</li>
-              <li class="body-copy">Zahlungsverkehr</li>
-              <li class="body-copy">Mehrwertsteuerberatung</li>
-              <li class="body-copy">Mehrwertsteuerabrechnungen</li>
-              <li class="body-copy">Umsatzabstimmungen</li>
-              <li class="body-copy">Digitale Buchhaltungsprozesse</li>
-            </ul>
+              <button class="service-detail__toggle" type="button" aria-expanded="false" aria-controls="service-detail-2" aria-label="Tätigkeiten anzeigen">Mehr anzeigen</button>
+              <ul class="service-detail__list" id="service-detail-2" hidden>
+                  <li class="body-copy">Finanzbuchhaltung</li>
+                  <li class="body-copy">Debitorenbuchhaltung</li>
+                  <li class="body-copy">Kreditorenbuchhaltung</li>
+                  <li class="body-copy">Zahlungsverkehr</li>
+                  <li class="body-copy">Mehrwertsteuerberatung</li>
+                  <li class="body-copy">Mehrwertsteuerabrechnungen</li>
+                  <li class="body-copy">Umsatzabstimmungen</li>
+                  <li class="body-copy">Digitale Buchhaltungsprozesse</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="service-card service-detail">
-              <span class="service-card__number">03</span>
-              <h3>Personaladministration</h3>
+          <article class="service-card service-detail" id="leistung-3">
+            <span class="service-card__number">03</span>
+            <h2 class="subtitle">Personaladministration</h2>
+            <div>
               <p>Bei der Personaladministration unterstützen wir Sie bei Arbeitsverträgen, Personalmutationen, Lohnabrechnungen und Sozialversicherungen. Die Verarbeitung erfolgt korrekt, termingerecht und mit Blick auf die Arbeitgeberpflichten.</p>
-              <button class="service-detail__toggle" type="button" aria-expanded="false" aria-controls="service-detail-3" aria-label="Tätigkeiten anzeigen">Mehr anzeigen +</button>
-            <ul class="service-detail__list" id="service-detail-3" hidden>
-              <li class="body-copy">Arbeitsverträge</li>
-              <li class="body-copy">Personalmutationen</li>
-              <li class="body-copy">Lohnabrechnungen</li>
-              <li class="body-copy">Lohnbuchhaltung</li>
-              <li class="body-copy">Lohnausweise</li>
-              <li class="body-copy">Quellensteuerabrechnungen</li>
-              <li class="body-copy">Sozialversicherungen</li>
-              <li class="body-copy">Behördenmeldungen</li>
-              <li class="body-copy">Arbeitgeberkontrollen</li>
-            </ul>
+              <button class="service-detail__toggle" type="button" aria-expanded="false" aria-controls="service-detail-3" aria-label="Tätigkeiten anzeigen">Mehr anzeigen</button>
+              <ul class="service-detail__list" id="service-detail-3" hidden>
+                  <li class="body-copy">Arbeitsverträge</li>
+                  <li class="body-copy">Personalmutationen</li>
+                  <li class="body-copy">Lohnabrechnungen</li>
+                  <li class="body-copy">Lohnbuchhaltung</li>
+                  <li class="body-copy">Lohnausweise</li>
+                  <li class="body-copy">Quellensteuerabrechnungen</li>
+                  <li class="body-copy">Sozialversicherungen</li>
+                  <li class="body-copy">Behördenmeldungen</li>
+                  <li class="body-copy">Arbeitgeberkontrollen</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="service-card service-detail">
-              <span class="service-card__number">04</span>
-              <h3>Jahresabschluss</h3>
+          <article class="service-card service-detail" id="leistung-4">
+            <span class="service-card__number">04</span>
+            <h2 class="subtitle">Jahresabschluss</h2>
+            <div>
               <p>Zwischenabschlüsse und Jahresabschlüsse werden fachgerecht erstellt und sauber dokumentiert. Bilanz und Erfolgsrechnung, Kontenabstimmungen sowie Abschlussberatung schaffen eine verlässliche Grundlage für Steuern, Auswertungen und weitere Entscheidungen.</p>
-              <button class="service-detail__toggle" type="button" aria-expanded="false" aria-controls="service-detail-4" aria-label="Tätigkeiten anzeigen">Mehr anzeigen +</button>
-            <ul class="service-detail__list" id="service-detail-4" hidden>
-              <li class="body-copy">Zwischenabschlüsse</li>
-              <li class="body-copy">Jahresabschlüsse</li>
-              <li class="body-copy">Bilanz und Erfolgsrechnung</li>
-              <li class="body-copy">Anhang und Revisionsunterlagen</li>
-              <li class="body-copy">Kontenabstimmungen</li>
-              <li class="body-copy">Abschlussberatung</li>
-            </ul>
+              <button class="service-detail__toggle" type="button" aria-expanded="false" aria-controls="service-detail-4" aria-label="Tätigkeiten anzeigen">Mehr anzeigen</button>
+              <ul class="service-detail__list" id="service-detail-4" hidden>
+                  <li class="body-copy">Zwischenabschlüsse</li>
+                  <li class="body-copy">Jahresabschlüsse</li>
+                  <li class="body-copy">Bilanz und Erfolgsrechnung</li>
+                  <li class="body-copy">Anhang und Revisionsunterlagen</li>
+                  <li class="body-copy">Kontenabstimmungen</li>
+                  <li class="body-copy">Abschlussberatung</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="service-card service-detail">
-              <span class="service-card__number">05</span>
-              <h3>Steuererklärung</h3>
+          <article class="service-card service-detail" id="leistung-5">
+            <span class="service-card__number">05</span>
+            <h2 class="subtitle">Steuererklärung</h2>
+            <div>
               <p>Steuerliche Arbeiten verlangen eine sorgfältige Prüfung und korrekte Deklaration. Wir unterstützen Sie bei Steuererklärungen für natürliche und juristische Personen, Veranlagungskontrollen, Einspracheverfahren und Steueroptimierungen.</p>
-              <button class="service-detail__toggle" type="button" aria-expanded="false" aria-controls="service-detail-5" aria-label="Tätigkeiten anzeigen">Mehr anzeigen +</button>
-            <ul class="service-detail__list" id="service-detail-5" hidden>
-              <li class="body-copy">Steuererklärungen natürliche Personen</li>
-              <li class="body-copy">Steuererklärungen juristische Personen</li>
-              <li class="body-copy">Veranlagungskontrolle</li>
-              <li class="body-copy">Einspracheverfahren</li>
-              <li class="body-copy">Steueroptimierung</li>
-              <li class="body-copy">Steuerberatung</li>
-              <li class="body-copy">Steuervertretung</li>
-            </ul>
+              <button class="service-detail__toggle" type="button" aria-expanded="false" aria-controls="service-detail-5" aria-label="Tätigkeiten anzeigen">Mehr anzeigen</button>
+              <ul class="service-detail__list" id="service-detail-5" hidden>
+                  <li class="body-copy">Steuererklärungen natürliche Personen</li>
+                  <li class="body-copy">Steuererklärungen juristische Personen</li>
+                  <li class="body-copy">Veranlagungskontrolle</li>
+                  <li class="body-copy">Einspracheverfahren</li>
+                  <li class="body-copy">Steueroptimierung</li>
+                  <li class="body-copy">Steuerberatung</li>
+                  <li class="body-copy">Steuervertretung</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="service-card service-detail">
-              <span class="service-card__number">06</span>
-              <h3>Unternehmensberatung</h3>
+          <article class="service-card service-detail" id="leistung-6">
+            <span class="service-card__number">06</span>
+            <h2 class="subtitle">Unternehmensberatung</h2>
+            <div>
               <p>Unternehmerische Schritte werden fachlich beurteilt und sorgfältig vorbereitet. Rechtsformwahl, Gründungsberatungen, Gesellschaftsgründungen und Umstrukturierungen werden klar eingeordnet und zielgerichtet begleitet.</p>
-              <button class="service-detail__toggle" type="button" aria-expanded="false" aria-controls="service-detail-6" aria-label="Tätigkeiten anzeigen">Mehr anzeigen +</button>
-            <ul class="service-detail__list" id="service-detail-6" hidden>
-              <li class="body-copy">Rechtsformwahl</li>
-              <li class="body-copy">Gründungsberatung</li>
-              <li class="body-copy">Gesellschaftsgründungen</li>
-              <li class="body-copy">Umstrukturierungen</li>
-              <li class="body-copy">Umwandlungen</li>
-              <li class="body-copy">Liquidationen</li>
-            </ul>
+              <button class="service-detail__toggle" type="button" aria-expanded="false" aria-controls="service-detail-6" aria-label="Tätigkeiten anzeigen">Mehr anzeigen</button>
+              <ul class="service-detail__list" id="service-detail-6" hidden>
+                  <li class="body-copy">Rechtsformwahl</li>
+                  <li class="body-copy">Gründungsberatung</li>
+                  <li class="body-copy">Gesellschaftsgründungen</li>
+                  <li class="body-copy">Umstrukturierungen</li>
+                  <li class="body-copy">Umwandlungen</li>
+                  <li class="body-copy">Liquidationen</li>
+              </ul>
+            </div>
           </article>
         </div>
       </div>
@@ -157,6 +169,6 @@
     </div>
   </footer>
 
-  <script src="../assets/site.js?v=20260918-clean-rollback-1"></script>
+  <script src="../assets/site.js?v=20260918-shared-services-audit"></script>
 </body>
 </html>

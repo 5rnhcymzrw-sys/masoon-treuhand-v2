@@ -57,49 +57,9 @@ if (contactForm) {
   }
 }
 
-/* DIENSTLEISTUNGEN: Tätigkeitsliste über das Plus einblenden
-   Titel und Fliesstext bleiben unverändert, nur der Kasten wächst nach unten. */
+/* DIENSTLEISTUNGEN: Nur die gewählte Tätigkeitsliste aufklappen.
+   Höhe und Plusdrehung folgen den bestehenden CSS Regeln. */
 const serviceDetailToggles = document.querySelectorAll('.service-detail__toggle');
-const serviceDetailCards = document.querySelectorAll('.service-detail');
-
-const getReferenceServiceHeight = () => {
-  const referenceCard = serviceDetailCards[2];
-
-  if (!referenceCard) return 0;
-
-  const referenceCopy = referenceCard.cloneNode(true);
-  const referenceList = referenceCopy.querySelector('.service-detail__list');
-  const referenceWidth = referenceCard.getBoundingClientRect().width;
-
-  referenceCopy.classList.add('is-open');
-  referenceCopy.style.position = 'absolute';
-  referenceCopy.style.left = '-10000px';
-  referenceCopy.style.top = '0';
-  referenceCopy.style.width = `${referenceWidth}px`;
-  referenceCopy.style.height = 'auto';
-  referenceCopy.style.visibility = 'hidden';
-  referenceCopy.style.pointerEvents = 'none';
-
-  if (referenceList) referenceList.hidden = false;
-
-  document.body.append(referenceCopy);
-  const referenceHeight = Math.ceil(referenceCopy.getBoundingClientRect().height);
-  referenceCopy.remove();
-
-  return referenceHeight;
-};
-
-const alignOpenServiceCards = () => {
-  const referenceHeight = getReferenceServiceHeight();
-
-  if (!referenceHeight) return;
-
-  serviceDetailCards.forEach((card) => {
-    if (card.classList.contains('is-open')) {
-      card.style.height = `${referenceHeight}px`;
-    }
-  });
-};
 
 serviceDetailToggles.forEach((toggle) => {
   const listId = toggle.getAttribute('aria-controls');
@@ -108,22 +68,14 @@ serviceDetailToggles.forEach((toggle) => {
 
   if (!list || !card) return;
 
-  card.addEventListener('click', () => {
+  toggle.addEventListener('click', () => {
     const isOpen = toggle.getAttribute('aria-expanded') === 'true';
-
     toggle.setAttribute('aria-expanded', String(!isOpen));
     toggle.setAttribute('aria-label', isOpen ? 'Tätigkeiten anzeigen' : 'Tätigkeiten ausblenden');
-    toggle.textContent = `Mehr anzeigen\u2003${isOpen ? '+' : '−'}`;
-    card?.classList.toggle('is-open', !isOpen);
+    card.classList.toggle('is-open', !isOpen);
     list.hidden = isOpen;
-
-    if (card) {
-      card.style.height = isOpen ? '' : `${getReferenceServiceHeight()}px`;
-    }
   });
 });
-
-window.addEventListener('resize', alignOpenServiceCards);
 
 /* FACHBEITRÄGE: Zurücklink zur vorherigen Position
    Bei direktem Aufruf bleibt die Fachwissen-Übersicht das normale Linkziel. */
@@ -228,7 +180,8 @@ if (latestKnowledgeGrid) {
         return [
           resolvedHref,
           card.querySelector('.knowledge-card__date')?.textContent?.trim() ?? '',
-          card.querySelector('h3')?.textContent?.trim() ?? ''
+          card.querySelector('h3')?.textContent?.trim() ?? '',
+          card.querySelector('p')?.textContent?.trim() ?? ''
         ].join('|');
       };
 

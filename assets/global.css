@@ -219,9 +219,6 @@ main > section:last-child { padding-bottom:0; }
   gap:34px;
 }
 
-.service-detail:hover .service-detail__toggle,
-.service-detail__toggle:focus-visible { color:var(--black); }
-
 @media (max-width:1050px) {
   .site-nav { gap:20px; }
 }
@@ -380,8 +377,20 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
    Beispiel: Abstand von "Treuhand mit Struktur und Anspruch." zu "Auf der Basis von Diskretion..." */
 .home-hero__title + .home-hero__copy { margin-top:var(--hero-title-bottom-space); }
 
-/* KLEINE GROSSBUCHSTABEN: global
-   Beispiel: "KONTAKT", "ADRESSE", "NACHNAME", "07.2026 STEUERN" */
+/* GEMEINSAME SCHRIFT: Kopfzeile, Bereichstitel und Textlinks */
+.contact-label,
+.small-title,
+.home-hero__actions,
+.service-detail__toggle,
+.section-label,
+.action,
+.site-nav {
+  font-family:var(--font-body);
+  font-weight:var(--label-weight);
+  line-height:var(--label-line);
+}
+
+/* GEMEINSAME TEXTFARBE: Die dunkle Kopfzeile bleibt weiss. */
 .contact-label,
 .small-title,
 .home-hero__actions,
@@ -389,15 +398,6 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 .section-label,
 .action {
   color:var(--label-color);
-  font-family:var(--font-body);
-  font-weight:var(--label-weight);
-  line-height:var(--label-line);
-}
-
-.site-nav {
-  font-family:var(--font-body);
-  font-weight:var(--label-weight);
-  line-height:var(--label-line);
 }
 
 .action,
@@ -420,7 +420,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 .small-title + p,
 .small-title + .body-copy { margin-top:var(--small-title-bottom-space); }
 
-/* BEREICHSTITEL – Werte wie auf der Testseite */
+/* BEREICHSTITEL: Anordnung und Linie vor dem Text */
 .section-label {
   display:flex;
   align-items:center;
@@ -458,7 +458,6 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   transform:translateY(-2px);
 }
 
-
 .section-label.article-back::before,
 .section-label.article-meta::before {
   content:none;
@@ -469,16 +468,19 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   margin:var(--subtitle-top-space) 0 0;
 }
 
-/* TEXTLINK / BUTTON OHNE RAHMEN
-   Beispiel: "Nachricht senden", "Kontakt aufnehmen", "Alle Beiträge ansehen" */
+/* TEXTLINKS UND SCHALTFLÄCHEN: gemeinsame Abstände und untere Linie
+   Beispiel: "Kontakt aufnehmen", "Alle Beiträge ansehen", "Mehr anzeigen" */
 .action,
-.site-nav a {
+.site-nav a,
+.service-detail__toggle {
   display:inline-flex;
   align-items:center;
   gap:12px;
   margin-bottom:-8px;
   padding:15px 0;
   text-transform:none;
+  border:0;
+  background-color:transparent;
   background-image:linear-gradient(#8d96a8,#8d96a8);
   background-repeat:no-repeat;
   background-position:left bottom;
@@ -486,10 +488,11 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   transition:color 260ms ease,background-size .4s ease;
 }
 
-/* PFEIL BEI TEXTLINKS UND BUTTONS
-   Beispiel: Pfeil hinter "Nachricht senden" */
-.action::after {
-  content:"\2197\FE0E";
+/* ZEICHEN BEI TEXTLINKS UND SCHALTFLÄCHEN
+   Pfeil bei Textlinks, drehendes Plus bei "Mehr anzeigen". */
+.action::after,
+.service-detail__toggle::after {
+  content:var(--action-symbol,"\2197\FE0E");
   font-family:Arial,sans-serif;
   font-size:1.2em;
   font-weight:500;
@@ -498,6 +501,8 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   text-transform:none;
   position:relative;
   top:0px;
+  transform:rotate(var(--action-symbol-rotation,0deg));
+  transition:transform .2s ease;
 }
 
 .article-back:hover,.article-back:focus-visible {
@@ -508,7 +513,9 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 .action:focus-visible,
 .site-nav a:hover,
 .site-nav a:focus-visible,
-.site-nav a[aria-current="page"] {
+.site-nav a[aria-current="page"],
+.service-detail__toggle:hover,
+.service-detail__toggle:focus-visible {
   background-size:40px 2px;
 }
 
@@ -548,6 +555,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 @media (max-width:800px) {
   .service-grid,
   .knowledge-grid {
+    --service-detail-columns:minmax(0,1fr);
     margin-top:46px;
     grid-template-columns:1fr;
   }
@@ -585,9 +593,9 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
     --title-size:40px;
     --hero-title-size:clamp(42px, 12vw, 58px);
     --content-card-inline-space:var(--page-gutter-mobile);
+    --page-bottom-space:var(--page-bottom-space-mobile);
   }
   body { background-attachment:scroll; }
-  main { padding-bottom:var(--page-bottom-space-mobile); }
   .container { width:calc(100% - (2 * var(--page-gutter-mobile))); }
   .section { padding-block:var(--section-space-mobile); }
 }
@@ -610,7 +618,6 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   align-items:center;
   gap:48px;
   color:var(--white);
-  background:#1a1a1a;
   border:0;
 }
 
@@ -792,7 +799,10 @@ body.page-article-employment-termination .content-card .article-text-table td:la
   position:relative;
   color:#5e5e5e;
   background:var(--white);
+  font-family:var(--font-body);
   font-size:11px;
+  font-weight:400;
+  line-height:1.75;
   letter-spacing:.025em;
 }
 
@@ -815,9 +825,6 @@ body.page-article-employment-termination .content-card .article-text-table td:la
   align-items:center;
   justify-content:flex-start;
   gap:29px;
-  font-family:var(--font-body);
-  font-weight:400;
-  line-height:1.75;
   text-transform:none;
 }
 

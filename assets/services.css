@@ -1,50 +1,38 @@
-/* MASOON TREUHAND V2 | nur Dienstleistungsseite
-   Enthält ausschliesslich das Verhalten der ausklappbaren Leistungsdetails.
-   Raster, Karten, Schriften, Farben und Abstände bleiben global geregelt.
+/* MASOON TREUHAND V2 | Dienstleistungsseite
+   Zeilenlayout nach V3. Schriften, Farben, Karten und Abstände aus global.css.
 */
 
-/* =========================================================
-   DIENSTLEISTUNGEN: PLUS UND AUSKLAPPBARE TÄTIGKEITEN
-   Titel und Fliesstext bleiben fest. Nur die angeklickte Karte wächst nach unten.
-   ========================================================= */
+/* LEISTUNGSZEILE: Nummer links, Titel mittig, Beschreibung rechts */
 .service-detail {
   display:grid;
-  grid-template-rows:auto auto auto auto;
-  cursor:pointer;
+  grid-template-columns:var(--service-detail-columns,var(--card-label-title-space) minmax(0,.85fr) minmax(0,1.5fr));
+  column-gap:var(--home-card-column-gap);
+  align-items:start;
 }
 
-.service-grid:has(.service-detail.is-open) .service-detail {
-  align-self:start;
+/* LEISTUNGSÜBERSICHT: eine durchgehende Zeile pro Dienstleistung */
+.service-grid:has(.service-detail) {
+  grid-template-columns:minmax(0,1fr);
+  row-gap:0;
 }
 
+/* GEÖFFNETE LEISTUNG: Liste anzeigen und das Plus drehen */
 .service-detail.is-open {
-  height:auto;
+  --service-list-display:grid;
+  --action-symbol-rotation:45deg;
 }
 
+/* MEHR ANZEIGEN: globaler Textlink mit Plus statt Pfeil */
 .service-detail__toggle {
-  grid-column:1 / -1;
-  grid-row:3;
-  justify-self:start;
-  margin-top:21px;
-  padding:0;
-  border:0;
-  background:transparent;
+  --action-symbol:"+";
+  margin-top:var(--subtitle-bottom-space);
   cursor:pointer;
-  transition:color 260ms ease;
 }
 
+/* TÄTIGKEITEN: natürliche Höhe; bei wenig Platz automatisch eine Spalte */
 .service-detail__list {
-  grid-column:1 / -1;
-  grid-row:4;
-  margin:20px 0 0;
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  grid-auto-flow:row;
-  column-gap:24px;
-  row-gap:2px;
-}
-
-.service-detail__list li.body-copy {
-  margin-top:0;
-  line-height:1;
+  margin:var(--card-top-space) 0 0;
+  display:var(--service-list-display,none);
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr));
+  column-gap:var(--home-card-column-gap);
 }
