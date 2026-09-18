@@ -35,6 +35,6 @@
   margin:var(--card-top-space) 0 0;
   display:var(--service-list-display,none);
   columns:2;
-  column-gap:var(--home-card-column-gap);
+  column-gap:30px;
 }
 
