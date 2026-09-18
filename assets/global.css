@@ -533,7 +533,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   letter-spacing:0;
   text-transform:none;
   position:relative;
-  top:0px;
+  top:var(--action-symbol-top,0px);
   transform:rotate(var(--action-symbol-rotation,0deg));
   transition:transform .2s ease;
 }
