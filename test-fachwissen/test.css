@@ -422,72 +422,142 @@
   background: transparent !important;
 }
 
-/* TEST: Hero – weiche geometrische Übergangsflächen statt Linie */
-.home-hero {
-  position: relative;
-  overflow: hidden;
-}
-
-.home-hero__content {
-  position: relative;
-  z-index: 2;
-}
-
-.home-hero__image {
-  position: relative;
-  z-index: 1;
-}
-
-.home-hero__inner {
-  position: relative;
-  z-index: 2;
-}
-
-.home-hero::before {
-  content: "";
-  position: absolute;
-  z-index: 3;
-  top: 0;
-  bottom: 0;
-  left: 37%;
-  width: 24%;
-  pointer-events: none;
-  background: linear-gradient(
-    135deg,
-    rgba(255,255,255,0.88) 0%,
-    rgba(242,242,242,0.72) 45%,
-    rgba(205,210,217,0.34) 100%
-  );
-  clip-path: polygon(18% 0, 100% 0, 72% 100%, 0 100%);
-}
-
-.home-hero::after {
-  content: "";
-  position: absolute;
-  z-index: 4;
-  top: 8%;
-  bottom: 18%;
-  left: 48%;
-  width: 12%;
-  pointer-events: none;
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,0.16) 0%,
-    rgba(180,186,196,0.34) 100%
-  );
-  clip-path: polygon(34% 0, 100% 0, 72% 100%, 0 100%);
-}
-
-/* TEST: Hero-Foto links bis zur Startseite-Achse verlängern */
+/* TEST: Hero – Übergang wie Referenzbild */
 @media (min-width: 801px) {
+  .home-hero {
+    position: relative;
+    overflow: hidden;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Foto beginnt deutlich weiter links als die reguläre 50%-Teilung. */
   .home-hero__image {
-    width: 120%;
-    margin-left: -20%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 36%;
+    width: auto;
+    height: 100%;
+    min-height: 0;
+    margin: 0;
   }
 
   .home-hero__image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 70% center;
+  }
+
+  /* Text bleibt in seiner bisherigen linken Hälfte. */
+  .home-hero__content {
+    position: relative;
+    z-index: 6;
+    width: 100%;
+    grid-column: 1;
+    background-image: url("../assets/images/backgrounds/Hintergrund 3.png");
+    background-size: 228% auto;
+    background-position: 90% 20%;
+    background-repeat: no-repeat;
+  }
+
+  /* Gesamte Übergangszone zwischen heller Textfläche und Foto. */
+  .hero-transition {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    bottom: 0;
+    left: 29%;
+    width: 31%;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  /* Breiter milchiger Schleier, der das Foto nach links ausblendet. */
+  .hero-transition__wash {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(255,255,255,.97) 0%,
+      rgba(255,255,255,.86) 25%,
+      rgba(245,246,247,.66) 52%,
+      rgba(219,223,229,.36) 76%,
+      rgba(255,255,255,0) 100%
+    );
+    clip-path: polygon(0 0, 100% 0, 73% 100%, 0 100%);
+  }
+
+  /* Obere grosse schräge Glasfläche. */
+  .hero-transition__wedge--top {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 66%;
+    height: 63%;
+    background: linear-gradient(
+      145deg,
+      rgba(255,255,255,.42),
+      rgba(201,207,216,.25)
+    );
+    clip-path: polygon(18% 0, 100% 0, 58% 100%, 0 72%);
+  }
+
+  /* Untere, gegenläufige Fläche wie in der Referenz. */
+  .hero-transition__wedge--bottom {
+    position: absolute;
+    left: 4%;
+    bottom: 0;
+    width: 88%;
+    height: 48%;
+    background: linear-gradient(
+      150deg,
+      rgba(255,255,255,.68) 0%,
+      rgba(226,229,233,.38) 52%,
+      rgba(178,186,198,.20) 100%
+    );
+    clip-path: polygon(0 24%, 70% 0, 100% 100%, 20% 100%);
+  }
+
+  /* Feine parallele Linien auf der diagonalen Übergangskante. */
+  .hero-transition__lines {
+    position: absolute;
+    z-index: 5;
+    top: 9%;
+    bottom: 7%;
+    left: 37%;
+    width: 31%;
+    opacity: .34;
+    transform: skewX(-15deg);
+    transform-origin: center;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(130,139,151,.42) 0,
+      rgba(130,139,151,.42) 1px,
+      transparent 1px,
+      transparent 6px
+    );
+    -webkit-mask-image: linear-gradient(
+      180deg,
+      transparent 0%,
+      #000 15%,
+      #000 78%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      180deg,
+      transparent 0%,
+      #000 15%,
+      #000 78%,
+      transparent 100%
+    );
+  }
+}
+
+@media (max-width: 800px) {
+  .hero-transition {
+    display: none;
   }
 }
