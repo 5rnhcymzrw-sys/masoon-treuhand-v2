@@ -43,8 +43,8 @@
 
   /* BEREICHSTITEL UND GROSSGESCHRIEBENE BEGRIFFE:
      z. B. FACHWISSEN, KONTAKT, BUCHHALTUNG, PERSONAL, STEUERN, BERATUNG */
-  --uppercase-label-size: 12px;
-  --uppercase-label-spacing: .04em;
+  --uppercase-label-size: 11.5px;
+  --uppercase-label-spacing: .10em;
 
   /* GEMEINSAME UI-WERTE:
      gelten für Kopfzeile, normale Links, Bereichstitel und grossgeschriebene Begriffe */
@@ -93,7 +93,7 @@
   --card-inline-space: 0px;
   --card-bottom-space: var(--card-top-space);
   --card-label-title-space: 31px;
-  --card-meta-size: 12px;
+  --card-meta-size: 11px;
   --card-meta-weight: 400;
   --card-meta-line: 1.5;
   --card-meta-spacing: .05em;
