@@ -613,14 +613,14 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   letter-spacing:var(--service-number-spacing);
 }
 
-.service-card:nth-child(1),
-.service-card:nth-child(4) { border-image:var(--brand-gradient-left) 1; }
+.service-card:nth-child(3n+1),
+.knowledge-card:nth-child(3n+1) { border-image:var(--brand-gradient-left) 1; }
 
-.service-card:nth-child(2),
-.service-card:nth-child(5) { border-image:var(--brand-gradient-middle) 1; }
+.service-card:nth-child(3n+2),
+.knowledge-card:nth-child(3n+2) { border-image:var(--brand-gradient-middle) 1; }
 
-.service-card:nth-child(3),
-.service-card:nth-child(6) { border-image:var(--brand-gradient-right) 1; }
+.service-card:nth-child(3n),
+.knowledge-card:nth-child(3n) { border-image:var(--brand-gradient-right) 1; }
 
 .service-card h3 {
   grid-column:2;
