@@ -233,10 +233,12 @@
         image.style.setProperty('--test-hero-image-top', `${topSpace}px`);
         image.style.setProperty('--test-hero-image-bottom', `${bottomSpace}px`);
         image.style.setProperty('--test-hero-image-left', `${imageLeft}px`);
+        hero.style.setProperty('--test-hero-image-left', `${imageLeft}px`);
       } else {
         image.style.removeProperty('--test-hero-image-top');
         image.style.removeProperty('--test-hero-image-bottom');
         image.style.removeProperty('--test-hero-image-left');
+        hero.style.removeProperty('--test-hero-image-left');
       }
     };
 
