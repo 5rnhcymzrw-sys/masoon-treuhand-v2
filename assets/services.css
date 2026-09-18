@@ -8,6 +8,7 @@
    Titel und Fliesstext bleiben fest. Nur die angeklickte Karte wächst nach unten.
    ========================================================= */
 .service-detail {
+  display:grid;
   grid-template-rows:auto auto auto auto;
   cursor:pointer;
 }
