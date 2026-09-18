@@ -438,3 +438,14 @@
 .home-knowledge::before {
   content: none !important;
 }
+
+/* TEST: Kopfzeile – weisser Hintergrund und feine graue Linie */
+.site-header {
+  background: var(--white);
+}
+
+.site-header::after {
+  height: 1px;
+  bottom: 0;
+  background: #cfcfcf;
+}
