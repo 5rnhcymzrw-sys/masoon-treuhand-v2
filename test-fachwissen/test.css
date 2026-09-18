@@ -66,10 +66,10 @@
   border-bottom-color: transparent;
 }
 
-/* TEST: Fachwissen – erste Kachel breiter, zweite und dritte schmaler */
+/* TEST: Fachwissen – erste Kachel so breit wie eine Dienstleistungskachel */
 @media (min-width: 1051px) {
   .home-knowledge .knowledge-grid {
-    grid-template-columns: 1.35fr 0.825fr 0.825fr;
+    grid-template-columns: calc(50% - 9px) 1fr 1fr;
   }
 }
 
