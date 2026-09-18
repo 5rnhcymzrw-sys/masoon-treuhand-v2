@@ -5,8 +5,8 @@
 /* LEISTUNGSZEILE: Nummer links, Titel mittig, Beschreibung rechts */
 .service-detail {
   display:grid;
-  grid-template-columns:var(--service-detail-columns,var(--card-label-title-space) minmax(0,.85fr) minmax(0,1.5fr));
-  column-gap:var(--home-card-column-gap);
+  grid-template-columns:var(--service-detail-columns,var(--card-label-title-space) calc(var(--secondary-column-start) - var(--card-label-title-space) - var(--card-column-gap,46px) - var(--card-column-gap,46px)) minmax(0,1fr));
+  column-gap:var(--card-column-gap,46px);
   align-items:start;
 }
 
