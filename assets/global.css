@@ -109,6 +109,29 @@
   --content-table-line: #d7d5d1;
 }
 
+/* PROVISORISCHE HILFSLINIE: linke Kante von "Startseite" auf allen Seiten */
+body::before {
+  content:"";
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:50%;
+  width:min(calc(100% - (2 * var(--page-gutter))),var(--content-width));
+  transform:translateX(-50%);
+  background:
+    linear-gradient(
+      to right,
+      transparent 0,
+      transparent calc(var(--secondary-column-start) - .5px),
+      red calc(var(--secondary-column-start) - .5px),
+      red calc(var(--secondary-column-start) + .5px),
+      transparent calc(var(--secondary-column-start) + .5px),
+      transparent 100%
+    );
+  pointer-events:none;
+  z-index:9999;
+}
+
 /* =========================================================
    WEBSITE: GRUNDLAGEN
    ========================================================= */
