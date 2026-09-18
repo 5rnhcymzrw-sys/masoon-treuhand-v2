@@ -75,6 +75,9 @@
 
 /* UNTERNEHMEN: Abschlussbereich ohne dunklen Hintergrund */
 .company-values + .closing-card-section {
+  --closing-ink:var(--ink);
+  --closing-text-color:var(--text);
+  --closing-label-color:var(--label-color);
   background:transparent;
 }
 
