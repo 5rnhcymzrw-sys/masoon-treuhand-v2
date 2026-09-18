@@ -18,7 +18,7 @@
 
 /* GEÖFFNETE LEISTUNG: Liste anzeigen und das Plus drehen */
 .service-detail.is-open {
-  --service-list-display:grid;
+  --service-list-display:block;
   --action-symbol-rotation:45deg;
 }
 
@@ -33,7 +33,7 @@
 .service-detail__list {
   margin:var(--card-top-space) 0 0;
   display:var(--service-list-display,none);
-  grid-template-columns:repeat(2,minmax(0,1fr));
+  columns:2;
   column-gap:var(--home-card-column-gap);
 }
 
