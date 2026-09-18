@@ -7,7 +7,6 @@
 .home-hero {
   width:min(calc(100% - (2 * var(--page-gutter))),var(--content-width));
   height:700px;
-  min-height:700px;
   margin:48px auto 90px;
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -55,11 +54,7 @@
   position:relative;
   z-index:1;
   height:700px;
-  min-height:700px;
   overflow:hidden;
-  width:100%;
-  margin-left:0;
-  transform:none;
   background:#ddd;
 }
 
@@ -85,7 +80,6 @@
   height:100%;
   object-fit:cover;
   object-position:70% center;
-  display:block;
 }
 
 /* HERO: Tablet */
@@ -103,7 +97,6 @@
   .home-hero {
     width:calc(100% - (2 * var(--page-gutter-mobile)));
     height:auto;
-    min-height:auto;
     margin:32px auto 64px;
     grid-template-columns:1fr;
   }
@@ -120,8 +113,6 @@
   .home-hero__image {
     height:auto;
     min-height:460px;
-    width:100%;
-    margin-left:0;
   }
 }
 
