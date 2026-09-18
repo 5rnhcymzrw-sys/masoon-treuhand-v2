@@ -393,3 +393,9 @@
 .home-knowledge .knowledge-card__date {
   color: var(--label-color);
 }
+
+/* TEST: Dienstleistungen und Fachwissen – gleiche Transparenz */
+.home-services .service-card,
+.home-knowledge::before {
+  background: rgba(231,233,237,.62);
+}
