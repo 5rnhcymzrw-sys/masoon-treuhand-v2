@@ -34,7 +34,7 @@
   margin-top:14px;
   display:flex;
   flex-direction:column;
-  gap:4px;
+  gap:var(--small-title-bottom-space);
   color:var(--ink);
   font-family:var(--font-body);
   font-size:11px;
