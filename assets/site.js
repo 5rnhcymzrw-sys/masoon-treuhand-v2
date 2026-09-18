@@ -202,6 +202,13 @@ if (latestKnowledgeGrid) {
             cardCopy.setAttribute('href', new URL(relativeUrl, knowledgeOverviewUrl).href);
           }
 
+          if (!cardCopy.querySelector('.action')) {
+            const action = document.createElement('span');
+            action.className = 'action';
+            action.textContent = 'Beitrag anzeigen';
+            cardCopy.append(action);
+          }
+
           return cardCopy;
         });
 
