@@ -13,8 +13,8 @@
    Beispiel: links "Wir stehen Ihnen gerne zur Verfügung.", rechts Formular */
 .contact-page__grid {
   display:grid;
-  grid-template-columns:53% 47%;
-  gap:0;
+  grid-template-columns:1fr 1fr;
+  gap:100px;
   align-items:start;
 }
 
@@ -85,21 +85,14 @@
    Beispiel: "Nachname", "Vorname", "E Mail", "Telefon", "Nachricht", "Nachricht senden" */
 .contact-form {
   position:relative;
-  height:600px;
-  margin-top:calc(-5.1% + 7px);
-  transform:translateX(-38px);
-  padding:56px 62px 50px;
+  margin-top:9px;
+  padding:44px 38px 32px;
   display:grid;
-  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
-  column-gap:36px;
+  grid-template-columns:1fr 1fr;
+  column-gap:28px;
   align-content:start;
   overflow:hidden;
-  background:transparent;
-  border-width:3px 1px 1px;
-  border-style:solid;
-  border-color:transparent;
-  border-image:var(--brand-gradient) 1;
-  box-shadow:0 18px 44px rgba(23,23,21,.035);
+  background:#f2f2f2;
 }
 
 /* FORMULARFELDER: klare Abstände und ruhige Hierarchie
@@ -108,7 +101,7 @@
   position:relative;
   display:flex;
   flex-direction:column;
-  gap:10px;
+  gap:9px;
   margin:0 0 32px;
 }
 
@@ -138,36 +131,20 @@
   grid-column:1 / -1;
 }
 
-/* FELDBESCHRIFTUNG: ruhiger Farbwechsel beim Anklicken
-   Beispiel: "Nachname", "Vorname", "E Mail", "Telefon", "Nachricht" */
-.contact-form .contact-label {
-  transition:color 180ms ease;
-}
-
-/* AKTIVE FELDBESCHRIFTUNG: dunkler beim Schreiben
-   Beispiel: "E Mail" bei aktivem Eingabefeld */
-.contact-form__field:focus-within .contact-label {
-  color:var(--ink);
-}
-
 /* NORMALE EINGABEFELDER: Darstellung und vollständige Grössenwerte
    Beispiel: "Nachname", "Vorname", "E Mail" und "Telefon" */
 .contact-form input,
 .contact-form textarea {
   width:100%;
   margin:0;
-  padding:5px 0 9px;
-  color:var(--text);
+  padding:8px 0;
+  color:var(--ink);
   caret-color:#8d96a8;
-  background-color:transparent;
-  background-image:linear-gradient(90deg,rgba(243,232,212,.95) 0%,rgba(232,229,223,.82) 52%,rgba(141,150,168,.48) 100%);
-  background-repeat:no-repeat;
-  background-position:left bottom;
-  background-size:100% 1px;
+  background:transparent;
   border:0;
+  border-bottom:1px solid #9a9a9a;
   border-radius:0;
   outline:none;
-  transition:background-image 180ms ease,color 180ms ease;
 }
 
 .contact-form input {
@@ -179,28 +156,16 @@
   resize:none;
 }
 
-/* EINGABEFELDER BEI MAUS DARÜBER: Verlauf etwas deutlicher
-   Beispiel: Linie unter "Nachname" oder "Nachricht" */
-.contact-form input:hover,
-.contact-form textarea:hover {
-  background-image:var(--brand-gradient);
-}
-
-/* AKTIVES EINGABEFELD: Linie bleibt 1 px und wird vollständig blau
-   Beispiel: angeklicktes Feld unter "Nachname" oder "E Mail" */
-.contact-form input:focus,
-.contact-form textarea:focus {
-  background-image:linear-gradient(#8d96a8,#8d96a8);
-}
-
 /* BUTTON NACHRICHT SENDEN: bewusst rahmenlos und mit mehr Klickfläche
    Beispiel: "Nachricht senden ↗" */
 .contact-form__submit {
   grid-column:1 / -1;
-  justify-self:start;
-  align-self:start;
+  width:100%;
+  justify-content:space-between;
   border:0;
-  background-color:transparent;
+  padding:15px 21px;
+  color:var(--white);
+  background:#1a1a1a;
   cursor:pointer;
 }
 
