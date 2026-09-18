@@ -559,3 +559,20 @@
   background: red;
   pointer-events: none;
 }
+
+/* TEST: Hero-Foto – oben bei MASOON TREUHAND, unten bei Leistungsbegriffen */
+@media (min-width: 801px) {
+  .home-hero__image {
+    height: auto;
+    min-height: 0;
+    align-self: stretch;
+    margin-top: var(--test-hero-image-top, 0px);
+    margin-bottom: var(--test-hero-image-bottom, 0px);
+  }
+
+  .home-hero__image img {
+    height: 100%;
+    object-fit: cover;
+    object-position: 70% 38%;
+  }
+}
