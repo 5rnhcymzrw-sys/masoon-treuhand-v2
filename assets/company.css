@@ -70,7 +70,8 @@
   );
 }
 
-.company-values > .container {
+.company-values > .container,
+.company-values + .closing-card-section .closing-card {
   display:grid;
   grid-template-columns:calc(var(--secondary-column-start) - 120px) 1fr;
   column-gap:36px;
