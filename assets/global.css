@@ -39,15 +39,20 @@
   --body-line: 1.75;
   --body-spacing: 12px;
 
-  /* GLOBALE UI-SCHRIFTGRÖSSE: Kopfzeile, Bereichstitel, Hero-Begriffe,
-     Aktionslinks und kleine Titel verwenden gemeinsam --label-size.
-     Beispiele: Startseite, Fachwissen, BUCHHALTUNG, Beitrag anzeigen, Kontakt aufnehmen. */
+  /* KOPFZEILE UND NORMALE LINKS:
+     z. B. Startseite, Unternehmen, Alle Beiträge ansehen, Beitrag anzeigen, Kontakt aufnehmen */
   --label-size: 14px;
+  --label-spacing: 0;
+
+  /* BEREICHSTITEL UND GROSSGESCHRIEBENE BEGRIFFE:
+     z. B. FACHWISSEN, KONTAKT, BUCHHALTUNG, PERSONAL, STEUERN, BERATUNG */
   --uppercase-label-size: 12px;
   --uppercase-label-spacing: .04em;
+
+  /* GEMEINSAME UI-WERTE:
+     gelten für Kopfzeile, normale Links, Bereichstitel und grossgeschriebene Begriffe */
   --label-weight: 400;
   --label-line: 1.75;
-  --label-spacing: 0;
   --label-color: #bb2020;
   --small-title-bottom-space: 7px;
 
