@@ -648,7 +648,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   display:flex;
   flex-direction:column;
   background:rgba(255,255,255,.8);
-  border-width:3px 1px 1px;
+  border-width:1px;
   border-style:solid;
   border-color:transparent;
   border-image:var(--brand-gradient) 1;
