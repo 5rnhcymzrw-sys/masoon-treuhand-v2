@@ -277,3 +277,54 @@
       rgba(141,150,168,.42) 100%
     );
 }
+
+/* TEST: Farbkonzept – gezielte Flächen statt überall Farbe */
+/* Kopfzeile: leicht abgetönt statt rein weiss */
+.site-header {
+  background: #f3f1ed;
+}
+
+/* Dienstleistungen: bewusst neutral lassen */
+.home-services {
+  background: transparent;
+}
+
+/* Fachwissen: ruhige, sehr helle Blaugrau-Fläche über die ganze Breite */
+.home-knowledge {
+  position: relative;
+  isolation: isolate;
+}
+
+.home-knowledge::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: rgba(231,233,237,.48);
+}
+
+/* Fachwissen-Karten selbst bleiben hell und klar */
+.home-knowledge .knowledge-card {
+  background: rgba(255,255,255,.72);
+}
+
+/* Abschlussbereich bleibt die stärkste Farbfläche der Seite */
+.closing-card::after {
+  background:
+    linear-gradient(
+      110deg,
+      rgba(243,232,212,.78) 0%,
+      rgba(232,229,223,.68) 42%,
+      rgba(199,203,211,.62) 72%,
+      rgba(141,150,168,.50) 100%
+    );
+}
+
+/* Fusszeile bleibt bewusst schwarz als klarer Abschluss */
+.site-footer {
+  background: var(--black);
+}
