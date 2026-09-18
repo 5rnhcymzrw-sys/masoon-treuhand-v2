@@ -83,3 +83,61 @@
   margin-top: auto;
   align-self: flex-start;
 }
+
+/* TEST: Fachwissen – nur Kasten bewegt sich, Inhalt bleibt fix */
+.home-knowledge .knowledge-card {
+  position: relative;
+  background: transparent;
+  border: 0;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.home-knowledge .knowledge-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: rgba(255,255,255,.8);
+  border: 1px solid transparent;
+  transition:
+    transform var(--card-hover-duration) ease,
+    box-shadow var(--card-hover-duration) ease;
+}
+
+.home-knowledge .knowledge-card:nth-child(1)::before {
+  border-image: linear-gradient(
+    90deg,
+    #f3e8d4 0%,
+    #e8e5df 100%
+  ) 1;
+}
+
+.home-knowledge .knowledge-card:nth-child(2)::before {
+  border-image: linear-gradient(
+    90deg,
+    #e8e5df 0%,
+    #c7cbd3 100%
+  ) 1;
+}
+
+.home-knowledge .knowledge-card:nth-child(3)::before {
+  border-image: linear-gradient(
+    90deg,
+    #c7cbd3 0%,
+    #8d96a8 100%
+  ) 1;
+}
+
+.home-knowledge .knowledge-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (hover:hover) {
+  .home-knowledge .knowledge-card:hover::before {
+    transform: translateY(var(--card-hover-lift));
+    box-shadow: var(--card-hover-shadow);
+  }
+}
