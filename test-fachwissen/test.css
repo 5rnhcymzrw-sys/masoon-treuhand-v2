@@ -28,3 +28,8 @@
     #8d96a8 100%
   ) 1 !important;
 }
+
+/* TEST: Fachwissen – obere Linie wieder dünn */
+.home-knowledge .knowledge-card {
+  border-width: 1px;
+}
