@@ -133,7 +133,7 @@ body {
   background-size:100% auto;
   background-position:80% 3%;
   background-repeat:repeat-y;
-  background-attachment:scroll;
+  background-attachment:fixed;
   font-family:var(--font-body);
   font-size:var(--body-size);
   font-weight:var(--body-weight);
