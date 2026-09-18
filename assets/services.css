@@ -30,7 +30,7 @@
 
 /* TÄTIGKEITEN: zwei Spalten, Reihenfolge zuerst links von oben nach unten */
 .service-detail__list {
-  margin:var(--card-top-space) 0 0;
+  margin:20px 0 0;
   columns:2;
   column-gap:30px;
 }
