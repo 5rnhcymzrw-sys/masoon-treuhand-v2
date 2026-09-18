@@ -224,9 +224,11 @@
 
         const topSpace = Math.max(0, labelRect.top - heroRect.top);
         const bottomSpace = Math.max(0, heroRect.bottom - actionsRect.bottom);
-        const startLink = document.querySelector('.site-nav a:first-child');
-        const startLeft = startLink ? startLink.getBoundingClientRect().left : heroRect.left + (heroRect.width / 2);
-        const imageLeft = Math.max(0, startLeft - heroRect.left);
+        const firstRedLine = document.querySelector('.test-start-line');
+        const firstRedLineLeft = firstRedLine
+          ? firstRedLine.getBoundingClientRect().left
+          : heroRect.left + (heroRect.width * .4);
+        const imageLeft = Math.max(0, firstRedLineLeft - heroRect.left);
 
         image.style.setProperty('--test-hero-image-top', `${topSpace}px`);
         image.style.setProperty('--test-hero-image-bottom', `${bottomSpace}px`);
