@@ -67,11 +67,13 @@ serviceDetailToggles.forEach((toggle) => {
 
   toggle.addEventListener('click', () => {
     const isOpen = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', String(!isOpen));
-    toggle.setAttribute('aria-label', isOpen ? 'Tätigkeiten anzeigen' : 'Tätigkeiten ausblenden');
-    toggle.textContent = isOpen ? 'Mehr anzeigen' : 'Weniger anzeigen';
-    toggle.style.setProperty('--action-symbol', isOpen ? '"+"' : '"-"');
-    list.hidden = isOpen;
+    const nextOpen = !isOpen;
+    toggle.setAttribute('aria-expanded', String(nextOpen));
+    toggle.setAttribute('aria-label', nextOpen ? 'Tätigkeiten ausblenden' : 'Tätigkeiten anzeigen');
+    toggle.textContent = nextOpen ? 'Weniger anzeigen' : 'Mehr anzeigen';
+    toggle.style.setProperty('--action-symbol', nextOpen ? '"–"' : '"+"');
+    toggle.style.setProperty('--action-symbol-top', nextOpen ? '-1px' : '2px');
+    list.hidden = !nextOpen;
   });
 });
 
