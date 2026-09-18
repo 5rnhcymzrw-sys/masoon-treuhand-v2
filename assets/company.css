@@ -72,7 +72,7 @@
 
 .company-values > .container {
   display:grid;
-  grid-template-columns:calc(var(--secondary-column-start) + 27px) 1fr;
+  grid-template-columns:calc(var(--secondary-column-start) - 374px) 1fr;
   column-gap:36px;
 }
 
