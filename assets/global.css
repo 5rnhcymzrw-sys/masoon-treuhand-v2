@@ -23,10 +23,8 @@
   --black: #000000;
   --ink: #171715;
   --text: #484a4f;
-  --muted: #777777;
   --white: #ffffff;
   --brand-gradient: linear-gradient(110deg,#f3e8d4 0%,#e8e5df 38%,#c7cbd3 66%,#8d96a8 100%);
-  --brand-gradient-reverse: linear-gradient(110deg,#8d96a8 0%,#c7cbd3 34%,#e8e5df 62%,#f3e8d4 100%);
 
   /* FLIESSTEXTE: Schrift, Farbe und Abstände
      Beispiel: "Bitte füllen Sie das Kontaktformular aus." */
@@ -102,38 +100,10 @@
   --page-bottom-space: 126px;
   --page-bottom-space-mobile: 82px;
   --header-height: 122px;
-  --accent-height: 6px;
   --secondary-column-start: calc(40% + 11.4px);
   --legal-left-inset: 75px;
   --content-card-inline-space: 130px;
   --content-table-line: #d7d5d1;
-}
-
-/* PROVISORISCHE HILFSLINIEN:
-   1. linke Inhaltskante
-   2. linke Kante von "Startseite" in der Kopfzeile */
-body::before {
-  content:"";
-  position:fixed;
-  top:0;
-  bottom:0;
-  left:50%;
-  width:min(calc(100% - (2 * var(--page-gutter))),var(--content-width));
-  transform:translateX(-50%);
-  background:
-    linear-gradient(
-      to right,
-      red 0,
-      red 1px,
-      transparent 1px,
-      transparent calc(var(--secondary-column-start) - .5px),
-      red calc(var(--secondary-column-start) - .5px),
-      red calc(var(--secondary-column-start) + .5px),
-      transparent calc(var(--secondary-column-start) + .5px),
-      transparent 100%
-    );
-  pointer-events:none;
-  z-index:9999;
 }
 
 /* =========================================================
@@ -201,29 +171,6 @@ main > section:last-child { padding-bottom:0; }
   height:var(--header-height);
   color:var(--white);
   background:#1a1a1a;
-  transform:translateY(0);
-  transition:transform 260ms ease, background-color 260ms ease, color 260ms ease;
-  will-change:transform;
-}
-
-/* KOPFZEILE BEIM HERUNTERSCROLLEN: aus dem Sichtbereich schieben
-   Beispiel: nach unten scrollen */
-.site-header.is-scrolling-down {
-  transform:translateY(calc(-100% - var(--accent-height)));
-}
-
-/* KOPFZEILE BEIM HOCHSCROLLEN: transparentes Schwarz und wieder sichtbar
-   Beispiel: nach unten scrollen und danach wieder nach oben */
-.site-header.is-scrolling-up {
-  color:var(--white);
-  background:#1a1a1a;
-}
-
-/* KOPFZEILE SCHWARZ: Logo und Navigation weiss
-   Beispiel: "MASOON TREUHAND" und "STARTSEITE" beim Hochscrollen */
-.site-header.is-scrolling-up .site-brand__text,
-.site-header.is-scrolling-up .site-nav a {
-  color:var(--white);
 }
 
 .header-inner {
@@ -249,7 +196,6 @@ main > section:last-child { padding-bottom:0; }
 
 /* LOGO: MASOON TREUHAND (Schrift) */
 .site-brand__text {
-  transform:translateX(0px);
   display:inline-flex;
   align-items:baseline;
   gap:.22em;
@@ -261,10 +207,6 @@ main > section:last-child { padding-bottom:0; }
   letter-spacing:.03em;
   white-space:nowrap;
   transition:color 260ms ease;
-}
-
-.site-brand__text span:last-child {
-  color:var(--white);
 }
 
 /* KOPFZEILE: Navigation, Position und Schriftwerte */
@@ -281,9 +223,7 @@ main > section:last-child { padding-bottom:0; }
 
 .site-nav a {
   position:relative;
-  padding:35px 0 32px;
   color:inherit;
-  transition:color 260ms ease;
 }
 
 .service-detail:hover .service-detail__toggle,
@@ -352,14 +292,18 @@ p + p,
 
 /* ZWISCHENTITEL: global
    Beispiel: "Buchhaltung" / "Checkliste für die Steuererklärung" */
-.subtitle {
+.subtitle,
+.service-card h3,
+.knowledge-card h3 {
   margin:0;
+  padding:0;
   color:var(--ink);
   font-family:var(--font-heading);
   font-size:var(--subtitle-size);
   font-weight:var(--subtitle-weight);
   line-height:var(--subtitle-line);
   letter-spacing:var(--subtitle-spacing);
+  background:none;
 }
 
 /* ZWISCHENTITEL: globaler Abstand zum Fliesstext
@@ -619,13 +563,10 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 /* KARTEN: gemeinsame Basis für Dienstleistungen und Fachwissen */
 .service-card,
 .knowledge-card {
-  position:relative;
   display:flex;
   flex-direction:column;
   padding:var(--card-top-space) var(--card-inline-space) var(--card-bottom-space) 0;
   border-top:1px solid var(--card-line-color);
-  background:transparent;
-  box-shadow:none;
 }
 
 /* KARTEN: gemeinsame kleine Kennzeichnung oberhalb des Titels */
@@ -641,32 +582,8 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   letter-spacing:var(--card-meta-spacing);
 }
 
-.service-card__number {
-  position:static;
-  transform:none;
-}
-
 .knowledge-card__date {
   text-transform:uppercase;
-}
-
-/* KARTEN: gemeinsame Titelwerte und identische Umbruchhöhe */
-.service-card h3,
-.knowledge-card h3 {
-  margin:0;
-  padding:0;
-  color:var(--ink);
-  font-family:var(--font-heading);
-  font-size:var(--subtitle-size);
-  font-weight:var(--subtitle-weight);
-  line-height:var(--subtitle-line);
-  letter-spacing:var(--subtitle-spacing);
-  background:none;
-}
-
-.service-card p,
-.knowledge-card p {
-  max-width:none;
 }
 
 @media (max-width:800px) {
@@ -710,8 +627,6 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 }
 
 .closing-card__content {
-  position:relative;
-  left:0;
   display:flex;
   flex-direction:column;
   align-items:flex-start;
@@ -721,7 +636,6 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 .closing-card .action {
   margin-top:26px;
   color:var(--white);
-  background-image:linear-gradient(#9a9a9a,#9a9a9a);
 }
 
 /* =========================================================
@@ -873,7 +787,6 @@ body.page-article-employment-termination .content-card .article-text-table td:la
     align-items:flex-start;
   }
 
-  .closing-card__content { left:0; }
   .content-card { padding:var(--page-gutter-mobile); }
   .legal-section { padding-top:var(--section-space-mobile); }
 }
@@ -911,10 +824,8 @@ body.page-article-employment-termination .content-card .article-text-table td:la
   justify-content:flex-start;
   gap:29px;
   font-family:var(--font-body);
-  font-size:11px;
   font-weight:400;
   line-height:1.75;
-  letter-spacing:.025em;
   text-transform:none;
 }
 
