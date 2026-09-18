@@ -13,8 +13,8 @@
    Beispiel: links "Wir stehen Ihnen gerne zur Verfügung.", rechts Formular */
 .contact-page__grid {
   display:grid;
-  grid-template-columns:44% 56%;
-  gap:60px;
+  grid-template-columns:1fr 1fr;
+  gap:100px;
   align-items:start;
 }
 
