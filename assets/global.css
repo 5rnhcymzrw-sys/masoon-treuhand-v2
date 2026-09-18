@@ -608,6 +608,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 .knowledge-card__date {
   display:block;
   margin:0 0 var(--card-label-title-space);
+  transform:translateY(var(--service-number-offset,0));
   color:var(--card-meta-color);
   font-family:var(--font-body);
   font-size:var(--card-meta-size);
