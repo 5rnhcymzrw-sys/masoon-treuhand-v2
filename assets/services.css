@@ -8,13 +8,13 @@
   display:grid;
   grid-template-columns:var(--service-detail-columns,var(--card-label-title-space) calc(var(--secondary-column-start) - var(--card-label-title-space) - var(--card-column-gap,46px) - var(--card-column-gap,46px)) minmax(0,1fr));
   column-gap:var(--card-column-gap,46px);
-  min-height:211px;
   align-items:start;
 }
 
 /* LEISTUNGSÜBERSICHT: eine durchgehende Zeile pro Dienstleistung */
 .service-grid:has(.service-detail) {
   grid-template-columns:minmax(0,1fr);
+  grid-auto-rows:1fr;
   row-gap:0;
   border-bottom:1px solid var(--card-line-color);
 }
