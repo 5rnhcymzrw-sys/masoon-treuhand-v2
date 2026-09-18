@@ -626,23 +626,12 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 .service-card,
 .knowledge-card {
   position:relative;
-  padding:var(--card-top-space) var(--card-inline-space) var(--card-bottom-space) 0;
-  border-top:1px solid var(--card-line-color);
-}
-
-.service-card {
-  display:block;
-}
-
-.knowledge-card {
   display:flex;
   flex-direction:column;
+  padding:var(--card-top-space) var(--card-inline-space) var(--card-bottom-space) 0;
+  border-top:1px solid var(--card-line-color);
   background:transparent;
   box-shadow:none;
-}
-
-.service-card > div {
-  display:block;
 }
 
 /* KARTEN: gemeinsame kleine Kennzeichnung oberhalb des Titels */
@@ -681,20 +670,13 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   background:none;
 }
 
-.service-card p {
+.service-card p,
+.knowledge-card p {
   max-width:none;
 }
 
-/* FACHWISSEN: gleicher Abstand vom Fliesstext zur unteren Kartenlinie wie bei Dienstleistungen */
-.knowledge-card > p {
-  padding-bottom:var(--card-bottom-space);
-}
-
 .knowledge-card > .action {
-  width:100%;
   margin-top:auto;
-  padding-top:var(--card-top-space);
-  border-top:1px solid var(--card-line-color);
   align-self:flex-start;
 }
 
