@@ -55,10 +55,10 @@
 }
 
 /* =========================================================
-   UNTERNEHMEN: WERTEKARTEN
-   Abstände und Typografie kommen vollständig aus der globalen Kartenregel.
+   UNTERNEHMEN: WERTEBEREICH
+   Abstände und Typografie kommen vollständig aus den globalen Regeln.
    ========================================================= */
-.company-value-card {
+.company-values {
   background:#f3f3f3;
 }
 
