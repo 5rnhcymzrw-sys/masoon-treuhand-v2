@@ -472,3 +472,8 @@
 .site-nav a::after {
   background: #C7CBD3;
 }
+
+/* TEST: Kopfzeile – Navigationslinien wie Anspruch */
+.site-nav a::after {
+  background: #8B8E92;
+}
