@@ -43,6 +43,7 @@
      Aktionslinks und kleine Titel verwenden gemeinsam --label-size.
      Beispiele: Startseite, Fachwissen, BUCHHALTUNG, Beitrag anzeigen, Kontakt aufnehmen. */
   --label-size: 14px;
+  --uppercase-label-size: 12px;
   --label-weight: 400;
   --label-line: 1.75;
   --label-spacing: 0;
@@ -466,10 +467,22 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 .site-nav {
   color:var(--label-color);
   font-family:var(--font-body);
-  font-size:var(--label-size);
   font-weight:var(--label-weight);
   line-height:var(--label-line);
   letter-spacing:var(--label-spacing);
+}
+
+.action,
+.site-nav {
+  font-size:var(--label-size);
+}
+
+.contact-label,
+.small-title,
+.home-hero__actions,
+.service-detail__toggle,
+.section-label {
+  font-size:var(--uppercase-label-size);
 }
 
 /* KLEINER TITEL: Spezialfall mit kleinem Abstand zum Fliesstext
