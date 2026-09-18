@@ -629,7 +629,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   display:flex;
   flex-direction:column;
   padding:var(--card-top-space) var(--card-inline-space) var(--card-bottom-space) 0;
-  border-top:1px solid var(--card-line-color);
+  border:1px solid var(--card-line-color);
   background:transparent;
   box-shadow:none;
 }
