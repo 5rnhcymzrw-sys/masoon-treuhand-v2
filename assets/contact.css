@@ -162,7 +162,7 @@
   grid-column:1 / -1;
   justify-self:start;
   border:0;
-  padding:15px 21px;
+  padding:var(--button-padding);
   color:var(--white);
   background:#1a1a1a;
   cursor:pointer;
