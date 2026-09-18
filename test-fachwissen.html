@@ -194,7 +194,7 @@
           const cardRect = closingCard.getBoundingClientRect();
           const cardStyle = getComputedStyle(closingCard);
           const paddingLeft = parseFloat(cardStyle.paddingLeft) || 0;
-          const exactOffset = startLeft - cardRect.left - paddingLeft - 2;
+          const exactOffset = startLeft - cardRect.left - paddingLeft - 1;
 
           closingContent.style.marginLeft = `${Math.max(0, exactOffset)}px`;
         } else {
