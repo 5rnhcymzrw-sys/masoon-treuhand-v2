@@ -500,3 +500,11 @@
   background-color: var(--white);
   border-bottom-color: #8B8E92;
 }
+
+/* TEST: Kopfbereich-Links – kein schwarzer Hover bei Alle Dienstleistungen/Beiträge */
+.home-services__head .action:hover,
+.home-services__head .action:focus-visible,
+.home-knowledge__head .action:hover,
+.home-knowledge__head .action:focus-visible {
+  color: var(--label-color) !important;
+}
