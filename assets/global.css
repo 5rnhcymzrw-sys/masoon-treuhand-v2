@@ -39,8 +39,9 @@
   --body-line: 1.75;
   --body-spacing: 12px;
 
-  /* KLEINE GROSSBUCHSTABEN + Bereichstitel: Schrift und Farben
-     Beispiel: "KONTAKT", "ADRESSE", "NACHNAME", "FACHWISSEN" */
+  /* GLOBALE UI-SCHRIFTGRÖSSE: Kopfzeile, Bereichstitel, Hero-Begriffe,
+     Aktionslinks und kleine Titel verwenden gemeinsam --label-size.
+     Beispiele: Startseite, Fachwissen, BUCHHALTUNG, Beitrag anzeigen, Kontakt aufnehmen. */
   --label-size: 14px;
   --label-weight: 500;
   --label-line: 1.5;
@@ -70,8 +71,8 @@
   --subtitle-top-space: 48px;
   --subtitle-bottom-space: 14px;
 
-  /* GANZ GROSSER HERO-TITEL
-     Beispiel: "Treuhand mit Struktur und Anspruch." */
+  /* HERO-TITEL GROSS: "Treuhand mit Struktur und Anspruch."
+     Schriftgrösse, Zeilenhöhe und Laufweite des grossen Startseiten-Titels */
   --hero-title-size: clamp(52px, 4.8vw, 75px);
   --hero-title-line: .96;
   --hero-title-spacing: 0;
