@@ -260,3 +260,20 @@
 .closing-card > .section-label {
   display: none !important;
 }
+
+/* TEST: Abschlussbereich – Rahmen weg, Farbfläche weniger transparent */
+.closing-card {
+  border: 0 !important;
+  border-image: none !important;
+}
+
+.closing-card::after {
+  background:
+    linear-gradient(
+      110deg,
+      rgba(243,232,212,.68) 0%,
+      rgba(232,229,223,.58) 42%,
+      rgba(199,203,211,.52) 72%,
+      rgba(141,150,168,.42) 100%
+    );
+}
