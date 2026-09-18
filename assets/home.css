@@ -172,6 +172,14 @@
   gap:32px;
 }
 
+.home-services {
+  border-top:1px solid #d6d6d6;
+}
+
+.home-knowledge {
+  background:#f3f3f3;
+}
+
 /* STARTSEITE: Mobil */
 @media (max-width:800px) {
   .home-services__head,
