@@ -36,7 +36,12 @@
           <p class="section-label">MASOON TREUHAND</p>
           <h1 class="home-hero__title">Treuhand mit Struktur und <span style="color:#8b8e92">Anspruch.</span></h1>
           <p class="home-hero__copy">Auf der Basis von Diskretion, Präzision und Vertrauen begleiten wir Sie<br>mit fachlicher Klarheit und hohem Anspruch durch alle Phasen Ihres<br>Geschäftslebens.</p>
-          <a class="action home-hero__cta" href="kontakt/">Kontakt aufnehmen</a>
+          <div class="home-hero__actions">
+            <span>BUCHHALTUNG</span>
+            <span>PERSONAL</span>
+            <span>STEUERN</span>
+            <span>BERATUNG</span>
+          </div>
         </div>
       </div>
       <div class="home-hero__image photo-grayscale">
@@ -54,28 +59,28 @@
           <a class="action" href="dienstleistungen/">Alle Dienstleistungen ansehen</a>
         </div>
 
-        <div class="service-grid" style="--card-grid-columns:repeat(2,minmax(0,1fr));--service-copy-width:none">
-          <article class="service-card" style="border-image:var(--brand-gradient-left) 1">
+        <div class="service-grid">
+          <article class="service-card">
             <span class="service-card__number">01</span>
             <div><h3>Administration</h3><p>Strukturierte administrative Unterstützung im Geschäftsalltag sowie rechtssicheres Dokumenten- und Korrespondenzmanagement.</p></div>
           </article>
-          <article class="service-card" style="border-image:var(--brand-gradient-right) 1">
+          <article class="service-card">
             <span class="service-card__number">02</span>
             <div><h3>Buchhaltung</h3><p>Ordnungsgemässe Führung der Finanzbuchhaltung, Debitoren- und Kreditorenbuchhaltung sowie Erstellung der Mehrwertsteuerabrechnungen.</p></div>
           </article>
-          <article class="service-card" style="border-image:var(--brand-gradient-left) 1">
+          <article class="service-card">
             <span class="service-card__number">03</span>
             <div><h3>Personaladministration</h3><p>Arbeitsrechtlich konforme Abwicklung der Lohnbuchhaltung, Erstellung von Arbeitsverträgen sowie Abklärung sozialversicherungsrechtlicher Fragestellungen.</p></div>
           </article>
-          <article class="service-card" style="border-image:var(--brand-gradient-right) 1">
+          <article class="service-card">
             <span class="service-card__number">04</span>
             <div><h3>Jahresabschluss</h3><p>Fachgerechte Erstellung von Zwischen- und Jahresabschlüssen sowie rechtssichere Aufbereitung der Bilanz- und Erfolgsrechnung.</p></div>
           </article>
-          <article class="service-card" style="border-image:var(--brand-gradient-left) 1">
+          <article class="service-card">
             <span class="service-card__number">05</span>
             <div><h3>Steuererklärung</h3><p>Sorgfältige Ausarbeitung von Steuererklärungen, Prüfung von Veranlagungen sowie Vertretung in Rechtsmittel- und Einspracheverfahren.</p></div>
           </article>
-          <article class="service-card" style="border-image:var(--brand-gradient-right) 1">
+          <article class="service-card">
             <span class="service-card__number">06</span>
             <div><h3>Unternehmensberatung</h3><p>Fachkundige Begleitung bei Gründungen, Umstrukturierungen sowie weiteren unternehmerischen Fragestellungen.</p></div>
           </article>
@@ -98,21 +103,18 @@
             <span class="knowledge-card__date">07.2026 Steuern</span>
             <h3>Checkliste für die Steuererklärung</h3>
             <p>Eine vollständige Übersicht der wichtigsten Unterlagen für eine korrekt vorbereitete Steuererklärung.</p>
-            <span class="action knowledge-card__action">Beitrag anzeigen</span>
           </a>
 
           <a class="knowledge-card" href="fachwissen/06.2026-unternehmen-gruenden/" aria-label="Fachbeitrag Unternehmen gründen in der Schweiz öffnen">
             <span class="knowledge-card__date">06.2026 Gesellschaftsrecht</span>
             <h3>Unternehmen gründen in der Schweiz: Welche Rechtsform passt?</h3>
             <p>Die Wahl der Rechtsform beeinflusst Haftung, Kapitalbedarf, Steuern und die Führung eines Unternehmens.</p>
-            <span class="action knowledge-card__action">Beitrag anzeigen</span>
           </a>
 
           <a class="knowledge-card" href="fachwissen/05.2026-unternehmensformen/" aria-label="Fachbeitrag Unternehmensformen im Überblick öffnen">
             <span class="knowledge-card__date">05.2026 Gesellschaftsrecht</span>
-            <h3>Unternehmensformen<br>im Überblick</h3>
+            <h3>Unternehmensformen im Überblick</h3>
             <p>Die gängigsten Unternehmensformen der Schweiz werden anhand ihrer rechtlichen und finanziellen Merkmale miteinander verglichen.</p>
-            <span class="action knowledge-card__action">Beitrag anzeigen</span>
           </a>
         </div>
       </div>
@@ -121,8 +123,9 @@
     <section class="closing-card-section">
       <div class="container">
         <div class="closing-card">
+          <p class="section-label">Kontakt</p>
           <div class="closing-card__content">
-            <h2 class="section-title">Verlässliche<br>Treuhandlösungen<br>für Ihr Unternehmen.</h2>
+            <h2 class="section-title">Verlässliche Treuhandlösungen für Ihr Unternehmen.</h2>
             <a class="action" href="kontakt/">Kontakt aufnehmen</a>
           </div>
         </div>
@@ -143,56 +146,5 @@
   </footer>
 
   <script src="assets/site.js?v=20260917-knowledge-fallback-1"></script>
-  <script>
-    /* TESTSEITE: stellt "Beitrag anzeigen" nach dem automatischen Laden der Beiträge wieder her. */
-    const testKnowledgeGrid = document.querySelector('.home-knowledge .knowledge-grid');
-    if (testKnowledgeGrid) {
-      const ensureKnowledgeActions = () => {
-        const cards = testKnowledgeGrid.querySelectorAll('.knowledge-card');
-
-        cards.forEach((card) => {
-          if (!card.querySelector('.knowledge-card__action')) {
-            const action = document.createElement('span');
-            action.className = 'action knowledge-card__action';
-            action.textContent = 'Beitrag anzeigen';
-            card.append(action);
-          }
-        });
-
-        const thirdTitle = cards[2]?.querySelector('h3');
-        if (thirdTitle && thirdTitle.textContent.trim() === 'Unternehmensformen im Überblick') {
-          thirdTitle.innerHTML = 'Unternehmensformen<br>im Überblick';
-        }
-      };
-      ensureKnowledgeActions();
-      new MutationObserver(ensureKnowledgeActions).observe(testKnowledgeGrid, { childList: true });
-    }
-  </script>
-  <script>
-    /* TESTSEITE: Abschlussinhalt an der linken Kante von "Startseite" ausrichten. */
-    const updateClosingAlignment = () => {
-      const startLink = document.querySelector('.site-nav a:first-child');
-      const closingCard = document.querySelector('.closing-card');
-      const closingContent = document.querySelector('.closing-card__content');
-
-      if (!startLink || !closingCard || !closingContent) return;
-
-      if (window.innerWidth > 800) {
-        const startLeft = startLink.getBoundingClientRect().left;
-        const cardRect = closingCard.getBoundingClientRect();
-        const cardStyle = getComputedStyle(closingCard);
-        const paddingLeft = parseFloat(cardStyle.paddingLeft) || 0;
-        const exactOffset = startLeft - cardRect.left - paddingLeft - 1;
-
-        closingContent.style.marginLeft = `${Math.max(0, exactOffset)}px`;
-      } else {
-        closingContent.style.marginLeft = '0px';
-      }
-    };
-
-    updateClosingAlignment();
-    window.addEventListener('load', updateClosingAlignment);
-    window.addEventListener('resize', updateClosingAlignment);
-  </script>
 </body>
 </html>
