@@ -202,6 +202,18 @@ if (latestKnowledgeGrid) {
             cardCopy.setAttribute('href', new URL(relativeUrl, knowledgeOverviewUrl).href);
           }
 
+          let cardAction = cardCopy.querySelector('.knowledge-card__action');
+
+          if (!cardAction) {
+            cardAction = document.createElement('span');
+            cardAction.className = 'action knowledge-card__action';
+            cardAction.textContent = 'Beitrag anzeigen';
+            cardCopy.append(cardAction);
+          }
+
+          cardAction.style.marginTop = 'auto';
+          cardAction.style.alignSelf = 'flex-start';
+
           return cardCopy;
         });
 
