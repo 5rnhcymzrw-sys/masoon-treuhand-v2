@@ -903,7 +903,7 @@ body.page-article-employment-termination .content-card .article-text-table td:la
 /* FUSSZEILENBALKEN: Höhe, Innenabstand und Ausrichtung */
 .footer-inner {
   position:relative;
-  min-height:40px;
+  min-height:50px;
   padding:38px 0;
   display:flex;
   align-items:center;
