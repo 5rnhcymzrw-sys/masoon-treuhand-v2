@@ -455,3 +455,10 @@
 .site-nav a:focus-visible {
   color: inherit;
 }
+
+/* TEST: Kopfzeile – schwarzer Zustand vollständig entfernen */
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.site-nav a[aria-current="page"] {
+  color: inherit !important;
+}
