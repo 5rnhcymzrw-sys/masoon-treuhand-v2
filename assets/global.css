@@ -549,7 +549,6 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   top:-2px;
 }
 
-.action:hover,.action:focus-visible,
 .article-back:hover,.article-back:focus-visible {
   color:var(--black);
 }
