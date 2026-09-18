@@ -91,8 +91,10 @@
   --service-number-line:39.6px;
   --service-number-spacing:-1.76px;
 
-  /* KARTEN: gemeinsamer Abstand von oberer Linie zu Zahl bzw. kleinem Titel */
+  /* KARTEN: gemeinsame Abstände für Dienstleistungen und Fachwissen */
   --card-top-space: 26px;
+  --card-label-title-space: 31px;
+  --card-title-copy-space: 16px;
 
   /* KARTEN: globaler Hover, bewusst weich und langsam */
   --card-hover-lift: -3px;
@@ -641,7 +643,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 }
 
 .service-card h3 {
-  margin:31px 0 16px;
+  margin:var(--card-label-title-space) 0 var(--card-title-copy-space);
   color:var(--ink);
   font-family:var(--font-heading);
   font-size:var(--subtitle-size);
@@ -671,7 +673,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 
 /* FACHWISSEN-KARTEN: Datum mit vollständigen Schriftwerten */
 .knowledge-card__date {
-  margin-bottom:26px;
+  margin-bottom:var(--card-label-title-space);
   color:#626262;
   font-family:var(--font-body);
   font-size:11px;
@@ -684,7 +686,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 /* FACHWISSEN-KARTEN: Titel und untere Trennlinie */
 .knowledge-card h3 {
   min-height:3.36em;
-  margin:0 0 21px;
+  margin:0 0 var(--card-title-copy-space);
   padding-bottom:0;
   color:var(--ink);
   font-family:var(--font-heading);
