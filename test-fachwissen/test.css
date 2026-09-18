@@ -118,7 +118,7 @@
 
 .closing-card {
   position: relative;
-  min-height: 330px;
+  min-height: 463px;
   padding: 58px 64px;
   grid-template-columns: var(--secondary-column-start) minmax(0,1fr);
   align-items: start;
