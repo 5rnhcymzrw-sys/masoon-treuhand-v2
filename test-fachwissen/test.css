@@ -218,3 +218,34 @@
   background-color: var(--ink);
   background-size: 0;
 }
+
+/* TEST: Abschlussbereich – ohne Bereichstitel, kräftigere Fläche, ohne obere Linie */
+.closing-card {
+  grid-template-columns: 1fr;
+}
+
+.closing-card__content {
+  grid-column: 1;
+  margin-left: var(--secondary-column-start);
+}
+
+.closing-card::before {
+  content: none;
+}
+
+.closing-card::after {
+  background:
+    linear-gradient(
+      110deg,
+      rgba(243,232,212,.48) 0%,
+      rgba(232,229,223,.38) 42%,
+      rgba(199,203,211,.34) 72%,
+      rgba(141,150,168,.26) 100%
+    );
+}
+
+@media (max-width: 800px) {
+  .closing-card__content {
+    margin-left: 0;
+  }
+}
