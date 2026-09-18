@@ -462,3 +462,8 @@
 .site-nav a[aria-current="page"] {
   color: inherit !important;
 }
+
+/* TEST: Kopfzeile – Navigationslinien in #F3F3F3 */
+.site-nav a::after {
+  background: #F3F3F3;
+}
