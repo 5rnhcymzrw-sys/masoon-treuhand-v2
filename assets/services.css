@@ -31,16 +31,12 @@
   cursor:pointer;
 }
 
-.service-detail__toggle:hover,
-.service-detail__toggle:focus-visible {
-  color:#1a1a1a;
-}
 
 /* TÄTIGKEITEN: natürliche Höhe; bei wenig Platz automatisch eine Spalte */
 .service-detail__list {
   margin:var(--card-top-space) 0 0;
   display:var(--service-list-display,none);
   columns:2;
-  column-gap:30x;
+  column-gap:30px;
 }
 
