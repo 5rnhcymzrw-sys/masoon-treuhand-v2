@@ -302,42 +302,6 @@
   background: rgba(231,233,237,.48);
 }
 
-/* Fachwissen-Karten selbst bleiben hell und klar */
-.home-knowledge .knowledge-card {
-  background: rgba(255,255,255,.72);
-}
-
-/* Abschlussbereich bleibt die stärkste Farbfläche der Seite */
-.closing-card::after {
-  background:
-    linear-gradient(
-      110deg,
-      rgba(243,232,212,.78) 0%,
-      rgba(232,229,223,.68) 42%,
-      rgba(199,203,211,.62) 72%,
-      rgba(141,150,168,.50) 100%
-    );
-}
-
-/* Fusszeile bleibt bewusst schwarz als klarer Abschluss */
-.site-footer {
-  background: var(--black);
-}
-
-/* TEST: Fachwissen – vorherige Farbgebung wiederherstellen */
-.home-knowledge::before {
-  background: rgba(231,233,237,.48);
-}
-
-.home-knowledge .knowledge-card {
-  background: rgba(255,255,255,.72);
-}
-
-.home-knowledge .section-label,
-.home-knowledge .knowledge-card__date {
-  color: var(--label-color);
-}
-
 /* TEST: Abschlussbereich – Hintergrund RGB 20 22 24 */
 .closing-card::after {
   background: rgb(20, 22, 24);
@@ -347,19 +311,6 @@
 .closing-card .section-title,
 .closing-card .action {
   color: var(--white);
-}
-
-/* TEST: Fachwissen – Kacheln ohne zusätzliche Farbe */
-.home-knowledge .knowledge-card {
-  background: transparent;
-}
-
-/* TEST: #F3F3F3 gezielt wiederholen */
-/* Fachwissen: Farbe nur als dezenter Hover-Akzent wiederholen */
-@media (hover:hover) {
-  .home-knowledge .knowledge-card:hover {
-    background: #F3F3F3;
-  }
 }
 
 /* TEST: Fachwissen – Hintergrundfläche entfernen */
@@ -426,7 +377,6 @@
 
 /* TEST: Dienstleistungskacheln – transparent mit Rahmenlinien */
 .home-services .service-card {
-  background: transparent !important;
   border: 1px solid transparent !important;
   border-bottom-width: 1px !important;
   border-bottom-style: solid !important;
@@ -514,4 +464,10 @@
 .home-hero__inner {
   position: relative;
   z-index: 1;
+}
+
+/* TEST: Kacheln – Innenfarben vollständig entfernt */
+.home-services .service-card,
+.home-knowledge .knowledge-card {
+  background: transparent !important;
 }
