@@ -477,3 +477,17 @@
   );
   clip-path: polygon(34% 0, 100% 0, 72% 100%, 0 100%);
 }
+
+/* TEST: Hero-Foto links bis zur Startseite-Achse verlängern */
+@media (min-width: 801px) {
+  .home-hero__image {
+    width: 120%;
+    margin-left: -20%;
+  }
+
+  .home-hero__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
