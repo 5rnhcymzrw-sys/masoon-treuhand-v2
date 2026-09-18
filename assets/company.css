@@ -74,6 +74,11 @@
   margin-left:calc((100% - (2 * var(--card-column-gap,46px))) / 3 + var(--card-column-gap,46px));
 }
 
+/* UNTERNEHMEN: Abschlussbereich ohne dunklen Hintergrund */
+.company-values + .closing-card-section {
+  background:transparent;
+}
+
 /* =========================================================
    UNTERNEHMEN: MOBIL
    ========================================================= */
