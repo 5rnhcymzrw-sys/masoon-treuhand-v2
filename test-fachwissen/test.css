@@ -7,3 +7,28 @@
   min-height: 0;
   padding-bottom: 45px;
 }
+
+/* TEST: Dienstleistungskacheln – durchgehender Farbverlauf von 01 bis 06 */
+.service-grid .service-card:nth-child(1) {
+  border-image: linear-gradient(110deg, #f3e8d4 0%, #eee7d9 100%) 1 !important;
+}
+
+.service-grid .service-card:nth-child(2) {
+  border-image: linear-gradient(110deg, #eee7d9 0%, #e9e5de 100%) 1 !important;
+}
+
+.service-grid .service-card:nth-child(3) {
+  border-image: linear-gradient(110deg, #e9e5de 0%, #dadada 100%) 1 !important;
+}
+
+.service-grid .service-card:nth-child(4) {
+  border-image: linear-gradient(110deg, #dadada 0%, #c6cad2 100%) 1 !important;
+}
+
+.service-grid .service-card:nth-child(5) {
+  border-image: linear-gradient(110deg, #c6cad2 0%, #a9b0bd 100%) 1 !important;
+}
+
+.service-grid .service-card:nth-child(6) {
+  border-image: linear-gradient(110deg, #a9b0bd 0%, #8d96a8 100%) 1 !important;
+}
