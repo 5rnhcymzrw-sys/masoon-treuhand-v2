@@ -107,7 +107,9 @@
   --content-table-line: #d7d5d1;
 }
 
-/* PROVISORISCHE HILFSLINIE: linke Kante von "Startseite" auf allen Seiten */
+/* PROVISORISCHE HILFSLINIEN:
+   1. linke Inhaltskante
+   2. linke Kante von "Startseite" in der Kopfzeile */
 body::before {
   content:"";
   position:fixed;
@@ -119,7 +121,9 @@ body::before {
   background:
     linear-gradient(
       to right,
-      transparent 0,
+      red 0,
+      red 1px,
+      transparent 1px,
       transparent calc(var(--secondary-column-start) - .5px),
       red calc(var(--secondary-column-start) - .5px),
       red calc(var(--secondary-column-start) + .5px),
