@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="test-fachwissen/test.css?v=20260917-2">
 </head>
 <body>
+  <div class="test-brand-vertical-line" aria-hidden="true"></div>
   <header class="site-header">
     <div class="container header-inner">
       <a class="site-brand" href="./" aria-label="MASOON TREUHAND Startseite">
@@ -198,6 +199,29 @@
     updateClosingAlignment();
     window.addEventListener('load', updateClosingAlignment);
     window.addEventListener('resize', updateClosingAlignment);
+  </script>
+  <script>
+    /* TESTSEITE: farbige Vertikallinie ab Bildunterkante an Startseite-Achse. */
+    const updateBrandVerticalLine = () => {
+      const line = document.querySelector('.test-brand-vertical-line');
+      const startLink = document.querySelector('.site-nav a:first-child');
+      const heroImage = document.querySelector('.home-hero__image');
+      const footer = document.querySelector('.site-footer');
+
+      if (!line || !startLink || !heroImage || !footer) return;
+
+      const startLeft = startLink.getBoundingClientRect().left + window.scrollX;
+      const imageBottom = heroImage.getBoundingClientRect().bottom + window.scrollY;
+      const footerBottom = footer.getBoundingClientRect().bottom + window.scrollY;
+
+      line.style.left = `${startLeft}px`;
+      line.style.top = `${imageBottom}px`;
+      line.style.height = `${Math.max(0, footerBottom - imageBottom)}px`;
+    };
+
+    updateBrandVerticalLine();
+    window.addEventListener('load', updateBrandVerticalLine);
+    window.addEventListener('resize', updateBrandVerticalLine);
   </script>
 </body>
 </html>
