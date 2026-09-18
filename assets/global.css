@@ -686,7 +686,10 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 }
 
 .knowledge-card > .action {
+  width:100%;
   margin-top:auto;
+  padding-top:var(--card-top-space);
+  border-top:1px solid var(--card-line-color);
   align-self:flex-start;
 }
 
