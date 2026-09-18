@@ -421,3 +421,10 @@
 .home-knowledge .knowledge-card {
   background: transparent !important;
 }
+
+/* TEST: Hero Schritt 1 – Bild beginnt exakt an Startseite-Achse */
+@media (min-width: 801px) {
+  .home-hero {
+    grid-template-columns: var(--secondary-column-start) minmax(0, 1fr);
+  }
+}
