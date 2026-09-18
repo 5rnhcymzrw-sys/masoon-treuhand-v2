@@ -41,7 +41,7 @@
 
   /* KLEINE GROSSBUCHSTABEN + Bereichstitel: Schrift und Farben
      Beispiel: "KONTAKT", "ADRESSE", "NACHNAME", "FACHWISSEN" */
-  --label-size: 12px;
+  --label-size: 14px;
   --label-weight: 500;
   --label-line: 1.5;
   --label-spacing: .16em;
@@ -273,7 +273,7 @@ main > section:last-child { padding-bottom:0; }
   gap:34px;
   color:var(--white);
   font-family:var(--font-body);
-  font-size:14px;
+  font-size:var(--label-size);
   font-weight:400;
   line-height:1.75;
   letter-spacing:0;
@@ -546,7 +546,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   padding:15px 0;
   color:var(--label-color);
   font-family:var(--font-body);
-  font-size:14px;
+  font-size:var(--label-size);
   font-weight:400;
   line-height:1.5;
   letter-spacing:0;
