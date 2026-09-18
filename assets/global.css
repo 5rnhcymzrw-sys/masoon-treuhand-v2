@@ -468,7 +468,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 .contact-label,
 .small-title {
   color:var(--label-color);
-  font-family:Arial,Helvetica,sans-serif;
+  font-family:var(--font-body);
   font-size:var(--label-size);
   font-weight:var(--label-weight);
   line-height:var(--label-line);
