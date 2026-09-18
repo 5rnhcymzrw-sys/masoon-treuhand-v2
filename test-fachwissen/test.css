@@ -508,3 +508,29 @@
 .home-knowledge__head .action:focus-visible {
   color: var(--label-color) !important;
 }
+
+/* TEST: Beitrag anzeigen und Kontaktbutton – keine schwarzen Farbwechsel */
+/* Fachwissen: "Beitrag anzeigen" behält seine normale Farbe beim Hover */
+.home-knowledge .knowledge-card__action:hover,
+.home-knowledge .knowledge-card__action:focus-visible {
+  color: var(--label-color) !important;
+}
+
+/* Kontaktbutton: keine Linie und keinerlei Farbwechsel beim Hover */
+.closing-card .action {
+  border: 0 !important;
+  border-bottom: 0 !important;
+  color: var(--white) !important;
+  background-color: var(--black) !important;
+  background-image: none !important;
+}
+
+.closing-card .action:hover,
+.closing-card .action:focus-visible {
+  border: 0 !important;
+  border-bottom: 0 !important;
+  color: var(--white) !important;
+  background-color: var(--black) !important;
+  background-image: none !important;
+  background-size: 0 !important;
+}
