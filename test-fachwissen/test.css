@@ -255,3 +255,8 @@
   border: 1px solid transparent;
   border-image: var(--brand-gradient) 1;
 }
+
+/* TEST: Abschlussbereich – Bereichstitel Kontakt sicher ausblenden */
+.closing-card > .section-label {
+  display: none !important;
+}
