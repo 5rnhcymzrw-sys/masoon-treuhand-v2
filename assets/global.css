@@ -443,7 +443,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 }
 
 .section-label::before {
-  content:"";
+  content:none;
   width:30px;
   height:1px;
   flex:0 0 30px;
