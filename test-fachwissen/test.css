@@ -559,3 +559,10 @@
   background: red;
   pointer-events: none;
 }
+
+/* TEST: Abschlussinhalt exakt an Startseite-Hilfslinie ausrichten */
+@media (min-width: 801px) {
+  .closing-card__content {
+    margin-left: calc(var(--secondary-column-start) - 64px);
+  }
+}
