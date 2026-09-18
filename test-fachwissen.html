@@ -207,44 +207,5 @@
     window.addEventListener('load', updateTestStartLine);
     window.addEventListener('resize', updateTestStartLine);
   </script>
-  <script>
-    /* TESTSEITE: Hero-Foto exakt zwischen Bereichstitel und Leistungsbegriffen ausrichten. */
-    const updateTestHeroImage = () => {
-      const hero = document.querySelector('.home-hero');
-      const image = document.querySelector('.home-hero__image');
-      const label = document.querySelector('.home-hero .section-label');
-      const actions = document.querySelector('.home-hero__actions');
-
-      if (!hero || !image || !label || !actions) return;
-
-      if (window.innerWidth > 800) {
-        const heroRect = hero.getBoundingClientRect();
-        const labelRect = label.getBoundingClientRect();
-        const actionsRect = actions.getBoundingClientRect();
-
-        const topSpace = Math.max(0, labelRect.top - heroRect.top);
-        const bottomSpace = Math.max(0, heroRect.bottom - actionsRect.bottom);
-        const firstRedLine = document.querySelector('.test-start-line');
-        const firstRedLineLeft = firstRedLine
-          ? firstRedLine.getBoundingClientRect().left
-          : heroRect.left + (heroRect.width * .4);
-        const imageLeft = Math.max(0, firstRedLineLeft - heroRect.left);
-
-        image.style.setProperty('--test-hero-image-top', `${topSpace}px`);
-        image.style.setProperty('--test-hero-image-bottom', `${bottomSpace}px`);
-        image.style.setProperty('--test-hero-image-left', `${imageLeft}px`);
-        hero.style.setProperty('--test-hero-image-left', `${imageLeft}px`);
-      } else {
-        image.style.removeProperty('--test-hero-image-top');
-        image.style.removeProperty('--test-hero-image-bottom');
-        image.style.removeProperty('--test-hero-image-left');
-        hero.style.removeProperty('--test-hero-image-left');
-      }
-    };
-
-    updateTestHeroImage();
-    window.addEventListener('load', updateTestHeroImage);
-    window.addEventListener('resize', updateTestHeroImage);
-  </script>
 </body>
 </html>
