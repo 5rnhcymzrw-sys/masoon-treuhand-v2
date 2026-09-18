@@ -59,7 +59,19 @@
    Abstände und Typografie kommen vollständig aus den globalen Regeln.
    ========================================================= */
 .company-values {
-  background:#f3f3f3;
+  background:linear-gradient(
+    to right,
+    transparent 0,
+    transparent var(--page-gutter),
+    #f3f3f3 var(--page-gutter),
+    #f3f3f3 calc(100% - var(--page-gutter)),
+    transparent calc(100% - var(--page-gutter)),
+    transparent 100%
+  );
+}
+
+.company-values .section-title {
+  margin-left:calc((100% - (2 * var(--card-column-gap,46px))) / 3 + var(--card-column-gap,46px));
 }
 
 /* =========================================================
