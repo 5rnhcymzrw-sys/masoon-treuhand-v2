@@ -308,6 +308,14 @@ p + p,
   background:none;
 }
 
+/* Beispiel: «Checkliste für die Steuererklärung» */
+.knowledge-card:hover h3,
+.knowledge-card:focus-visible h3 {
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:5px;
+}
+
 /* ZWISCHENTITEL: globaler Abstand zum Fliesstext
    Beispiel: Abstand von "Buchhaltung" zum Text "Ordnungsgemässe Führung der Finanzbuchhaltung..." */
 .service-card h3 + p,
