@@ -433,3 +433,8 @@
     background: #F3F3F3;
   }
 }
+
+/* TEST: Fachwissen – Hintergrundfläche entfernen */
+.home-knowledge::before {
+  content: none !important;
+}
