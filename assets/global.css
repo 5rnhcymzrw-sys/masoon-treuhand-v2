@@ -1,6 +1,14 @@
 /* MASOON TREUHAND V2 | einzige zentrale Designquelle */
 
 @font-face {
+  font-family:Inter;
+  src:url("inter.woff2") format("woff2");
+  font-style:normal;
+  font-weight:100 900;
+  font-display:optional;
+}
+
+@font-face {
   font-family:Cormorant;
   src:url("cormorant.woff2") format("woff2");
   font-style:normal;
@@ -458,7 +466,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   gap:14px;
   margin:0 0 30px;
   color:var(--label-color);
-  font-family:Arial,Helvetica,sans-serif;
+  font-family:var(--font-body);
   font-size:var(--label-size);
   font-weight:var(--label-weight);
   line-height:var(--label-line);
