@@ -1,5 +1,18 @@
 /* MASOON TREUHAND V2 | nur Startseite */
 
+/* PROVISORISCHE HILFSLINIE: linke Kante von "Startseite" bis zur Fusszeile */
+body::before {
+  content:"";
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:calc(max(var(--page-gutter), (100vw - var(--content-width)) / 2) + var(--secondary-column-start));
+  width:1px;
+  background:red;
+  pointer-events:none;
+  z-index:9999;
+}
+
 /* =========================================================
    HERO
    ========================================================= */
