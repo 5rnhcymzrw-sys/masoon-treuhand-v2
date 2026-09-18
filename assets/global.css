@@ -1,5 +1,13 @@
 /* MASOON TREUHAND V2 | einzige zentrale Designquelle */
 
+@font-face {
+  font-family:Cormorant;
+  src:url("cormorant.woff2") format("woff2");
+  font-style:normal;
+  font-weight:300 700;
+  font-display:optional;
+}
+
 /* =========================================================
    GLOBALE DESIGNWERTE
    ========================================================= */
@@ -36,7 +44,7 @@
 
   /* GROSSE TITEL: Schrift und Abstand unten
      Beispiel: "Wir stehen Ihnen gerne zur Verfügung." / "Treuhandlösungen für Ihren Geschäftsalltag." */
-  --font-heading: "PT Serif", Georgia, serif;
+  --font-heading: "Cormorant", Georgia, serif;
   --title-size: 46px;
   --title-weight: 700;
   --title-line: 1.08;
