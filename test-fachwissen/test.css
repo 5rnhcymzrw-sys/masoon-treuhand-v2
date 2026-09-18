@@ -32,48 +32,76 @@
   margin-top:2px;
 }
 
-/* TEST: Hero – Original-Hintergrundgrafik über Foto weiterführen */
+/* TEST: Hero – Referenzaufbau als eine zusammenhängende Fläche */
 @media (min-width: 801px) {
   .home-hero {
     position: relative;
     overflow: hidden;
     grid-template-columns: var(--secondary-column-start) minmax(0, 1fr);
+    background: #fff;
   }
 
-  /*
-    Hintergrund 3 ist eine transparente PNG-Grafik.
-    Statt neue Dreiecke zu zeichnen, wird exakt diese Originalgrafik
-    in derselben Skalierung/Position wie bisher über die Bildkante
-    hinaus weitergeführt.
-  */
-  .home-hero__content {
-    position: relative;
-    z-index: 3;
-    background-image: none;
-    overflow: visible;
-  }
-
-  .home-hero__content::before {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    width: 228%;
-    aspect-ratio: 968 / 914;
-    left: -115.2%;
-    top: -9.5%;
-    background-image: url("../assets/images/backgrounds/Hintergrund 3.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    pointer-events: none;
-  }
-
-  .home-hero__inner {
-    position: relative;
-    z-index: 4;
-  }
-
+  /* Foto beginnt exakt an der Startseite-Achse. */
   .home-hero__image {
     position: relative;
     z-index: 1;
   }
+
+  /*
+    Bestehende abstrakte PNG-Grafik über den gesamten linken Bereich
+    und über den linken Rand des Fotos ziehen. Dadurch entstehen die
+    Formen als ein zusammenhängendes Motiv statt als einzelne Polygone.
+  */
+  .home-hero::before {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 62%;
+    background-image: url("../assets/images/backgrounds/Hintergrund 3.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: left center;
+    pointer-events: none;
+  }
+
+  /* Die ursprüngliche Hintergrundgrafik im Content wird abgeschaltet,
+     damit sie nicht doppelt erscheint. */
+  .home-hero__content {
+    position: relative;
+    z-index: 4;
+    background-image: none !important;
+  }
+
+  .home-hero__inner {
+    position: relative;
+    z-index: 5;
+    justify-content: center;
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .home-hero__title {
+    max-width: 560px;
+  }
+
+  .home-hero__copy {
+    margin-top: 22px;
+    max-width: 520px;
+  }
+
+  .home-hero__cta {
+    margin-top: 34px;
+    align-self: flex-start;
+  }
 }
+
+@media (max-width: 800px) {
+  .home-hero__cta {
+    margin-top: 28px;
+    align-self: flex-start;
+  }
+}
+
