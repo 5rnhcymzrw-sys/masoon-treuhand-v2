@@ -89,6 +89,8 @@
   --card-meta-spacing: .05em;
   --card-meta-color: #696969;
   --card-line-color: #adadad;
+  --home-card-column-gap: 46px;
+  --home-card-row-gap: 30px;
 
   /* SEITE-Kopfzeile-Linie: Breite, Rand und globale Abstände */
   --content-width: 1280px;
