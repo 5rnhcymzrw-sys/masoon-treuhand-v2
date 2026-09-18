@@ -306,14 +306,17 @@ p + p,
   line-height:var(--subtitle-line);
   letter-spacing:var(--subtitle-spacing);
   background:none;
+  text-decoration-line:underline;
+  text-decoration-color:transparent;
+  text-decoration-thickness:1px;
+  text-underline-offset:5px;
+  transition:text-decoration-color 280ms ease;
 }
 
 /* Beispiel: «Checkliste für die Steuererklärung» */
 .knowledge-card:hover h3,
 .knowledge-card:focus-visible h3 {
-  text-decoration:underline;
-  text-decoration-thickness:1px;
-  text-underline-offset:5px;
+  text-decoration-color:currentColor;
 }
 
 /* ZWISCHENTITEL: globaler Abstand zum Fliesstext
