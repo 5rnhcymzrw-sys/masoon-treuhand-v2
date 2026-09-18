@@ -594,3 +594,32 @@
     margin: 0;
   }
 }
+
+/* TEST: Hero links sichtbar bis zur ersten roten Linie */
+@media (min-width: 801px) {
+  /* Der linke Hero-Bereich bleibt für den Text 50% breit,
+     aber sein sichtbarer Hintergrund endet schon an der ersten roten Linie. */
+  .home-hero__content {
+    background-image: none;
+  }
+
+  .home-hero__content::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: var(--test-hero-image-left, 40%);
+    background-image: url("../assets/images/backgrounds/Hintergrund 3.png");
+    background-size: 228% auto;
+    background-position: 90% 20%;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+
+  .home-hero__inner {
+    position: relative;
+    z-index: 1;
+  }
+}
