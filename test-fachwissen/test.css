@@ -401,44 +401,6 @@
   color: inherit !important;
 }
 
-/* TEST: Kopfzeile – Navigationslinien in #F3F3F3 */
-.site-nav a::after {
-  background: #F3F3F3;
-}
-
-/* TEST: Kopfzeile – Navigationslinien dunkler */
-.site-nav a::after {
-  background: #C7CBD3;
-}
-
-/* TEST: Kopfzeile – Navigationslinien wie Anspruch */
-.site-nav a::after {
-  background: #8B8E92;
-}
-
-/* TEST: Buttons – Anspruch-Grau Linie und schwarzer Hover */
-/* Alle normalen Textbuttons: gleiche Linie wie "Anspruch." und beim Hover schwarz */
-.action {
-  background-image: linear-gradient(#8B8E92, #8B8E92);
-}
-
-.action:hover,
-.action:focus-visible {
-  color: var(--black);
-}
-
-/* Schwarzer Kontaktbutton: bleibt als Fläche bestehen, übernimmt den gleichen Hover-Akzent */
-.closing-card .action {
-  border-bottom: 2px solid #8B8E92;
-}
-
-.closing-card .action:hover,
-.closing-card .action:focus-visible {
-  color: var(--black);
-  background-color: var(--white);
-  border-bottom-color: #8B8E92;
-}
-
 /* TEST: Kopfbereich-Links – kein schwarzer Hover bei Alle Dienstleistungen/Beiträge */
 .home-services__head .action:hover,
 .home-services__head .action:focus-visible,
@@ -532,4 +494,13 @@
     #aab1bd 48%,
     #8d96a8 100%
   ) 1 !important;
+}
+
+/* TEST: Klicklinien – einheitlich blaugrau */
+.site-nav a::after {
+  background: #8D96A8;
+}
+
+.action {
+  background-image: linear-gradient(#8D96A8, #8D96A8);
 }
