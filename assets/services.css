@@ -31,7 +31,7 @@
 
 /* TÄTIGKEITEN: zwei Spalten, Reihenfolge zuerst links von oben nach unten */
 .service-detail__list {
-  margin:16px 0 0;
+  margin:16px 0 0 -20%;
   columns:2;
   column-gap:30px;
 }
