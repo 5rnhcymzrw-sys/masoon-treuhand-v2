@@ -1,188 +1,241 @@
 /* MASOON TREUHAND | TEST FACHWISSEN
-   Ausschliesslich Hero-Test. Alte Testregeln wurden entfernt. */
+   Nur Hero-Test. Die Komposition orientiert sich proportional an der Referenz
+   (ca. 2:1 Bildverhältnis), damit das Foto auch in schmaleren Browserfenstern
+   nicht mehr stark gezoomt und abgeschnitten wird. */
 
-@media (min-width: 801px) {
+.home-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: min(50.3vw, 820px);
+  min-height: 0;
+  margin: 0 0 clamp(44px,5.4vw,90px);
+  background: #fafafa;
+}
+
+/* Foto über die gesamte Hero-Fläche. */
+.home-hero__image {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+  transform: none;
+  background: #ddd;
+}
+
+.home-hero__image::after {
+  display: none;
+  content: none;
+}
+
+.home-hero__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  filter: grayscale(100%);
+  transform: none;
+}
+
+/* Hauptverlauf: links fast weiss, ab ca. 30% wird das Foto sichtbar,
+   ab ca. 55% ist es weitgehend frei. */
+.home-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,1) 0%,
+    rgba(255,255,255,1) 20%,
+    rgba(255,255,255,.995) 27%,
+    rgba(255,255,255,.96) 32%,
+    rgba(255,255,255,.82) 38%,
+    rgba(255,255,255,.58) 43%,
+    rgba(255,255,255,.32) 48%,
+    rgba(255,255,255,.12) 52%,
+    rgba(255,255,255,0) 56%
+  );
+}
+
+/* Sehr zurückhaltende geometrische Lichtflächen. */
+.home-hero__art {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.home-hero__shape {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.home-hero__shape--1 {
+  background: rgba(255,255,255,.085);
+  clip-path: polygon(0 0, 51% 0, 34% 100%, 0 100%);
+}
+
+.home-hero__shape--2 {
+  background: rgba(219,222,224,.075);
+  clip-path: polygon(31% 0, 53% 0, 38% 100%, 18% 100%);
+}
+
+.home-hero__shape--3 {
+  background: rgba(255,255,255,.11);
+  clip-path: polygon(0 72%, 45% 42%, 34% 100%, 0 100%);
+}
+
+.home-hero__shape--4 {
+  background: rgba(255,255,255,.055);
+  clip-path: polygon(32% 11%, 48% 23%, 40% 82%, 24% 100%);
+}
+
+/* Feine diagonale Linien wie in der Referenz, aber nicht dominant. */
+.home-hero__lines {
+  position: absolute;
+  inset: 0;
+  opacity: .045;
+  background: repeating-linear-gradient(
+    118deg,
+    transparent 0,
+    transparent 6px,
+    rgba(70,70,70,.24) 7px,
+    transparent 8px
+  );
+  clip-path: polygon(0 17%, 39% 8%, 46% 59%, 24% 100%, 0 100%);
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    #000 0%,
+    rgba(0,0,0,.78) 22%,
+    rgba(0,0,0,.20) 42%,
+    transparent 53%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    #000 0%,
+    rgba(0,0,0,.78) 22%,
+    rgba(0,0,0,.20) 42%,
+    transparent 53%
+  );
+}
+
+/* Inhalt proportional zur Referenz positionieren.
+   Typografie wird hier nur responsiv verkleinert, damit sie das Bild nicht verdeckt. */
+.home-hero__content {
+  position: relative;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: block;
+  background: none;
+  overflow: visible;
+}
+
+.home-hero__inner {
+  position: absolute;
+  z-index: 7;
+  left: 13%;
+  top: 27%;
+  width: 34%;
+  height: auto;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.home-hero__title {
+  max-width: none;
+  margin: 0;
+  font-size: clamp(28px,3.65vw,61px);
+  line-height: .98;
+}
+
+.home-hero__copy {
+  max-width: 100%;
+  margin-top: clamp(12px,1.65vw,28px);
+  font-size: clamp(9px,.96vw,16px);
+  line-height: 1.55;
+}
+
+.home-hero__cta {
+  display: inline-flex;
+  margin-top: clamp(16px,2.5vw,42px);
+  align-self: flex-start;
+  font-size: clamp(8px,.72vw,12px);
+}
+
+/* Die Testseite soll auch in einem schmaleren Browserfenster dieselbe
+   Gesamtkomposition behalten, statt in den alten mobilen Bildblock zu wechseln. */
+@media (max-width: 800px) {
   .home-hero {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    display: block;
     width: 100%;
-    max-width: none;
-    height: clamp(720px, 50vw, 820px);
-    min-height: 720px;
-    margin: 0 0 90px;
-    background: #f8f8f7;
+    height: 50.3vw;
+    min-height: 0;
+    margin: 0 0 44px;
+    display: block;
   }
 
-  /* Das vorhandene Foto liegt hinter dem gesamten Hero. */
+  .home-hero__content,
+  .home-hero__image {
+    height: 100%;
+    min-height: 0;
+  }
+
   .home-hero__image {
     position: absolute;
     inset: 0;
-    z-index: 1;
     width: 100%;
-    height: 100%;
-    min-height: 0;
-    margin: 0;
-    overflow: hidden;
-    transform: none;
-    background: #d9d9d9;
-  }
-
-  .home-hero__image::after {
-    display: none;
-    content: none;
   }
 
   .home-hero__image img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 66% center;
-    filter: grayscale(100%);
-    transform: none;
+    object-position: center center;
   }
 
-  /* Weicher Weissverlauf: keine harte Trennung zwischen Weiss und Foto. */
-  .home-hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    pointer-events: none;
-    background:
-      linear-gradient(
-        90deg,
-        rgba(255,255,255,1) 0%,
-        rgba(255,255,255,1) 20%,
-        rgba(255,255,255,.995) 27%,
-        rgba(255,255,255,.97) 33%,
-        rgba(255,255,255,.88) 38%,
-        rgba(255,255,255,.70) 44%,
-        rgba(255,255,255,.45) 49%,
-        rgba(255,255,255,.21) 54%,
-        rgba(255,255,255,.07) 58%,
-        rgba(255,255,255,0) 62%
-      );
-  }
-
-  /* Dekorative Ebenen über dem Foto. */
   .home-hero__art {
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-    pointer-events: none;
-  }
-
-  .home-hero__shape {
-    position: absolute;
-    inset: 0;
     display: block;
-  }
-
-  .home-hero__shape--1 {
-    background: rgba(255,255,255,.24);
-    clip-path: polygon(0 0, 53% 0, 36% 100%, 0 100%);
-  }
-
-  .home-hero__shape--2 {
-    background: rgba(229,231,232,.18);
-    clip-path: polygon(28% 0, 54% 0, 39% 100%, 15% 100%);
-  }
-
-  .home-hero__shape--3 {
-    background: rgba(255,255,255,.30);
-    clip-path: polygon(0 73%, 44% 40%, 35% 100%, 0 100%);
-  }
-
-  .home-hero__shape--4 {
-    background: rgba(255,255,255,.13);
-    clip-path: polygon(31% 8%, 49% 24%, 41% 82%, 24% 100%);
-  }
-
-  /* Sehr feine Linien, nur im hellen Übergangsbereich sichtbar. */
-  .home-hero__lines {
-    position: absolute;
-    inset: 0;
-    opacity: .10;
-    background:
-      repeating-linear-gradient(
-        118deg,
-        transparent 0,
-        transparent 6px,
-        rgba(82,82,82,.25) 7px,
-        transparent 8px
-      );
-    clip-path: polygon(0 18%, 39% 8%, 47% 58%, 24% 100%, 0 100%);
-    -webkit-mask-image: linear-gradient(
-      90deg,
-      #000 0%,
-      rgba(0,0,0,.82) 23%,
-      rgba(0,0,0,.28) 43%,
-      transparent 56%
-    );
-    mask-image: linear-gradient(
-      90deg,
-      #000 0%,
-      rgba(0,0,0,.82) 23%,
-      rgba(0,0,0,.28) 43%,
-      transparent 56%
-    );
-  }
-
-  /* Text bleibt darüber; Gestaltung des Textes ist nicht Teil dieses Tests. */
-  .home-hero__content {
-    position: relative;
-    z-index: 6;
-    width: min(calc(100% - (2 * var(--page-gutter))), var(--content-width));
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    align-items: stretch;
-    background: none;
-    overflow: visible;
   }
 
   .home-hero__inner {
-    position: relative;
-    z-index: 7;
-    width: 48%;
-    height: 100%;
-    min-height: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 48px 0 4px;
+    left: 12.5%;
+    top: 26%;
+    width: 36%;
+    padding: 0;
   }
 
   .home-hero__title {
-    max-width: none;
+    font-size: clamp(24px,3.65vw,31px);
   }
 
   .home-hero__copy {
-    max-width: 560px;
-    margin-top: 22px;
-  }
-
-  .home-hero__cta {
-    margin-top: 34px;
-    align-self: flex-start;
+    font-size: clamp(8px,.96vw,10px);
   }
 }
 
-@media (max-width: 800px) {
-  .home-hero__art {
+@media (max-width: 520px) {
+  .home-hero__copy,
+  .home-hero__cta {
     display: none;
   }
 
-  .home-hero__image img {
-    filter: grayscale(100%);
+  .home-hero__inner {
+    top: 32%;
+    width: 39%;
   }
 
-  .home-hero__cta {
-    margin-top: 28px;
-    align-self: flex-start;
+  .home-hero__title {
+    font-size: clamp(20px,4vw,24px);
   }
 }
