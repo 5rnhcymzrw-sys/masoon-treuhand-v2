@@ -15,6 +15,7 @@
 </head>
 <body>
   <div class="test-center-line" aria-hidden="true"></div>
+  <div class="test-start-line" aria-hidden="true"></div>
   <header class="site-header">
     <div class="container header-inner">
       <a class="site-brand" href="./" aria-label="MASOON TREUHAND Startseite">
@@ -173,6 +174,20 @@
       ensureKnowledgeActions();
       new MutationObserver(ensureKnowledgeActions).observe(testKnowledgeGrid, { childList: true });
     }
+  </script>
+  <script>
+    /* TESTSEITE: rote Hilfslinie an linker Kante von "Startseite". */
+    const updateTestStartLine = () => {
+      const startLink = document.querySelector('.site-nav a:first-child');
+      const startLine = document.querySelector('.test-start-line');
+
+      if (!startLink || !startLine) return;
+
+      startLine.style.setProperty('--test-start-line-left', `${startLink.getBoundingClientRect().left}px`);
+    };
+
+    updateTestStartLine();
+    window.addEventListener('resize', updateTestStartLine);
   </script>
 </body>
 </html>
