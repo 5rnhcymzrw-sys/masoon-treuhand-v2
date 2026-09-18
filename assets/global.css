@@ -703,7 +703,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 .closing-card {
   --ink:var(--white);
   min-height:0;
-  padding:105px 43px 115px;
+  padding:110px 43px 110px;
   display:grid;
   grid-template-columns:minmax(0,.4fr) minmax(0,.6fr);
   align-items:start;
@@ -903,7 +903,7 @@ body.page-article-employment-termination .content-card .article-text-table td:la
 /* FUSSZEILENBALKEN: Höhe, Innenabstand und Ausrichtung */
 .footer-inner {
   position:relative;
-  min-height:50px;
+  min-height:86px;
   padding:38px 0;
   display:flex;
   align-items:center;
