@@ -466,7 +466,7 @@
   background: var(--brand-gradient);
 }
 
-/* TEST: Hero-Trennlinie ganz zuvorderst über allen Bildern */
+/* TEST: Hero-Trennlinie exakt auf Startseite-Achse */
 .home-hero {
   position: relative;
 }
@@ -477,9 +477,8 @@
   z-index: 9999;
   top: 0;
   bottom: 0;
-  left: 50%;
+  left: var(--secondary-column-start);
   width: 2px;
-  transform: translateX(-1px);
   background: linear-gradient(
     180deg,
     #E7D7B9 0%,
