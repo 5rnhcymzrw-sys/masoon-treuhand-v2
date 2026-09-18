@@ -675,11 +675,6 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   max-width:none;
 }
 
-.knowledge-card > .action {
-  margin-top:auto;
-  align-self:flex-start;
-}
-
 @media (max-width:800px) {
   :root {
     --header-height:92px;
