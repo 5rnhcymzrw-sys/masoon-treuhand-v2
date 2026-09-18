@@ -531,8 +531,8 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   background-image:linear-gradient(#8d96a8,#8d96a8);
   background-repeat:no-repeat;
   background-position:left bottom;
-  background-size:0 1px;
-  transition:color 260ms ease,background-size .4s ease,gap .2s ease;
+  background-size:0 2px;
+  transition:color 260ms ease,background-size .4s ease;
 }
 
 /* PFEIL BEI TEXTLINKS UND BUTTONS
@@ -555,8 +555,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 }
 
 .action:hover,.action:focus-visible {
-  gap:43px;
-  background-size:100% 1px;
+  background-size:40px 2px;
 }
 
 /* =========================================================
