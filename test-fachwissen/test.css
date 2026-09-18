@@ -628,3 +628,8 @@
 .site-footer {
   background: rgb(20, 22, 24);
 }
+
+/* TEST: Abschlussbereich – Hintergrund grau */
+.closing-card::after {
+  background: #8B8E92;
+}
