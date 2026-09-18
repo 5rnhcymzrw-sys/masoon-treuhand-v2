@@ -47,8 +47,6 @@
   --label-line: 1.75;
   --label-spacing: 0;
   --label-color: #bb2020;
-  --header-label-color: #080808;
-  --header-scroll-accent: #e7dfc1;
   --small-title-bottom-space: 7px;
 
   /* GROSSE TITEL: Schrift und Abstand unten
@@ -98,11 +96,9 @@
   --section-space: 126px;
   --section-space-compact: 80px;
   --section-space-mobile: 82px;
-  --closing-card-space: 84px;
   --page-bottom-space: 126px;
   --page-bottom-space-mobile: 82px;
   --header-height: 122px;
-  --footer-height: 80px;
   --accent-height: 6px;
   --secondary-column-start: calc(40% + 11.4px);
   --legal-left-inset: 75px;
