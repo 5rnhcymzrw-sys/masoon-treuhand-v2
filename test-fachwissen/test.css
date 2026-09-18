@@ -404,3 +404,9 @@
 .closing-card::after {
   background: rgb(20, 22, 24);
 }
+
+/* TEST: Abschlussbereich – Schrift auf dunklem Hintergrund weiss */
+.closing-card .section-title,
+.closing-card .action {
+  color: var(--white);
+}
