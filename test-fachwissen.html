@@ -176,17 +176,35 @@
     }
   </script>
   <script>
-    /* TESTSEITE: rote Hilfslinie an linker Kante von "Startseite". */
+    /* TESTSEITE: rote Hilfslinie an linker Kante von "Startseite"
+       und Abschlussinhalt exakt an derselben X-Position ausrichten. */
     const updateTestStartLine = () => {
       const startLink = document.querySelector('.site-nav a:first-child');
       const startLine = document.querySelector('.test-start-line');
+      const closingCard = document.querySelector('.closing-card');
+      const closingContent = document.querySelector('.closing-card__content');
 
       if (!startLink || !startLine) return;
 
-      startLine.style.setProperty('--test-start-line-left', `${startLink.getBoundingClientRect().left}px`);
+      const startLeft = startLink.getBoundingClientRect().left;
+      startLine.style.setProperty('--test-start-line-left', `${startLeft}px`);
+
+      if (closingCard && closingContent) {
+        if (window.innerWidth > 800) {
+          const cardRect = closingCard.getBoundingClientRect();
+          const cardStyle = getComputedStyle(closingCard);
+          const paddingLeft = parseFloat(cardStyle.paddingLeft) || 0;
+          const exactOffset = startLeft - cardRect.left - paddingLeft;
+
+          closingContent.style.marginLeft = `${Math.max(0, exactOffset)}px`;
+        } else {
+          closingContent.style.marginLeft = '0px';
+        }
+      }
     };
 
     updateTestStartLine();
+    window.addEventListener('load', updateTestStartLine);
     window.addEventListener('resize', updateTestStartLine);
   </script>
 </body>
