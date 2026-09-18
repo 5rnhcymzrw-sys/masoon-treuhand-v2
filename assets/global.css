@@ -469,14 +469,15 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 .contact-label,
 .small-title,
 .home-hero__actions,
-.service-detail__toggle {
+.service-detail__toggle,
+.section-label,
+.action {
   color:var(--label-color);
   font-family:var(--font-body);
   font-size:var(--label-size);
   font-weight:var(--label-weight);
   line-height:var(--label-line);
   letter-spacing:var(--label-spacing);
-  text-transform:uppercase;
 }
 
 /* KLEINER TITEL: Spezialfall mit kleinem Abstand zum Fliesstext
@@ -490,12 +491,6 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   align-items:center;
   gap:14px;
   margin:0 0 30px;
-  color:var(--label-color);
-  font-family:var(--font-body);
-  font-size:var(--label-size);
-  font-weight:var(--label-weight);
-  line-height:var(--label-line);
-  letter-spacing:var(--label-spacing);
   text-transform:uppercase;
   transition:color 260ms ease;
 }
@@ -547,12 +542,6 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   gap:12px;
   margin-bottom:-8px;
   padding:15px 0;
-  color:var(--label-color);
-  font-family:var(--font-body);
-  font-size:var(--label-size);
-  font-weight:400;
-  line-height:1.5;
-  letter-spacing:0;
   text-transform:none;
   background-image:linear-gradient(#8d96a8,#8d96a8);
   background-repeat:no-repeat;
