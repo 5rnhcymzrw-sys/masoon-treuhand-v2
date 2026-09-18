@@ -443,8 +443,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 /* KLEINE GROSSBUCHSTABEN: global
    Beispiel: "KONTAKT", "ADRESSE", "NACHNAME", "07.2026 STEUERN" */
 .contact-label,
-.small-title,
-.footer-links a {
+.small-title {
   color:var(--label-color);
   font-family:Arial,Helvetica,sans-serif;
   font-size:var(--label-size);
@@ -519,21 +518,21 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 .action {
   display:inline-flex;
   align-items:center;
-  gap:10px;
+  gap:32px;
   margin-bottom:-8px;
-  padding:0 0 14px;
+  padding:15px 0;
   color:var(--label-color);
-  font-family:Arial,Helvetica,sans-serif;
-  font-size:var(--label-size);
-  font-weight:var(--label-weight);
-  line-height:var(--label-line);
-  letter-spacing:var(--label-spacing);
-  text-transform:uppercase;
+  font-family:var(--font-body);
+  font-size:14px;
+  font-weight:400;
+  line-height:1.5;
+  letter-spacing:0;
+  text-transform:none;
   background-image:linear-gradient(#8d96a8,#8d96a8);
   background-repeat:no-repeat;
   background-position:left bottom;
-  background-size:0 2px;
-  transition:color 260ms ease,background-size .4s ease;
+  background-size:0 1px;
+  transition:color 260ms ease,background-size .4s ease,gap .2s ease;
 }
 
 /* PFEIL BEI TEXTLINKS UND BUTTONS
@@ -556,7 +555,8 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 }
 
 .action:hover,.action:focus-visible {
-  background-size:40px 2px;
+  gap:43px;
+  background-size:100% 1px;
 }
 
 /* =========================================================
@@ -634,9 +634,6 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   background:transparent;
   border-top:1px solid #bcbcbc;
   box-shadow:none;
-  transition:
-    transform var(--card-hover-duration) ease,
-    box-shadow var(--card-hover-duration) ease;
 }
 
 /* FACHWISSEN-KARTEN: Datum mit vollständigen Schriftwerten */
@@ -675,7 +672,6 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 }
 
 @media (hover:hover) {
-  .knowledge-card:hover,
   .article-card:hover {
     transform:translateY(var(--card-hover-lift));
     box-shadow:var(--card-hover-shadow);
@@ -698,9 +694,13 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 /* =========================================================
    ABSCHLUSSKASTEN / KONTAKT
    ========================================================= */
-.closing-card-section { padding-top:var(--closing-card-space); }
+.closing-card-section {
+  padding-top:0;
+  background:#1a1a1a;
+}
 
 .closing-card {
+  --ink:var(--white);
   min-height:0;
   padding:77px 43px 87px;
   display:grid;
@@ -913,7 +913,13 @@ body.page-article-employment-termination .content-card .article-text-table td:la
   display:flex;
   align-items:center;
   justify-content:flex-start;
-  gap:34px;
+  gap:29px;
+  font-family:var(--font-body);
+  font-size:11px;
+  font-weight:400;
+  line-height:1.5;
+  letter-spacing:.025em;
+  text-transform:none;
 }
 
 @media (max-width:1050px) { .footer-links { gap:20px; } }
