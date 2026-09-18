@@ -689,9 +689,8 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   background:none;
 }
 
-/* Dienstleistungsseite kann die Textbreite weiterhin über dieselbe Variable steuern. */
 .service-card p {
-  max-width:var(--service-copy-width,34ch);
+  max-width:none;
 }
 
 .knowledge-card > .action {
