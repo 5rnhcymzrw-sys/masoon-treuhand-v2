@@ -477,3 +477,26 @@
 .site-nav a::after {
   background: #8B8E92;
 }
+
+/* TEST: Buttons – Anspruch-Grau Linie und schwarzer Hover */
+/* Alle normalen Textbuttons: gleiche Linie wie "Anspruch." und beim Hover schwarz */
+.action {
+  background-image: linear-gradient(#8B8E92, #8B8E92);
+}
+
+.action:hover,
+.action:focus-visible {
+  color: var(--black);
+}
+
+/* Schwarzer Kontaktbutton: bleibt als Fläche bestehen, übernimmt den gleichen Hover-Akzent */
+.closing-card .action {
+  border-bottom: 2px solid #8B8E92;
+}
+
+.closing-card .action:hover,
+.closing-card .action:focus-visible {
+  color: var(--black);
+  background-color: var(--white);
+  border-bottom-color: #8B8E92;
+}
