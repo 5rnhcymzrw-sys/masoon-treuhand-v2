@@ -422,7 +422,7 @@
   background: transparent !important;
 }
 
-/* TEST: Hero – Übergang exakt nach Referenz, ohne zusätzliche Striche */
+/* TEST: Hero – Referenzaufbau, Foto ab Startseite-Achse sichtbar */
 @media (min-width: 801px) {
   .home-hero {
     position: relative;
@@ -431,7 +431,39 @@
     background: rgba(255,255,255,.72);
   }
 
-  /* Foto beginnt auf der Startseite-Achse und läuft von dort bis rechts. */
+  /*
+    Wichtig: Der alte Hintergrund auf .home-hero__content hat den
+    nach links verlängerten Teil des Fotos verdeckt.
+    Deshalb ist die Content-Fläche selbst jetzt transparent.
+  */
+  .home-hero__content {
+    position: relative;
+    z-index: 6;
+    width: 100%;
+    grid-column: 1;
+    background: none !important;
+  }
+
+  /*
+    Der abstrakte linke Hintergrund liegt separat hinter dem Text
+    und endet exakt an der Startseite-Achse.
+  */
+  .home-hero::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: var(--secondary-column-start);
+    background-image: url("../assets/images/backgrounds/Hintergrund 3.png");
+    background-size: 278% auto;
+    background-position: 72% 20%;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+
+  /* Das echte Foto beginnt exakt an derselben Startseite-Achse. */
   .home-hero__image {
     position: absolute;
     z-index: 1;
@@ -452,55 +484,34 @@
     object-position: 70% center;
   }
 
-  /* Linker Original-Hintergrund bleibt sichtbar, aber ohne harte Kante. */
-  .home-hero__content {
-    position: relative;
-    z-index: 6;
-    width: 100%;
-    grid-column: 1;
-    background-image: url("../assets/images/backgrounds/Hintergrund 3.png");
-    background-size: 228% auto;
-    background-position: 90% 20%;
-    background-repeat: no-repeat;
-  }
-
   /*
-    Referenzaufbau:
-    eine breite milchige Fläche über dem linken Fotoanfang,
-    eine grosse schräge obere Fläche und eine ruhige untere Fläche.
-    Keine künstlichen Parallelstriche.
+    Nur die grossen transparenten Glasflächen aus der Referenz.
+    Keine zusätzlichen Parallelstriche.
   */
   .hero-transition {
     position: absolute;
     z-index: 5;
     top: 0;
     bottom: 0;
-    left: calc(var(--secondary-column-start) - 10%);
-    width: 25%;
+    left: calc(var(--secondary-column-start) - 11%);
+    width: 27%;
     pointer-events: none;
     overflow: visible;
   }
 
-  /* Hauptfläche: links fast weiss, rechts durchsichtig zum Foto. */
   .hero-transition__wash {
     position: absolute;
     inset: 0;
     background: linear-gradient(
       90deg,
-      rgba(255,255,255,.96) 0%,
+      rgba(255,255,255,.97) 0%,
       rgba(255,255,255,.88) 30%,
-      rgba(244,245,246,.60) 62%,
+      rgba(244,245,246,.58) 62%,
       rgba(255,255,255,0) 100%
     );
-    clip-path: polygon(
-      0 0,
-      100% 0,
-      58% 100%,
-      0 100%
-    );
+    clip-path: polygon(0 0, 100% 0, 58% 100%, 0 100%);
   }
 
-  /* Markante obere Diagonale wie im Screenshot. */
   .hero-transition__wedge--top {
     position: absolute;
     top: 0;
@@ -509,18 +520,12 @@
     height: 78%;
     background: linear-gradient(
       135deg,
-      rgba(255,255,255,.34) 0%,
-      rgba(214,218,224,.26) 100%
+      rgba(255,255,255,.32) 0%,
+      rgba(214,218,224,.24) 100%
     );
-    clip-path: polygon(
-      25% 0,
-      100% 0,
-      42% 100%,
-      0 72%
-    );
+    clip-path: polygon(25% 0, 100% 0, 42% 100%, 0 72%);
   }
 
-  /* Untere transparente Dreiecksfläche der Referenz. */
   .hero-transition__wedge--bottom {
     position: absolute;
     left: 0;
@@ -529,16 +534,11 @@
     height: 45%;
     background: linear-gradient(
       145deg,
-      rgba(255,255,255,.62) 0%,
-      rgba(220,224,229,.30) 62%,
-      rgba(190,197,207,.14) 100%
+      rgba(255,255,255,.60) 0%,
+      rgba(220,224,229,.28) 62%,
+      rgba(190,197,207,.12) 100%
     );
-    clip-path: polygon(
-      0 30%,
-      72% 0,
-      100% 100%,
-      16% 100%
-    );
+    clip-path: polygon(0 30%, 72% 0, 100% 100%, 16% 100%);
   }
 }
 
