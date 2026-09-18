@@ -339,3 +339,43 @@
   border: 0 !important;
   border-image: none !important;
 }
+
+/* TEST: Blaugrau-Farbkonzept – hell, mittel und dunkel kombiniert */
+/* sehr hell: Kopfzeile */
+.site-header {
+  background: #f5f6f8;
+}
+
+/* mittelhell: Dienstleistungskacheln */
+.home-services .service-card {
+  background: rgba(231,233,237,.62);
+}
+
+/* sehr hell: Fachwissen-Fläche etwas ruhiger als die Dienstleistungskacheln */
+.home-knowledge::before {
+  background: rgba(231,233,237,.30);
+}
+
+/* Fachwissen-Karten bleiben fast weiss, damit die Inhalte klar lesbar bleiben */
+.home-knowledge .knowledge-card {
+  background: rgba(255,255,255,.82);
+}
+
+/* dunkler Ton derselben Farbfamilie für kleine Akzente */
+.home-services .section-label,
+.home-knowledge .section-label,
+.home-services .service-card__number,
+.home-knowledge .knowledge-card__date {
+  color: #7f8796;
+}
+
+/* Abschlussbereich: gleiche Farbfamilie, etwas kräftiger als die übrigen Flächen */
+.closing-card::after {
+  background:
+    linear-gradient(
+      110deg,
+      rgba(238,240,243,.92) 0%,
+      rgba(218,222,228,.86) 48%,
+      rgba(174,182,195,.78) 100%
+    );
+}
