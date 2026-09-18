@@ -18,12 +18,6 @@
   align-items:start;
 }
 
-/* LINKE SPALTE: gesamter Informationsbereich
-   Beispiel: "Kontakt", grosser Titel, Einleitung, Adresse, Telefon, E Mail */
-.contact-page__info {
-  padding-top:0;
-}
-
 /* EINLEITUNGSTEXT unter dem grossen Titel
    Beispiel: "Bitte füllen Sie das Kontaktformular aus." */
 .contact-page__lead {
@@ -91,9 +85,7 @@
    Beispiel: "Nachname", "Vorname", "E Mail", "Telefon", "Nachricht", "Nachricht senden" */
 .contact-form {
   position:relative;
-  box-sizing:border-box;
   height:600px;
-  min-height:600px;
   margin-top:calc(-5.1% + 7px);
   transform:translateX(-38px);
   padding:56px 62px 50px;
@@ -184,14 +176,8 @@
 
 .contact-form textarea {
   height:140px;
-  min-height:140px;
-  max-height:140px;
   resize:none;
 }
-
-/* NACHRICHTENFELD: Darstellung und vollständige Grössenwerte
-   Beispiel: Feld unter "Nachricht" */
-
 
 /* EINGABEFELDER BEI MAUS DARÜBER: Verlauf etwas deutlicher
    Beispiel: Linie unter "Nachname" oder "Nachricht" */
@@ -205,7 +191,6 @@
 .contact-form input:focus,
 .contact-form textarea:focus {
   background-image:linear-gradient(#8d96a8,#8d96a8);
-  background-size:100% 1px;
 }
 
 /* BUTTON NACHRICHT SENDEN: bewusst rahmenlos und mit mehr Klickfläche
@@ -261,7 +246,6 @@
    Beispiel: "Wir haben Ihre Nachricht erhalten und melden uns in Kürze bei Ihnen." */
 .contact-form__response-message {
   width:min(100%,420px);
-  text-align:center;
   opacity:0;
   transform:translateY(10px);
   animation:contact-response-in 520ms 180ms ease-out forwards;
@@ -277,7 +261,7 @@
   align-items:center;
   justify-content:center;
   color:#8d96a8;
-  border:1.5px solid #8d96a8;
+  border:1.5px solid currentColor;
   border-radius:50%;
   opacity:0;
   transform:scale(.88);
@@ -373,17 +357,10 @@
     gap:var(--section-space-mobile);
   }
 
-  /* MOBILE: linke Kontaktspalte
-     Beispiel: "Adresse", "Telefon", "E Mail" */
-  .contact-page__info {
-    padding-top:0;
-  }
-
   /* MOBILE: Formular einspaltig mit ruhigen Innenabständen
      Beispiel: "Nachname" bis "Nachricht senden" */
   .contact-form {
     height:auto;
-    min-height:0;
     margin-top:0;
     padding:36px var(--page-gutter-mobile) 34px;
     grid-template-columns:1fr;
@@ -405,8 +382,6 @@
      Beispiel: Feld unter "Nachricht" */
   .contact-form textarea {
     height:120px;
-    min-height:120px;
-    max-height:120px;
   }
 
   /* MOBILE TESTANSICHT: Mindesthöhe für die sichtbare Statusmeldung
