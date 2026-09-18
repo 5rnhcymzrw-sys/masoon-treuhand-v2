@@ -57,22 +57,18 @@ if (contactForm) {
   }
 }
 
-/* DIENSTLEISTUNGEN: Nur die gewählte Tätigkeitsliste aufklappen.
-   Höhe und Plusdrehung folgen den bestehenden CSS Regeln. */
+/* DIENSTLEISTUNGEN: Nur die gewählte Tätigkeitsliste aufklappen. */
 const serviceDetailToggles = document.querySelectorAll('.service-detail__toggle');
 
 serviceDetailToggles.forEach((toggle) => {
   const listId = toggle.getAttribute('aria-controls');
   const list = listId ? document.getElementById(listId) : null;
-  const card = toggle.closest('.service-detail');
-
-  if (!list || !card) return;
+  if (!list) return;
 
   toggle.addEventListener('click', () => {
     const isOpen = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', String(!isOpen));
     toggle.setAttribute('aria-label', isOpen ? 'Tätigkeiten anzeigen' : 'Tätigkeiten ausblenden');
-    card.classList.toggle('is-open', !isOpen);
     list.hidden = isOpen;
   });
 });
