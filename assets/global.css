@@ -656,6 +656,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 
 .closing-card > .section-label {
   align-self:start;
+  transform:translateY(8px);
   margin-bottom:0;
   color:#bbbbbb;
 }
