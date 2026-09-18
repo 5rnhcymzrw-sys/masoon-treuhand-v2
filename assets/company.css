@@ -77,6 +77,11 @@
   column-gap:36px;
 }
 
+/* UNTERNEHMEN: unterer Titel und Fliesstext horizontal fein ausrichten */
+.company-values + .closing-card-section .closing-card__content {
+  transform:translateX(22px);
+}
+
 .company-values .section-label {
   padding-top:10px;
   margin-bottom:0;
@@ -92,10 +97,6 @@
   --closing-text-color:var(--text);
   --closing-label-color:var(--label-color);
   background:transparent;
-}
-
-.company-values + .closing-card-section .closing-card__content {
-  transform:translateX(22px);
 }
 
 /* =========================================================
