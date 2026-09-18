@@ -422,9 +422,85 @@
   background: transparent !important;
 }
 
-/* TEST: Hero Schritt 1 – Bild beginnt exakt an Startseite-Achse */
+/* TEST: Hero – Referenz IMG_3569 */
 @media (min-width: 801px) {
   .home-hero {
+    position: relative;
+    overflow: hidden;
     grid-template-columns: var(--secondary-column-start) minmax(0, 1fr);
+    background: #fff;
+  }
+
+  /* Foto beginnt exakt auf der Startseite-Achse. */
+  .home-hero__image {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Linke Fläche bleibt hell und nutzt den bestehenden abstrakten Hintergrund. */
+  .home-hero__content {
+    position: relative;
+    z-index: 5;
+    background-image: url("../assets/images/backgrounds/Hintergrund 3.png");
+    background-size: 228% auto;
+    background-position: 90% 20%;
+    background-repeat: no-repeat;
+  }
+
+  .home-hero__inner {
+    position: relative;
+    z-index: 6;
+  }
+
+  /* Breiter, weicher Übergang über den linken Rand des Fotos. */
+  .home-hero::before {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+    left: calc(var(--secondary-column-start) - 8%);
+    width: 19%;
+    pointer-events: none;
+    background: linear-gradient(
+      90deg,
+      rgba(255,255,255,.98) 0%,
+      rgba(255,255,255,.90) 26%,
+      rgba(246,246,246,.72) 48%,
+      rgba(224,226,230,.44) 72%,
+      rgba(255,255,255,0) 100%
+    );
+    clip-path: polygon(0 0, 100% 0, 58% 100%, 0 100%);
+  }
+
+  /* Zweite transparente Diagonalfläche wie in der Referenz. */
+  .home-hero::after {
+    content: "";
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    bottom: 0;
+    left: calc(var(--secondary-column-start) - 1%);
+    width: 14%;
+    pointer-events: none;
+    background: linear-gradient(
+      155deg,
+      rgba(255,255,255,.18) 0%,
+      rgba(217,220,225,.28) 48%,
+      rgba(190,196,205,.18) 100%
+    );
+    clip-path: polygon(30% 0, 100% 0, 40% 100%, 0 76%);
+  }
+
+  .home-hero__cta {
+    margin-top: 34px;
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 800px) {
+  .home-hero__cta {
+    margin-top: 28px;
+    align-self: flex-start;
   }
 }
