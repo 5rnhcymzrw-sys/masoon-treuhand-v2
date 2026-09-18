@@ -66,10 +66,10 @@
   border-bottom-color: transparent;
 }
 
-/* TEST: Fachwissen – erste Kachel so breit wie eine Dienstleistungskachel */
+/* TEST: Fachwissen – erste Kachel endet exakt auf der vertikalen Kopfzeilenachse */
 @media (min-width: 1051px) {
   .home-knowledge .knowledge-grid {
-    grid-template-columns: calc(50% - 9px) 1fr 1fr;
+    grid-template-columns: var(--secondary-column-start) 1fr 1fr;
   }
 }
 
