@@ -66,87 +66,9 @@
   border-bottom-color: transparent;
 }
 
-/* TEST: Fachwissen – offene redaktionelle Darstellung */
-.home-knowledge .knowledge-grid {
-  position: relative;
-  gap: 0;
-  padding-top: 1px;
-}
-
-.home-knowledge .knowledge-grid::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: var(--brand-gradient);
-}
-
-.home-knowledge .knowledge-card {
-  min-height: 330px;
-  padding: 42px 38px 34px;
-  background: transparent;
-  border: 0;
-  border-image: none !important;
-  box-shadow: none;
-}
-
-.home-knowledge .knowledge-card + .knowledge-card {
-  border-left: 1px solid #d7d5d1;
-}
-
-.home-knowledge .knowledge-card__date {
-  margin-bottom: 30px;
-}
-
-.home-knowledge .knowledge-card h3 {
-  padding-bottom: 0;
-  background: none;
-}
-
-.home-knowledge .knowledge-card p {
-  margin-top: 18px;
-}
-
-.home-knowledge .knowledge-card::after {
-  content: "Beitrag anzeigen ↗";
-  margin-top: auto;
-  padding-top: 30px;
-  color: var(--label-color);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: var(--label-size);
-  font-weight: var(--label-weight);
-  line-height: var(--label-line);
-  letter-spacing: var(--label-spacing);
-  text-transform: uppercase;
-}
-
-@media (hover:hover) {
-  .home-knowledge .knowledge-card:hover {
-    transform: none;
-    background: rgba(255,255,255,.38);
-    box-shadow: none;
-  }
-}
-
-@media (max-width: 800px) {
+/* TEST: Fachwissen – erste Kachel breiter, zweite und dritte schmaler */
+@media (min-width: 1051px) {
   .home-knowledge .knowledge-grid {
-    padding-top: 0;
-  }
-
-  .home-knowledge .knowledge-grid::before {
-    content: none;
-  }
-
-  .home-knowledge .knowledge-card {
-    min-height: 0;
-    padding: 34px 0;
-    border-top: 1px solid transparent;
-    border-image: var(--brand-gradient) 1 !important;
-  }
-
-  .home-knowledge .knowledge-card + .knowledge-card {
-    border-left: 0;
+    grid-template-columns: 1.35fr 0.825fr 0.825fr;
   }
 }
