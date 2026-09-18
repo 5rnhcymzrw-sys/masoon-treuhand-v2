@@ -431,13 +431,12 @@
     background: #fff;
   }
 
-  /* Foto beginnt exakt auf der Startseite-Achse. */
+  /* Foto bleibt exakt ab der Startseite-Achse. */
   .home-hero__image {
     position: relative;
     z-index: 1;
   }
 
-  /* Linke Fläche bleibt hell und nutzt den bestehenden abstrakten Hintergrund. */
   .home-hero__content {
     position: relative;
     z-index: 5;
@@ -447,49 +446,69 @@
     background-repeat: no-repeat;
   }
 
+  /*
+    Text liegt ganz vorne. Die Übergangsflächen liegen bewusst
+    ÜBER dem linken Hintergrund, aber UNTER dem Text.
+  */
   .home-hero__inner {
     position: relative;
-    z-index: 6;
+    z-index: 9;
   }
 
-  /* Breiter, weicher Übergang über den linken Rand des Fotos. */
+  /*
+    Grosse milchige Diagonalfläche der Referenz.
+    Sie beginnt deutlich links der Fotoachse und läuft weich ins Foto.
+  */
   .home-hero::before {
     content: "";
     position: absolute;
-    z-index: 3;
+    z-index: 7;
     top: 0;
     bottom: 0;
-    left: calc(var(--secondary-column-start) - 8%);
-    width: 19%;
+    left: calc(var(--secondary-column-start) - 15%);
+    width: 31%;
     pointer-events: none;
     background: linear-gradient(
       90deg,
-      rgba(255,255,255,.98) 0%,
-      rgba(255,255,255,.90) 26%,
-      rgba(246,246,246,.72) 48%,
-      rgba(224,226,230,.44) 72%,
+      rgba(255,255,255,.96) 0%,
+      rgba(255,255,255,.90) 28%,
+      rgba(247,247,247,.72) 52%,
+      rgba(220,223,228,.42) 76%,
       rgba(255,255,255,0) 100%
     );
-    clip-path: polygon(0 0, 100% 0, 58% 100%, 0 100%);
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      48% 100%,
+      0 100%
+    );
   }
 
-  /* Zweite transparente Diagonalfläche wie in der Referenz. */
+  /*
+    Zweite, zurückhaltende Glasfläche. Sie erzeugt die zweite
+    schräge Kante aus der Vorlage, ohne zusätzliche Striche.
+  */
   .home-hero::after {
     content: "";
     position: absolute;
-    z-index: 4;
+    z-index: 8;
     top: 0;
     bottom: 0;
-    left: calc(var(--secondary-column-start) - 1%);
-    width: 14%;
+    left: calc(var(--secondary-column-start) - 4%);
+    width: 18%;
     pointer-events: none;
     background: linear-gradient(
       155deg,
-      rgba(255,255,255,.18) 0%,
-      rgba(217,220,225,.28) 48%,
-      rgba(190,196,205,.18) 100%
+      rgba(255,255,255,.20) 0%,
+      rgba(222,225,230,.26) 54%,
+      rgba(183,190,201,.16) 100%
     );
-    clip-path: polygon(30% 0, 100% 0, 40% 100%, 0 76%);
+    clip-path: polygon(
+      28% 0,
+      100% 0,
+      34% 100%,
+      0 72%
+    );
   }
 
   .home-hero__cta {
