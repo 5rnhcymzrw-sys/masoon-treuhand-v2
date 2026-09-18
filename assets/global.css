@@ -648,7 +648,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   padding:110px 43px 110px 0;
   display:grid;
   grid-template-columns:minmax(0,.4fr) minmax(0,.6fr);
-  align-items:center;
+  align-items:start;
   gap:48px;
   color:var(--white);
   border:0;
@@ -656,7 +656,6 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 
 .closing-card > .section-label {
   align-self:start;
-  transform:translateY(8px);
   margin-bottom:0;
   color:#bbbbbb;
 }
