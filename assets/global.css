@@ -91,7 +91,7 @@
   /* KARTEN: gemeinsame Gestaltung für Dienstleistungen und Fachwissen */
   --card-top-space: 26px;
   --card-inline-space: 0px;
-  --card-bottom-space: 10px;
+  --card-bottom-space: var(--card-top-space);
   --card-label-title-space: 31px;
   --card-meta-size: 12px;
   --card-meta-weight: 400;
