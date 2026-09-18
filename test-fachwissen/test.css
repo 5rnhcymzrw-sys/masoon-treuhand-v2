@@ -28,3 +28,10 @@
     #8d96a8 100%
   ) 1 !important;
 }
+
+/* TEST: Dienstleistungskacheln – Fliesstext exakt unter dem Titel */
+.service-grid .service-card p {
+  grid-column: 2;
+  transform: translateX(-8px);
+  max-width: none;
+}
