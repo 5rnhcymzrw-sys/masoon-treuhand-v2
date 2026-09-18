@@ -1,102 +1,168 @@
-/* MASOON TREUHAND | nur Testseite
-   Temporäre Gestaltungsversuche werden ausschliesslich hier eingetragen.
-   Nach der endgültigen Entscheidung wird diese Datei wieder gelöscht. */
+/* MASOON TREUHAND | TEST FACHWISSEN
+   Ausschliesslich Hero-Test. Alte Testregeln wurden entfernt. */
 
-/* TEST: Dienstleistungen – Mehr anzeigen und kompaktere Tätigkeitsliste */
-.service-detail__toggle {
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.service-detail__toggle::before {
-  content:"Mehr anzeigen";
-  color:var(--ink);
-  font-family:Arial,Helvetica,sans-serif;
-  font-size:var(--label-size);
-  font-weight:var(--label-weight);
-  line-height:var(--label-line);
-  letter-spacing:var(--label-spacing);
-  text-transform:uppercase;
-}
-
-.service-detail__list {
-  margin-top:8px;
-}
-
-.service-detail__list li {
-  line-height:1.35;
-}
-
-.service-detail__list li + li {
-  margin-top:2px;
-}
-
-/* TEST: Hero – Referenz IMG_3569 sauber nachgebaut */
 @media (min-width: 801px) {
   .home-hero {
     position: relative;
+    isolation: isolate;
     overflow: hidden;
     display: block;
-    background: #fff;
+    width: 100%;
+    max-width: none;
+    height: clamp(720px, 50vw, 820px);
+    min-height: 720px;
+    margin: 0 0 90px;
+    background: #f8f8f7;
   }
 
-  /* Foto beginnt exakt auf der Startseite-Achse und bleibt dort fixiert. */
+  /* Das vorhandene Foto liegt hinter dem gesamten Hero. */
   .home-hero__image {
     position: absolute;
+    inset: 0;
     z-index: 1;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: var(--secondary-column-start);
-    width: auto;
+    width: 100%;
     height: 100%;
     min-height: 0;
     margin: 0;
+    overflow: hidden;
+    transform: none;
+    background: #d9d9d9;
+  }
+
+  .home-hero__image::after {
+    display: none;
+    content: none;
   }
 
   .home-hero__image img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 70% center;
+    object-position: 66% center;
+    filter: grayscale(100%);
+    transform: none;
   }
 
-  /*
-    Linker Bereich wie bisher mit der Originalgrafik.
-    Er endet nicht als harte weisse Fläche über dem Foto.
-  */
+  /* Weicher Weissverlauf: keine harte Trennung zwischen Weiss und Foto. */
+  .home-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(255,255,255,1) 0%,
+        rgba(255,255,255,1) 20%,
+        rgba(255,255,255,.995) 27%,
+        rgba(255,255,255,.97) 33%,
+        rgba(255,255,255,.88) 38%,
+        rgba(255,255,255,.70) 44%,
+        rgba(255,255,255,.45) 49%,
+        rgba(255,255,255,.21) 54%,
+        rgba(255,255,255,.07) 58%,
+        rgba(255,255,255,0) 62%
+      );
+  }
+
+  /* Dekorative Ebenen über dem Foto. */
+  .home-hero__art {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  .home-hero__shape {
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+
+  .home-hero__shape--1 {
+    background: rgba(255,255,255,.24);
+    clip-path: polygon(0 0, 53% 0, 36% 100%, 0 100%);
+  }
+
+  .home-hero__shape--2 {
+    background: rgba(229,231,232,.18);
+    clip-path: polygon(28% 0, 54% 0, 39% 100%, 15% 100%);
+  }
+
+  .home-hero__shape--3 {
+    background: rgba(255,255,255,.30);
+    clip-path: polygon(0 73%, 44% 40%, 35% 100%, 0 100%);
+  }
+
+  .home-hero__shape--4 {
+    background: rgba(255,255,255,.13);
+    clip-path: polygon(31% 8%, 49% 24%, 41% 82%, 24% 100%);
+  }
+
+  /* Sehr feine Linien, nur im hellen Übergangsbereich sichtbar. */
+  .home-hero__lines {
+    position: absolute;
+    inset: 0;
+    opacity: .10;
+    background:
+      repeating-linear-gradient(
+        118deg,
+        transparent 0,
+        transparent 6px,
+        rgba(82,82,82,.25) 7px,
+        transparent 8px
+      );
+    clip-path: polygon(0 18%, 39% 8%, 47% 58%, 24% 100%, 0 100%);
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      #000 0%,
+      rgba(0,0,0,.82) 23%,
+      rgba(0,0,0,.28) 43%,
+      transparent 56%
+    );
+    mask-image: linear-gradient(
+      90deg,
+      #000 0%,
+      rgba(0,0,0,.82) 23%,
+      rgba(0,0,0,.28) 43%,
+      transparent 56%
+    );
+  }
+
+  /* Text bleibt darüber; Gestaltung des Textes ist nicht Teil dieses Tests. */
   .home-hero__content {
     position: relative;
-    z-index: 4;
-    width: 49%;
+    z-index: 6;
+    width: min(calc(100% - (2 * var(--page-gutter))), var(--content-width));
     height: 100%;
-    background-image: url("../assets/images/backgrounds/Hintergrund 3.png");
-    background-size: 228% auto;
-    background-position: 90% 20%;
-    background-repeat: no-repeat;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    background: none;
     overflow: visible;
   }
 
   .home-hero__inner {
     position: relative;
-    z-index: 6;
-    width: 100%;
+    z-index: 7;
+    width: 48%;
     height: 100%;
+    min-height: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 72px 0 72px 4px;
+    padding: 0 48px 0 4px;
   }
 
   .home-hero__title {
     max-width: none;
   }
 
-  .home-hero__title > span {
-    white-space: nowrap;
-  }
-
   .home-hero__copy {
-    max-width: 520px;
+    max-width: 560px;
     margin-top: 22px;
   }
 
@@ -104,60 +170,19 @@
     margin-top: 34px;
     align-self: flex-start;
   }
-
-  /*
-    Referenz-Übergang: nur eine breite, halbtransparente Lichtzone.
-    Sie liegt über dem Foto und wird an beiden Seiten weich transparent.
-  */
-  .home-hero::before {
-    content: "";
-    position: absolute;
-    z-index: 3;
-    top: -8%;
-    bottom: -8%;
-    left: calc(var(--secondary-column-start) - 7%);
-    width: 19%;
-    transform: skewX(-14deg);
-    transform-origin: center;
-    background: linear-gradient(
-      90deg,
-      rgba(255,255,255,.84) 0%,
-      rgba(255,255,255,.66) 30%,
-      rgba(230,233,237,.38) 62%,
-      rgba(255,255,255,0) 100%
-    );
-    filter: blur(1.5px);
-    pointer-events: none;
-  }
-
-  /*
-    Zweite sehr dezente Fläche unten wie in der Vorlage,
-    ohne harte Polygonkante.
-  */
-  .home-hero::after {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    left: calc(var(--secondary-column-start) - 13%);
-    bottom: -18%;
-    width: 30%;
-    height: 56%;
-    transform: rotate(-20deg);
-    background: linear-gradient(
-      135deg,
-      rgba(255,255,255,.72) 0%,
-      rgba(237,239,242,.32) 58%,
-      rgba(255,255,255,0) 100%
-    );
-    filter: blur(2px);
-    pointer-events: none;
-  }
 }
 
 @media (max-width: 800px) {
+  .home-hero__art {
+    display: none;
+  }
+
+  .home-hero__image img {
+    filter: grayscale(100%);
+  }
+
   .home-hero__cta {
     margin-top: 28px;
     align-self: flex-start;
   }
 }
-
