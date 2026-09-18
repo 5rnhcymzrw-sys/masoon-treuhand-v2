@@ -653,9 +653,17 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   border-color:transparent;
   border-image:var(--brand-gradient) 1;
   box-shadow:none;
+  will-change:transform;
   transition:
     transform var(--card-hover-duration) ease,
     box-shadow var(--card-hover-duration) ease;
+}
+
+.knowledge-card > * {
+  position:relative;
+  top:auto;
+  left:auto;
+  transform:none !important;
 }
 
 /* FACHWISSEN-KARTEN: Datum mit vollständigen Schriftwerten */
