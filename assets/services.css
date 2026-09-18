@@ -14,7 +14,6 @@
 /* LEISTUNGSÜBERSICHT: eine durchgehende Zeile pro Dienstleistung */
 .service-grid:has(.service-detail) {
   grid-template-columns:minmax(0,1fr);
-  grid-auto-rows:1fr;
   row-gap:0;
   border-bottom:1px solid var(--card-line-color);
 }
