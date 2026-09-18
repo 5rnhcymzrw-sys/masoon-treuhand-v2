@@ -32,7 +32,7 @@
   margin-top:2px;
 }
 
-/* TEST: Hero – sauberer weicher Bildübergang */
+/* TEST: Hero – Original-Hintergrundgrafik über Foto weiterführen */
 @media (min-width: 801px) {
   .home-hero {
     position: relative;
@@ -41,42 +41,39 @@
   }
 
   /*
-    Das Foto beginnt an der Startseite-Achse.
-    Statt aufgesetzter Dreiecke wird nur der linke Fotorand
-    weich und diagonal ausgeblendet.
+    Hintergrund 3 ist eine transparente PNG-Grafik.
+    Statt neue Dreiecke zu zeichnen, wird exakt diese Originalgrafik
+    in derselben Skalierung/Position wie bisher über die Bildkante
+    hinaus weitergeführt.
   */
-  .home-hero__image {
-    position: relative;
-    z-index: 1;
-    margin-left: -13%;
-    width: 113%;
-    -webkit-mask-image: linear-gradient(
-      76deg,
-      transparent 0%,
-      rgba(0,0,0,.10) 11%,
-      rgba(0,0,0,.34) 18%,
-      rgba(0,0,0,.70) 25%,
-      #000 34%,
-      #000 100%
-    );
-    mask-image: linear-gradient(
-      76deg,
-      transparent 0%,
-      rgba(0,0,0,.10) 11%,
-      rgba(0,0,0,.34) 18%,
-      rgba(0,0,0,.70) 25%,
-      #000 34%,
-      #000 100%
-    );
-  }
-
   .home-hero__content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
+    background-image: none;
+    overflow: visible;
+  }
+
+  .home-hero__content::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 228%;
+    aspect-ratio: 968 / 914;
+    left: -115.2%;
+    top: -9.5%;
+    background-image: url("../assets/images/backgrounds/Hintergrund 3.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    pointer-events: none;
   }
 
   .home-hero__inner {
     position: relative;
-    z-index: 3;
+    z-index: 4;
+  }
+
+  .home-hero__image {
+    position: relative;
+    z-index: 1;
   }
 }
