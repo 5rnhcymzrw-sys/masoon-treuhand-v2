@@ -623,3 +623,8 @@
     z-index: 1;
   }
 }
+
+/* TEST: Fusszeile – gleiche Hintergrundfarbe wie Abschlussbereich */
+.site-footer {
+  background: rgb(20, 22, 24);
+}
