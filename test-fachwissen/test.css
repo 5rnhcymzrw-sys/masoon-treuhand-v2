@@ -449,3 +449,9 @@
   bottom: 0;
   background: #cfcfcf;
 }
+
+/* TEST: Kopfzeile – schwarzer Hover entfernen */
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: inherit;
+}
