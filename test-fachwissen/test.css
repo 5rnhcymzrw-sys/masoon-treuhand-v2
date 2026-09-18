@@ -379,3 +379,17 @@
       rgba(174,182,195,.78) 100%
     );
 }
+
+/* TEST: Fachwissen – vorherige Farbgebung wiederherstellen */
+.home-knowledge::before {
+  background: rgba(231,233,237,.48);
+}
+
+.home-knowledge .knowledge-card {
+  background: rgba(255,255,255,.72);
+}
+
+.home-knowledge .section-label,
+.home-knowledge .knowledge-card__date {
+  color: var(--label-color);
+}
