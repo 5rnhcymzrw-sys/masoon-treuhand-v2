@@ -197,33 +197,45 @@ if (latestKnowledgeGrid) {
         .map((card) => {
           const cardCopy = card.cloneNode(true);
           const relativeUrl = cardCopy.getAttribute('href');
+          const articleUrl = relativeUrl ? new URL(relativeUrl, knowledgeOverviewUrl).href : '';
 
-          if (relativeUrl) {
-            cardCopy.setAttribute('href', new URL(relativeUrl, knowledgeOverviewUrl).href);
+          if (articleUrl) {
+            cardCopy.setAttribute('href', articleUrl);
           }
 
-          if (!cardCopy.querySelector('.action')) {
-            const action = document.createElement('span');
+          const wrapper = document.createElement('div');
+          wrapper.append(cardCopy);
+
+          if (articleUrl) {
+            const action = document.createElement('a');
             action.className = 'action';
+            action.href = articleUrl;
             action.textContent = 'Beitrag anzeigen';
-            cardCopy.append(action);
+            wrapper.append(action);
           }
 
-          return cardCopy;
+          return wrapper;
         });
 
       const currentCards = Array.from(
         latestKnowledgeGrid.querySelectorAll('.knowledge-card')
       );
 
-      const cardSignature = (card) => [
-        card.getAttribute('href') ?? '',
-        card.querySelector('.knowledge-card__date')?.textContent?.trim() ?? '',
-        card.querySelector('h3')?.textContent?.trim() ?? ''
-      ].join('|');
+      const cardSignature = (card) => {
+        const href = card.getAttribute('href');
+        const resolvedHref = href ? new URL(href, document.baseURI).href : '';
+
+        return [
+          resolvedHref,
+          card.querySelector('.knowledge-card__date')?.textContent?.trim() ?? '',
+          card.querySelector('h3')?.textContent?.trim() ?? ''
+        ].join('|');
+      };
 
       const currentSignatures = currentCards.map(cardSignature);
-      const latestSignatures = latestCards.map(cardSignature);
+      const latestSignatures = latestCards.map((wrapper) =>
+        cardSignature(wrapper.querySelector('.knowledge-card'))
+      );
 
       const cardsChanged =
         currentSignatures.length !== latestSignatures.length ||
