@@ -57,36 +57,8 @@ if (contactForm) {
   }
 }
 
-/* DIENSTLEISTUNGEN: geschlossene und geöffnete Leistungszeilen getrennt auf gleiche Höhe bringen. */
+/* DIENSTLEISTUNGEN: Nur die gewählte Tätigkeitsliste aufklappen. */
 const serviceDetailToggles = document.querySelectorAll('.service-detail__toggle');
-const serviceDetails = Array.from(document.querySelectorAll('.service-detail'));
-const closedServiceHeight = serviceDetails.length
-  ? Math.max(...serviceDetails.map((service) => service.getBoundingClientRect().height))
-  : 0;
-
-const updateServiceDetailHeights = () => {
-  const openServices = serviceDetails.filter((service) =>
-    service.querySelector('.service-detail__toggle')?.getAttribute('aria-expanded') === 'true'
-  );
-
-  serviceDetails.forEach((service) => {
-    service.style.minHeight = `${closedServiceHeight}px`;
-  });
-
-  if (!openServices.length) return;
-
-  openServices.forEach((service) => {
-    service.style.minHeight = '';
-  });
-
-  const openHeight = Math.max(...openServices.map((service) => service.getBoundingClientRect().height));
-
-  openServices.forEach((service) => {
-    service.style.minHeight = `${openHeight}px`;
-  });
-};
-
-updateServiceDetailHeights();
 
 serviceDetailToggles.forEach((toggle) => {
   const listId = toggle.getAttribute('aria-controls');
@@ -102,7 +74,6 @@ serviceDetailToggles.forEach((toggle) => {
     toggle.style.setProperty('--action-symbol', nextOpen ? '"–"' : '"+"');
     toggle.style.setProperty('--action-symbol-top', nextOpen ? '-1px' : '2px');
     list.hidden = !nextOpen;
-    updateServiceDetailHeights();
   });
 });
 
