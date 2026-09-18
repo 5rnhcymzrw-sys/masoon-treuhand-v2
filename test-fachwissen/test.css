@@ -465,3 +465,18 @@
   height: 2px;
   background: var(--brand-gradient);
 }
+
+/* TEST: farbige Vertikallinie ab Bildbasis bis Seitenende */
+.test-brand-vertical-line {
+  position: absolute;
+  z-index: 50;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    #f3e8d4 0%,
+    #e8e5df 34%,
+    #c7cbd3 67%,
+    #8d96a8 100%
+  );
+  pointer-events: none;
+}
