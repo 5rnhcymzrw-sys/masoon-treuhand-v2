@@ -420,3 +420,16 @@
 .home-services .service-card {
   background: #F3F3F3;
 }
+
+/* TEST: #F3F3F3 gezielt wiederholen */
+/* Kopfzeile: gleiche neutrale Hellgrau-Farbe wie die Dienstleistungskacheln */
+.site-header {
+  background: #F3F3F3;
+}
+
+/* Fachwissen: Farbe nur als dezenter Hover-Akzent wiederholen */
+@media (hover:hover) {
+  .home-knowledge .knowledge-card:hover {
+    background: #F3F3F3;
+  }
+}
