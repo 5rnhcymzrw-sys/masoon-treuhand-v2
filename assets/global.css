@@ -906,28 +906,20 @@ body.page-article-employment-termination .content-card .article-text-table td:la
    ========================================================= */
 .site-footer {
   position:relative;
-  min-height:var(--footer-height);
-  color:var(--white);
-  background:var(--black);
-}
-
-.site-footer::before {
-  content:"";
-  position:absolute;
-  top:calc(-1 * var(--accent-height));
-  right:0;
-  left:0;
-  height:var(--accent-height);
-  background:var(--brand-gradient-reverse);
+  color:#5e5e5e;
+  background:var(--white);
+  font-size:11px;
+  letter-spacing:.025em;
 }
 
 .footer-inner {
   position:relative;
-  min-height:var(--footer-height);
+  min-height:auto;
+  padding:33px 0;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:36px;
+  gap:28px;
 }
 
 .footer-links {
