@@ -58,3 +58,10 @@
     #8d96a8 100%
   ) 1;
 }
+
+/* TEST: Dienstleistungskacheln – untere Linien wieder anzeigen */
+.service-grid .service-card {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+}
