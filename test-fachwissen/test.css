@@ -410,3 +410,8 @@
 .closing-card .action {
   color: var(--white);
 }
+
+/* TEST: Fachwissen-Kacheln – helles Blaugrau #DCE0E6 */
+.home-knowledge .knowledge-card {
+  background: #DCE0E6;
+}
