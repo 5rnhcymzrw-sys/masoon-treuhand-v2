@@ -91,10 +91,20 @@
   --service-number-line:39.6px;
   --service-number-spacing:-1.76px;
 
-  /* KARTEN: gemeinsame Abstände für Dienstleistungen und Fachwissen */
+  /* KARTEN: gemeinsame Gestaltung für Dienstleistungen und Fachwissen */
   --card-top-space: 26px;
+  --card-inline-space: 0px;
+  --card-bottom-space: 10px;
+  --card-min-height: 360px;
   --card-label-title-space: 31px;
   --card-title-copy-space: 16px;
+  --card-title-min-height: 3.36em;
+  --card-meta-size: 12px;
+  --card-meta-weight: 400;
+  --card-meta-line: 1.5;
+  --card-meta-spacing: .05em;
+  --card-meta-color: #696969;
+  --card-line-color: #adadad;
 
   /* KARTEN: globaler Hover, bewusst weich und langsam */
   --card-hover-lift: -3px;
@@ -621,73 +631,58 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   }
 }
 
-.service-card {
+/* KARTEN: gemeinsame Basis für Dienstleistungen und Fachwissen */
+.service-card,
+.knowledge-card {
   position:relative;
-  padding:var(--card-top-space) 32px 30px 0;
+  min-height:var(--card-min-height);
+  padding:var(--card-top-space) var(--card-inline-space) var(--card-bottom-space) 0;
+  border-top:1px solid var(--card-line-color);
+}
+
+.service-card {
   display:block;
-  border-top:1px solid #adadad;
-}
-
-.service-card > div { display:block; }
-
-.service-card__number {
-  position:static;
-  display:block;
-  transform:none;
-  color:#696969;
-  font-family:var(--font-body);
-  font-size:12px;
-  font-weight:400;
-  line-height:1.5;
-  letter-spacing:.05em;
-}
-
-.service-card h3 {
-  margin:var(--card-label-title-space) 0 var(--card-title-copy-space);
-  color:var(--ink);
-  font-family:var(--font-heading);
-  font-size:var(--subtitle-size);
-  font-weight:var(--subtitle-weight);
-  line-height:var(--subtitle-line);
-  letter-spacing:var(--subtitle-spacing);
-}
-
-.service-card p {
-  max-width:var(--service-copy-width,34ch);
 }
 
 .knowledge-card {
-  min-height:360px;
-  padding:var(--card-top-space) 0 10px;
   display:flex;
   flex-direction:column;
   background:transparent;
-  border-top:1px solid #bcbcbc;
   box-shadow:none;
 }
 
-.knowledge-card > .action {
-  margin-top:2px;
-  align-self:flex-start;
+.service-card > div {
+  display:block;
 }
 
-/* FACHWISSEN-KARTEN: Datum mit vollständigen Schriftwerten */
+/* KARTEN: gemeinsame kleine Kennzeichnung oberhalb des Titels */
+.service-card__number,
 .knowledge-card__date {
-  margin-bottom:var(--card-label-title-space);
-  color:#626262;
+  display:block;
+  margin:0 0 var(--card-label-title-space);
+  color:var(--card-meta-color);
   font-family:var(--font-body);
-  font-size:11px;
-  font-weight:400;
-  line-height:1.7;
-  letter-spacing:.075em;
+  font-size:var(--card-meta-size);
+  font-weight:var(--card-meta-weight);
+  line-height:var(--card-meta-line);
+  letter-spacing:var(--card-meta-spacing);
+}
+
+.service-card__number {
+  position:static;
+  transform:none;
+}
+
+.knowledge-card__date {
   text-transform:uppercase;
 }
 
-/* FACHWISSEN-KARTEN: Titel und untere Trennlinie */
+/* KARTEN: gemeinsame Titelwerte und identische Umbruchhöhe */
+.service-card h3,
 .knowledge-card h3 {
-  min-height:3.36em;
+  min-height:var(--card-title-min-height);
   margin:0 0 var(--card-title-copy-space);
-  padding-bottom:0;
+  padding:0;
   color:var(--ink);
   font-family:var(--font-heading);
   font-size:var(--subtitle-size);
@@ -695,6 +690,16 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   line-height:var(--subtitle-line);
   letter-spacing:var(--subtitle-spacing);
   background:none;
+}
+
+/* Dienstleistungsseite kann die Textbreite weiterhin über dieselbe Variable steuern. */
+.service-card p {
+  max-width:var(--service-copy-width,34ch);
+}
+
+.knowledge-card > .action {
+  margin-top:2px;
+  align-self:flex-start;
 }
 
 /* =========================================================
