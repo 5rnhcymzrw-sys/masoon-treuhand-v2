@@ -603,7 +603,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 .closing-card {
   --ink:var(--closing-ink,var(--white));
   height:490px;
-  padding:126px 43px 100px 0;
+  padding:126px 0 100px;
   display:grid;
   grid-template-columns:var(--secondary-column-start) minmax(0,1fr);
   align-items:center;
