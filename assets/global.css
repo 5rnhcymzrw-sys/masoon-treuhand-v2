@@ -785,8 +785,6 @@ body.page-article-employment-termination .content-card .article-text-table td:la
 }
 
 .legal-card {
-  --subtitle-size:18px;
-  --subtitle-bottom-space:10px;
   min-height:405px;
   padding:67px 156px 67px var(--legal-left-inset);
   display:grid;
