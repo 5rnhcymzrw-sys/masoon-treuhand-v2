@@ -506,7 +506,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   background-color:transparent;
   background-image:linear-gradient(#8d96a8,#8d96a8);
   background-repeat:no-repeat;
-  background-position:left bottom;
+  background-position:left calc(100% - 2px);
   background-size:0 2px;
   transition:color 260ms ease,background-size .4s ease;
 }
