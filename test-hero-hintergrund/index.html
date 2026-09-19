@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1440">
+  <title>Hero Hintergrund Test | MASOON TREUHAND</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="../assets/global.css?v=20260919-cleanup-1">
+  <link rel="stylesheet" href="../assets/home.css?v=20260919-live-soft">
+  <style>
+    .hero-bg-test .home-hero {
+      position:relative;
+      isolation:isolate;
+      overflow:hidden;
+      display:block;
+      height:700px;
+      background:#fff;
+    }
+
+    .hero-bg-test .home-hero__image {
+      position:absolute;
+      inset:0;
+      z-index:1;
+      width:100%;
+      height:100%;
+      overflow:hidden;
+      background:#ddd;
+    }
+
+    .hero-bg-test .home-hero__image img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:70% center;
+    }
+
+    .hero-bg-test .home-hero__image::after {
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:2;
+      pointer-events:none;
+      background:linear-gradient(
+        90deg,
+        rgba(0,0,0,.16) 44%,
+        rgba(0,0,0,.10) 54%,
+        rgba(0,0,0,.03) 66%,
+        rgba(0,0,0,0) 78%
+      );
+    }
+
+    .hero-bg-test .home-hero::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:3;
+      pointer-events:none;
+      background:linear-gradient(
+        90deg,
+        rgba(255,255,255,1) 0%,
+        rgba(255,255,255,1) 24%,
+        rgba(255,255,255,.99) 31%,
+        rgba(255,255,255,.95) 37%,
+        rgba(255,255,255,.82) 43%,
+        rgba(255,255,255,.62) 49%,
+        rgba(255,255,255,.38) 54%,
+        rgba(255,255,255,.16) 59%,
+        rgba(255,255,255,.04) 63%,
+        rgba(255,255,255,0) 67%
+      );
+    }
+
+    /* Nur das bestehende linke Hero-Hintergrundbild wird verstärkt */
+    .hero-bg-test .home-hero::after {
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:4;
+      pointer-events:none;
+      background-image:url("../assets/images/backgrounds/Hintergrund%203.png");
+      background-size:228% auto;
+      background-position:90% 20%;
+      background-repeat:no-repeat;
+      opacity:.72;
+      -webkit-mask-image:linear-gradient(90deg,#000 0%,#000 42%,rgba(0,0,0,.55) 52%,transparent 64%);
+      mask-image:linear-gradient(90deg,#000 0%,#000 42%,rgba(0,0,0,.55) 52%,transparent 64%);
+    }
+
+    .hero-bg-test .home-hero__content {
+      position:relative;
+      z-index:5;
+      width:100%;
+      height:100%;
+      display:block;
+      background:none;
+    }
+
+    .hero-bg-test .home-hero__inner {
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:var(--secondary-column-start);
+      height:auto;
+      margin:0;
+      padding:76px 74px 74px 4px;
+      display:block;
+    }
+
+    .hero-bg-test .test-note {
+      width:min(calc(100% - (2 * var(--page-gutter))),var(--content-width));
+      margin:0 auto 28px;
+      color:#797c82;
+      font-family:var(--font-body);
+      font-size:11px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+  </style>
+</head>
+<body class="hero-bg-test">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-brand" href="../" aria-label="MASOON TREUHAND Startseite">
+        <span class="site-brand__text"><span>MASOON</span><span>TREUHAND</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <a href="../" aria-current="page">Startseite</a>
+        <a href="../unternehmen/">Unternehmen</a>
+        <a href="../dienstleistungen/">Dienstleistungen</a>
+        <a href="../fachwissen/">Fachwissen</a>
+        <a href="../kontakt/">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <p class="test-note">Test: bestehendes Hero Hintergrundbild verstärkt, ohne künstliches Dreieck</p>
+
+    <section class="home-hero">
+      <div class="home-hero__image photo-grayscale">
+        <img src="../assets/images/photos/hero.png" alt="MASOON TREUHAND">
+      </div>
+
+      <div class="home-hero__content">
+        <div class="home-hero__inner">
+          <p class="section-label">MASOON TREUHAND</p>
+          <h1 class="home-hero__title">Treuhand mit Struktur und <span style="color:#8b8e92">Anspruch.</span></h1>
+          <p class="home-hero__copy">Auf der Basis von Diskretion, Präzision und Vertrauen begleiten wir Sie<br>mit fachlicher Klarheit und hohem Anspruch durch alle Phasen Ihres<br>Geschäftslebens.</p>
+          <div class="home-hero__actions">
+            <span>BUCHHALTUNG</span>
+            <span>PERSONAL</span>
+            <span>STEUERN</span>
+            <span>BERATUNG</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
