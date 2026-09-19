@@ -452,8 +452,9 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 /* BLOGBEITRÄGE: unterer Zurücklink nach dem Fazit */
 .content-card .article-back {
   margin:var(--subtitle-top-space) 0 0;
-  padding-top:var(--subtitle-top-space);
+  padding:28px 30px;
   border-top:1px solid #d6d6d6;
+  background:#f3f3f3;
 }
 
 /* TEXTLINKS UND SCHALTFLÄCHEN: gemeinsame Abstände und untere Linie
