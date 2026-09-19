@@ -654,8 +654,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
    ========================================================= */
 .legal-section { padding-top:var(--section-space); }
 
-.legal-card,
-.content-card {
+.legal-card {
   border:1px solid transparent;
   border-image:var(--brand-gradient) 1;
 }
@@ -668,7 +667,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   margin-bottom:var(--subtitle-top-space);
   padding-bottom:var(--subtitle-top-space);
   border-bottom:1px solid transparent;
-  border-image:inherit;
+  border-image:var(--brand-gradient) 1;
 }
 
 .content-card > div {
