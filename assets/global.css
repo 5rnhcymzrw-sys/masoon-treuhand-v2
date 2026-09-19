@@ -432,6 +432,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   align-self:start;
   gap:14px;
   margin:0 0 30px;
+  transform:translateY(10px);
   text-transform:uppercase;
   transition:color 260ms ease;
 }
