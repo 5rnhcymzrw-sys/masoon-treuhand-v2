@@ -196,10 +196,10 @@ main > section:last-child { padding-bottom:0; }
   align-items:baseline;
   gap:.22em;
   font-family:var(--font-heading);
-  font-size:22px;
-  font-weight:700;
-  line-height:1;
-  letter-spacing:.03em;
+  font-size:var(--subtitle-size);
+  font-weight:var(--subtitle-weight);
+  line-height:var(--subtitle-line);
+  letter-spacing:var(--subtitle-spacing);
   white-space:nowrap;
 }
 
