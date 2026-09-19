@@ -11,7 +11,9 @@
     /* TESTSEITE: gemeinsame vertikale Startkante
        Referenz: «Diese Werte prägen unsere Treuhandarbeit.» */
     .test-raster {
-      --test-line: calc(var(--secondary-column-start) - 84px);
+      --test-column-gap:46px;
+      --test-column-width:calc((100% - (2 * var(--test-column-gap))) / 3);
+      --test-line:calc(var(--test-column-width) + var(--test-column-gap));
     }
 
     .test-raster::before {
@@ -35,8 +37,8 @@
     .test-raster .test-grid-head,
     .test-raster .test-split {
       display:grid;
-      grid-template-columns:calc(var(--test-line) - 36px) minmax(0,1fr);
-      column-gap:36px;
+      grid-template-columns:var(--test-line) minmax(0,1fr);
+      column-gap:0;
       align-items:start;
     }
 
@@ -58,7 +60,7 @@
       margin-top:58px;
       display:grid;
       grid-template-columns:repeat(3,minmax(0,1fr));
-      column-gap:46px;
+      column-gap:var(--test-column-gap);
       row-gap:30px;
     }
 
@@ -71,8 +73,8 @@
       min-height:430px;
       padding:105px 43px 105px 0;
       display:grid;
-      grid-template-columns:calc(var(--test-line) - 36px) minmax(0,1fr);
-      column-gap:36px;
+      grid-template-columns:var(--test-line) minmax(0,1fr);
+      column-gap:0;
       align-items:start;
     }
 
@@ -111,8 +113,8 @@
       min-height:405px;
       padding:67px 75px;
       display:grid;
-      grid-template-columns:calc(var(--test-line) - 36px) minmax(0,1fr);
-      column-gap:36px;
+      grid-template-columns:var(--test-line) minmax(0,1fr);
+      column-gap:0;
       border:1px solid transparent;
       border-image:var(--brand-gradient) 1;
       align-items:start;
