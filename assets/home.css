@@ -12,7 +12,7 @@
   width:min(calc(100% - (2 * var(--page-gutter))),var(--content-width));
   height:700px;
   margin:48px auto 90px;
-  background:#fff;
+  background:#fff url("images/backgrounds/Hintergrund 3.png") 90% 20% / 228% auto no-repeat;
 }
 
 /* HERO-FOTO: liegt hinter der gesamten Hero-Fläche */
@@ -23,7 +23,27 @@
   width:100%;
   height:100%;
   overflow:hidden;
-  background:#ddd;
+  background:transparent;
+  -webkit-mask-image:linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 22%,
+    rgba(0,0,0,.12) 30%,
+    rgba(0,0,0,.35) 38%,
+    rgba(0,0,0,.62) 47%,
+    rgba(0,0,0,.85) 56%,
+    #000 67%
+  );
+  mask-image:linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 22%,
+    rgba(0,0,0,.12) 30%,
+    rgba(0,0,0,.35) 38%,
+    rgba(0,0,0,.62) 47%,
+    rgba(0,0,0,.85) 56%,
+    #000 67%
+  );
 }
 
 .home-hero__image img {
@@ -58,15 +78,13 @@
   pointer-events:none;
   background:linear-gradient(
     90deg,
-    rgba(255,255,255,1) 0%,
-    rgba(255,255,255,1) 24%,
-    rgba(255,255,255,.99) 31%,
-    rgba(255,255,255,.95) 37%,
-    rgba(255,255,255,.82) 43%,
-    rgba(255,255,255,.62) 49%,
-    rgba(255,255,255,.38) 54%,
-    rgba(255,255,255,.16) 59%,
-    rgba(255,255,255,.04) 63%,
+    rgba(255,255,255,.46) 0%,
+    rgba(255,255,255,.42) 24%,
+    rgba(255,255,255,.34) 31%,
+    rgba(255,255,255,.26) 37%,
+    rgba(255,255,255,.18) 43%,
+    rgba(255,255,255,.10) 49%,
+    rgba(255,255,255,.05) 54%,
     rgba(255,255,255,0) 67%
   );
 }
@@ -88,10 +106,7 @@
   width:100%;
   height:100%;
   display:block;
-  background-image:url("images/backgrounds/Hintergrund 3.png");
-  background-size:228% auto;
-  background-position:90% 20%;
-  background-repeat:no-repeat;
+  background:none;
 }
 
 .home-hero__inner {
