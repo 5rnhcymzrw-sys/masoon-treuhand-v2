@@ -613,7 +613,6 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 }
 
 .closing-card > .section-label {
-  align-self:center;
   margin-bottom:0;
   color:var(--closing-label-color,#bbbbbb);
 }
