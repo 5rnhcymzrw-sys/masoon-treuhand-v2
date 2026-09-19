@@ -741,7 +741,7 @@ body.page-article-employment-termination .content-card .article-text-table td:la
 
 .legal-card {
   min-height:405px;
-  padding:67px 156px 67px var(--legal-left-inset);
+  padding:67px 0;
   display:grid;
   grid-template-columns:var(--secondary-column-start) minmax(0,1fr);
   align-items:start;
@@ -754,7 +754,6 @@ body.page-article-employment-termination .content-card .article-text-table td:la
 .legal-card .legal-copy {
   align-self:start;
   margin-top:14px;
-  margin-right:-90px;
 }
 
 /* ABSCHLUSSKASTEN UND RECHTSEITENKASTEN: gemeinsame mobile Anordnung */
