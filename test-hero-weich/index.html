@@ -72,12 +72,9 @@
       );
     }
 
-    /* Dezente weiche geometrische Ebene wie auf der Referenz */
+    /* Hintergrundbild 2 als echte Gestaltungsebene verstärken */
     .hero-soft-test .home-hero::after {
-      display:none;
-    }
-
-    .hero-soft-test .triangle-marker {
+      content:"";
       position:absolute;
       inset:0;
       z-index:4;
@@ -86,8 +83,9 @@
       background-size:100% auto;
       background-position:left top;
       background-repeat:no-repeat;
-      opacity:.55;
-      mix-blend-mode:multiply;
+      opacity:.42;
+      -webkit-mask-image:linear-gradient(90deg,#000 0%,#000 43%,rgba(0,0,0,.55) 53%,transparent 68%);
+      mask-image:linear-gradient(90deg,#000 0%,#000 43%,rgba(0,0,0,.55) 53%,transparent 68%);
     }
 
     .hero-soft-test .home-hero__content {
@@ -148,8 +146,6 @@
       <div class="home-hero__image photo-grayscale">
         <img src="../assets/images/photos/hero.png" alt="MASOON TREUHAND">
       </div>
-
-      <div class="triangle-marker" aria-hidden="true"></div>
 
       <div class="home-hero__content">
         <div class="home-hero__inner">
