@@ -157,7 +157,7 @@ main {
 /* ABSCHNITTE: globale Abstände */
 .section { padding-block:var(--section-space); }
 main > section:last-child { padding-bottom:0; }
-.section-compact { padding-block:var(--section-space-compact); }
+.section-compact { padding:var(--section-space) 0 var(--section-space-compact); }
 .section-compact-top { padding-top:var(--section-space-compact); }
 .section-compact-bottom { padding-bottom:var(--section-space-compact); }
 
