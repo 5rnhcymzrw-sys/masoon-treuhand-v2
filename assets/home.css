@@ -9,7 +9,7 @@
   height:700px;
   margin:48px auto 90px;
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:var(--secondary-column-start) minmax(0,1fr);
   background:rgba(255,255,255,.72);
 }
 
