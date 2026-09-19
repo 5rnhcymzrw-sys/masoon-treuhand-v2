@@ -74,12 +74,15 @@
 
     /* Dezente weiche geometrische Ebene wie auf der Referenz */
     .hero-soft-test .home-hero::after {
-      content:"";
+      display:none;
+    }
+
+    .hero-soft-test .triangle-marker {
       position:absolute;
       inset:0;
-      z-index:4;
+      z-index:20;
       pointer-events:none;
-      background:rgba(255,0,0,.28);
+      background:rgba(255,0,0,.48);
       clip-path:polygon(0 0,49% 0,36% 100%,0 100%);
     }
 
@@ -141,6 +144,8 @@
       <div class="home-hero__image photo-grayscale">
         <img src="../assets/images/photos/hero.png" alt="MASOON TREUHAND">
       </div>
+
+      <div class="triangle-marker" aria-hidden="true"></div>
 
       <div class="home-hero__content">
         <div class="home-hero__inner">
