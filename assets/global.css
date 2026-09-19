@@ -101,7 +101,7 @@
   --page-bottom-space: 126px;
   --page-bottom-space-mobile: 82px;
   --header-height: 122px;
-  --secondary-column-start: calc(40% + 11.4px);
+  --secondary-column-start: calc(33.333333% + 15.333px);
   --legal-left-inset: 75px;
   --content-card-inline-space: 130px;
   --content-table-line: #d7d5d1;
@@ -147,7 +147,7 @@ body::before {
   position:fixed;
   top:0;
   bottom:0;
-  left:calc(max(var(--page-gutter),calc((100vw - var(--content-width)) / 2)) + var(--secondary-column-start) + -338px);
+  left:calc(max(var(--page-gutter),calc((100vw - var(--content-width)) / 2)) + var(--secondary-column-start));
   width:1px;
   background:red;
   pointer-events:none;
@@ -459,7 +459,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 /* BLOGBEITRÄGE: Zurücklink und Metadaten ohne Strich am Titelanfang ausrichten */
 .section-label.article-back,
 .section-label.article-meta {
-  margin-left:var(--content-card-inline-space);
+  margin-left:0;
 }
 
 /* BLOGBEITRÄGE: Zurücklink normal geschrieben; Pfeil separat geregelt */
@@ -633,9 +633,9 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   height:490px;
   padding:110px 43px 110px 0;
   display:grid;
-  grid-template-columns:minmax(0,.4fr) minmax(0,.6fr);
+  grid-template-columns:var(--secondary-column-start) minmax(0,1fr);
   align-items:start;
-  gap:48px;
+  gap:0;
   color:var(--closing-ink,var(--white));
   border:0;
 }
@@ -685,8 +685,8 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 }
 
 .content-card > div {
-  width:min(calc(50% + 305px),100%);
-  margin-left:auto;
+  width:auto;
+  margin-left:calc(var(--secondary-column-start) - var(--content-card-inline-space));
 }
 
 .content-card .page-title {
@@ -788,9 +788,9 @@ body.page-article-employment-termination .content-card .article-text-table td:la
   min-height:405px;
   padding:67px 156px 67px var(--legal-left-inset);
   display:grid;
-  grid-template-columns:minmax(0,.4fr) minmax(0,.6fr);
+  grid-template-columns:var(--secondary-column-start) minmax(0,1fr);
   align-items:start;
-  gap:48px;
+  gap:0;
 }
 
 .legal-card .page-title { margin:0; }
