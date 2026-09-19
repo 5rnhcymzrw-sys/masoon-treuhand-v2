@@ -14,7 +14,7 @@
 .company-intro__grid {
   display:grid;
   grid-template-columns:1.15fr 1fr;
-  column-gap:36px;
+  column-gap:64px;
   align-items:start;
 }
 
