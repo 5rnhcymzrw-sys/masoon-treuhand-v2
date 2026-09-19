@@ -95,7 +95,7 @@
   position:absolute;
   left:0;
   bottom:0;
-  width:var(--secondary-column-start);
+  width:min(720px,58%);
   height:auto;
   margin:0;
   padding:76px 74px 74px 4px;
