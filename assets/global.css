@@ -425,7 +425,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 .small-title + p,
 .small-title + .body-copy { margin-top:var(--small-title-bottom-space); }
 
-/* BEREICHSTITEL: Anordnung und Linie vor dem Text */
+/* BEREICHSTITEL: Anordnung */
 .section-label {
   display:flex;
   align-items:center;
@@ -433,20 +433,6 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   margin:0 0 30px;
   text-transform:uppercase;
   transition:color 260ms ease;
-}
-
-.section-label::before {
-  content:none;
-  width:30px;
-  height:1px;
-  flex:0 0 30px;
-  background:currentColor;
-}
-
-/* BLOGBEITRÄGE: Zurücklink und Metadaten ohne Strich am Titelanfang ausrichten */
-.section-label.article-back,
-.section-label.article-meta {
-  margin-left:0;
 }
 
 /* BLOGBEITRÄGE: Zurücklink normal geschrieben; Pfeil separat geregelt */
@@ -461,11 +447,6 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   line-height:.7;
   letter-spacing:0;
   transform:translateY(-2px);
-}
-
-.section-label.article-back::before,
-.section-label.article-meta::before {
-  content:none;
 }
 
 /* BLOGBEITRÄGE: unterer Zurücklink nach dem Fazit */
