@@ -203,11 +203,6 @@ main > section:last-child { padding-bottom:0; }
   align-items:center;
 }
 
-/* RECHTSEITEN: Logo mit der linken Titelkante ausrichten */
-.legal-page .site-brand {
-  margin-left:var(--legal-left-inset);
-}
-
 /* LOGO: MASOON TREUHAND (Schrift) */
 .site-brand__text {
   display:inline-flex;
