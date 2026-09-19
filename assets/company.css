@@ -71,8 +71,7 @@
   );
 }
 
-.company-values > .container,
-.company-values + .closing-card-section .closing-card {
+.company-values > .container {
   display:grid;
   grid-template-columns:var(--secondary-column-start) 1fr;
   column-gap:0;
