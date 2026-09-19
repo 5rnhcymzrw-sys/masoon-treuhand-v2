@@ -13,8 +13,8 @@
 
 .company-intro__grid {
   display:grid;
-  grid-template-columns:var(--secondary-column-start) minmax(0,1fr);
-  column-gap:0;
+  grid-template-columns:1.15fr 1fr;
+  column-gap:36px;
   align-items:start;
 }
 
@@ -22,9 +22,6 @@
   min-width:0;
   width:100%;
   margin:0;
-  padding-right:36px;
-  grid-column:1;
-  grid-row:1;
 }
 
 .company-intro__portrait img {
@@ -109,11 +106,5 @@
   .company-intro__grid {
     grid-template-columns:1fr;
     gap:42px;
-  }
-
-  .company-intro__portrait {
-    padding-right:0;
-    grid-column:auto;
-    grid-row:auto;
   }
 }
