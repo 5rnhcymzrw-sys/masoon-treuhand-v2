@@ -105,13 +105,39 @@ serviceDetailToggles.forEach((toggle) => {
   toggle.addEventListener('click', () => {
     const isOpen = toggle.getAttribute('aria-expanded') === 'true';
     const nextOpen = !isOpen;
+    const startHeight = service.getBoundingClientRect().height;
+    const targetHeight = nextOpen ? serviceHeights.openHeight : serviceHeights.closedHeight;
+
     toggle.setAttribute('aria-expanded', String(nextOpen));
     toggle.setAttribute('aria-label', nextOpen ? 'Tätigkeiten ausblenden' : 'Tätigkeiten anzeigen');
     toggle.textContent = nextOpen ? 'Weniger anzeigen' : 'Mehr anzeigen';
     toggle.style.setProperty('--action-symbol', nextOpen ? '"–"' : '"+"');
     toggle.style.setProperty('--action-symbol-top', nextOpen ? '-1px' : '2px');
-    list.hidden = !nextOpen;
-    service.style.minHeight = `${nextOpen ? serviceHeights.openHeight : serviceHeights.closedHeight}px`;
+
+    if (nextOpen) list.hidden = false;
+
+    service.style.overflow = 'hidden';
+    service.style.minHeight = `${targetHeight}px`;
+
+    const boxAnimation = service.animate(
+      [
+        { height: `${startHeight}px` },
+        { height: `${targetHeight}px` }
+      ],
+      { duration: 350, easing: 'ease-in-out' }
+    );
+
+    const listAnimation = list.animate(
+      nextOpen
+        ? [{ opacity: 0, transform: 'translateY(-4px)' }, { opacity: 1, transform: 'translateY(0)' }]
+        : [{ opacity: 1, transform: 'translateY(0)' }, { opacity: 0, transform: 'translateY(-4px)' }],
+      { duration: 300, easing: 'ease-in-out' }
+    );
+
+    Promise.all([boxAnimation.finished, listAnimation.finished]).then(() => {
+      if (!nextOpen) list.hidden = true;
+      service.style.overflow = '';
+    });
   });
 });
 
