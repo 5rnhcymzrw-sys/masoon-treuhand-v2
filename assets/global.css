@@ -741,19 +741,20 @@ body.page-article-employment-termination .content-card .article-text-table td:la
 
 .legal-card {
   min-height:405px;
-  padding:67px 0;
-  display:grid;
-  grid-template-columns:var(--secondary-column-start) minmax(0,1fr);
-  align-items:start;
-  gap:0;
+  padding:67px 0 67px var(--secondary-column-start);
+  display:block;
   border:1px solid transparent;
   border-image:var(--brand-gradient) 1;
 }
 
-.legal-card .page-title { margin:0; }
+.legal-card .page-title {
+  margin:0;
+  padding-bottom:30px;
+  border-bottom:1px solid #d6d6d6;
+}
+
 .legal-card .legal-copy {
-  align-self:start;
-  margin-top:14px;
+  margin-top:30px;
 }
 
 /* ABSCHLUSSKASTEN UND RECHTSEITENKASTEN: gemeinsame mobile Anordnung */
@@ -763,6 +764,8 @@ body.page-article-employment-termination .content-card .article-text-table td:la
     grid-template-columns:1fr;
     gap:18px;
     align-items:flex-start;
+    padding-left:0;
+    padding-right:0;
   }
 
   .content-card { padding:var(--page-gutter-mobile); }
