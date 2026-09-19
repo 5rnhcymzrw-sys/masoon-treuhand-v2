@@ -741,7 +741,7 @@ body.page-article-employment-termination .content-card .article-text-table td:la
 
 .legal-card {
   min-height:405px;
-  padding:67px 0 67px var(--secondary-column-start);
+  padding:0 0 67px var(--secondary-column-start);
   display:block;
 }
 
