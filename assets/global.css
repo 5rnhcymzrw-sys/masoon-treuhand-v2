@@ -743,8 +743,6 @@ body.page-article-employment-termination .content-card .article-text-table td:la
   min-height:405px;
   padding:67px 0 67px var(--secondary-column-start);
   display:block;
-  border:1px solid transparent;
-  border-image:var(--brand-gradient) 1;
 }
 
 .legal-card .page-title {
