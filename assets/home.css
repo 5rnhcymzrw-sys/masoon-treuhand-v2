@@ -12,7 +12,7 @@
   width:min(calc(100% - (2 * var(--page-gutter))),var(--content-width));
   height:700px;
   margin:48px auto 90px;
-  background:#fff url("images/backgrounds/Hintergrund 3.png") 90% 20% / 228% auto no-repeat;
+  background:#fff;
 }
 
 /* HERO-FOTO: liegt hinter der gesamten Hero-Fläche */
