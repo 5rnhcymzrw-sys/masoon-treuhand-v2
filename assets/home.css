@@ -122,15 +122,16 @@
 
 .home-services__head,
 .home-knowledge__head {
-  display:flex;
+  display:grid;
+  grid-template-columns:var(--secondary-column-start) minmax(0,1fr) auto;
   align-items:end;
-  justify-content:space-between;
-  gap:32px;
+  gap:0;
 }
 
 .home-services__head > .action,
 .home-knowledge__head > .action {
   transform:translateY(2px);
+  margin-left:32px;
 }
 
 .home-services {
@@ -153,6 +154,7 @@
 @media (max-width:800px) {
   .home-services__head,
   .home-knowledge__head {
+    display:flex;
     flex-direction:column;
     align-items:flex-start;
   }
