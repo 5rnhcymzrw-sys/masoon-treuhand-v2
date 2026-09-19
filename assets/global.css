@@ -626,10 +626,7 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
 
 .closing-card .action {
   margin-top:26px;
-  padding:var(--button-padding);
-  color:#1a1a1a;
-  background:#f2f2f2;
-  background-image:none;
+  color:var(--closing-ink,var(--white));
 }
 
 /* =========================================================
