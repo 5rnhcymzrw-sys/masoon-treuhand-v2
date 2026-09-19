@@ -462,9 +462,8 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
   margin-left:var(--content-card-inline-space);
 }
 
-/* BLOGBEITRÄGE: kräftiges Winkelzeichen wie auf der alten Webseite */
+/* BLOGBEITRÄGE: Zurücklink normal geschrieben; Pfeil separat geregelt */
 .section-label.article-back {
-  gap:10px;
   text-transform:none;
 }
 
