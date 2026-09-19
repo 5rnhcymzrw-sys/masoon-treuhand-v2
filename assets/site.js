@@ -124,14 +124,14 @@ serviceDetailToggles.forEach((toggle) => {
         { height: `${startHeight}px` },
         { height: `${targetHeight}px` }
       ],
-      { duration: 350, easing: 'ease-in-out' }
+      { duration: 100, easing: 'ease-in-out' }
     );
 
     const listAnimation = list.animate(
       nextOpen
         ? [{ opacity: 0, transform: 'translateY(-4px)' }, { opacity: 1, transform: 'translateY(0)' }]
         : [{ opacity: 1, transform: 'translateY(0)' }, { opacity: 0, transform: 'translateY(-4px)' }],
-      { duration: 300, easing: 'ease-in-out' }
+      { duration: 900, easing: 'ease-in-out' }
     );
 
     Promise.all([boxAnimation.finished, listAnimation.finished]).then(() => {
