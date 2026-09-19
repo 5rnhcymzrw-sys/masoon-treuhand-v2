@@ -638,11 +638,6 @@ ul + .subtitle { margin-top:var(--subtitle-top-space); }
    ========================================================= */
 .legal-section { padding-top:var(--section-space); }
 
-.legal-card {
-  border:1px solid transparent;
-  border-image:var(--brand-gradient) 1;
-}
-
 .content-card {
   padding:var(--legal-left-inset) var(--content-card-inline-space);
 }
@@ -704,13 +699,9 @@ body.page-article-employment-termination .content-card .article-text-table td:la
 }
 
 .content-card .article-table-wrap {
-  margin:24px 0 36px;
+  margin:24px -50px 36px;
   overflow-x:auto;
   border:1px solid var(--content-table-line);
-}
-
-.content-card .article-table-wrap {
-  margin-inline:-50px;
 }
 
 .content-card .article-table-wrap table {
@@ -759,6 +750,8 @@ body.page-article-employment-termination .content-card .article-text-table td:la
   grid-template-columns:var(--secondary-column-start) minmax(0,1fr);
   align-items:start;
   gap:0;
+  border:1px solid transparent;
+  border-image:var(--brand-gradient) 1;
 }
 
 .legal-card .page-title { margin:0; }
