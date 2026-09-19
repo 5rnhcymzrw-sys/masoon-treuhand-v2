@@ -11,7 +11,7 @@
   display:block;
   width:min(calc(100% - (2 * var(--page-gutter))),var(--content-width));
   height:700px;
-  margin:48px auto 90px;
+  margin:69px auto;
   background:#fff;
 }
 
